@@ -14,6 +14,8 @@ class StopWatch: UIViewController {
         var count: Float = 0.0
         
         var  timer:Timer = Timer()
+    
+    var startTime = TimeInterval()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,8 @@ class StopWatch: UIViewController {
     
     @objc func up() {
             //countを0.01足す
-        count = count + 0.1
-            //ラベル小数点以下2行まで表示
+        count = count + 0.01
+//            ラベル小数点以下2行まで表示
             label.text = String(format: "%.2f", count)
         }
 
