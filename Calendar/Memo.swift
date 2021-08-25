@@ -10,5 +10,5 @@ import RealmSwift
 
 class Memo: Object {
     @objc dynamic var title: String = ""
-        @objc dynamic var content: String = ""
+    @objc dynamic var content: String = ""
 }

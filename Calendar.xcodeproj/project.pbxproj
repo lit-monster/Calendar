@@ -10,6 +10,7 @@
 		211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB55E26A80AE900655F2F /* ChartViewController.swift */; };
 		211BB56126B13E5C00655F2F /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB56026B13E5C00655F2F /* Memo.swift */; };
 		211BB56326B145B200655F2F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB56226B145B200655F2F /* CalendarViewController.swift */; };
+		211BB56526BA9E9F00655F2F /* event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB56426BA9E9E00655F2F /* event.swift */; };
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
 		216771B4269EFB530005F50C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B3269EFB530005F50C /* Realm */; };
 		216771B6269EFB580005F50C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B5269EFB580005F50C /* RealmSwift */; };
@@ -28,6 +29,7 @@
 		211BB55E26A80AE900655F2F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		211BB56026B13E5C00655F2F /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		211BB56226B145B200655F2F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		211BB56426BA9E9E00655F2F /* event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event.swift; sourceTree = "<group>"; };
 		216771AF269EF2570005F50C /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A1D499268C67AD00C07A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
+				211BB56426BA9E9E00655F2F /* event.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				211BB56526BA9E9F00655F2F /* event.swift in Sources */,
 				21A1D49E268C67AD00C07A86 /* ViewController.swift in Sources */,
 				21A1D49A268C67AD00C07A86 /* AppDelegate.swift in Sources */,
 				21A1D49C268C67AD00C07A86 /* SceneDelegate.swift in Sources */,
