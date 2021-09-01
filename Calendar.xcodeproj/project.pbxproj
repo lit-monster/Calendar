@@ -8,16 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB55E26A80AE900655F2F /* ChartViewController.swift */; };
-		211BB56126B13E5C00655F2F /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB56026B13E5C00655F2F /* Memo.swift */; };
 		211BB56326B145B200655F2F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB56226B145B200655F2F /* CalendarViewController.swift */; };
 		211BB56526BA9E9F00655F2F /* event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB56426BA9E9E00655F2F /* event.swift */; };
+		212D7BBB26D652BA004561B0 /* GraphTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 212D7BB926D652BA004561B0 /* GraphTableViewCell.xib */; };
+		212D7BBC26D652BA004561B0 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBA26D652BA004561B0 /* GraphTableViewCell.swift */; };
+		212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBD26D65676004561B0 /* AppDelegate.swift */; };
+		212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBF26D65686004561B0 /* SceneDelegate.swift */; };
+		212D7BC226D65D2B004561B0 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BC126D65D2B004561B0 /* Memo.swift */; };
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
 		216771B4269EFB530005F50C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B3269EFB530005F50C /* Realm */; };
 		216771B6269EFB580005F50C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B5269EFB580005F50C /* RealmSwift */; };
 		216771B9269EFD2E0005F50C /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B8269EFD2E0005F50C /* FSCalendar */; };
 		216771BC269EFD9F0005F50C /* CalculateCalendarLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 216771BB269EFD9F0005F50C /* CalculateCalendarLogic */; };
-		21A1D49A268C67AD00C07A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A1D499268C67AD00C07A86 /* AppDelegate.swift */; };
-		21A1D49C268C67AD00C07A86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A1D49B268C67AD00C07A86 /* SceneDelegate.swift */; };
 		21A1D49E268C67AD00C07A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A1D49D268C67AD00C07A86 /* ViewController.swift */; };
 		21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D49F268C67AD00C07A86 /* Main.storyboard */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
@@ -27,13 +29,15 @@
 /* Begin PBXFileReference section */
 		0D5B7FF3D979C5B89AD7EA4C /* Pods_Calendar_CalendarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar_CalendarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211BB55E26A80AE900655F2F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		211BB56026B13E5C00655F2F /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		211BB56226B145B200655F2F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		211BB56426BA9E9E00655F2F /* event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event.swift; sourceTree = "<group>"; };
+		212D7BB926D652BA004561B0 /* GraphTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphTableViewCell.xib; sourceTree = "<group>"; };
+		212D7BBA26D652BA004561B0 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
+		212D7BBD26D65676004561B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		212D7BBF26D65686004561B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		212D7BC126D65D2B004561B0 /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		216771AF269EF2570005F50C /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21A1D499268C67AD00C07A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21A1D49B268C67AD00C07A86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		21A1D49D268C67AD00C07A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21A1D4A0268C67AD00C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,14 +82,16 @@
 		21A1D498268C67AD00C07A86 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				21A1D499268C67AD00C07A86 /* AppDelegate.swift */,
-				21A1D49B268C67AD00C07A86 /* SceneDelegate.swift */,
+				212D7BBD26D65676004561B0 /* AppDelegate.swift */,
+				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
 				21A1D49F268C67AD00C07A86 /* Main.storyboard */,
+				212D7BC126D65D2B004561B0 /* Memo.swift */,
 				216771AF269EF2570005F50C /* StopWatchViewController.swift */,
+				212D7BBA26D652BA004561B0 /* GraphTableViewCell.swift */,
+				212D7BB926D652BA004561B0 /* GraphTableViewCell.xib */,
 				211BB55E26A80AE900655F2F /* ChartViewController.swift */,
 				211BB56226B145B200655F2F /* CalendarViewController.swift */,
 				21A1D49D268C67AD00C07A86 /* ViewController.swift */,
-				211BB56026B13E5C00655F2F /* Memo.swift */,
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
@@ -172,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212D7BBB26D652BA004561B0 /* GraphTableViewCell.xib in Resources */,
 				21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */,
 				21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */,
 				21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */,
@@ -185,13 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212D7BBC26D652BA004561B0 /* GraphTableViewCell.swift in Sources */,
 				211BB56526BA9E9F00655F2F /* event.swift in Sources */,
 				21A1D49E268C67AD00C07A86 /* ViewController.swift in Sources */,
-				21A1D49A268C67AD00C07A86 /* AppDelegate.swift in Sources */,
-				21A1D49C268C67AD00C07A86 /* SceneDelegate.swift in Sources */,
-				211BB56126B13E5C00655F2F /* Memo.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
+				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				211BB56326B145B200655F2F /* CalendarViewController.swift in Sources */,
+				212D7BC226D65D2B004561B0 /* Memo.swift in Sources */,
+				212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */,
 				211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

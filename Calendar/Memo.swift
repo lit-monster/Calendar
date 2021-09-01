@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class Memo: Object {
-    @objc dynamic var title: String = ""
-    @objc dynamic var content: String = ""
+    @objc dynamic var date: Date = Date()
+//    @objc dynamic var studyTime: Int = 0
+    @objc dynamic var studyTime: TimeInterval = 0
 }

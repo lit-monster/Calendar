@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class StopWatch: UIViewController {
+    
+    let realm = try! Realm()
     
     @IBOutlet var label:UILabel!
         
@@ -15,6 +18,7 @@ class StopWatch: UIViewController {
         
         var  timer:Timer = Timer()
     
+    //時間の型で保存する、小数まで保存
     var startTime = TimeInterval()
 
     override func viewDidLoad() {
@@ -46,6 +50,7 @@ class StopWatch: UIViewController {
             if timer.isValid{
                 //タイマーが動作したら停止する
                 timer.invalidate()
+                
             }
         }
 
