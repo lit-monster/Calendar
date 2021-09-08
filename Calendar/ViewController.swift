@@ -11,6 +11,8 @@ import RealmSwift
 class ViewController: UIViewController,UITextFieldDelegate {
     
     let realm = try! Realm()
+    var date = Date()
+    var studyTime = TimeInterval()
     
 //    @IBOutlet var titleTextField: UITextField!
 //    @IBOutlet var contentTextField: UITextField!
@@ -37,8 +39,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func save(){
         //タイトルとカウントという定数をTextFieldに入力された文字列を取得
-//        let title:String = titleTextField.text!
-//        let content:String = contentTextField.text!
+//        let Date:String = dateTextField.text!
+//        let studyTime:String = studyTimeTextField.text!
         
         func textFiledShouldReturn(_ textField: UITextField) -> Bool{
             textField.resignFirstResponder()
@@ -49,8 +51,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
         if let memo = memo{
             //メモの更新をする
             try! realm.write{
-//                memo.title = title
-//                memo.content = content
+                memo.date = date
+                memo.studyTime = studyTime
             }
         } else {
             //メモの新規作成

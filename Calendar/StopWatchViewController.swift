@@ -10,7 +10,8 @@ import RealmSwift
 
 class StopWatch: UIViewController {
     
-    let realm = try! Realm()
+
+//    let realm = try! Realm()
     
     @IBOutlet var label:UILabel!
         
