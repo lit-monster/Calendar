@@ -1,20 +1,30 @@
 PODS:
-  - CalculateCalendarLogic (0.5.0)
-  - FSCalendar (2.8.2)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - FSCalendar (2.8.3)
 
 DEPENDENCIES:
-  - CalculateCalendarLogic
-  - FSCalendar
+  - Charts
+  - FSCalendar (from `https://github.com/WenchaoD/FSCalendar`)
 
 SPEC REPOS:
   trunk:
-    - CalculateCalendarLogic
-    - FSCalendar
+    - Charts
+
+EXTERNAL SOURCES:
+  FSCalendar:
+    :git: https://github.com/WenchaoD/FSCalendar
+
+CHECKOUT OPTIONS:
+  FSCalendar:
+    :commit: 7c5d8c6463515411cdc2c7c485afb53ecd8cd72e
+    :git: https://github.com/WenchaoD/FSCalendar
 
 SPEC CHECKSUMS:
-  CalculateCalendarLogic: d14189787cd47766e64281b2686608afea07ae4d
-  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  FSCalendar: ed63fee7df375e34340c1236308fdbfc568d26ac
 
-PODFILE CHECKSUM: 47ce90010fcd07fa51c0e4cb33f5a45637e0145d
+PODFILE CHECKSUM: eb244f6168788f4350ae378c1c4b3b08fd3748db
 
 COCOAPODS: 1.10.1

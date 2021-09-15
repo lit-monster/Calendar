@@ -2,12 +2,30 @@
   "object": {
     "pins": [
       {
+        "package": "FSCalendar",
+        "repositoryURL": "git@github.com:WenchaoD/FSCalendar.git",
+        "state": {
+          "branch": null,
+          "revision": "4e79a201fad268408a4fd9e2ef429497def9594f",
+          "version": "2.8.2"
+        }
+      },
+      {
+        "package": "CalculateCalendarLogic",
+        "repositoryURL": "https://github.com/fumiyasac/handMadeCalendarAdvance",
+        "state": {
+          "branch": null,
+          "revision": "84155ac35feb78f79b12ddc4af9007ceb6bdde65",
+          "version": "0.5.0"
+        }
+      },
+      {
         "package": "Realm",
         "repositoryURL": "https://github.com/realm/realm-cocoa",
         "state": {
           "branch": null,
-          "revision": "628c59a9048aae3b6bcf129ba56216dbe3dce808",
-          "version": "10.9.0"
+          "revision": "e7e7f072a1571435049683ca43c51501de2612fd",
+          "version": "10.14.0"
         }
       },
       {
@@ -15,8 +33,8 @@
         "repositoryURL": "https://github.com/realm/realm-core",
         "state": {
           "branch": null,
-          "revision": "95da0df7815d7cbaff14ed5e8b73fe4c2a992816",
-          "version": "11.0.4"
+          "revision": "fdb2157346dcdf0c2677b3608d9a4c30315fa7f0",
+          "version": "11.3.1"
         }
       }
     ]

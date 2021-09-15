@@ -16,14 +16,15 @@
 		212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBF26D65686004561B0 /* SceneDelegate.swift */; };
 		212D7BC226D65D2B004561B0 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BC126D65D2B004561B0 /* Memo.swift */; };
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
-		216771B4269EFB530005F50C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B3269EFB530005F50C /* Realm */; };
-		216771B6269EFB580005F50C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B5269EFB580005F50C /* RealmSwift */; };
-		216771B9269EFD2E0005F50C /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B8269EFD2E0005F50C /* FSCalendar */; };
-		216771BC269EFD9F0005F50C /* CalculateCalendarLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 216771BB269EFD9F0005F50C /* CalculateCalendarLogic */; };
+		216771B4269EFB530005F50C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B3269EFB530005F50C /* SwiftPackageProductDependency */; };
+		216771B6269EFB580005F50C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B5269EFB580005F50C /* SwiftPackageProductDependency */; };
+		216771B9269EFD2E0005F50C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B8269EFD2E0005F50C /* SwiftPackageProductDependency */; };
+		216771BC269EFD9F0005F50C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 216771BB269EFD9F0005F50C /* SwiftPackageProductDependency */; };
 		21A1D49E268C67AD00C07A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A1D49D268C67AD00C07A86 /* ViewController.swift */; };
 		21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D49F268C67AD00C07A86 /* Main.storyboard */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
+		D0DCCE03047C5BA1F7C02523 /* Pods_Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16591580D786A0422E920DF /* Pods_Calendar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,9 @@
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A1D4A7268C67B100C07A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A8C359A1E108C1663295203 /* Pods-Calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.debug.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.debug.xcconfig"; sourceTree = "<group>"; };
 		B16591580D786A0422E920DF /* Pods_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79439DBC9A713730EDA78F2 /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
 		C074DC4BF477E05E76FD0DE3 /* Pods_CalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,10 +55,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216771BC269EFD9F0005F50C /* CalculateCalendarLogic in Frameworks */,
-				216771B6269EFB580005F50C /* RealmSwift in Frameworks */,
-				216771B9269EFD2E0005F50C /* FSCalendar in Frameworks */,
-				216771B4269EFB530005F50C /* Realm in Frameworks */,
+				216771BC269EFD9F0005F50C /* BuildFile in Frameworks */,
+				216771B6269EFB580005F50C /* BuildFile in Frameworks */,
+				216771B9269EFD2E0005F50C /* BuildFile in Frameworks */,
+				216771B4269EFB530005F50C /* BuildFile in Frameworks */,
+				D0DCCE03047C5BA1F7C02523 /* Pods_Calendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +72,7 @@
 				21A1D498268C67AD00C07A86 /* Calendar */,
 				21A1D497268C67AD00C07A86 /* Products */,
 				CE2FE2A402FC206F12E932B0 /* Frameworks */,
+				698D53E95CA5BDAD2AA5CBCF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +105,16 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
+		698D53E95CA5BDAD2AA5CBCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A8C359A1E108C1663295203 /* Pods-Calendar.debug.xcconfig */,
+				B79439DBC9A713730EDA78F2 /* Pods-Calendar.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE2FE2A402FC206F12E932B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21A1D4C0268C67B200C07A86 /* Build configuration list for PBXNativeTarget "Calendar" */;
 			buildPhases = (
+				E816BAEBD538FC27F0C27A92 /* [CP] Check Pods Manifest.lock */,
 				21A1D492268C67AD00C07A86 /* Sources */,
 				21A1D493268C67AD00C07A86 /* Frameworks */,
 				21A1D494268C67AD00C07A86 /* Resources */,
+				2F54EC007538B80A5FD7BB03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +144,10 @@
 			);
 			name = Calendar;
 			packageProductDependencies = (
-				216771B3269EFB530005F50C /* Realm */,
-				216771B5269EFB580005F50C /* RealmSwift */,
-				216771B8269EFD2E0005F50C /* FSCalendar */,
-				216771BB269EFD9F0005F50C /* CalculateCalendarLogic */,
+				216771B3269EFB530005F50C /* SwiftPackageProductDependency */,
+				216771B5269EFB580005F50C /* SwiftPackageProductDependency */,
+				216771B8269EFD2E0005F50C /* SwiftPackageProductDependency */,
+				216771BB269EFD9F0005F50C /* SwiftPackageProductDependency */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* Calendar.app */;
@@ -160,9 +177,9 @@
 			);
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
-				216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				216771B7269EFD2E0005F50C /* XCRemoteSwiftPackageReference "FSCalendar" */,
-				216771BA269EFD9F0005F50C /* XCRemoteSwiftPackageReference "handMadeCalendarAdvance" */,
+				216771AE2695BDC30005F50C /* RemoteSwiftPackageReference */,
+				216771B7269EFD2E0005F50C /* RemoteSwiftPackageReference */,
+				216771BA269EFD9F0005F50C /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -186,6 +203,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F54EC007538B80A5FD7BB03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calendar/Pods-Calendar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calendar/Pods-Calendar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calendar/Pods-Calendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E816BAEBD538FC27F0C27A92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calendar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21A1D492268C67AD00C07A86 /* Sources */ = {
@@ -344,6 +403,7 @@
 		};
 		21A1D4C1268C67B200C07A86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8C359A1E108C1663295203 /* Pods-Calendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +422,7 @@
 		};
 		21A1D4C2268C67B200C07A86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B79439DBC9A713730EDA78F2 /* Pods-Calendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -402,7 +463,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		216771AE2695BDC30005F50C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -410,7 +471,7 @@
 				minimumVersion = 10.9.0;
 			};
 		};
-		216771B7269EFD2E0005F50C /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+		216771B7269EFD2E0005F50C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:WenchaoD/FSCalendar.git";
 			requirement = {
@@ -418,7 +479,7 @@
 				minimumVersion = 2.8.2;
 			};
 		};
-		216771BA269EFD9F0005F50C /* XCRemoteSwiftPackageReference "handMadeCalendarAdvance" */ = {
+		216771BA269EFD9F0005F50C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/fumiyasac/handMadeCalendarAdvance";
 			requirement = {
@@ -429,24 +490,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		216771B3269EFB530005F50C /* Realm */ = {
+		216771B3269EFB530005F50C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 216771AE2695BDC30005F50C /* RemoteSwiftPackageReference */;
 			productName = Realm;
 		};
-		216771B5269EFB580005F50C /* RealmSwift */ = {
+		216771B5269EFB580005F50C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 216771AE2695BDC30005F50C /* RemoteSwiftPackageReference */;
 			productName = RealmSwift;
 		};
-		216771B8269EFD2E0005F50C /* FSCalendar */ = {
+		216771B8269EFD2E0005F50C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 216771B7269EFD2E0005F50C /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			package = 216771B7269EFD2E0005F50C /* RemoteSwiftPackageReference */;
 			productName = FSCalendar;
 		};
-		216771BB269EFD9F0005F50C /* CalculateCalendarLogic */ = {
+		216771BB269EFD9F0005F50C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 216771BA269EFD9F0005F50C /* XCRemoteSwiftPackageReference "handMadeCalendarAdvance" */;
+			package = 216771BA269EFD9F0005F50C /* RemoteSwiftPackageReference */;
 			productName = CalculateCalendarLogic;
 		};
 /* End XCSwiftPackageProductDependency section */
