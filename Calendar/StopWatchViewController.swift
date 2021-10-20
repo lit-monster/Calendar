@@ -8,34 +8,49 @@
 import UIKit
 import RealmSwift
 
-class StopWatch: UIViewController {
+class StopWatchViewController: UIViewController {
     
-
-//    let realm = try! Realm()
+    
+    //    let realm = try! Realm()
     
     @IBOutlet var label:UILabel!
-        
-        var count: Float = 0.0
-        
-        var  timer:Timer = Timer()
+    
+    var count: Float = 0.0
+    
+    var  timer:Timer = Timer()
     
     //時間の型で保存する、小数まで保存
     var startTime = TimeInterval()
-
+    
+    //UIDeviceクラスを呼ぶ
+    let myDevice: UIDevice = UIDevice.current
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
+        super.viewDidLoad()
+        // 近接センサーの有効化
+        UIDevice.current.isProximityMonitoringEnabled = true
+        
+        // 近接センサーのON-Offが切り替わる通知
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(proximityMonitorStateDidChange),
+            name: UIDevice.proximityStateDidChangeNotification,
+            object: nil
+        )
     }
     
-    @objc func up() {
-            //countを0.01足す
-        count = count + 0.01
-//            ラベル小数点以下2行まで表示
-            label.text = String(format: "%.2f", count)
-        }
-
-        @IBAction func start(){
+    
+    // 近接センサーのON-Offが切り替わると実行される
+    @objc func proximityMonitorStateDidChange() {
+        let proximityState = UIDevice.current.proximityState
+        print(proximityState)
+        
+        if proximityState {
             if !timer.isValid {
                 //タイマーが動作してなかったら動かす
                 timer = Timer.scheduledTimer(timeInterval: 0.01,
@@ -45,24 +60,16 @@ class StopWatch: UIViewController {
                                              repeats:true
                 )
             }
+        } else {
+            timer.invalidate()
         }
-        
-        @IBAction func stop(){
-            if timer.isValid{
-                //タイマーが動作したら停止する
-                timer.invalidate()
-                
-            }
-        }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    
+    @objc func up() {
+        //countを0.01足す
+        count = count + 0.01
+        //            ラベル小数点以下2行まで表示
+        label.text = String(format: "%.2f", count)
+    }
 }
