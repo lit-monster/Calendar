@@ -64,7 +64,9 @@
                                 <rect key="frame" x="98" y="404" width="218" height="63"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="START"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="start" destination="U2q-eZ-etJ" eventType="touchUpInside" id="BWG-ib-NNu"/>
                                 </connections>
@@ -73,7 +75,9 @@
                                 <rect key="frame" x="98" y="517" width="218" height="63"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="STOP"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="stop" destination="U2q-eZ-etJ" eventType="touchUpInside" id="RpV-Vk-lib"/>
                                 </connections>
@@ -82,7 +86,9 @@
                                 <rect key="frame" x="98" y="630" width="218" height="63"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="RESET"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Qh-vyz">
                                 <rect key="frame" x="65" y="178" width="284" height="104"/>
@@ -93,7 +99,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="snk-JE-xX3"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Nw-8t-EhL" firstAttribute="leading" secondItem="snk-JE-xX3" secondAttribute="leading" constant="98" id="79F-Xi-D90"/>
                             <constraint firstItem="6Nw-8t-EhL" firstAttribute="top" secondItem="OAp-kn-npc" secondAttribute="bottom" constant="50" id="G2x-kH-dfG"/>
@@ -169,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebF-kN-8gO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="-2937"/>
+            <point key="canvasLocation" x="-1352" y="-2813"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xe9-1b-h9l">
