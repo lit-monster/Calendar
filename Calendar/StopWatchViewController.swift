@@ -11,6 +11,24 @@ import RealmSwift
 class StopWatchViewController: UIViewController {
     
     
+    // プロパティを用意
+    var feedbackGenerator : UINotificationFeedbackGenerator? = nil
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // インスタンスを生成し prepare() をコール
+        self.feedbackGenerator = UINotificationFeedbackGenerator()
+        self.feedbackGenerator?.prepare()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // 一応 nil にしておく
+        self.feedbackGenerator = nil
+    }
+    
+    
     //    let realm = try! Realm()
     
     @IBOutlet var label:UILabel!
@@ -44,7 +62,15 @@ class StopWatchViewController: UIViewController {
         )
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        //remove observerしたい
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //add observerしたい
+    }
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
         let proximityState = UIDevice.current.proximityState
@@ -62,14 +88,30 @@ class StopWatchViewController: UIViewController {
             }
         } else {
             timer.invalidate()
+            self.feedbackGenerator?.notificationOccurred(.success)
         }
     }
-    
     
     @objc func up() {
         //countを0.01足す
         count = count + 0.01
         //            ラベル小数点以下2行まで表示
         label.text = String(format: "%.2f", count)
+    }
+    
+    @IBAction func save(){
+        let alert = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        //ここから追加
+        let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { (acrion) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(cancel)
+        //ここまで追加
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+         
     }
 }
