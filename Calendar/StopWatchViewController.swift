@@ -13,15 +13,15 @@ class StopWatchViewController: UIViewController {
     
     // プロパティを用意
     var feedbackGenerator : UINotificationFeedbackGenerator? = nil
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         // インスタンスを生成し prepare() をコール
         self.feedbackGenerator = UINotificationFeedbackGenerator()
         self.feedbackGenerator?.prepare()
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // 一応 nil にしておく
@@ -64,12 +64,19 @@ class StopWatchViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        //remove observerしたい
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIDevice.proximityStateDidChangeNotification,
+                                                  object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //add observerしたい
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(proximityMonitorStateDidChange),
+            name: UIDevice.proximityStateDidChangeNotification,
+            object: nil
+        )
     }
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
@@ -112,6 +119,6 @@ class StopWatchViewController: UIViewController {
         //ここまで追加
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
-         
+        
     }
 }
