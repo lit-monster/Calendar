@@ -49,7 +49,6 @@ class StopWatchViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        super.viewDidLoad()
         // 近接センサーの有効化
         UIDevice.current.isProximityMonitoringEnabled = true
         
@@ -64,19 +63,12 @@ class StopWatchViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        NotificationCenter.default.removeObserver(self,
-                                                  name: UIDevice.proximityStateDidChangeNotification,
-                                                  object: nil)
+        UIDevice.current.isProximityMonitoringEnabled = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(proximityMonitorStateDidChange),
-            name: UIDevice.proximityStateDidChangeNotification,
-            object: nil
-        )
+        UIDevice.current.isProximityMonitoringEnabled = true
     }
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
