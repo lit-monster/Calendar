@@ -99,12 +99,12 @@ class StopWatchViewController: UIViewController {
     }
     
     @IBAction func save(){
-        let alert = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+        let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "キャンセル", style: .default) { (action) in
             self.dismiss(animated: true, completion: nil)
         }
         //ここから追加
-        let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { (acrion) in
+        let cancel = UIAlertAction(title: "保存", style: .cancel) { (acrion) in
             self.dismiss(animated: true, completion: nil)
         }
         alert.addAction(cancel)
