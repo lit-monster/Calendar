@@ -123,25 +123,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAp-kn-npc">
-                                <rect key="frame" x="98" y="517" width="218" height="63"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <color key="tintColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="リセット">
-                                    <color key="titleColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nw-8t-EhL">
-                                <rect key="frame" x="98" y="630" width="218" height="63"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <color key="tintColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="記録を保存">
-                                    <color key="titleColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="save" destination="U2q-eZ-etJ" eventType="touchUpInside" id="QVg-ze-cL4"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Qh-vyz">
                                 <rect key="frame" x="65" y="178" width="284" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -152,14 +133,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="snk-JE-xX3"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Nw-8t-EhL" firstAttribute="leading" secondItem="snk-JE-xX3" secondAttribute="leading" constant="98" id="79F-Xi-D90"/>
-                            <constraint firstItem="6Nw-8t-EhL" firstAttribute="top" secondItem="OAp-kn-npc" secondAttribute="bottom" constant="50" id="G2x-kH-dfG"/>
-                            <constraint firstItem="snk-JE-xX3" firstAttribute="trailing" secondItem="OAp-kn-npc" secondAttribute="trailing" constant="98" id="LMu-2q-Fsj"/>
-                            <constraint firstItem="snk-JE-xX3" firstAttribute="trailing" secondItem="6Nw-8t-EhL" secondAttribute="trailing" constant="98" id="dbT-3K-1wc"/>
-                            <constraint firstItem="snk-JE-xX3" firstAttribute="bottom" secondItem="6Nw-8t-EhL" secondAttribute="bottom" constant="120" id="gE8-aS-0bQ"/>
-                            <constraint firstItem="OAp-kn-npc" firstAttribute="leading" secondItem="snk-JE-xX3" secondAttribute="leading" constant="98" id="gWM-W5-2wM"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="640-Te-Pi4"/>
                     <navigationItem key="navigationItem" title="タイマー" id="u5o-F6-kEc"/>
@@ -276,9 +249,6 @@
         <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

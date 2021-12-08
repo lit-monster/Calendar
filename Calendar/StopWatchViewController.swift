@@ -88,6 +88,40 @@ class StopWatchViewController: UIViewController {
         } else {
             timer.invalidate()
             self.feedbackGenerator?.notificationOccurred(.success)
+            let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { (action) in
+                self.dismiss(animated: true, completion: nil)
+                
+                
+            }
+            //ここから追加
+            let save = UIAlertAction(title: "保存", style: .default) { (acrion) in
+                self.dismiss(animated: true, completion: nil)
+                
+                let studyRecord = StudyRecord()
+                studyRecord.date = Date()
+                studyRecord.quality = 2
+                studyRecord.time = 1000
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.add(studyRecord)
+                }
+
+                
+                
+            }
+            
+            let pause = UIAlertAction(title: "一時停止", style: .default) { (acrion) in
+                self.dismiss(animated: true, completion: nil)
+                
+                
+                
+            }
+            
+            alert.addAction(save)
+            alert.addAction(pause)
+            alert.addAction(cancel)
+            present(alert, animated: true, completion: nil)
         }
     }
     
@@ -96,21 +130,5 @@ class StopWatchViewController: UIViewController {
         count = count + 0.01
         //            ラベル小数点以下2行まで表示
         label.text = String(format: "%.2f", count)
-    }
-    
-    @IBAction func save(){
-        let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "キャンセル", style: .default) { (action) in
-            self.dismiss(animated: true, completion: nil)
-        }
-        //ここから追加
-        let cancel = UIAlertAction(title: "保存", style: .cancel) { (acrion) in
-            self.dismiss(animated: true, completion: nil)
-        }
-        alert.addAction(cancel)
-        //ここまで追加
-        alert.addAction(ok)
-        present(alert, animated: true, completion: nil)
-        
     }
 }

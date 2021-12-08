@@ -14,3 +14,12 @@ class Memo: Object {
     @objc dynamic var date: Date = Date()
     @objc dynamic var studyTime: TimeInterval = 0
 }
+
+class StudyRecord: Object {
+    
+    @objc dynamic var date: Date = .init()
+    @objc dynamic var time: TimeInterval = 0
+    @objc dynamic var quality: Int = 0
+
+    
+}
