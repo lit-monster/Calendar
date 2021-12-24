@@ -8,66 +8,9 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController,UITextFieldDelegate {
-    
-    let realm = try! Realm()
-    var date = Date()
-    var studyTime = TimeInterval()
-    
-//    @IBOutlet var titleTextField: UITextField!
-//    @IBOutlet var contentTextField: UITextField!
-    
+class ViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        titleTextField.delegate = self
-//        contentTextField.delegate = self
-        
-        let memo: Memo? = read()
-        
-        //メモという定数に取得したデータを代入
-//        if let memo = memo {
-//            titleTextField.text =
-//            contentTextField.text =
-//        }
-        // Do any additional setup after loading the view.
-    }
-
-    func read() -> Memo? {
-        return realm.objects(Memo.self).first
-    }
-    
-    @IBAction func save(){
-        //タイトルとカウントという定数をTextFieldに入力された文字列を取得
-//        let Date:String = dateTextField.text!
-//        let studyTime:String = studyTimeTextField.text!
-        
-        func textFiledShouldReturn(_ textField: UITextField) -> Bool{
-            textField.resignFirstResponder()
-        }
-        
-        let memo: Memo? = read()
-        
-        if let memo = memo{
-            //メモの更新をする
-            try! realm.write{
-                memo.date = date
-                memo.studyTime = studyTime
-            }
-        } else {
-            //メモの新規作成
-            //newMemoを実体化(インスタンスオブジェクト)
-            let newMemo = Memo()
-//            newMemo.title = title
-//            newMemo.content = content
-            
-            try! realm.write{
-                realm.add(newMemo)
-            }
-        }
-        let alert:UIAlertController = UIAlertController(title:"成功",message:"保存しました",preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title:"OK",style: .default,handler: nil)
-        )
-        present(alert,animated: true, completion: nil)
     }
 }

@@ -28,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D5B7FF3D979C5B89AD7EA4C /* Pods_Calendar_CalendarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar_CalendarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211BB55E26A80AE900655F2F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		211BB56226B145B200655F2F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		211BB56426BA9E9E00655F2F /* event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event.swift; sourceTree = "<group>"; };
@@ -45,8 +44,6 @@
 		21D146D5273BCE6500CCF9E1 /* ChartBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartBarCell.xib; sourceTree = "<group>"; };
 		21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarCell.swift; sourceTree = "<group>"; };
 		21F926E5275BA7810000FA03 /* UIDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDatePickerViewController.swift; sourceTree = "<group>"; };
-		B16591580D786A0422E920DF /* Pods_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C074DC4BF477E05E76FD0DE3 /* Pods_CalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +66,6 @@
 			children = (
 				21A1D498268C67AD00C07A86 /* Calendar */,
 				21A1D497268C67AD00C07A86 /* Products */,
-				CE2FE2A402FC206F12E932B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,16 +97,6 @@
 				21F926E5275BA7810000FA03 /* UIDatePickerViewController.swift */,
 			);
 			path = Calendar;
-			sourceTree = "<group>";
-		};
-		CE2FE2A402FC206F12E932B0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B16591580D786A0422E920DF /* Pods_Calendar.framework */,
-				0D5B7FF3D979C5B89AD7EA4C /* Pods_Calendar_CalendarUITests.framework */,
-				C074DC4BF477E05E76FD0DE3 /* Pods_CalendarTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,13 +338,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48GWJKGD2K;
+				DEVELOPMENT_TEAM = 7R974FN29R;
 				INFOPLIST_FILE = Calendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.aoba.Calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.aoba.Calendaraaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -371,13 +357,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48GWJKGD2K;
+				DEVELOPMENT_TEAM = 7R974FN29R;
 				INFOPLIST_FILE = Calendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.aoba.Calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.aoba.Calendaraaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

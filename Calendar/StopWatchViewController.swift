@@ -9,46 +9,23 @@ import UIKit
 import RealmSwift
 
 class StopWatchViewController: UIViewController {
-    
-    
-    // プロパティを用意
+    // HapticFeedback用のプロパティ(変数)を用意
     var feedbackGenerator : UINotificationFeedbackGenerator? = nil
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // インスタンスを生成し prepare() をコール
-        self.feedbackGenerator = UINotificationFeedbackGenerator()
-        self.feedbackGenerator?.prepare()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // 一応 nil にしておく
-        self.feedbackGenerator = nil
-    }
-    
-    
-    //    let realm = try! Realm()
-    
-    @IBOutlet var label:UILabel!
+
+    @IBOutlet var label: UILabel!
     
     var count: Float = 0.0
     
-    var  timer:Timer = Timer()
+    var timer: Timer = Timer()
     
-    //時間の型で保存する、小数まで保存
+    //時間の型で保存する、秒数で保存
     var startTime = TimeInterval()
-    
+
     //UIDeviceクラスを呼ぶ
     let myDevice: UIDevice = UIDevice.current
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
         // 近接センサーの有効化
         UIDevice.current.isProximityMonitoringEnabled = true
         
@@ -60,21 +37,29 @@ class StopWatchViewController: UIViewController {
             object: nil
         )
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        UIDevice.current.isProximityMonitoringEnabled = false
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // インスタンスを生成し prepare() をコール
+        self.feedbackGenerator = UINotificationFeedbackGenerator()
+        self.feedbackGenerator?.prepare()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIDevice.current.isProximityMonitoringEnabled = true
     }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UIDevice.current.isProximityMonitoringEnabled = false
+    }
+
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
         let proximityState = UIDevice.current.proximityState
         print(proximityState)
-        
         if proximityState {
             if !timer.isValid {
                 //タイマーが動作してなかったら動かす
@@ -91,13 +76,9 @@ class StopWatchViewController: UIViewController {
             let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { (action) in
                 self.dismiss(animated: true, completion: nil)
-                
-                
             }
-            //ここから追加
-            let save = UIAlertAction(title: "保存", style: .default) { (acrion) in
-                self.dismiss(animated: true, completion: nil)
-                
+
+            let save = UIAlertAction(title: "保存", style: .default) { _ in
                 let studyRecord = StudyRecord()
                 studyRecord.date = Date()
                 studyRecord.quality = 2
@@ -107,15 +88,11 @@ class StopWatchViewController: UIViewController {
                     realm.add(studyRecord)
                 }
 
-                
-                
+                self.dismiss(animated: true, completion: nil)
             }
             
-            let pause = UIAlertAction(title: "一時停止", style: .default) { (acrion) in
+            let pause = UIAlertAction(title: "一時停止", style: .default) { _ in
                 self.dismiss(animated: true, completion: nil)
-                
-                
-                
             }
             
             alert.addAction(save)
@@ -128,7 +105,7 @@ class StopWatchViewController: UIViewController {
     @objc func up() {
         //countを0.01足す
         count = count + 0.01
-        //            ラベル小数点以下2行まで表示
+        //ラベル小数点以下2行まで表示
         label.text = String(format: "%.2f", count)
     }
 }
