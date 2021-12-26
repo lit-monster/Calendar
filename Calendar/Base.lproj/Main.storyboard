@@ -122,7 +122,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="snk-JE-xX3"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="s5s-Qh-vyz" firstAttribute="centerX" secondItem="tSx-v5-UAE" secondAttribute="centerX" id="04p-vg-V0b"/>
                             <constraint firstItem="s5s-Qh-vyz" firstAttribute="top" secondItem="snk-JE-xX3" secondAttribute="top" constant="150" id="TfW-Lg-pho"/>
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doQ-3w-klM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2865" y="-3585"/>
+            <point key="canvasLocation" x="-2865" y="-3571"/>
         </scene>
         <!--chart-->
         <scene sceneID="5mc-TM-41e">
