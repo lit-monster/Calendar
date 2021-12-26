@@ -7,12 +7,20 @@
 
 import UIKit
 import Charts
+import RealmSwift
 
 class ChartViewController: UIViewController {
     @IBOutlet var barChartView: BarChartView!
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            let realm = try! Realm()
+
+            // 全データ検索
+            let results = realm.objects(StudyRecord.self)
+            print(results)
+            
             
             let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
             //たとえば一番最初は20だから全部20ずつ合計で20×３で60になる

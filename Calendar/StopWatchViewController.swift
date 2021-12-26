@@ -95,20 +95,17 @@ class StopWatchViewController: UIViewController {
                 
             }
             //ここから追加
-            let save = UIAlertAction(title: "保存", style: .default) { (acrion) in
-                self.dismiss(animated: true, completion: nil)
+            let save = UIAlertAction(title: "保存", style: .default) { [weak self]action in
+                self?.dismiss(animated: true, completion: nil)
                 
                 let studyRecord = StudyRecord()
                 studyRecord.date = Date()
                 studyRecord.quality = 2
-                studyRecord.time = 1000
+                studyRecord.time = TimeInterval(self?.count ?? 0)
                 let realm = try! Realm()
                 try! realm.write {
                     realm.add(studyRecord)
                 }
-
-                
-                
             }
             
             let pause = UIAlertAction(title: "一時停止", style: .default) { (acrion) in
