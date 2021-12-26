@@ -46,9 +46,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DxL-iW-P0f">
-                                <rect key="frame" x="39" y="106" width="337" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DxL-iW-P0f">
+                                <rect key="frame" x="30" y="108" width="354" height="32"/>
                                 <segments>
                                     <segment title="日"/>
                                     <segment title="週"/>
@@ -56,14 +55,23 @@
                                     <segment title="年"/>
                                 </segments>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="20" y="189" width="374" height="417"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w3Q-AQ-ReX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ByN-BG-5YC" firstAttribute="centerX" secondItem="Cz8-qu-JFF" secondAttribute="centerX" id="Le7-Cs-pK1"/>
+                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="DxL-iW-P0f" secondAttribute="trailing" constant="30" id="QYC-sp-1fm"/>
+                            <constraint firstItem="DxL-iW-P0f" firstAttribute="top" secondItem="w3Q-AQ-ReX" secondAttribute="top" constant="20" id="Qqp-ow-xx5"/>
+                            <constraint firstItem="ByN-BG-5YC" firstAttribute="top" secondItem="DxL-iW-P0f" secondAttribute="bottom" constant="60" id="SA2-gg-2lr"/>
+                            <constraint firstItem="DxL-iW-P0f" firstAttribute="centerX" secondItem="Cz8-qu-JFF" secondAttribute="centerX" id="Y2h-9f-0Zv"/>
+                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="ByN-BG-5YC" secondAttribute="trailing" constant="20" id="aWt-6Z-hyb"/>
+                            <constraint firstItem="DxL-iW-P0f" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="30" id="oZ9-Bc-T6L"/>
+                            <constraint firstItem="ByN-BG-5YC" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="20" id="sgG-cf-OfC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="集中グラフ" id="2qz-wV-6op"/>
                     <connections>
@@ -106,9 +114,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Qh-vyz">
-                                <rect key="frame" x="65" y="178" width="284" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="０" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Qh-vyz">
+                                <rect key="frame" x="70" y="238" width="274" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,6 +123,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="snk-JE-xX3"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="s5s-Qh-vyz" firstAttribute="centerX" secondItem="tSx-v5-UAE" secondAttribute="centerX" id="04p-vg-V0b"/>
+                            <constraint firstItem="s5s-Qh-vyz" firstAttribute="top" secondItem="snk-JE-xX3" secondAttribute="top" constant="150" id="TfW-Lg-pho"/>
+                            <constraint firstItem="s5s-Qh-vyz" firstAttribute="leading" secondItem="snk-JE-xX3" secondAttribute="leading" constant="70" id="VSF-qt-ycI"/>
+                            <constraint firstItem="snk-JE-xX3" firstAttribute="trailing" secondItem="s5s-Qh-vyz" secondAttribute="trailing" constant="70" id="rIX-kU-dD4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="640-Te-Pi4"/>
                     <navigationItem key="navigationItem" title="タイマー" id="u5o-F6-kEc"/>
