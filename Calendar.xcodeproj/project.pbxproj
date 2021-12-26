@@ -13,6 +13,7 @@
 		212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBD26D65676004561B0 /* AppDelegate.swift */; };
 		212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBF26D65686004561B0 /* SceneDelegate.swift */; };
 		212D7BC226D65D2B004561B0 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BC126D65D2B004561B0 /* Memo.swift */; };
+		214A03FF27783C5E00502DDB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 214A03FE27783C5E00502DDB /* Charts */; };
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
 		216771B4269EFB530005F50C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B3269EFB530005F50C /* Realm */; };
 		216771B6269EFB580005F50C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B5269EFB580005F50C /* RealmSwift */; };
@@ -28,7 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D5B7FF3D979C5B89AD7EA4C /* Pods_Calendar_CalendarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar_CalendarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211BB55E26A80AE900655F2F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		211BB56226B145B200655F2F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		211BB56426BA9E9E00655F2F /* event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event.swift; sourceTree = "<group>"; };
@@ -45,8 +45,6 @@
 		21D146D5273BCE6500CCF9E1 /* ChartBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartBarCell.xib; sourceTree = "<group>"; };
 		21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarCell.swift; sourceTree = "<group>"; };
 		21F926E5275BA7810000FA03 /* UIDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDatePickerViewController.swift; sourceTree = "<group>"; };
-		B16591580D786A0422E920DF /* Pods_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C074DC4BF477E05E76FD0DE3 /* Pods_CalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214A03FF27783C5E00502DDB /* Charts in Frameworks */,
 				216771BC269EFD9F0005F50C /* CalculateCalendarLogic in Frameworks */,
 				216771B6269EFB580005F50C /* RealmSwift in Frameworks */,
 				216771B9269EFD2E0005F50C /* FSCalendar in Frameworks */,
@@ -106,9 +105,6 @@
 		CE2FE2A402FC206F12E932B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B16591580D786A0422E920DF /* Pods_Calendar.framework */,
-				0D5B7FF3D979C5B89AD7EA4C /* Pods_Calendar_CalendarUITests.framework */,
-				C074DC4BF477E05E76FD0DE3 /* Pods_CalendarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +130,7 @@
 				216771B5269EFB580005F50C /* RealmSwift */,
 				216771B8269EFD2E0005F50C /* FSCalendar */,
 				216771BB269EFD9F0005F50C /* CalculateCalendarLogic */,
+				214A03FE27783C5E00502DDB /* Charts */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* Calendar.app */;
@@ -166,6 +163,7 @@
 				216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				216771B7269EFD2E0005F50C /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				216771BA269EFD9F0005F50C /* XCRemoteSwiftPackageReference "handMadeCalendarAdvance" */,
+				214A03FD2778382A00502DDB /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -354,6 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48GWJKGD2K;
 				INFOPLIST_FILE = Calendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48GWJKGD2K;
 				INFOPLIST_FILE = Calendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +408,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		214A03FD2778382A00502DDB /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
@@ -435,6 +443,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		214A03FE27783C5E00502DDB /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 214A03FD2778382A00502DDB /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
 		216771B3269EFB530005F50C /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */;

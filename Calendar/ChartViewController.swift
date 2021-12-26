@@ -6,51 +6,54 @@
 //
 
 import UIKit
+import Charts
 
 class ChartViewController: UIViewController {
-    @IBOutlet var collectionView: UICollectionView! {
-        didSet {
-            collectionView.delegate = self
-            collectionView.dataSource = self
-            collectionView.register(UINib(nibName: "ChartBarCell", bundle: .main), forCellWithReuseIdentifier: "ChartBarCell")
-        }
-    }
-    
-//    @IBOutlet var collectionViewFlowLayout: UICollectionViewLayout! {
-//        didSet {
-//            collectionViewFlowLayout.estimatedItemSize = CGSize(width: 20, height: 20)
-//        }
-//    }
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        collectionView.dataSource = self
-//
-//            collectionView.backgroundColor = .lightGray
-//
-//            // レイアウト設定
-//            let layout = UICollectionViewFlowLayout()
-//            layout.itemSize = CGSize(width: 100, height: 50)
-//            collectionView.collectionViewLayout = layout
-//    }
-}
-
-extension ChartViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChartBarCell", for: indexPath) as! ChartBarCell
+    @IBOutlet var barChartView: BarChartView!
         
-        cell.dayLabel.text = String(indexPath.row)
-        return cell
-    }
-}
-
-
-extension ChartViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.size.width / 7, height: 328)
-    }
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
+            //たとえば一番最初は20だから全部20ずつ合計で20×３で60になる
+            let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), yValues: [Double($0.element), Double($0.element), Double($0.element)]) }
+            let dataSet = BarChartDataSet(entries: entries)
+            let data = BarChartData(dataSet: dataSet)
+            barChartView.data = data
+            
+            // X軸のラベルの位置を下に設定
+            barChartView.xAxis.labelPosition = .bottom
+            // X軸のラベルの色を設定
+            barChartView.xAxis.labelTextColor = .systemGray
+            // X軸の線、グリッドを非表示にする
+            barChartView.xAxis.drawGridLinesEnabled = false
+            barChartView.xAxis.drawAxisLineEnabled = false
+            
+            barChartView.rightAxis.enabled = false
+            
+            // Y座標の値が0始まりになるように設定
+            barChartView.leftAxis.axisMinimum = 0.0
+            barChartView.leftAxis.drawZeroLineEnabled = true
+            barChartView.leftAxis.zeroLineColor = .systemGray
+            // ラベルの数を設定
+            barChartView.leftAxis.labelCount = 5
+            // ラベルの色を設定
+            barChartView.leftAxis.labelTextColor = .systemGray
+            // グリッドの色を設定
+            barChartView.leftAxis.gridColor = .systemGray
+            // 軸線は非表示にする
+            barChartView.leftAxis.drawAxisLineEnabled = false
+            
+            barChartView.legend.enabled = false
+            
+            dataSet.drawValuesEnabled = false
+            dataSet.colors = [.systemBlue, .systemMint, .systemTeal]
+            
+            // 平均
+            let avg = rawData.reduce(0) { return $0 + $1 } / rawData.count
+            let limitLine = ChartLimitLine(limit: Double(avg))
+            limitLine.lineColor = .systemOrange
+            limitLine.lineDashLengths = [4]
+            barChartView.leftAxis.addLimitLine(limitLine)
+        }
 }

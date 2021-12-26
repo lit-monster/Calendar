@@ -33,7 +33,7 @@ class StopWatchViewController: UIViewController {
     
     @IBOutlet var label:UILabel!
     
-    var count: Float = 0.0
+    var count: Int = 0
     
     var  timer:Timer = Timer()
     
@@ -78,7 +78,7 @@ class StopWatchViewController: UIViewController {
         if proximityState {
             if !timer.isValid {
                 //タイマーが動作してなかったら動かす
-                timer = Timer.scheduledTimer(timeInterval: 0.01,
+                timer = Timer.scheduledTimer(timeInterval: 1,
                                              target: self,
                                              selector: #selector(self.up),
                                              userInfo: nil,
@@ -127,8 +127,8 @@ class StopWatchViewController: UIViewController {
     
     @objc func up() {
         //countを0.01足す
-        count = count + 0.01
+        count = count + 1
         //            ラベル小数点以下2行まで表示
-        label.text = String(format: "%.2f", count)
+        label.text = String(count)
     }
 }
