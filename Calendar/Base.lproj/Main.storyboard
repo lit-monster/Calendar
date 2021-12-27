@@ -9,34 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--記録-->
-        <scene sceneID="FEC-G7-lOz">
-            <objects>
-                <viewController id="TEu-I8-nFm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1I1-3f-7n1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGg-ju-Koj" customClass="FSCalendar">
-                                <rect key="frame" x="10" y="113" width="394" height="518"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ZON-KU-26m"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="記録" id="du6-YB-ajm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O4O-H6-zJv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2117" y="-3585"/>
-        </scene>
         <!--集中グラフ-->
         <scene sceneID="v1I-hM-0hP">
             <objects>
@@ -79,32 +51,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1352.1739130434785" y="-3585.2678571428569"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="lfv-GR-Di5">
-            <objects>
-                <viewController id="zFe-2D-iq4" customClass="UIDatePickerViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="f24-xa-gKb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omD-RT-zrS">
-                                <rect key="frame" x="20" y="297" width="374" height="254"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="nHz-Cx-kvC" kind="embed" id="vlb-OK-fw3"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Vjz-xL-rKO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6os-Ri-fMA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hmd-1i-Hwl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-500.00000000000006" y="-4302.4553571428569"/>
+            <point key="canvasLocation" x="-2119" y="-3571"/>
         </scene>
         <!--タイマー-->
         <scene sceneID="qh8-NN-rYc">
@@ -155,7 +102,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLJ-st-ORR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1352" y="-4302"/>
+            <point key="canvasLocation" x="-2117" y="-4302"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xe9-1b-h9l">
@@ -168,14 +115,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
-                        <segue destination="5H5-2g-7tj" kind="relationship" relationship="viewControllers" id="CcJ-MG-hQr"/>
                         <segue destination="RGk-ha-wwz" kind="relationship" relationship="viewControllers" id="P95-HX-VLX"/>
-                        <segue destination="zFe-2D-iq4" kind="relationship" relationship="viewControllers" id="egr-Da-DdH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOC-sH-4Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2117" y="-5028"/>
+            <point key="canvasLocation" x="-2501" y="-5063"/>
         </scene>
         <!--Timer-->
         <scene sceneID="uYG-e8-Jkv">
@@ -194,61 +139,12 @@
             </objects>
             <point key="canvasLocation" x="-2865" y="-4302"/>
         </scene>
-        <!--calendar-->
-        <scene sceneID="i8B-BH-pMy">
-            <objects>
-                <navigationController id="5H5-2g-7tj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="calendar" image="calendar" catalog="system" id="cOd-ZD-v5Z"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Wg-mK-0Wj">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="TEu-I8-nFm" kind="relationship" relationship="rootViewController" id="sLr-VF-rQC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xnq-PI-WKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2117" y="-4302"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ZXF-Eg-gBS">
-            <objects>
-                <viewController id="nHz-Cx-kvC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Isk-yD-3eD">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="254"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o0-iu-lLm">
-                                <rect key="frame" x="0.0" y="20" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4yr-Kb-czD">
-                                <rect key="frame" x="0.0" y="49" width="374" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="8S0-Nr-cEl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VVY-A8-gfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="208.69565217391306" y="-4354.0178571428569"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
