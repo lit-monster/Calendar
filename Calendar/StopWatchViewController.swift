@@ -98,6 +98,42 @@ class StopWatchViewController: UIViewController {
             let save = UIAlertAction(title: "保存", style: .default) { [weak self]action in
                 self?.dismiss(animated: true, completion: nil)
                 
+                //保存ボタンを押された時の集中度合いの通知
+                //アラート生成
+                //UIAlertControllerのスタイルがalert
+                let alert: UIAlertController = UIAlertController(title: "集中度合いを記録しよう", message:  "どのくらい集中した？", preferredStyle:  UIAlertController.Style.alert)
+                // 確定ボタンの処理
+                let quality3Action: UIAlertAction = UIAlertAction(title: "超集中(★★★)", style: UIAlertAction.Style.default, handler:{
+                    // 確定ボタンが押された時の処理をクロージャ実装する
+                    (action: UIAlertAction!) -> Void in
+                    //実際の処理
+                    print("超集中")
+                })
+                // 確定ボタンの処理
+                let quality2Action: UIAlertAction = UIAlertAction(title: "集中(★★)", style: UIAlertAction.Style.default, handler:{
+                    // 確定ボタンが押された時の処理をクロージャ実装する
+                    (action: UIAlertAction!) -> Void in
+                    //実際の処理
+                    print("集中")
+                })
+                // 確定ボタンの処理
+                let quality1Action: UIAlertAction = UIAlertAction(title: "普通(★)", style: UIAlertAction.Style.default, handler:{
+                    // 確定ボタンが押された時の処理をクロージャ実装する
+                    (action: UIAlertAction!) -> Void in
+                    //実際の処理
+                    print("普通")
+                })
+
+                
+                //UIAlertControllerに集中ボタンをActionを追加
+                alert.addAction(quality3Action)
+                alert.addAction(quality2Action)
+                alert.addAction(quality1Action)
+            
+                //実際にAlertを表示する
+                self?.present(alert, animated: true, completion: nil)
+                
+                //保存する記録
                 let studyRecord = StudyRecord()
                 studyRecord.date = Date()
                 studyRecord.quality = 2
