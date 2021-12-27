@@ -44,6 +44,10 @@ class StopWatchViewController: UIViewController {
     let myDevice: UIDevice = UIDevice.current
     
     
+    //集中度合いの記録
+    let quality: [Int] = [3,2,1]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -108,6 +112,7 @@ class StopWatchViewController: UIViewController {
                     (action: UIAlertAction!) -> Void in
                     //実際の処理
                     print("超集中")
+                    print(self?.quality[0])
                 })
                 // 確定ボタンの処理
                 let quality2Action: UIAlertAction = UIAlertAction(title: "集中(★★)", style: UIAlertAction.Style.default, handler:{
@@ -115,6 +120,7 @@ class StopWatchViewController: UIViewController {
                     (action: UIAlertAction!) -> Void in
                     //実際の処理
                     print("集中")
+                    print(self?.quality[1])
                 })
                 // 確定ボタンの処理
                 let quality1Action: UIAlertAction = UIAlertAction(title: "普通(★)", style: UIAlertAction.Style.default, handler:{
@@ -122,6 +128,7 @@ class StopWatchViewController: UIViewController {
                     (action: UIAlertAction!) -> Void in
                     //実際の処理
                     print("普通")
+                    print(self?.quality[2])
                 })
 
                 
@@ -161,7 +168,7 @@ class StopWatchViewController: UIViewController {
     @objc func up() {
         //countを0.01足す
         count = count + 1
-        //            ラベル小数点以下2行まで表示
+        //ラベル表示
         label.text = String(count)
     }
 }
