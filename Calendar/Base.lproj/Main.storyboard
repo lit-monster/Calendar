@@ -27,9 +27,12 @@
                                     <segment title="年"/>
                                 </segments>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="189" width="374" height="417"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="199" width="374" height="417"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="417" id="wl1-u2-JQJ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w3Q-AQ-ReX"/>
@@ -85,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doQ-3w-klM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2865" y="-3571"/>
+            <point key="canvasLocation" x="-2865.217391304348" y="-3571.2053571428569"/>
         </scene>
         <!--chart-->
         <scene sceneID="5mc-TM-41e">

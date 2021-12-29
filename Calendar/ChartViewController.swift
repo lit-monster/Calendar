@@ -55,7 +55,7 @@ class ChartViewController: UIViewController {
             barChartView.legend.enabled = false
             
             dataSet.drawValuesEnabled = false
-            dataSet.colors = [.systemBlue, .systemMint, .systemTeal]
+            dataSet.colors = [#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1), #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)]
             
             // 平均
             let avg = rawData.reduce(0) { return $0 + $1 } / rawData.count
