@@ -11,6 +11,8 @@ import RealmSwift
 class StopWatchViewController: UIViewController {
     var feedbackGenerator : UINotificationFeedbackGenerator? = nil
     
+    @IBOutlet weak var timerLabel: UILabel!
+    
     @IBOutlet var label:UILabel!
     
     var count: Int = 0
@@ -36,8 +38,8 @@ class StopWatchViewController: UIViewController {
             object: nil
         )
         // インスタンスを生成し prepare() をコール
-                self.feedbackGenerator = UINotificationFeedbackGenerator()
-                self.feedbackGenerator?.prepare()
+        self.feedbackGenerator = UINotificationFeedbackGenerator()
+        self.feedbackGenerator?.prepare()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +51,7 @@ class StopWatchViewController: UIViewController {
         super.viewDidDisappear(animated)
         UIDevice.current.isProximityMonitoringEnabled = false
     }
-
+    
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
         let proximityState = UIDevice.current.proximityState
@@ -121,13 +123,13 @@ class StopWatchViewController: UIViewController {
                         realm.add(studyRecord)
                     }
                 }
-
+                
                 
                 //UIAlertControllerに集中ボタンをActionを追加
                 alert.addAction(quality3Action)
                 alert.addAction(quality2Action)
                 alert.addAction(quality1Action)
-            
+                
                 //実際にAlertを表示する
                 self.present(alert, animated: true, completion: nil)
             }
@@ -147,6 +149,10 @@ class StopWatchViewController: UIViewController {
         //countを0.01足す
         count = count + 1
         //ラベル表示
-        label.text = String(count)
+        let interval = Int(count)
+        let seconds = interval % 60
+        let minutes = (interval / 60) % 60
+        let hours = (interval / 3600)
+        label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
 }
