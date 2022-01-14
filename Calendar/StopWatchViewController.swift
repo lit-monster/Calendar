@@ -70,8 +70,11 @@ class StopWatchViewController: UIViewController {
             timer.invalidate()
             self.feedbackGenerator?.notificationOccurred(.success)
             let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { (action) in
+            let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in
                 self.dismiss(animated: true, completion: nil)
+                
+                self.count = count - count
+                label.text = String(count)
             }
             let save = UIAlertAction(title: "保存", style: .default) { _ in
                 //保存ボタンを押された時の集中度合いの通知
