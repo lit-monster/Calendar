@@ -17,6 +17,7 @@
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
 		216771B4269EFB530005F50C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B3269EFB530005F50C /* Realm */; };
 		216771B6269EFB580005F50C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B5269EFB580005F50C /* RealmSwift */; };
+		217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217A1F9427DDF13D0082B2BC /* Colors.xcassets */; };
 		21A1D49E268C67AD00C07A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A1D49D268C67AD00C07A86 /* ViewController.swift */; };
 		21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D49F268C67AD00C07A86 /* Main.storyboard */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		212D7BBF26D65686004561B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		212D7BC126D65D2B004561B0 /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		216771AF269EF2570005F50C /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
+		217A1F9427DDF13D0082B2BC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A1D49D268C67AD00C07A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21A1D4A0268C67AD00C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
+				217A1F9427DDF13D0082B2BC /* Colors.xcassets */,
 				211BB56426BA9E9E00655F2F /* event.swift */,
 				21D146D5273BCE6500CCF9E1 /* ChartBarCell.xib */,
 				21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */,
@@ -171,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */,
 				21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */,
 				21D146D6273BCE6500CCF9E1 /* ChartBarCell.xib in Resources */,
 				21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */,
