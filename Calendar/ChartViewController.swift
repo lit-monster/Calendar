@@ -32,7 +32,7 @@ class ChartViewController: UIViewController {
             // X軸のラベルの位置を下に設定
             barChartView.xAxis.labelPosition = .bottom
             // X軸のラベルの色を設定
-            barChartView.xAxis.labelTextColor = .systemGray
+            barChartView.xAxis.labelTextColor = UIColor(named: "n")!
             // X軸の線、グリッドを非表示にする
             barChartView.xAxis.drawGridLinesEnabled = false
             barChartView.xAxis.drawAxisLineEnabled = false
@@ -46,9 +46,9 @@ class ChartViewController: UIViewController {
             // ラベルの数を設定
             barChartView.leftAxis.labelCount = 5
             // ラベルの色を設定
-            barChartView.leftAxis.labelTextColor = .systemGray
+            barChartView.leftAxis.labelTextColor = UIColor(named: "n")!
             // グリッドの色を設定
-            barChartView.leftAxis.gridColor = .systemGray
+            barChartView.leftAxis.gridColor = UIColor(named: "n")!
             // 軸線は非表示にする
             barChartView.leftAxis.drawAxisLineEnabled = false
             

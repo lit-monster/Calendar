@@ -11,7 +11,7 @@ class ChartBarCell: UICollectionViewCell {
     @IBOutlet weak var dayLabel: UILabel!
     
     override func prepareForReuse() {
-        contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = UIColor(named: "n")!
     }
     
     func setText(_ text: String?) {

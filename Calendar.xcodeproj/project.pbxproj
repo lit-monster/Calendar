@@ -89,14 +89,14 @@
 				211BB55E26A80AE900655F2F /* ChartViewController.swift */,
 				211BB56226B145B200655F2F /* CalendarViewController.swift */,
 				21A1D49D268C67AD00C07A86 /* ViewController.swift */,
-				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
-				21A1D4A7268C67B100C07A86 /* Info.plist */,
-				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
-				217A1F9427DDF13D0082B2BC /* Colors.xcassets */,
 				211BB56426BA9E9E00655F2F /* event.swift */,
+				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21D146D5273BCE6500CCF9E1 /* ChartBarCell.xib */,
 				21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */,
 				21F926E5275BA7810000FA03 /* UIDatePickerViewController.swift */,
+				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
+				217A1F9427DDF13D0082B2BC /* Colors.xcassets */,
+				21A1D4A7268C67B100C07A86 /* Info.plist */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
