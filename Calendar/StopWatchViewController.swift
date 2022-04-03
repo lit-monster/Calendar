@@ -58,6 +58,7 @@ class StopWatchViewController: UIViewController {
         print(proximityState)
         if proximityState {
             if !timer.isValid {
+                self.feedbackGenerator?.notificationOccurred(.success)
                 //タイマーが動作してなかったら動かす
                 timer = Timer.scheduledTimer(timeInterval: 1,
                                              target: self,
@@ -68,6 +69,7 @@ class StopWatchViewController: UIViewController {
             }
         } else {
             timer.invalidate()
+//            hapticfeedback始まり
             self.feedbackGenerator?.notificationOccurred(.success)
             let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in

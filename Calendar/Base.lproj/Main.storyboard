@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DxL-iW-P0f">
-                                <rect key="frame" x="30" y="108" width="354" height="32"/>
+                                <rect key="frame" x="30" y="160" width="354" height="32"/>
                                 <segments>
                                     <segment title="日"/>
                                     <segment title="週"/>
@@ -26,7 +26,7 @@
                                 </segments>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="199" width="374" height="417"/>
+                                <rect key="frame" x="20" y="251" width="374" height="417"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="417" id="wl1-u2-JQJ"/>
@@ -46,7 +46,7 @@
                             <constraint firstItem="ByN-BG-5YC" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="20" id="sgG-cf-OfC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="集中グラフ" id="2qz-wV-6op"/>
+                    <navigationItem key="navigationItem" title="集中グラフ" largeTitleDisplayMode="always" id="2qz-wV-6op"/>
                     <connections>
                         <outlet property="barChartView" destination="ByN-BG-5YC" id="xkk-Gp-eGI"/>
                     </connections>
@@ -54,6 +54,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YP-YC-pVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2119" y="-3571"/>
+        </scene>
+        <!--ハイライト-->
+        <scene sceneID="4cE-xX-Xtm">
+            <objects>
+                <viewController id="hBJ-zm-PnO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CYx-gn-3lc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 2" translatesAutoresizingMaskIntoConstraints="NO" id="gwW-HI-ZOd">
+                                <rect key="frame" x="-95" y="0.0" width="610" height="926"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YgN-W6-Rhw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ハイライト" id="umc-jm-X7i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lit-Z3-fUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1384.0579710144928" y="-3571.2053571428569"/>
         </scene>
         <!--タイマー-->
         <scene sceneID="qh8-NN-rYc">
@@ -64,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Qh-vyz">
-                                <rect key="frame" x="70" y="238" width="274" height="61"/>
+                                <rect key="frame" x="70" y="290" width="274" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,7 +101,6 @@
                             <constraint firstItem="snk-JE-xX3" firstAttribute="trailing" secondItem="s5s-Qh-vyz" secondAttribute="trailing" constant="70" id="rIX-kU-dD4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="640-Te-Pi4"/>
                     <navigationItem key="navigationItem" title="タイマー" id="u5o-F6-kEc"/>
                     <connections>
                         <outlet property="label" destination="s5s-Qh-vyz" id="t3M-qa-bpi"/>
@@ -94,8 +115,8 @@
             <objects>
                 <navigationController id="RGk-ha-wwz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="chart" image="chart.bar.xaxis" catalog="system" id="hzv-AS-EsC"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="18h-Oy-Enw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="18h-Oy-Enw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -105,6 +126,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLJ-st-ORR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2117" y="-4302"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="7kX-ta-Iit">
+            <objects>
+                <navigationController id="7Rx-rP-EjZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="a.magnify" catalog="system" id="HF6-qI-6Rj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jt8-1Y-q9U">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hBJ-zm-PnO" kind="relationship" relationship="rootViewController" id="1tw-NB-lQA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3B-LZ-I77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1383" y="-4302"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xe9-1b-h9l">
@@ -118,6 +156,7 @@
                     <connections>
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
                         <segue destination="RGk-ha-wwz" kind="relationship" relationship="viewControllers" id="P95-HX-VLX"/>
+                        <segue destination="7Rx-rP-EjZ" kind="relationship" relationship="viewControllers" id="Vpc-l0-aIn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOC-sH-4Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -129,8 +168,8 @@
             <objects>
                 <navigationController id="7v2-jG-oNr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="kQ7-0n-rHa"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2MP-7d-Nrz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2MP-7d-Nrz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -143,6 +182,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 2" width="552" height="886"/>
+        <image name="a.magnify" catalog="system" width="128" height="100"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
