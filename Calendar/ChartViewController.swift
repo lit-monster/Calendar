@@ -215,10 +215,10 @@ class ChartViewController: UIViewController {
     
     func setupBarChart(inputData: [[Double]]) {
         
-        let entries = inputData.enumerated().map { BarChartDataEntry(x: Double($0.offset), yValues: $0.flatMap{ $0 })}
-        let dataSet = BarChartDataSet(entries: entries)
-        let data = BarChartData(dataSet: dataSet)
-        barChartView.data = data
+//        let entries = inputData.enumerated().map { BarChartDataEntry(x: Double($0.offset), yValues: $0.flatMap{ $0 })}
+//        let dataSet = BarChartDataSet(entries: entries)
+//        let data = BarChartData(dataSet: dataSet)
+//        barChartView.data = data
         
         // X軸のラベルの位置を下に設定
         barChartView.xAxis.labelPosition = .bottom
@@ -245,16 +245,16 @@ class ChartViewController: UIViewController {
         
         barChartView.legend.enabled = false
         
-        dataSet.drawValuesEnabled = false
-        dataSet.colors = [UIColor(named: "charts-deepblue")!,
-                          UIColor(named: "charts-blue")!,
-                          UIColor(named: "charts-lightblue")!]
+//        dataSet.drawValuesEnabled = false
+//        dataSet.colors = [UIColor(named: "charts-deepblue")!,
+//                          UIColor(named: "charts-blue")!,
+//                          UIColor(named: "charts-lightblue")!]
         
         // 平均
-        let avg = rawData.reduce(0) { return $0 + $1 } / rawData.count
-        let limitLine = ChartLimitLine(limit: Double(avg))
-        limitLine.lineColor = .systemOrange
-        limitLine.lineDashLengths = [4]
-        barChartView.leftAxis.addLimitLine(limitLine)
+//        let avg = rawData.reduce(0) { return $0 + $1 } / rawData.count
+//        let limitLine = ChartLimitLine(limit: Double(avg))
+//        limitLine.lineColor = .systemOrange
+//        limitLine.lineDashLengths = [4]
+//        barChartView.leftAxis.addLimitLine(limitLine)
     }
 }
