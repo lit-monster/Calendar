@@ -151,7 +151,7 @@ class ChartViewController: UIViewController {
             }
         }
         
-        let twoDayAgo = yesterdayArray.map {
+        let twoDays = yesterdayArray.map {
             $0.map {
                 $0.time
             }.reduce(0) { (num1, num2) -> Double in
@@ -199,8 +199,9 @@ class ChartViewController: UIViewController {
             }
         }
         
-        print([today, twoDaysAgo, threeDays, fourDays, fiveDays, sixDays, sevenDaysAgo])
+        print([today, twoDays, threeDays, fourDays, fiveDays, sixDays, sevenDaysAgo])
         
+        setupBarChart(inputData: [today, twoDays, threeDays, fourDays, fiveDays, sixDays, sevenDaysAgo])
 //        array.reduce(0) {(todayQuality1 , todayQuality2 , todayQuality3)}
 //        todayQuality1 + todayQuality2 + todayQuality3
 //
@@ -216,9 +217,16 @@ class ChartViewController: UIViewController {
     func setupBarChart(inputData: [[Double]]) {
         
 //        let entries = inputData.enumerated().map { BarChartDataEntry(x: Double($0.offset), yValues: $0.flatMap{ $0 })}
-//        let dataSet = BarChartDataSet(entries: entries)
-//        let data = BarChartData(dataSet: dataSet)
-//        barChartView.data = data
+        
+        //dummy data below...
+//        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
+        //たとえば一番最初は20だから全部20ずつ合計で20×３で60になる
+        let entries = inputData.map { BarChartDataEntry(x: Double(inputData.index(of: $0)!), yValues: $0) }
+        
+        
+        let dataSet = BarChartDataSet(entries: entries)
+        let data = BarChartData(dataSet: dataSet)
+        barChartView.data = data
         
         // X軸のラベルの位置を下に設定
         barChartView.xAxis.labelPosition = .bottom
@@ -245,13 +253,13 @@ class ChartViewController: UIViewController {
         
         barChartView.legend.enabled = false
         
-//        dataSet.drawValuesEnabled = false
-//        dataSet.colors = [UIColor(named: "charts-deepblue")!,
-//                          UIColor(named: "charts-blue")!,
-//                          UIColor(named: "charts-lightblue")!]
+        dataSet.drawValuesEnabled = false
+        dataSet.colors = [UIColor(named: "charts-deepblue")!,
+                          UIColor(named: "charts-blue")!,
+                          UIColor(named: "charts-lightblue")!]
         
         // 平均
-//        let avg = rawData.reduce(0) { return $0 + $1 } / rawData.count
+//        let avg = inputData.reduce(0) { return $0 + $1 } / rawData.count
 //        let limitLine = ChartLimitLine(limit: Double(avg))
 //        limitLine.lineColor = .systemOrange
 //        limitLine.lineDashLengths = [4]

@@ -6,10 +6,3 @@
 //
 //
 //import Foundation
-//import UIKit
-//
-//class SummaryCollectionView: UIViewController {
-//    override func prepareForReuse() {
-//        contentView.backgroundColor = UIColor(named: "summary")!
-//    }
-//}
