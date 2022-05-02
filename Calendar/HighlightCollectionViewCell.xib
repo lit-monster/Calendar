@@ -23,13 +23,11 @@
                             <rect key="frame" x="0.0" y="0.0" width="440" height="214"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-ku-hti">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-ku-hti">
                                     <rect key="frame" x="12" y="91" width="186" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="月曜日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-0J-VP8">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="月曜日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-0J-VP8">
                                             <rect key="frame" x="2" y="3" width="52" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -37,6 +35,10 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemGray3Color"/>
                                     <color key="tintColor" systemColor="systemCyanColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="HXz-0J-VP8" secondAttribute="bottom" constant="3" id="Niz-YD-R3M"/>
+                                        <constraint firstItem="HXz-0J-VP8" firstAttribute="top" secondItem="u7E-ku-hti" secondAttribute="top" constant="3" id="Pmg-WP-F4I"/>
+                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                             <integer key="value" value="6"/>
@@ -44,34 +46,35 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBouds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="52m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIN-x8-oot">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="52m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIN-x8-oot">
                                     <rect key="frame" x="12" y="68" width="35" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日は昨日よりも超集中の時間が長いです。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfS-tz-Gee">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今日は昨日よりも超集中の時間が長いです。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfS-tz-Gee">
                                     <rect key="frame" x="12" y="37" width="286" height="17"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="ZVP-Nu-XHM"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" systemColor="systemGrayColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="超集中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vU-eH-XTB">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="超集中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vU-eH-XTB">
                                     <rect key="frame" x="12" y="8" width="62" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="mpY-ZR-ZaY"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                     <color key="textColor" systemColor="linkColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-7l-58d">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-7l-58d">
                                     <rect key="frame" x="12" y="155" width="328" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日曜日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6H-fg-RrY">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="日曜日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6H-fg-RrY">
                                             <rect key="frame" x="2" y="3" width="52" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -79,6 +82,10 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemCyanColor"/>
                                     <color key="tintColor" systemColor="systemCyanColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="R6H-fg-RrY" secondAttribute="bottom" constant="3" id="BOr-p6-hYG"/>
+                                        <constraint firstItem="R6H-fg-RrY" firstAttribute="top" secondItem="KcB-7l-58d" secondAttribute="top" constant="3" id="ZtL-dj-lTB"/>
+                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                             <integer key="value" value="6"/>
@@ -86,19 +93,31 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBouds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hr1-wo-Fvi">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hr1-wo-Fvi">
                                     <rect key="frame" x="12" y="59" width="354" height="1"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="ExG-Mi-S8Y"/>
+                                    </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1h38m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjL-hW-80h">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1h38m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjL-hW-80h">
                                     <rect key="frame" x="12" y="130" width="53" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="u7E-ku-hti" firstAttribute="top" secondItem="MIN-x8-oot" secondAttribute="bottom" constant="2" id="3Kg-qp-CFi"/>
+                                <constraint firstItem="GfS-tz-Gee" firstAttribute="top" secondItem="6vU-eH-XTB" secondAttribute="bottom" constant="5" id="EdU-bI-VaH"/>
+                                <constraint firstItem="YjL-hW-80h" firstAttribute="top" secondItem="u7E-ku-hti" secondAttribute="bottom" constant="12" id="bwC-0R-pUO"/>
+                                <constraint firstAttribute="bottom" secondItem="KcB-7l-58d" secondAttribute="bottom" constant="32" id="jcO-We-wmq"/>
+                                <constraint firstItem="MIN-x8-oot" firstAttribute="top" secondItem="hr1-wo-Fvi" secondAttribute="bottom" constant="8" symbolic="YES" id="uhb-ux-adm"/>
+                                <constraint firstItem="u7E-ku-hti" firstAttribute="top" secondItem="MIN-x8-oot" secondAttribute="bottom" constant="2" id="vYO-y3-D9j"/>
+                                <constraint firstItem="hr1-wo-Fvi" firstAttribute="top" secondItem="GfS-tz-Gee" secondAttribute="bottom" constant="5" id="w5Q-a3-Nmf"/>
+                                <constraint firstItem="KcB-7l-58d" firstAttribute="top" secondItem="YjL-hW-80h" secondAttribute="bottom" constant="4" id="yHO-Uq-lBy"/>
+                                <constraint firstItem="6vU-eH-XTB" firstAttribute="top" secondItem="Iae-MT-4ze" secondAttribute="top" constant="8" id="zKm-YV-WsW"/>
+                            </constraints>
                         </view>
                         <blurEffect style="regular"/>
                         <userDefinedRuntimeAttributes>
@@ -118,6 +137,9 @@
                 <constraint firstItem="NXI-Kc-J8F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nxT-zh-K3y"/>
             </constraints>
             <size key="customSize" width="440" height="214"/>
+            <connections>
+                <outlet property="blurView" destination="NXI-Kc-J8F" id="Ixi-l6-w15"/>
+            </connections>
             <point key="canvasLocation" x="420.28985507246381" y="145.98214285714286"/>
         </collectionViewCell>
     </objects>

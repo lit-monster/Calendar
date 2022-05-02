@@ -22,7 +22,6 @@
 		21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D49F268C67AD00C07A86 /* Main.storyboard */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
-		21D146D6273BCE6500CCF9E1 /* ChartBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D146D5273BCE6500CCF9E1 /* ChartBarCell.xib */; };
 		21D146D8273BCE8100CCF9E1 /* ChartBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A1D4A7268C67B100C07A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21D146D5273BCE6500CCF9E1 /* ChartBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartBarCell.xib; sourceTree = "<group>"; };
 		21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +86,6 @@
 				21A1D49F268C67AD00C07A86 /* Main.storyboard */,
 				218C51AB27FBE74A00973A80 /* HighlightViewController.swift */,
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
-				21D146D5273BCE6500CCF9E1 /* ChartBarCell.xib */,
 				214521B427FA863B00A9C9DC /* HighlightCollectionViewCell.swift */,
 				214521B527FA863B00A9C9DC /* HighlightCollectionViewCell.xib */,
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
@@ -173,7 +170,6 @@
 			files = (
 				217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */,
 				21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */,
-				21D146D6273BCE6500CCF9E1 /* ChartBarCell.xib in Resources */,
 				214521B727FA863B00A9C9DC /* HighlightCollectionViewCell.xib in Resources */,
 				21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */,
 				21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */,

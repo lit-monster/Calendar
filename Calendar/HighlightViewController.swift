@@ -9,29 +9,31 @@ import UIKit
 
 class HighlightViewController: UIViewController {
     
-    @IBOutlet var blurView: UIVisualEffectView! {
+    @IBOutlet var collectionView: UICollectionView! {
         didSet {
-            blurView.layer.cornerRadius = 12
-            blurView.layer.masksToBounds = true
+            collectionView.delegate = self
+            collectionView.dataSource = self
+            collectionView.register(UINib(nibName: "HighlightCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HighlightCollectionViewCell")
         }
     }
-    
 
+    @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: self.view.frame.width, height: 64)
 
         // Do any additional setup after loading the view.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension HighlightViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HighlightCollectionViewCell", for: indexPath)
+        return cell
+    }
 }

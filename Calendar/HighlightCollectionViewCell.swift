@@ -8,15 +8,19 @@
 import UIKit
 
 class HighlightCollectionViewCell: UICollectionViewCell {
-
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
 //        self.view.innerShadow()
     }
+    
+    @IBOutlet var blurView: UIVisualEffectView! {
+        didSet {
+            blurView.layer.cornerRadius = 12
+            blurView.layer.masksToBounds = true
+        }
+    }
 }
-
 
 extension UIView {
     func innerShadow() {
