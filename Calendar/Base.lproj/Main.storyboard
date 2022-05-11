@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -65,7 +66,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LUu-yx-kxz">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EPK-DH-PCn">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -78,14 +80,14 @@
                         <viewLayoutGuide key="safeArea" id="YgN-W6-Rhw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LUu-yx-kxz" firstAttribute="top" secondItem="YgN-W6-Rhw" secondAttribute="top" id="1zn-H8-nmZ"/>
+                            <constraint firstItem="LUu-yx-kxz" firstAttribute="top" secondItem="CYx-gn-3lc" secondAttribute="top" id="1zn-H8-nmZ"/>
                             <constraint firstItem="gwW-HI-ZOd" firstAttribute="top" secondItem="CYx-gn-3lc" secondAttribute="top" id="4Py-8m-NVL"/>
                             <constraint firstItem="gwW-HI-ZOd" firstAttribute="trailing" secondItem="YgN-W6-Rhw" secondAttribute="trailing" id="CJP-Og-byu"/>
                             <constraint firstAttribute="bottom" secondItem="gwW-HI-ZOd" secondAttribute="bottom" id="RPO-QN-Eqa"/>
                             <constraint firstItem="YgN-W6-Rhw" firstAttribute="trailing" secondItem="LUu-yx-kxz" secondAttribute="trailing" id="WhO-je-OzO"/>
                             <constraint firstItem="LUu-yx-kxz" firstAttribute="leading" secondItem="YgN-W6-Rhw" secondAttribute="leading" id="b22-5a-3iS"/>
                             <constraint firstItem="gwW-HI-ZOd" firstAttribute="leading" secondItem="YgN-W6-Rhw" secondAttribute="leading" id="cA1-8c-ojY"/>
-                            <constraint firstItem="YgN-W6-Rhw" firstAttribute="bottom" secondItem="LUu-yx-kxz" secondAttribute="bottom" id="h3y-EX-p7h"/>
+                            <constraint firstAttribute="bottom" secondItem="LUu-yx-kxz" secondAttribute="bottom" id="h3y-EX-p7h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ハイライト" id="umc-jm-X7i"/>
@@ -152,7 +154,9 @@
         <scene sceneID="7kX-ta-Iit">
             <objects>
                 <navigationController id="7Rx-rP-EjZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="highlight" image="filemenu.and.selection" catalog="system" id="HF6-qI-6Rj"/>
+                    <tabBarItem key="tabBarItem" title="highlight" image="filemenu.and.selection" catalog="system" id="HF6-qI-6Rj">
+                        <color key="badgeColor" name="n"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jt8-1Y-q9U">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -438,6 +442,9 @@
         <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="glass" width="415.5" height="885"/>
         <image name="timer" catalog="system" width="128" height="121"/>
+        <namedColor name="n">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

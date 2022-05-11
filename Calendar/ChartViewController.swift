@@ -255,7 +255,7 @@ class ChartViewController: UIViewController {
         
         dataSet.drawValuesEnabled = false
         dataSet.colors = [UIColor(named: "charts-deepblue")!,
-                          UIColor(named: "charts-blue")!,
+                          UIColor(named: "charts-blue")!,   
                           UIColor(named: "charts-lightblue")!]
         
         // 平均
