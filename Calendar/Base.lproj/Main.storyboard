@@ -155,7 +155,7 @@
             <objects>
                 <navigationController id="7Rx-rP-EjZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="highlight" image="filemenu.and.selection" catalog="system" id="HF6-qI-6Rj">
-                        <color key="badgeColor" name="n"/>
+                        <color key="badgeColor" name="summary"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jt8-1Y-q9U">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -442,8 +442,8 @@
         <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="glass" width="415.5" height="885"/>
         <image name="timer" catalog="system" width="128" height="121"/>
-        <namedColor name="n">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <namedColor name="summary">
+            <color red="0.94509803921568625" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
