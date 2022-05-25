@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DxL-iW-P0f">
-                                <rect key="frame" x="30" y="160" width="354" height="32"/>
+                                <rect key="frame" x="16" y="160" width="382" height="32"/>
                                 <segments>
                                     <segment title="W"/>
                                     <segment title="M"/>
@@ -29,19 +29,47 @@
                                     <action selector="segmentedControl:" destination="Khu-uL-2wZ" eventType="valueChanged" id="xcN-ut-u6l"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="328" width="374" height="417"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="322" width="382" height="461"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-rh-TmD">
+                                <rect key="frame" x="16" y="207" width="382" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gu9-Df-QX5">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5h30m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnp-rq-jcA">
+                                        <rect key="frame" x="0.0" y="20.5" width="382" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dec 5-11, 2011" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foX-az-eX2">
+                                        <rect key="frame" x="0.0" y="63.5" width="382" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w3Q-AQ-ReX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="DxL-iW-P0f" secondAttribute="trailing" constant="30" id="QYC-sp-1fm"/>
+                            <constraint firstItem="ByN-BG-5YC" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="16" id="1Ax-Q7-x6E"/>
+                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="ByN-BG-5YC" secondAttribute="trailing" constant="16" id="9A5-ww-DTR"/>
+                            <constraint firstItem="pZr-rh-TmD" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="16" id="FbU-ow-Ds1"/>
+                            <constraint firstItem="ByN-BG-5YC" firstAttribute="top" secondItem="pZr-rh-TmD" secondAttribute="bottom" constant="30" id="KWO-EP-5jG"/>
+                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="DxL-iW-P0f" secondAttribute="trailing" constant="16" id="QYC-sp-1fm"/>
                             <constraint firstItem="DxL-iW-P0f" firstAttribute="top" secondItem="w3Q-AQ-ReX" secondAttribute="top" constant="20" id="Qqp-ow-xx5"/>
-                            <constraint firstItem="DxL-iW-P0f" firstAttribute="centerX" secondItem="Cz8-qu-JFF" secondAttribute="centerX" id="Y2h-9f-0Zv"/>
-                            <constraint firstItem="DxL-iW-P0f" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="30" id="oZ9-Bc-T6L"/>
+                            <constraint firstItem="pZr-rh-TmD" firstAttribute="top" secondItem="DxL-iW-P0f" secondAttribute="bottom" constant="16" id="SmP-Nr-Ooi"/>
+                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="pZr-rh-TmD" secondAttribute="trailing" constant="16" id="c4a-kv-acv"/>
+                            <constraint firstItem="DxL-iW-P0f" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="16" id="oZ9-Bc-T6L"/>
+                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="bottom" secondItem="ByN-BG-5YC" secondAttribute="bottom" constant="30" id="zEm-hl-DqL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="集中グラフ" largeTitleDisplayMode="always" id="2qz-wV-6op"/>
@@ -52,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YP-YC-pVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2119" y="-3571"/>
+            <point key="canvasLocation" x="-2120.289855072464" y="-3571.2053571428569"/>
         </scene>
         <!--ハイライト-->
         <scene sceneID="4cE-xX-Xtm">
@@ -453,6 +481,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

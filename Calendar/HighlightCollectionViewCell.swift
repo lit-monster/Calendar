@@ -18,9 +18,12 @@ class HighlightCollectionViewCell: UICollectionViewCell {
         didSet {
             blurView.layer.cornerRadius = 12
             blurView.layer.masksToBounds = true
+            blurView.innerShadow()
         }
+        
     }
 }
+
 extension UIView {
     func innerShadow() {
         let path = UIBezierPath(rect: CGRect(x: -5.0, y: -5.0, width: self.bounds.size.width + 5.0, height: 5.0 ))
