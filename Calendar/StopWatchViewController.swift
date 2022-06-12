@@ -97,6 +97,11 @@ class StopWatchViewController: UIViewController {
                     try! realm.write {
                         realm.add(studyRecord)
                     }
+                    
+                    print("Done111!!")
+                    self.count = count - count
+                    label.text = String(count)
+                    
                 }
                 // 確定ボタンの処理
                 let quality2Action = UIAlertAction(title: "集中(★★)", style: .default) { [weak self] _ in
@@ -127,6 +132,9 @@ class StopWatchViewController: UIViewController {
                     try! realm.write {
                         realm.add(studyRecord)
                     }
+                    print("done222")
+                
+                    
                 }
                 
                 

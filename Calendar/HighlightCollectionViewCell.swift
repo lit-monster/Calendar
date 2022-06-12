@@ -30,7 +30,7 @@ extension UIView {
         let innerLayer = CALayer()
         innerLayer.frame = self.bounds
         innerLayer.masksToBounds = true
-        innerLayer.shadowColor = UIColor.systemPink.cgColor
+        innerLayer.shadowColor = UIColor.white.cgColor
         innerLayer.shadowOffset = CGSize(width: 2.5, height: 2.5)
         innerLayer.shadowOpacity = 0.5
         innerLayer.shadowPath = path.cgPath

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C8i-iC-cub">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -29,10 +29,6 @@
                                     <action selector="segmentedControl:" destination="Khu-uL-2wZ" eventType="valueChanged" id="xcN-ut-u6l"/>
                                 </connections>
                             </segmentedControl>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="322" width="382" height="461"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-rh-TmD">
                                 <rect key="frame" x="16" y="207" width="382" height="85"/>
                                 <subviews>
@@ -56,6 +52,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-BG-5YC" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="322" width="382" height="214"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w3Q-AQ-ReX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,13 +63,13 @@
                             <constraint firstItem="ByN-BG-5YC" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="16" id="1Ax-Q7-x6E"/>
                             <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="ByN-BG-5YC" secondAttribute="trailing" constant="16" id="9A5-ww-DTR"/>
                             <constraint firstItem="pZr-rh-TmD" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="16" id="FbU-ow-Ds1"/>
-                            <constraint firstItem="ByN-BG-5YC" firstAttribute="top" secondItem="pZr-rh-TmD" secondAttribute="bottom" constant="30" id="KWO-EP-5jG"/>
                             <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="DxL-iW-P0f" secondAttribute="trailing" constant="16" id="QYC-sp-1fm"/>
                             <constraint firstItem="DxL-iW-P0f" firstAttribute="top" secondItem="w3Q-AQ-ReX" secondAttribute="top" constant="20" id="Qqp-ow-xx5"/>
                             <constraint firstItem="pZr-rh-TmD" firstAttribute="top" secondItem="DxL-iW-P0f" secondAttribute="bottom" constant="16" id="SmP-Nr-Ooi"/>
                             <constraint firstItem="w3Q-AQ-ReX" firstAttribute="trailing" secondItem="pZr-rh-TmD" secondAttribute="trailing" constant="16" id="c4a-kv-acv"/>
+                            <constraint firstItem="ByN-BG-5YC" firstAttribute="top" secondItem="pZr-rh-TmD" secondAttribute="bottom" constant="30" id="dNY-Vl-N7d"/>
                             <constraint firstItem="DxL-iW-P0f" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" constant="16" id="oZ9-Bc-T6L"/>
-                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="bottom" secondItem="ByN-BG-5YC" secondAttribute="bottom" constant="30" id="zEm-hl-DqL"/>
+                            <constraint firstItem="w3Q-AQ-ReX" firstAttribute="bottom" secondItem="ByN-BG-5YC" secondAttribute="bottom" constant="277" id="og8-sL-3ld"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="集中グラフ" largeTitleDisplayMode="always" id="2qz-wV-6op"/>
@@ -205,6 +205,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
@@ -215,6 +216,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOC-sH-4Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2501" y="-5063"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gkK-Qc-npB">
+            <objects>
+                <viewController id="C8i-iC-cub" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kvm-Bq-rYC" customClass="ChartBarCell" customModule="Calendar" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTc-oz-Y3M">
+                                <rect key="frame" x="42" y="142" width="330" height="612"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1cQ-sd-Ndb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHY-uf-Mnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1339.1304347826087" y="-5063.1696428571422"/>
         </scene>
         <!--Timer-->
         <scene sceneID="uYG-e8-Jkv">
@@ -462,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZT-A6-UKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-717" y="-3638"/>
+            <point key="canvasLocation" x="-574" y="-3571"/>
         </scene>
     </scenes>
     <resources>

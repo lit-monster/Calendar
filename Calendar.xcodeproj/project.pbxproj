@@ -15,14 +15,15 @@
 		214521B727FA863B00A9C9DC /* HighlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214521B527FA863B00A9C9DC /* HighlightCollectionViewCell.xib */; };
 		214A03FF27783C5E00502DDB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 214A03FE27783C5E00502DDB /* Charts */; };
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
-		216771B4269EFB530005F50C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B3269EFB530005F50C /* Realm */; };
-		216771B6269EFB580005F50C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 216771B5269EFB580005F50C /* RealmSwift */; };
 		217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217A1F9427DDF13D0082B2BC /* Colors.xcassets */; };
 		218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C51AB27FBE74A00973A80 /* HighlightViewController.swift */; };
+		2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196BA0A2856022800FA8D61 /* BarChart.swift */; };
 		21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D49F268C67AD00C07A86 /* Main.storyboard */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
 		21D146D8273BCE8100CCF9E1 /* ChartBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */; };
+		21D848D32855E0610016BACD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21D848D22855E0610016BACD /* Realm */; };
+		21D848D52855E0610016BACD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21D848D42855E0610016BACD /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		216771AF269EF2570005F50C /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		217A1F9427DDF13D0082B2BC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		218C51AB27FBE74A00973A80 /* HighlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightViewController.swift; sourceTree = "<group>"; };
+		2196BA0A2856022800FA8D61 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A1D4A0268C67AD00C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,9 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D848D52855E0610016BACD /* RealmSwift in Frameworks */,
+				21D848D32855E0610016BACD /* Realm in Frameworks */,
 				214A03FF27783C5E00502DDB /* Charts in Frameworks */,
-				216771B6269EFB580005F50C /* RealmSwift in Frameworks */,
-				216771B4269EFB530005F50C /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,7 @@
 				211BB55E26A80AE900655F2F /* ChartViewController.swift */,
 				21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */,
 				21A1D49F268C67AD00C07A86 /* Main.storyboard */,
+				2196BA0A2856022800FA8D61 /* BarChart.swift */,
 				218C51AB27FBE74A00973A80 /* HighlightViewController.swift */,
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				214521B427FA863B00A9C9DC /* HighlightCollectionViewCell.swift */,
@@ -119,9 +122,9 @@
 			);
 			name = Calendar;
 			packageProductDependencies = (
-				216771B3269EFB530005F50C /* Realm */,
-				216771B5269EFB580005F50C /* RealmSwift */,
 				214A03FE27783C5E00502DDB /* Charts */,
+				21D848D22855E0610016BACD /* Realm */,
+				21D848D42855E0610016BACD /* RealmSwift */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* Calendar.app */;
@@ -151,8 +154,8 @@
 			);
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
-				216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				214A03FD2778382A00502DDB /* XCRemoteSwiftPackageReference "Charts" */,
+				21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21D146D8273BCE8100CCF9E1 /* ChartBarCell.swift in Sources */,
+				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				214521B627FA863B00A9C9DC /* HighlightCollectionViewCell.swift in Sources */,
@@ -340,7 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48GWJKGD2K;
 				INFOPLIST_FILE = Calendar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,7 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48GWJKGD2K;
 				INFOPLIST_FILE = Calendar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,12 +408,12 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa";
+			repositoryURL = "https://github.com/aheze/realm-swift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.9.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -420,14 +424,14 @@
 			package = 214A03FD2778382A00502DDB /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
 		};
-		216771B3269EFB530005F50C /* Realm */ = {
+		21D848D22855E0610016BACD /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		216771B5269EFB580005F50C /* RealmSwift */ = {
+		21D848D42855E0610016BACD /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 216771AE2695BDC30005F50C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
