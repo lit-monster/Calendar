@@ -13,12 +13,11 @@
 		212D7BC226D65D2B004561B0 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BC126D65D2B004561B0 /* Memo.swift */; };
 		214521B627FA863B00A9C9DC /* HighlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214521B427FA863B00A9C9DC /* HighlightCollectionViewCell.swift */; };
 		214521B727FA863B00A9C9DC /* HighlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214521B527FA863B00A9C9DC /* HighlightCollectionViewCell.xib */; };
-		214A03FF27783C5E00502DDB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 214A03FE27783C5E00502DDB /* Charts */; };
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
 		217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217A1F9427DDF13D0082B2BC /* Colors.xcassets */; };
 		218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C51AB27FBE74A00973A80 /* HighlightViewController.swift */; };
 		2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196BA0A2856022800FA8D61 /* BarChart.swift */; };
-		21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D49F268C67AD00C07A86 /* Main.storyboard */; };
+		21981829285EEDA2000AE2F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21981828285EEDA2000AE2F5 /* Main.storyboard */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
 		21D146D8273BCE8100CCF9E1 /* ChartBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */; };
@@ -37,8 +36,8 @@
 		217A1F9427DDF13D0082B2BC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		218C51AB27FBE74A00973A80 /* HighlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightViewController.swift; sourceTree = "<group>"; };
 		2196BA0A2856022800FA8D61 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		21981828285EEDA2000AE2F5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21A1D4A0268C67AD00C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A1D4A7268C67B100C07A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +51,6 @@
 			files = (
 				21D848D52855E0610016BACD /* RealmSwift in Frameworks */,
 				21D848D32855E0610016BACD /* Realm in Frameworks */,
-				214A03FF27783C5E00502DDB /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,11 +79,11 @@
 			children = (
 				212D7BBD26D65676004561B0 /* AppDelegate.swift */,
 				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
+				21981828285EEDA2000AE2F5 /* Main.storyboard */,
 				212D7BC126D65D2B004561B0 /* Memo.swift */,
 				216771AF269EF2570005F50C /* StopWatchViewController.swift */,
 				211BB55E26A80AE900655F2F /* ChartViewController.swift */,
 				21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */,
-				21A1D49F268C67AD00C07A86 /* Main.storyboard */,
 				2196BA0A2856022800FA8D61 /* BarChart.swift */,
 				218C51AB27FBE74A00973A80 /* HighlightViewController.swift */,
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
@@ -122,7 +120,6 @@
 			);
 			name = Calendar;
 			packageProductDependencies = (
-				214A03FE27783C5E00502DDB /* Charts */,
 				21D848D22855E0610016BACD /* Realm */,
 				21D848D42855E0610016BACD /* RealmSwift */,
 			);
@@ -154,7 +151,6 @@
 			);
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
-				214A03FD2778382A00502DDB /* XCRemoteSwiftPackageReference "Charts" */,
 				21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
@@ -172,10 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */,
+				21981829285EEDA2000AE2F5 /* Main.storyboard in Resources */,
 				21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */,
 				214521B727FA863B00A9C9DC /* HighlightCollectionViewCell.xib in Resources */,
 				21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */,
-				21A1D4A1268C67AD00C07A86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,14 +197,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		21A1D49F268C67AD00C07A86 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21A1D4A0268C67AD00C07A86 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -271,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -326,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -344,7 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48GWJKGD2K;
 				INFOPLIST_FILE = Calendar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48GWJKGD2K;
 				INFOPLIST_FILE = Calendar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,14 +388,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		214A03FD2778382A00502DDB /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/aheze/realm-swift";
@@ -419,11 +399,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		214A03FE27783C5E00502DDB /* Charts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 214A03FD2778382A00502DDB /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
-		};
 		21D848D22855E0610016BACD /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */;

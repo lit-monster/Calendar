@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import RealmSwift
 import Foundation
 @main
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             deleteRealmIfMigrationNeeded: true)
         
         
+        
+
         return true
     }
 

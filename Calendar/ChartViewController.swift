@@ -10,7 +10,7 @@ import Charts
 import RealmSwift
 
 class ChartViewController: UIViewController {
-    @IBOutlet var barChartView: BarChartView!
+//    @IBOutlet var barChartView: BarChartView!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -20,33 +20,33 @@ class ChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //        let realm = try! Realm()
-        //
-        //        // 全データ検索
-        //        let results = realm.objects(StudyRecord.self)
-        //        print(results)
-        
-        //            viewload時に選択されているボタン
-        segmentedControl.selectedSegmentIndex = 0
-        
-        
-        //            var date = results.filter {
-        //                $0.date > Range
-        //            }
-        
-        //            {
-        //            quality1 mount = date.filter{
-        //                quality = 1
-        //            }
-        //            }
-        
-        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
-        //たとえば一番最初は20だから全部20ずつ合計で20×３で60になる
-        let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), yValues: [Double($0.element), Double($0.element), Double($0.element)]) }
-        
-        
-        getWeekData()
+//
+//        //        let realm = try! Realm()
+//        //
+//        //        // 全データ検索
+//        //        let results = realm.objects(StudyRecord.self)
+//        //        print(results)
+//
+//        //            viewload時に選択されているボタン
+//        segmentedControl.selectedSegmentIndex = 0
+//
+//
+//        //            var date = results.filter {
+//        //                $0.date > Range
+//        //            }
+//
+//        //            {
+//        //            quality1 mount = date.filter{
+//        //                quality = 1
+//        //            }
+//        //            }
+//
+//        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
+//        //たとえば一番最初は20だから全部20ずつ合計で20×３で60になる
+//        let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), yValues: [Double($0.element), Double($0.element), Double($0.element)]) }
+//
+//
+//        getWeekData()
     }
     
     //    選択されたボタンのタイトルを取得する
@@ -201,7 +201,7 @@ class ChartViewController: UIViewController {
         
         print([today, twoDays, threeDays, fourDays, fiveDays, sixDays, sevenDaysAgo])
         
-        setupBarChart(inputData: [today, twoDays, threeDays, fourDays, fiveDays, sixDays, sevenDaysAgo])
+//        setupBarChart(inputData: [today, twoDays, threeDays, fourDays, fiveDays, sixDays, sevenDaysAgo])
 //        array.reduce(0) {(todayQuality1 , todayQuality2 , todayQuality3)}
 //        todayQuality1 + todayQuality2 + todayQuality3
 //
@@ -209,60 +209,60 @@ class ChartViewController: UIViewController {
 //        newArray
 //        array.reduce(0) { (todayQuality1, todayQuality2, todayQuality3) -> Int in
 //            todayQuality1 + todayQuality2 + todayQuality3
-//        }
+        }
         
         
     }
     
-    func setupBarChart(inputData: [[Double]]) {
-        
-//        let entries = inputData.enumerated().map { BarChartDataEntry(x: Double($0.offset), yValues: $0.flatMap{ $0 })}
-        
-        //dummy data below...
-//        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
-        //たとえば一番最初は20だから全部20ずつ合計で20×３で60になる
-        let entries = inputData.map { BarChartDataEntry(x: Double(inputData.index(of: $0)!), yValues: $0) }
-        
-        
-        let dataSet = BarChartDataSet(entries: entries)
-        let data = BarChartData(dataSet: dataSet)
-        barChartView.data = data
-        
-        // X軸のラベルの位置を下に設定
-        barChartView.xAxis.labelPosition = .bottom
-        // X軸のラベルの色を設定
-        barChartView.xAxis.labelTextColor = UIColor(named: "n")!
-        // X軸の線、グリッドを非表示にする
-        barChartView.xAxis.drawGridLinesEnabled = false
-        barChartView.xAxis.drawAxisLineEnabled = false
-        
-        barChartView.rightAxis.enabled = false
-        
-        // Y座標の値が0始まりになるように設定
-        barChartView.leftAxis.axisMinimum = 0.0
-        barChartView.leftAxis.drawZeroLineEnabled = true
-        barChartView.leftAxis.zeroLineColor = .systemGray
-        // ラベルの数を設定
-        barChartView.leftAxis.labelCount = 5
-        // ラベルの色を設定
-        barChartView.leftAxis.labelTextColor = UIColor(named: "n")!
-        // グリッドの色を設定
-        barChartView.leftAxis.gridColor = UIColor(named: "n")!
-        // 軸線は非表示にする
-        barChartView.leftAxis.drawAxisLineEnabled = false
-        
-        barChartView.legend.enabled = false
-        
-        dataSet.drawValuesEnabled = false
-        dataSet.colors = [UIColor(named: "charts-deepblue")!,
-                          UIColor(named: "charts-blue")!,   
-                          UIColor(named: "charts-lightblue")!]
-        
-        // 平均
-//        let avg = inputData.reduce(0) { return $0 + $1 } / rawData.count
-//        let limitLine = ChartLimitLine(limit: Double(avg))
-//        limitLine.lineColor = .systemOrange
-//        limitLine.lineDashLengths = [4]
-//        barChartView.leftAxis.addLimitLine(limitLine)
-    }
-}
+//    func setupBarChart(inputData: [[Double]]) {
+//
+////        let entries = inputData.enumerated().map { BarChartDataEntry(x: Double($0.offset), yValues: $0.flatMap{ $0 })}
+//
+//        //dummy data below...
+////        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
+//        //たとえば一番最初は20だから全部20ずつ合計で20×３で60になる
+//        let entries = inputData.map { BarChartDataEntry(x: Double(inputData.index(of: $0)!), yValues: $0) }
+//
+//
+//        let dataSet = BarChartDataSet(entries: entries)
+//        let data = BarChartData(dataSet: dataSet)
+//        barChartView.data = data
+//
+//        // X軸のラベルの位置を下に設定
+//        barChartView.xAxis.labelPosition = .bottom
+//        // X軸のラベルの色を設定
+//        barChartView.xAxis.labelTextColor = UIColor(named: "n")!
+//        // X軸の線、グリッドを非表示にする
+//        barChartView.xAxis.drawGridLinesEnabled = false
+//        barChartView.xAxis.drawAxisLineEnabled = false
+//
+//        barChartView.rightAxis.enabled = false
+//
+//        // Y座標の値が0始まりになるように設定
+//        barChartView.leftAxis.axisMinimum = 0.0
+//        barChartView.leftAxis.drawZeroLineEnabled = true
+//        barChartView.leftAxis.zeroLineColor = .systemGray
+//        // ラベルの数を設定
+//        barChartView.leftAxis.labelCount = 5
+//        // ラベルの色を設定
+//        barChartView.leftAxis.labelTextColor = UIColor(named: "n")!
+//        // グリッドの色を設定
+//        barChartView.leftAxis.gridColor = UIColor(named: "n")!
+//        // 軸線は非表示にする
+//        barChartView.leftAxis.drawAxisLineEnabled = false
+//
+//        barChartView.legend.enabled = false
+//
+//        dataSet.drawValuesEnabled = false
+//        dataSet.colors = [UIColor(named: "charts-deepblue")!,
+//                          UIColor(named: "charts-blue")!,
+//                          UIColor(named: "charts-lightblue")!]
+//
+//        // 平均
+////        let avg = inputData.reduce(0) { return $0 + $1 } / rawData.count
+////        let limitLine = ChartLimitLine(limit: Double(avg))
+////        limitLine.lineColor = .systemOrange
+////        limitLine.lineDashLengths = [4]
+////        barChartView.leftAxis.addLimitLine(limitLine)
+//    }
+//}
