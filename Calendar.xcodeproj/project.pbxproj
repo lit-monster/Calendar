@@ -18,6 +18,8 @@
 		218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C51AB27FBE74A00973A80 /* HighlightViewController.swift */; };
 		2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196BA0A2856022800FA8D61 /* BarChart.swift */; };
 		21981829285EEDA2000AE2F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21981828285EEDA2000AE2F5 /* Main.storyboard */; };
+		2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75D286C52AC00018ADB /* ChartContentView.swift */; };
+		2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75F286C547E00018ADB /* ChartPeriodView.swift */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
 		21D146D8273BCE8100CCF9E1 /* ChartBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D146D7273BCE8100CCF9E1 /* ChartBarCell.swift */; };
@@ -37,6 +39,8 @@
 		218C51AB27FBE74A00973A80 /* HighlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightViewController.swift; sourceTree = "<group>"; };
 		2196BA0A2856022800FA8D61 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		21981828285EEDA2000AE2F5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2199B75D286C52AC00018ADB /* ChartContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentView.swift; sourceTree = "<group>"; };
+		2199B75F286C547E00018ADB /* ChartPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPeriodView.swift; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				212D7BBD26D65676004561B0 /* AppDelegate.swift */,
 				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
 				21981828285EEDA2000AE2F5 /* Main.storyboard */,
+				2199B75D286C52AC00018ADB /* ChartContentView.swift */,
+				2199B75F286C547E00018ADB /* ChartPeriodView.swift */,
 				212D7BC126D65D2B004561B0 /* Memo.swift */,
 				216771AF269EF2570005F50C /* StopWatchViewController.swift */,
 				211BB55E26A80AE900655F2F /* ChartViewController.swift */,
@@ -183,10 +189,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				21D146D8273BCE8100CCF9E1 /* ChartBarCell.swift in Sources */,
+				2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */,
 				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				214521B627FA863B00A9C9DC /* HighlightCollectionViewCell.swift in Sources */,
+				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */,
 				212D7BC226D65D2B004561B0 /* Memo.swift in Sources */,
 				212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */,

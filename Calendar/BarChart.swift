@@ -123,7 +123,6 @@ func getWeekData() {
     let yesterdayQuality2 = yesterdayData.filter { $0.quality == 2 }
     let yesterdayQuality3 = yesterdayData.filter { $0.quality == 3 }
     let yesterdayArray = [yesterdayQuality1, yesterdayQuality2, yesterdayQuality3]
-    //yesterday からは自分で頑張る
     
     let threeDaysQuality1 = threeDaysAgoData.filter { $0.quality == 1 }
     let threeDaysQuality2 = threeDaysAgoData.filter { $0.quality == 2 }
@@ -217,3 +216,10 @@ func getWeekData() {
     //        array.reduce(0) { (todayQuality1, todayQuality2, todayQuality3) -> Int in
     //            todayQuality1 + todayQuality2 + todayQuality3
 }
+
+//barChartView.legend.enabled = false
+//
+//dataSet.drawValuesEnabled = false
+//dataSet.colors = [UIColor(named: "charts-deepblue")!,
+//                  UIColor(named: "charts-blue")!,
+//                  UIColor(named: "charts-lightblue")!]
