@@ -18,6 +18,7 @@
 		218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C51AB27FBE74A00973A80 /* HighlightViewController.swift */; };
 		2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196BA0A2856022800FA8D61 /* BarChart.swift */; };
 		21981829285EEDA2000AE2F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21981828285EEDA2000AE2F5 /* Main.storyboard */; };
+		2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198C50A28758B71000C705C /* StudyRecordManager.swift */; };
 		2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75D286C52AC00018ADB /* ChartContentView.swift */; };
 		2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75F286C547E00018ADB /* ChartPeriodView.swift */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		218C51AB27FBE74A00973A80 /* HighlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightViewController.swift; sourceTree = "<group>"; };
 		2196BA0A2856022800FA8D61 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		21981828285EEDA2000AE2F5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2198C50A28758B71000C705C /* StudyRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRecordManager.swift; sourceTree = "<group>"; };
 		2199B75D286C52AC00018ADB /* ChartContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentView.swift; sourceTree = "<group>"; };
 		2199B75F286C547E00018ADB /* ChartPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPeriodView.swift; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 		21A1D498268C67AD00C07A86 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				2198C50A28758B71000C705C /* StudyRecordManager.swift */,
 				212D7BBD26D65676004561B0 /* AppDelegate.swift */,
 				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
 				21981828285EEDA2000AE2F5 /* Main.storyboard */,
@@ -190,6 +193,7 @@
 			files = (
 				21D146D8273BCE8100CCF9E1 /* ChartBarCell.swift in Sources */,
 				2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */,
+				2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */,
 				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,

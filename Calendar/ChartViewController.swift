@@ -284,11 +284,11 @@ final class ChartViewController: UIViewController {
         vc.didMove(toParent: self)
         
         vc.view.translatesAutoresizingMaskIntoConstraints = false
-//        vc.view.frame = self.view.frame
-        let leadingConstraint = vc.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
-        let trailingConstraint = vc.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
-        let bottomConstraint = vc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
-        let topConstraint = vc.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
-        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, bottomConstraint, topConstraint])
+        vc.view.frame = self.view.frame
+//        let leadingConstraint = vc.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
+//        let trailingConstraint = vc.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
+//        let bottomConstraint = vc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+//        let topConstraint = vc.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
+//        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, bottomConstraint, topConstraint])
     }
 }
