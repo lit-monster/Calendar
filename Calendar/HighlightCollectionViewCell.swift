@@ -8,70 +8,70 @@
 import UIKit
 
 class HighlightCollectionViewCell: UICollectionViewCell {
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        //        //        self.view.innerShadow()
-        //        let innerShadow = CALayer()
-        //        innerShadow.frame = bounds
-        //        // Shadow path (1pt ring around bounds)
-        //        let path = UIBezierPath(rect: innerShadow.bounds.insetBy(dx: -1, dy: -1))
-        //        let cutout = UIBezierPath(rect: innerShadow.bounds).reversing()
-        //        path.append(cutout)
-        //        innerShadow.shadowPath = path.cgPath
-        //        innerShadow.masksToBounds = true
-        //        // Shadow properties
-        //        innerShadow.shadowColor = UIColor(white: 0, alpha: 1).cgColor // UIColor(red: 0.71, green: 0.77, blue: 0.81, alpha: 1.0).cgColor
-        //        innerShadow.shadowOffset = CGSize.zero
-        //        innerShadow.shadowOpacity = 1
-        //        innerShadow.shadowRadius = 2
-        //        // Add
-        //        blurView.layer.addSublayer(innerShadow)
-        super.layoutSubviews()
-        self.layer.cornerRadius = self.frame.size.height/2
-        self.addInnerShadow()
-    }
+    //    override func awakeFromNib() {
+    //        //        super.awakeFromNib()
+    //        Initialization code
+    //        //        self.view.innerShadow()
+    //        let innerShadow = CALayer()
+    //        innerShadow.frame = bounds
+    //        // Shadow path (1pt ring around bounds)
+    //        let path = UIBezierPath(rect: innerShadow.bounds.insetBy(dx: -1, dy: -1))
+    //        let cutout = UIBezierPath(rect: innerShadow.bounds).reversing()
+    //        path.append(cutout)
+    //        innerShadow.shadowPath = path.cgPath
+    //        innerShadow.masksToBounds = true
+    //        // Shadow properties
+    //        innerShadow.shadowColor = UIColor(white: 0, alpha: 1).cgColor // UIColor(red: 0.71, green: 0.77, blue: 0.81, alpha: 1.0).cgColor
+    //        innerShadow.shadowOffset = CGSize.zero
+    //        innerShadow.shadowOpacity = 1
+    //        innerShadow.shadowRadius = 2
+    //        // Add
+    //        blurView.layer.addSublayer(innerShadow)
+    //        //        super.layoutSubviews()
+    //        //        self.layer.cornerRadius = self.frame.size.height/2
+    //        //        self.addInnerShadow()
+    //    }
     
-    private func addInnerShadow() {
-        let innerShadow = CALayer()
-        innerShadow.frame = bounds
-        // Shadow path (1pt ring around bounds)
-        let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: -1, dy: -1), cornerRadius: 24)
-        let cutout = UIBezierPath(rect: innerShadow.bounds).reversing()
-        path.append(cutout)
-        innerShadow.shadowPath = path.cgPath
-        innerShadow.masksToBounds = true
-        // Shadow properties
-        innerShadow.shadowColor = UIColor.black.cgColor
-        innerShadow.shadowOffset = CGSize(width: 0, height: 3)
-        innerShadow.shadowOpacity = 0.5
-        innerShadow.shadowRadius = 4
-        //innerShadow.cornerRadius = self.frame.size.height/2
-        blurView.layer.addSublayer(innerShadow)
-    }
+    //    private func addInnerShadow() {
+    //        let innerShadow = CALayer()
+    //        innerShadow.frame = bounds
+    //        // Shadow path (1pt ring around bounds)
+    //        let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: -1, dy: -1), cornerRadius: 24)
+    //        let cutout = UIBezierPath(rect: innerShadow.bounds).reversing()
+    //        path.append(cutout)
+    //        innerShadow.shadowPath = path.cgPath
+    //        innerShadow.masksToBounds = true
+    //        // Shadow properties
+    //        innerShadow.shadowColor = UIColor.black.cgColor
+    //        innerShadow.shadowOffset = CGSize(width: 0, height: 3)
+    //        innerShadow.shadowOpacity = 0.5
+    //        innerShadow.shadowRadius = 4
+    //        //innerShadow.cornerRadius = self.frame.size.height/2
+    //        blurView.layer.addSublayer(innerShadow)
+    //    }
     
     
-    @IBOutlet var blurView: UIVisualEffectView! {
-        didSet {
-            blurView.layer.cornerRadius = 1
-            blurView.layer.masksToBounds = true
-//            blurView.innerShadow()
-        }
-        
-    }
+    //    @IBOutlet var blurView: UIVisualEffectView! {
+    ////        didSet {
+    ////            blurView.layer.cornerRadius = 1
+    ////            blurView.layer.masksToBounds = true
+    //////            blurView.innerShadow()
+    ////        }
+    //
+    //    }
 }
 
-extension UIView {
-    func innerShadow() {
-        let path = UIBezierPath(rect: CGRect(x: -5.0, y: -5.0, width: self.bounds.size.width + 5.0, height: 5.0 ))
-        let innerLayer = CALayer()
-        innerLayer.frame = self.bounds
-        innerLayer.masksToBounds = true
-        innerLayer.shadowColor = UIColor.white.cgColor
-        innerLayer.shadowOffset = CGSize(width: 2.5, height: 2.5)
-        innerLayer.shadowOpacity = 0.5
-        innerLayer.shadowPath = path.cgPath
-        self.layer.addSublayer(innerLayer)
-    }
-}
+//extension UIView {
+//    func innerShadow() {
+//        let path = UIBezierPath(rect: CGRect(x: -5.0, y: -5.0, width: self.bounds.size.width + 5.0, height: 5.0 ))
+//        let innerLayer = CALayer()
+//        innerLayer.frame = self.bounds
+//        innerLayer.masksToBounds = true
+//        innerLayer.shadowColor = UIColor.white.cgColor
+//        innerLayer.shadowOffset = CGSize(width: 2.5, height: 2.5)
+//        innerLayer.shadowOpacity = 0.5
+//        innerLayer.shadowPath = path.cgPath
+//        self.layer.addSublayer(innerLayer)
+//    }
+//}
 

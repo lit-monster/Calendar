@@ -278,9 +278,10 @@ final class ChartViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let vc = UIHostingController(rootView: ChartContentView())
-        self.addChild(vc)
-        self.view.addSubview(vc.view)
+        let vc = BarChartViewHostingController(rootView: BarChartView())
+        //UIHostingController(rootView: ChartContentView())
+        addChild(vc)
+        view.addSubview(vc.view)
         vc.didMove(toParent: self)
         
         vc.view.translatesAutoresizingMaskIntoConstraints = false

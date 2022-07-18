@@ -16,20 +16,20 @@ class HighlightViewController: UIViewController {
             collectionView.register(UINib(nibName: "HighlightCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HighlightCollectionViewCell")
         }
     }
-
+    
     @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionViewFlowLayout.estimatedItemSize = CGSize(width: self.view.frame.width, height: 64)
-
+        //        collectionViewFlowLayout.estimatedItemSize = CGSize(width: self.view.frame.width, height: 64)
+        
         // Do any additional setup after loading the view.
     }
 }
 
 extension HighlightViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

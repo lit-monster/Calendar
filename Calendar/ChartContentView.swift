@@ -23,7 +23,7 @@ struct ChartContentView: View {
                 .pickerStyle(.segmented)
                 .padding()
                 ChartPeriodView().frame(maxWidth: .infinity).padding()
-                BarChartView()
+//                BarChartView()
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             }.navigationTitle(Text("集中グラフ"))
         }
