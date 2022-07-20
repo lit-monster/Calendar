@@ -1,21 +1,8 @@
 import SwiftUI
 import RealmSwift
 import Charts
-import Foundation
 
-struct BarChart: Identifiable {
-    var name: String
-    var color: String
-    var type: String
-    var count: Double
-    var id: String { name }
-    var barmark: Character
-}
-struct ShapeType: Identifiable {
-    let type: String
-    let count: Int
-    let id = UUID()
-}
+
 struct ToyShape: Identifiable {
     var color: String
     let type: String
@@ -26,7 +13,20 @@ struct ToyShape: Identifiable {
 let realm = try! Realm()
 
 struct BarChartView: View {
-    @State var stackedBarData: [ToyShape] = []
+    @State var stackedBarData: [ToyShape] = [
+        .init(color: "Green", type: "Cube", count: 2),
+        .init(color: "Green", type: "Sphere", count: 0),
+        .init(color: "Green", type: "Pyramid", count: 1),
+        .init(color: "Purple", type: "Cube", count: 1),
+        .init(color: "Purple", type: "Sphere", count: 1),
+        .init(color: "Purple", type: "Pyramid", count: 1),
+        .init(color: "Pink", type: "Cube", count: 1),
+        .init(color: "Pink", type: "Sphere", count: 2),
+        .init(color: "Pink", type: "Pyramid", count: 0),
+        .init(color: "Yellow", type: "Cube", count: 1),
+        .init(color: "Yellow", type: "Sphere", count: 1),
+        .init(color: "Yellow", type: "Pyramid", count: 2)
+    ]
     
     var body: some View {
         Chart {
@@ -41,9 +41,9 @@ struct BarChartView: View {
         .chartForegroundStyleScale([
             "Green": .green,  "Pink": .pink, "Yellow": .yellow
         ])
-        .onAppear {
-            stackedBarData = StudyRecordManager.shared.getWeekData()
-        }
+//        .onAppear {
+//            stackedBarData = StudyRecordManager.shared.getWeekData()
+//        }
     }
 }
 
@@ -64,11 +64,3 @@ final class BarChartViewHostingController: UIHostingController<BarChartView> {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
-//barChartView.legend.enabled = false
-//
-//dataSet.drawValuesEnabled = false
-//dataSet.colors = [UIColor(named: "charts-deepblue")!,
-//                  UIColor(named: "charts-blue")!,
-//                  UIColor(named: "charts-lightblue")!]
