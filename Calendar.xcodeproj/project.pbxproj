@@ -77,7 +77,6 @@
 			children = (
 				21A1D498268C67AD00C07A86 /* Calendar */,
 				21A1D497268C67AD00C07A86 /* Products */,
-				CE2FE2A402FC206F12E932B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,13 +107,6 @@
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
 			);
 			path = Calendar;
-			sourceTree = "<group>";
-		};
-		CE2FE2A402FC206F12E932B0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

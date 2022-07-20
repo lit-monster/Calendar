@@ -158,7 +158,30 @@ final class StudyRecordManager {
             toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "7 DAYS AGO", count: Int($0)))
         }
         
-        return(toyShapeArray)
+//        return(toyShapeArray)
+        return [
+            .init(color: "Green", type: "Cube", count: 2),
+            .init(color: "Pink", type: "Cube", count: 1),
+            .init(color: "Yellow", type: "Cube", count: 1),
+            .init(color: "Green", type: "Sphere", count: 5),
+            .init(color: "Pink", type: "Sphere", count: 2),
+            .init(color: "Yellow", type: "Sphere", count: 1),
+            .init(color: "Green", type: "Pyramid", count: 5),
+            .init(color: "Pink", type: "Pyramid", count: 6),
+            .init(color: "Yellow", type: "Pyramid", count: 2),
+            .init(color: "Green", type: "aaa", count: 2),
+            .init(color: "Pink", type: "aaa", count: 3),
+            .init(color: "Yellow", type: "aaa", count: 4),
+            .init(color: "Green", type: "bbb", count: 6),
+            .init(color: "Pink", type: "bbb", count: 4),
+            .init(color: "Yellow", type: "bbb", count: 7),
+            .init(color: "Green", type: "ccc", count:5),
+            .init(color: "Pink", type: "ccc", count: 1),
+            .init(color: "Yellow", type: "ccc", count: 4),
+            .init(color: "Green", type: "ddd", count: 4),
+            .init(color: "Pink", type: "ddd", count: 5),
+            .init(color: "Yellow", type: "ddd", count: 2)
+        ]
         
         //        setupBarChart(inputData: [today, twoDays, threeDays, fourDays, fiveDays, sixDays, sevenDaysAgo])
         //        array.reduce(0) {(todayQuality1 , todayQuality2 , todayQuality3)}

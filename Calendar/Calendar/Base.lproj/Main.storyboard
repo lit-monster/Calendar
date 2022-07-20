@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21208.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21191"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,11 +19,12 @@
                         <viewLayoutGuide key="safeArea" id="w3Q-AQ-ReX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ZHw-Vm-2Br"/>
                     <navigationItem key="navigationItem" title="集中グラフ" largeTitleDisplayMode="always" id="2qz-wV-6op"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YP-YC-pVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2120.289855072464" y="-3571.2053571428569"/>
+            <point key="canvasLocation" x="-2109" y="-4302"/>
         </scene>
         <!--ハイライト-->
         <scene sceneID="4cE-xX-Xtm">
@@ -104,23 +105,6 @@
             </objects>
             <point key="canvasLocation" x="-2865.217391304348" y="-3571.2053571428569"/>
         </scene>
-        <!--chart-->
-        <scene sceneID="5mc-TM-41e">
-            <objects>
-                <navigationController id="RGk-ha-wwz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="chart" image="chart.bar.xaxis" catalog="system" id="hzv-AS-EsC"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="18h-Oy-Enw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Khu-uL-2wZ" kind="relationship" relationship="rootViewController" id="R8z-0E-RhB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XLJ-st-ORR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2117" y="-4302"/>
-        </scene>
         <!--highlight-->
         <scene sceneID="7kX-ta-Iit">
             <objects>
@@ -152,8 +136,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
-                        <segue destination="RGk-ha-wwz" kind="relationship" relationship="viewControllers" id="P95-HX-VLX"/>
                         <segue destination="7Rx-rP-EjZ" kind="relationship" relationship="viewControllers" id="Vpc-l0-aIn"/>
+                        <segue destination="Khu-uL-2wZ" kind="relationship" relationship="viewControllers" id="9ag-fc-pv2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOC-sH-4Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -432,7 +416,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
         <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="glass" width="415.5" height="885"/>
         <image name="timer" catalog="system" width="128" height="123"/>
