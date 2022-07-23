@@ -23,7 +23,10 @@ struct BarChartView: View {
             }
         }
         .chartForegroundStyleScale([
-            "Green": .green,  "Pink": .pink, "Yellow": .yellow
+            "Green": .green,  "Pink": .pink, "Yellow": .yellow,
+            "charts-blue": Color(UIColor(named: "charts-blue")!),
+            "charts-lightblue": Color(UIColor(named: "charts-lightblue")!),
+            "charts-deepblue": Color(UIColor(named: "charts-deepblue")!)
         ])
     }
 }
