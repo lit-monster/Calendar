@@ -80,10 +80,10 @@ final class StudyRecordManager {
                 num1 + num2
             }
         }
-        
-        today.forEach {
-            toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Today", count: Int($0)))
-        }
+
+        toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Today", count: Int(today[0])))
+        toyShapeArray.append(ToyShape(color: "charts-blue", type: "Today", count: Int(today[1])))
+        toyShapeArray.append(ToyShape(color: "charts-deepblue", type: "Today", count: Int(today[2])))
         
         let twoDays = yesterdayArray.map {
             $0.map {
@@ -92,10 +92,10 @@ final class StudyRecordManager {
                 num1 + num2
             }
         }
-        
-        twoDays.forEach {
-            toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Yesterday", count: Int($0)))
-        }
+
+        toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Today", count: Int(twoDays[0])))
+        toyShapeArray.append(ToyShape(color: "charts-blue", type: "Today", count: Int(twoDays[1])))
+        toyShapeArray.append(ToyShape(color: "charts-deepblue", type: "Today", count: Int(twoDays[2])))
         
         let threeDays = threeDaysArray.map {
             $0.map {
@@ -104,11 +104,10 @@ final class StudyRecordManager {
                 num1 + num2
             }
         }
-        
-        threeDays.forEach {
-            toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "3 DAYS AGO", count: Int($0)))
-        }
-        
+
+        toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Today", count: Int(threeDays[0])))
+        toyShapeArray.append(ToyShape(color: "charts-blue", type: "Today", count: Int(threeDays[1])))
+        toyShapeArray.append(ToyShape(color: "charts-deepblue", type: "Today", count: Int(threeDays[2])))
         
         let fourDays = fourDaysArray.map {
             $0.map {
@@ -117,10 +116,10 @@ final class StudyRecordManager {
                 num1 + num2
             }
         }
-        
-        fourDays.forEach {
-            toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "4 DAYS AGO", count: Int($0)))
-        }
+
+        toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Today", count: Int(fourDays[0])))
+        toyShapeArray.append(ToyShape(color: "charts-blue", type: "Today", count: Int(fourDays[1])))
+        toyShapeArray.append(ToyShape(color: "charts-deepblue", type: "Today", count: Int(fourDays[2])))
         
         let fiveDays = fiveDaysArray.map {
             $0.map {
@@ -130,9 +129,9 @@ final class StudyRecordManager {
             }
         }
         
-        fiveDays.forEach {
-            toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "5 DAYS AGO", count: Int($0)))
-        }
+        toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Today", count: Int(fiveDays[0])))
+        toyShapeArray.append(ToyShape(color: "charts-blue", type: "Today", count: Int(fiveDays[1])))
+        toyShapeArray.append(ToyShape(color: "charts-deepblue", type: "Today", count: Int(fiveDays[2])))
         
         let sixDays = sixDaysArray.map {
             $0.map {
@@ -142,11 +141,11 @@ final class StudyRecordManager {
             }
         }
         
-        sixDays.forEach {
-            toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "6 DAYS AGO", count: Int($0)))
-        }
+        toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Today", count: Int(sixDays[0])))
+        toyShapeArray.append(ToyShape(color: "charts-blue", type: "Today", count: Int(sixDays[1])))
+        toyShapeArray.append(ToyShape(color: "charts-deepblue", type: "Today", count: Int(sixDays[2])))
         
-        let sevenDaysAgo = weekAgoArray.map {
+        let sevenDays = weekAgoArray.map {
             $0.map {
                 $0.time
             }.reduce(0) { (num1, num2) -> Double in
@@ -154,42 +153,11 @@ final class StudyRecordManager {
             }
         }
         
-        sevenDaysAgo.forEach {
-            toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "7 DAYS AGO", count: Int($0)))
-        }
+        toyShapeArray.append(ToyShape(color: "charts-lightblue", type: "Today", count: Int(sevenDays[0])))
+        toyShapeArray.append(ToyShape(color: "charts-blue", type: "Today", count: Int(sevenDays[1])))
+        toyShapeArray.append(ToyShape(color: "charts-deepblue", type: "Today", count: Int(sevenDays[2])))
         
-//        return(toyShapeArray)
-        return [
-            .init(color: "Green", type: "Cube", count: 2),
-            .init(color: "Pink", type: "Cube", count: 1),
-            .init(color: "Yellow", type: "Cube", count: 1),
-            .init(color: "Green", type: "Sphere", count: 5),
-            .init(color: "Pink", type: "Sphere", count: 2),
-            .init(color: "Yellow", type: "Sphere", count: 1),
-            .init(color: "Green", type: "Pyramid", count: 5),
-            .init(color: "Pink", type: "Pyramid", count: 6),
-            .init(color: "Yellow", type: "Pyramid", count: 2),
-            .init(color: "Green", type: "aaa", count: 2),
-            .init(color: "Pink", type: "aaa", count: 3),
-            .init(color: "Yellow", type: "aaa", count: 4),
-            .init(color: "Green", type: "bbb", count: 6),
-            .init(color: "Pink", type: "bbb", count: 4),
-            .init(color: "Yellow", type: "bbb", count: 7),
-            .init(color: "Green", type: "ccc", count:5),
-            .init(color: "Pink", type: "ccc", count: 1),
-            .init(color: "Yellow", type: "ccc", count: 4),
-            .init(color: "Green", type: "ddd", count: 4),
-            .init(color: "Pink", type: "ddd", count: 5),
-            .init(color: "Yellow", type: "ddd", count: 2)
-        ]
-        
-        //        setupBarChart(inputData: [today, twoDays, threeDays, fourDays, fiveDays, sixDays, sevenDaysAgo])
-        //        array.reduce(0) {(todayQuality1 , todayQuality2 , todayQuality3)}
-        //        todayQuality1 + todayQuality2 + todayQuality3
-        //
-        //        let newArray = array.map { $0. timer }
-        //        newArray
-        //        array.reduce(0) { (todayQuality1, todayQuality2, todayQuality3) -> Int in
-        //            todayQuality1 + todayQuality2 + todayQuality3
+        return toyShapeArray
+
     }
 }
