@@ -23,6 +23,8 @@
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
 		21A342BA289147AC00243BCD /* HealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A342B9289147AC00243BCD /* HealthDataViewController.swift */; };
+		21A342BC289425FE00243BCD /* HighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A342BB289425FE00243BCD /* HighlightCell.swift */; };
+		21A342C0289426A000243BCD /* HighlightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A342BF289426A000243BCD /* HighlightCell.xib */; };
 		21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B0A6DB28855BDF00CFE312 /* Main.storyboard */; };
 		21D848D32855E0610016BACD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21D848D22855E0610016BACD /* Realm */; };
 		21D848D52855E0610016BACD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21D848D42855E0610016BACD /* RealmSwift */; };
@@ -47,6 +49,8 @@
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A1D4A7268C67B100C07A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21A342B9289147AC00243BCD /* HealthDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataViewController.swift; sourceTree = "<group>"; };
+		21A342BB289425FE00243BCD /* HighlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightCell.swift; sourceTree = "<group>"; };
+		21A342BF289426A000243BCD /* HighlightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighlightCell.xib; sourceTree = "<group>"; };
 		21B0A6DC28855BDF00CFE312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Calendar/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +72,7 @@
 			children = (
 				211BB55E26A80AE900655F2F /* ChartViewController.swift */,
 				2196BA0A2856022800FA8D61 /* BarChart.swift */,
+				2198C50A28758B71000C705C /* StudyRecordManager.swift */,
 				2199B75D286C52AC00018ADB /* ChartContentView.swift */,
 				2199B75F286C547E00018ADB /* ChartPeriodView.swift */,
 			);
@@ -95,7 +100,6 @@
 			children = (
 				2197B175288806E800D23030 /* ChartView */,
 				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
-				2198C50A28758B71000C705C /* StudyRecordManager.swift */,
 				212D7BBD26D65676004561B0 /* AppDelegate.swift */,
 				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
 				212D7BC126D65D2B004561B0 /* Memo.swift */,
@@ -104,6 +108,8 @@
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				214521B427FA863B00A9C9DC /* HighlightCollectionViewCell.swift */,
 				214521B527FA863B00A9C9DC /* HighlightCollectionViewCell.xib */,
+				21A342BB289425FE00243BCD /* HighlightCell.swift */,
+				21A342BF289426A000243BCD /* HighlightCell.xib */,
 				21A342B9289147AC00243BCD /* HealthDataViewController.swift */,
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
 				217A1F9427DDF13D0082B2BC /* Colors.xcassets */,
@@ -178,6 +184,7 @@
 			files = (
 				217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */,
 				21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */,
+				21A342C0289426A000243BCD /* HighlightCell.xib in Resources */,
 				21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */,
 				214521B727FA863B00A9C9DC /* HighlightCollectionViewCell.xib in Resources */,
 				21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */,
@@ -200,6 +207,7 @@
 				214521B627FA863B00A9C9DC /* HighlightCollectionViewCell.swift in Sources */,
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */,
+				21A342BC289425FE00243BCD /* HighlightCell.swift in Sources */,
 				212D7BC226D65D2B004561B0 /* Memo.swift in Sources */,
 				212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */,
 				211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */,
