@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HighlightViewController: UIViewController {
     
@@ -13,7 +14,8 @@ class HighlightViewController: UIViewController {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
-            collectionView.register(UINib(nibName: "HighlightCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HighlightCollectionViewCell")
+//            collectionView.register(UINib(nibName: "HighlightCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HighlightCollectionViewCell")
+            collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "HighlightCell")
         }
     }
 
@@ -29,11 +31,14 @@ class HighlightViewController: UIViewController {
 
 extension HighlightViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HighlightCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HighlightCell", for: indexPath)
+        cell.contentConfiguration = UIHostingConfiguration {
+            HighlightCell()
+        }
         return cell
     }
 }

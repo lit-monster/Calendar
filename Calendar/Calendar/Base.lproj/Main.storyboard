@@ -47,10 +47,6 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
-                                <connections>
-                                    <outlet property="dataSource" destination="umc-jm-X7i" id="TcE-TA-ysL"/>
-                                    <outlet property="delegate" destination="umc-jm-X7i" id="HEO-eZ-THs"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YgN-W6-Rhw"/>
@@ -68,8 +64,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="ハイライト" id="umc-jm-X7i"/>
                     <connections>
-                        <outlet property="collectionView" destination="LUu-yx-kxz" id="Qlc-Dz-eLe"/>
-                        <outlet property="collectionViewFlowLayout" destination="EPK-DH-PCn" id="lU0-q9-wP3"/>
+                        <outlet property="collectionView" destination="LUu-yx-kxz" id="fLL-lm-3MS"/>
+                        <outlet property="collectionViewFlowLayout" destination="EPK-DH-PCn" id="EDN-PC-aB9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lit-Z3-fUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
