@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C8i-iC-cub">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Qh-vyz">
-                                <rect key="frame" x="70" y="290" width="274" height="61"/>
+                                <rect key="frame" x="70" y="294" width="274" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,7 +113,7 @@
                         <color key="badgeColor" name="summary"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jt8-1Y-q9U">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -123,22 +123,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3B-LZ-I77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1383" y="-4302"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="rfd-IT-7bi">
-            <objects>
-                <viewController id="SAV-o5-vQv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LkA-Y5-RIF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="mnc-a2-F9O"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="heart.circle.fill" catalog="system" id="buh-cb-33Y"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Vc-Vl-bem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-564" y="-4300"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xe9-1b-h9l">
@@ -154,17 +138,16 @@
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
                         <segue destination="Khu-uL-2wZ" kind="relationship" relationship="viewControllers" id="9ag-fc-pv2"/>
                         <segue destination="7Rx-rP-EjZ" kind="relationship" relationship="viewControllers" id="Vpc-l0-aIn"/>
-                        <segue destination="SAV-o5-vQv" kind="relationship" relationship="viewControllers" id="b1u-FF-vmK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOC-sH-4Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2501" y="-5063"/>
         </scene>
-        <!--View Controller-->
+        <!--Haelth View Controller-->
         <scene sceneID="gkK-Qc-npB">
             <objects>
-                <viewController id="C8i-iC-cub" sceneMemberID="viewController">
+                <viewController id="C8i-iC-cub" customClass="HaelthViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kvm-Bq-rYC" customClass="ChartBarCell" customModule="Calendar" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,6 +161,9 @@
                         <viewLayoutGuide key="safeArea" id="1cQ-sd-Ndb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="HeartRateView" destination="hTc-oz-Y3M" id="K1l-vF-mRd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHY-uf-Mnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,7 +175,7 @@
                 <navigationController id="7v2-jG-oNr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="kQ7-0n-rHa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2MP-7d-Nrz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -436,7 +422,6 @@
         <image name="chart.bar.fill" catalog="system" width="128" height="90"/>
         <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="glass" width="415.5" height="885"/>
-        <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
         <image name="timer" catalog="system" width="128" height="123"/>
         <namedColor name="summary">
             <color red="0.94509803921568625" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
