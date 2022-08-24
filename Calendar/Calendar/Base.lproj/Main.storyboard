@@ -81,17 +81,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Qh-vyz">
-                                <rect key="frame" x="70" y="294" width="274" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <rect key="frame" x="70" y="198" width="274" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO4-9T-VJN">
-                                <rect key="frame" x="64" y="514" width="287" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="snk-JE-xX3"/>
@@ -110,7 +103,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doQ-3w-klM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2865.217391304348" y="-2834.5982142857142"/>
+            <point key="canvasLocation" x="-3851" y="-3212"/>
+        </scene>
+        <!--Stop Watch View Controller-->
+        <scene sceneID="uQJ-3Z-ENq">
+            <objects>
+                <viewController id="Bkz-OM-wML" customClass="StopWatchViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIP-tk-qfw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R4-0u-nJ3">
+                                <rect key="frame" x="102" y="264" width="210.5" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-MS-WAu">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhoneFlipImage" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-5U-8nn">
+                                        <rect key="frame" x="56" y="30" width="302" height="398"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強を始めよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-Q8-wUV">
+                                        <rect key="frame" x="54.5" y="460" width="305" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="X9g-Q8-wUV" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="3fn-fv-hdU"/>
+                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="30" id="F0I-DX-kcj"/>
+                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="Pjw-Mh-bMh"/>
+                                    <constraint firstItem="X9g-Q8-wUV" firstAttribute="top" secondItem="9yy-5U-8nn" secondAttribute="bottom" constant="32" id="uez-7f-whU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pfg-Mk-sKX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yd2-MS-WAu" firstAttribute="leading" secondItem="Pfg-Mk-sKX" secondAttribute="leading" id="2l1-9B-E5Q"/>
+                            <constraint firstItem="8R4-0u-nJ3" firstAttribute="centerX" secondItem="ZIP-tk-qfw" secondAttribute="centerX" id="3rl-A6-zKX"/>
+                            <constraint firstItem="8R4-0u-nJ3" firstAttribute="top" secondItem="Pfg-Mk-sKX" secondAttribute="top" constant="120" id="Roj-kJ-pmN"/>
+                            <constraint firstItem="Pfg-Mk-sKX" firstAttribute="trailing" secondItem="yd2-MS-WAu" secondAttribute="trailing" id="Rxp-NO-k41"/>
+                            <constraint firstItem="Pfg-Mk-sKX" firstAttribute="bottom" secondItem="yd2-MS-WAu" secondAttribute="bottom" id="bZ6-53-39F"/>
+                            <constraint firstItem="yd2-MS-WAu" firstAttribute="top" secondItem="Pfg-Mk-sKX" secondAttribute="top" id="jqh-3f-0ce"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hgt-13-Vv3"/>
+                    <connections>
+                        <outlet property="inturrptedView" destination="yd2-MS-WAu" id="xVh-mh-d4h"/>
+                        <outlet property="label" destination="8R4-0u-nJ3" id="4Kj-bB-Kdf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jgb-7e-Wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2863.768115942029" y="-2838.6160714285711"/>
         </scene>
         <!--タイマー-->
         <scene sceneID="Rfa-C0-DSU">
@@ -149,7 +199,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title=" "/>
                                 <connections>
                                     <action selector="start" destination="fvf-aK-hgg" eventType="touchUpInside" id="U3Z-8R-VLL"/>
-                                    <segue destination="U2q-eZ-etJ" kind="push" id="dtN-Dk-nop"/>
+                                    <segue destination="Bkz-OM-wML" kind="push" id="ZbX-K1-RO8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目標時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-jV-T3J">
@@ -496,6 +546,7 @@
         <image name="chart.bar.fill" catalog="system" width="128" height="90"/>
         <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="glass" width="415.5" height="885"/>
+        <image name="iPhoneFlipImage" width="302" height="398"/>
         <image name="timer" catalog="system" width="128" height="123"/>
         <namedColor name="summary">
             <color red="0.94509803921568625" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

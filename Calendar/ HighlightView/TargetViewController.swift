@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import RealmSwift
-import HealthKit
 
 class TargetViewController: UIViewController {
     

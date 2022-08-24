@@ -11,10 +11,9 @@ import HealthKit
 
 class StopWatchViewController: UIViewController {
     var feedbackGenerator : UINotificationFeedbackGenerator? = nil
-    
-    @IBOutlet weak var timerLabel: UILabel!
-    
+
     @IBOutlet var label:UILabel!
+    @IBOutlet var inturrptedView: UIView!
     
     var count: Int = 0
     
@@ -69,6 +68,18 @@ class StopWatchViewController: UIViewController {
     
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
+//        // 表示/非表示を切り替え
+//        func changeVisible(visible: Bool) {
+//            if visible {
+//                label.isHidden = false
+//            } else {
+//                label.isHidden = true
+//            }
+//        }
+//
+        if inturrptedView.isHidden == false {
+            inturrptedView.isHidden = true
+        }
         let proximityState = UIDevice.current.proximityState
         print(proximityState)
         if proximityState {
@@ -84,7 +95,7 @@ class StopWatchViewController: UIViewController {
             }
         } else {
             timer.invalidate()
-//            hapticfeedback
+            //            hapticfeedback
             self.feedbackGenerator?.notificationOccurred(.success)
             let alert = UIAlertController(title: "記録を保存する", message: "あなたの予想集中度合いは\(self.result)です", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in
@@ -147,7 +158,6 @@ class StopWatchViewController: UIViewController {
                     self.count = 0
                 }
                 
-                
                 //UIAlertControllerに集中ボタンをActionを追加
                 alert.addAction(quality3Action)
                 alert.addAction(quality2Action)
@@ -179,6 +189,7 @@ class StopWatchViewController: UIViewController {
         label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
+    //ヘルスキット系
     let myHealthStore = HKHealthStore()
     var typeOfHeartRate = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
     
@@ -220,7 +231,7 @@ class StopWatchViewController: UIViewController {
             print(sum/Double(heart.count))
             let aveHeartRate = sum/Double(heart.count)
             
-             // 平均心拍数からスコアを判定
+            // 平均心拍数からスコアを判定
             if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
                 print("超集中")
                 self.result = "超集中"
