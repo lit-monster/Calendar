@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import HealthKit
 
 class StopWatchViewController: UIViewController {
     var feedbackGenerator : UINotificationFeedbackGenerator? = nil
@@ -24,6 +25,8 @@ class StopWatchViewController: UIViewController {
     //UIDeviceクラスを呼ぶ
     let myDevice: UIDevice = UIDevice.current
     
+    var result: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +43,18 @@ class StopWatchViewController: UIViewController {
         // インスタンスを生成し prepare() をコール
         self.feedbackGenerator = UINotificationFeedbackGenerator()
         self.feedbackGenerator?.prepare()
+        
+        //healthkit使用の許可
+        let typeOfRead = Set([typeOfHeartRate])
+        myHealthStore.requestAuthorization(toShare: [],read: typeOfRead,completion: { (success, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            print(success)
+        })
+        
+        readHeartRate()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,9 +84,9 @@ class StopWatchViewController: UIViewController {
             }
         } else {
             timer.invalidate()
-//            hapticfeedback始まり
+//            hapticfeedback
             self.feedbackGenerator?.notificationOccurred(.success)
-            let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
+            let alert = UIAlertController(title: "記録を保存する", message: "あなたの予想集中度合いは\(self.result)です", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in
                 self.dismiss(animated: true, completion: nil)
                 
@@ -162,5 +177,63 @@ class StopWatchViewController: UIViewController {
         let minutes = (interval / 60) % 60
         let hours = (interval / 3600)
         label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+    
+    let myHealthStore = HKHealthStore()
+    var typeOfHeartRate = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+    
+    var heartRateArray: [Double] = []
+    
+    func readHeartRate() {
+        //期間の設定
+        let calendar = Calendar.current
+        let date = Date()
+        let endDate = calendar.date(byAdding: .day, value: -1, to: calendar.startOfDay(for: date))
+        let startDate = calendar.date(byAdding: .day, value: -20, to: calendar.startOfDay(for: date))
+        print("startDate")
+        print(startDate)
+        print("endDate")
+        print(endDate)
+        
+        let heartRateUnit:HKUnit = HKUnit(from: "count/min")
+        
+        //resultsに指定した期間のヘルスデータが取得される
+        let query = HKSampleQuery(sampleType: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!, predicate: HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: []), limit: HKObjectQueryNoLimit, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]){ [self] (query, results, error) in
+            
+            guard results != [] else { return }
+            
+            print(results?[0])
+            
+            for result in results ?? [] {
+                guard let currData = result as? HKQuantitySample else { return }
+                //                print("心拍数: \(currData.quantity.doubleValue(for: heartRateUnit))")
+                let heartRate = currData.quantity.doubleValue(for: heartRateUnit)
+                self.heartRateArray.append(heartRate)
+            }
+            print(self.heartRateArray)
+            
+            // aveHeartRateに平均心拍数を代入
+            let heart = heartRateArray
+            let sum = self.heartRateArray.reduce(0) {(num1: Double, num2: Double) -> Double in
+                return num1 + num2
+            }
+            print(sum/Double(heart.count))
+            let aveHeartRate = sum/Double(heart.count)
+            
+             // 平均心拍数からスコアを判定
+            if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
+                print("超集中")
+                self.result = "超集中"
+            } else if ( sum/Double(heart.count) + 1 > aveHeartRate &&  aveHeartRate > sum/Double(heart.count) - 1 ) {
+                print("集中")
+                self.result = "集中"
+            } else if ( sum/Double(heart.count) - 1 > aveHeartRate) {
+                print("普通")
+                self.result = "普通"
+            } else {
+                print("error")
+            }
+        }
+        myHealthStore.execute(query)
     }
 }

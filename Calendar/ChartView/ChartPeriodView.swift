@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChartPeriodView: View {
     @State var totalTimeString = "5h30m"
-    @State var periodString = "Dec 5-11, 2021"
+    @State var periodString = "Aug 23-26, 2022"
     var body: some View {
         HStack {
             VStack(alignment: .leading) {

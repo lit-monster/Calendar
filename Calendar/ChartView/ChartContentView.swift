@@ -25,7 +25,6 @@ struct ChartContentView: View {
                 .padding()
                 ChartPeriodView().frame(maxWidth: .infinity).padding()
                 BarChartView(stackedBarData: toyShapes)
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             }.navigationTitle(Text("集中グラフ"))
         }
         
