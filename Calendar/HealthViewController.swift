@@ -50,9 +50,10 @@ class HaelthViewController: UIViewController {
         //resultsに指定した期間のヘルスデータが取得される
         let query = HKSampleQuery(sampleType: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!, predicate: HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: []), limit: HKObjectQueryNoLimit, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]){ [self] (query, results, error) in
             
-            print(results![0])
+            guard results != [] else { return }
             
-            //heartRateArrayに心拍数の配列を代入
+            print(results?[0])
+            
             for result in results ?? [] {
                 guard let currData = result as? HKQuantitySample else { return }
                 //                print("心拍数: \(currData.quantity.doubleValue(for: heartRateUnit))")
@@ -63,7 +64,6 @@ class HaelthViewController: UIViewController {
             
             // aveHeartRateに平均心拍数を代入
             let heart = heartRateArray
-            guard heart == [] else { return }
             let sum = self.heartRateArray.reduce(0) {(num1: Double, num2: Double) -> Double in
                 return num1 + num2
             }

@@ -68,5 +68,85 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F030D95-9F82-4836-9B56-1F87F2FC8745"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calendar/HealthViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "readHeartRate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "426749AC-C503-4344-ABAD-7A7450932B27"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calendar/HealthViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "readHeartRate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "426749AC-C503-4344-ABAD-7A7450932B27 - e1d490175cb561d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Calendar.HaelthViewController.readHeartRate() -&gt; ()"
+                  moduleName = "Calendar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aobasuzuki/repo/Calendar/Calendar/HealthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "426749AC-C503-4344-ABAD-7A7450932B27 - e1d490175cb561d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Calendar.HaelthViewController.readHeartRate() -&gt; ()"
+                  moduleName = "Calendar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aobasuzuki/repo/Calendar/Calendar/HealthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "556">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01CB5657-67A3-4BC9-B5A5-565A3EA08D04"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calendar/HealthViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "readHeartRate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
