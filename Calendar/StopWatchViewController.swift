@@ -106,7 +106,7 @@ class StopWatchViewController: UIViewController {
                     //保存する記録
                     let studyRecord = StudyRecord()
                     studyRecord.date = Date()
-                    studyRecord.quality = 1
+                    studyRecord.quality = 3
                     studyRecord.time = TimeInterval(self.count)
                     let realm = try! Realm()
                     try! realm.write {
@@ -138,7 +138,7 @@ class StopWatchViewController: UIViewController {
                     //保存する記録
                     let studyRecord = StudyRecord()
                     studyRecord.date = Date()
-                    studyRecord.quality = 3
+                    studyRecord.quality = 1
                     studyRecord.time = TimeInterval(self.count)
                     let realm = try! Realm()
                     try! realm.write {

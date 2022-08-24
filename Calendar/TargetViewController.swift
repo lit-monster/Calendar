@@ -14,14 +14,9 @@ class TargetViewController: UIViewController {
     
     @IBOutlet weak var picker: UIDatePicker!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    @IBAction func Picker(_ sender: Any) {
-    }
-    
     @IBAction func start() {
         print("picker のあたい")
         print(picker.countDownDuration)
