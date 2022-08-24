@@ -60,6 +60,19 @@ class HaelthViewController: UIViewController {
                 return num1 + num2
             }
             print(sum/Double(heart.count))
+            
+            //numにリアルタイムか直近の心拍数を入れたい
+            let num = sum/Double(heart.count)
+             
+            if ( num > sum/Double(heart.count) + 1 ) {
+                print("超集中")
+            } else if ( sum/Double(heart.count) + 1 > num &&  num > sum/Double(heart.count) - 1 ) {
+                print("集中")
+            } else if ( sum/Double(heart.count) - 1 > num) {
+                print("普通")
+            } else {
+                print("error")
+            }
         }
         myHealthStore.execute(query)
     }
