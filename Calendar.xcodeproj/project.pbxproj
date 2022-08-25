@@ -24,6 +24,9 @@
 		219D151628B6225900193068 /* TimerViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D151528B6225900193068 /* TimerViewController..swift */; };
 		219D151A28B635C600193068 /* TimerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219D151928B635C600193068 /* TimerCollectionViewCell.xib */; };
 		219D151D28B63A5F00193068 /* TimerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D151C28B63A5F00193068 /* TimerCollectionViewCell.swift */; };
+		219D152028B74F8B00193068 /* water.gif in Resources */ = {isa = PBXBuildFile; fileRef = 219D151F28B74F8A00193068 /* water.gif */; };
+		219D152328B753C400193068 /* Gifu in Frameworks */ = {isa = PBXBuildFile; productRef = 219D152228B753C400193068 /* Gifu */; };
+		219D152528B7586D00193068 /* water02.gif in Resources */ = {isa = PBXBuildFile; fileRef = 219D152428B7586D00193068 /* water02.gif */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
 		21A342BA289147AC00243BCD /* HealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A342B9289147AC00243BCD /* HealthDataViewController.swift */; };
@@ -53,6 +56,8 @@
 		219D151528B6225900193068 /* TimerViewController..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController..swift; sourceTree = "<group>"; };
 		219D151928B635C600193068 /* TimerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerCollectionViewCell.xib; sourceTree = "<group>"; };
 		219D151C28B63A5F00193068 /* TimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewCell.swift; sourceTree = "<group>"; };
+		219D151F28B74F8A00193068 /* water.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = water.gif; sourceTree = "<group>"; };
+		219D152428B7586D00193068 /* water02.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = water02.gif; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 				21A4B7CE28A74CF400699C36 /* HealthKit.framework in Frameworks */,
 				21D848D52855E0610016BACD /* RealmSwift in Frameworks */,
 				21D848D32855E0610016BACD /* Realm in Frameworks */,
+				219D152328B753C400193068 /* Gifu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +143,8 @@
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
 				217A1F9427DDF13D0082B2BC /* Colors.xcassets */,
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
+				219D152428B7586D00193068 /* water02.gif */,
+				219D151F28B74F8A00193068 /* water.gif */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			packageProductDependencies = (
 				21D848D22855E0610016BACD /* Realm */,
 				21D848D42855E0610016BACD /* RealmSwift */,
+				219D152228B753C400193068 /* Gifu */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* Calendar.app */;
@@ -209,6 +218,7 @@
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
 				21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */,
+				219D152128B753C400193068 /* XCRemoteSwiftPackageReference "gifu" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -225,8 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */,
+				219D152028B74F8B00193068 /* water.gif in Resources */,
 				21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */,
 				21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */,
+				219D152528B7586D00193068 /* water02.gif in Resources */,
 				214521B727FA863B00A9C9DC /* HighlightCollectionViewCell.xib in Resources */,
 				219D151A28B635C600193068 /* TimerCollectionViewCell.xib in Resources */,
 				21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */,
@@ -466,6 +478,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		219D152128B753C400193068 /* XCRemoteSwiftPackageReference "gifu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kaishin/gifu";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/aheze/realm-swift";
@@ -477,6 +497,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		219D152228B753C400193068 /* Gifu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 219D152128B753C400193068 /* XCRemoteSwiftPackageReference "gifu" */;
+			productName = Gifu;
+		};
 		21D848D22855E0610016BACD /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 21D848D12855E0610016BACD /* XCRemoteSwiftPackageReference "realm-swift" */;

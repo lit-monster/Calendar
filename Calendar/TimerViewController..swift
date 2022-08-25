@@ -6,3 +6,19 @@
 //
 
 import Foundation
+import RealmSwift
+import UIKit
+import Gifu
+
+
+class TimerViewController: UIViewController {
+    
+    @IBOutlet weak var imageView:GIFImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        imageView.animate(withGIFNamed: "water02", animationBlock:  {
+//            print("It's animating!")
+//        })
+    }
+}

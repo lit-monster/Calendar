@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "gifu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kaishin/gifu",
+      "state" : {
+        "branch" : "master",
+        "revision" : "b3faac8bf96f11aca616657ba3e054dea3b062c4"
+      }
+    },
+    {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core",

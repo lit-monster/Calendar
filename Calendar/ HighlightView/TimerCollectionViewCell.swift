@@ -38,8 +38,8 @@ struct TimerCollectionViewCell: View {
     
 }
 
-struct TimerCollectionViewCell_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerCollectionViewCell()
-    }
-}
+//struct TimerCollectionViewCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimerCollectionViewCell()
+//    }
+//}
