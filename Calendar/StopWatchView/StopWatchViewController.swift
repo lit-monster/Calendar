@@ -32,7 +32,8 @@ class StopWatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(targetTimeInterval)
+        print("👻👻👻👻")
         // 近接センサーの有効化
         UIDevice.current.isProximityMonitoringEnabled = true
         
@@ -69,11 +70,6 @@ class StopWatchViewController: UIViewController {
         super.viewDidDisappear(animated)
         UIDevice.current.isProximityMonitoringEnabled = false
     }
-    
-    @IBAction func sliderValueDidChanged(sender: UISlider) {
-        updateGaugePrgress(remainingTime: "1:2:3", remainingRate: Double(sender.value))
-    }
-    
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
         //        // 表示/非表示を切り替え
@@ -190,12 +186,13 @@ class StopWatchViewController: UIViewController {
         //countを0.01足す
         count = count + 1
         //ラベル表示
-        let interval = Int(count)
+        let interval = Int(targetTimeInterval) - Int(count)
         let seconds = interval % 60
         let minutes = (interval / 60) % 60
         let hours = (interval / 3600)
 //        label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-        updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds), remainingRate: 0.3)
+        updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds),
+                           remainingRate: (targetTimeInterval - Double(count)) / targetTimeInterval)
     }
     
     func updateGaugePrgress(remainingTime: String, remainingRate: Double) {
