@@ -6,18 +6,22 @@
 //
 
 import UIKit
+import SwiftUI
 import RealmSwift
 import HealthKit
 
 class StopWatchViewController: UIViewController {
     var feedbackGenerator : UINotificationFeedbackGenerator? = nil
-
+    
+    @IBOutlet var circularGaugeView: UIView!
+    
     @IBOutlet var label:UILabel!
     @IBOutlet var inturrptedView: UIView!
     
     var count: Int = 0
     
     var timer: Timer = Timer()
+    var targetTimeInterval: CFTimeInterval = 0
     
     //時間の型で保存する、秒数で保存
     var startTime = TimeInterval()
@@ -25,7 +29,7 @@ class StopWatchViewController: UIViewController {
     let myDevice: UIDevice = UIDevice.current
     
     var result: String = ""
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,17 +70,21 @@ class StopWatchViewController: UIViewController {
         UIDevice.current.isProximityMonitoringEnabled = false
     }
     
+    @IBAction func sliderValueDidChanged(sender: UISlider) {
+        updateGaugePrgress(remainingTime: "1:2:3", remainingRate: Double(sender.value))
+    }
+    
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
-//        // 表示/非表示を切り替え
-//        func changeVisible(visible: Bool) {
-//            if visible {
-//                label.isHidden = false
-//            } else {
-//                label.isHidden = true
-//            }
-//        }
-//
+        //        // 表示/非表示を切り替え
+        //        func changeVisible(visible: Bool) {
+        //            if visible {
+        //                label.isHidden = false
+        //            } else {
+        //                label.isHidden = true
+        //            }
+        //        }
+        //
         if inturrptedView.isHidden == false {
             inturrptedView.isHidden = true
         }
@@ -102,7 +110,7 @@ class StopWatchViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
                 
                 self.count = count - count
-                label.text = String(count)
+//                label.text = String(count)
             }
             let save = UIAlertAction(title: "保存", style: .default) { _ in
                 //保存ボタンを押された時の集中度合いの通知
@@ -186,7 +194,25 @@ class StopWatchViewController: UIViewController {
         let seconds = interval % 60
         let minutes = (interval / 60) % 60
         let hours = (interval / 3600)
-        label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+//        label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds), remainingRate: 0.3)
+    }
+    
+    func updateGaugePrgress(remainingTime: String, remainingRate: Double) {
+        for view in self.circularGaugeView.subviews {
+            view.removeFromSuperview()
+        }
+        let vc = UIHostingController(rootView: CircularGauge(remainingRate: remainingRate, remainingTimeString: remainingTime))
+        self.addChild(vc)
+        self.circularGaugeView.addSubview(vc.view)
+        vc.didMove(toParent: self)
+        vc.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let leadingConstraint = vc.view.leadingAnchor.constraint(equalTo: circularGaugeView.leadingAnchor, constant: 0)
+        let trailingConstraint = vc.view.trailingAnchor.constraint(equalTo: circularGaugeView.trailingAnchor, constant: 0)
+        let bottomConstraint = vc.view.bottomAnchor.constraint(equalTo: circularGaugeView.bottomAnchor, constant: 0)
+        let topConstraint = vc.view.topAnchor.constraint(equalTo: circularGaugeView.topAnchor, constant: 0)
+        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, bottomConstraint, topConstraint])
     }
     
     //ヘルスキット系

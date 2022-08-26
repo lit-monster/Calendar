@@ -19,5 +19,13 @@ class TargetViewController: UIViewController {
     @IBAction func start() {
         print("picker のあたい")
         print(picker.countDownDuration)
+        performSegue(withIdentifier: "tocountdown", sender: .none)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tocountdown"{
+            let vc = segue.destination as! StopWatchViewController
+            vc.targetTimeInterval = picker.countDownDuration
+        }
     }
 }

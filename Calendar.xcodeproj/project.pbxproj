@@ -22,11 +22,10 @@
 		2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75F286C547E00018ADB /* ChartPeriodView.swift */; };
 		219D151428B605A600193068 /* TargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D151328B605A600193068 /* TargetViewController.swift */; };
 		219D151628B6225900193068 /* TimerViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D151528B6225900193068 /* TimerViewController..swift */; };
-		219D151A28B635C600193068 /* TimerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219D151928B635C600193068 /* TimerCollectionViewCell.xib */; };
-		219D151D28B63A5F00193068 /* TimerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D151C28B63A5F00193068 /* TimerCollectionViewCell.swift */; };
 		219D152028B74F8B00193068 /* water.gif in Resources */ = {isa = PBXBuildFile; fileRef = 219D151F28B74F8A00193068 /* water.gif */; };
 		219D152328B753C400193068 /* Gifu in Frameworks */ = {isa = PBXBuildFile; productRef = 219D152228B753C400193068 /* Gifu */; };
 		219D152528B7586D00193068 /* water02.gif in Resources */ = {isa = PBXBuildFile; fileRef = 219D152428B7586D00193068 /* water02.gif */; };
+		219D152928B85A8700193068 /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D152828B85A8700193068 /* CircularGauge.swift */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
 		21A342BA289147AC00243BCD /* HealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A342B9289147AC00243BCD /* HealthDataViewController.swift */; };
@@ -54,10 +53,9 @@
 		2199B75F286C547E00018ADB /* ChartPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPeriodView.swift; sourceTree = "<group>"; };
 		219D151328B605A600193068 /* TargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
 		219D151528B6225900193068 /* TimerViewController..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController..swift; sourceTree = "<group>"; };
-		219D151928B635C600193068 /* TimerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerCollectionViewCell.xib; sourceTree = "<group>"; };
-		219D151C28B63A5F00193068 /* TimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewCell.swift; sourceTree = "<group>"; };
 		219D151F28B74F8A00193068 /* water.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = water.gif; sourceTree = "<group>"; };
 		219D152428B7586D00193068 /* water02.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = water02.gif; sourceTree = "<group>"; };
+		219D152828B85A8700193068 /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,15 +95,14 @@
 			path = ChartView;
 			sourceTree = "<group>";
 		};
-		219D151828B6357300193068 /*  HighlightView */ = {
+		219D151828B6357300193068 /* StopWatchView */ = {
 			isa = PBXGroup;
 			children = (
 				219D151328B605A600193068 /* TargetViewController.swift */,
+				219D152828B85A8700193068 /* CircularGauge.swift */,
 				216771AF269EF2570005F50C /* StopWatchViewController.swift */,
-				219D151928B635C600193068 /* TimerCollectionViewCell.xib */,
-				219D151C28B63A5F00193068 /* TimerCollectionViewCell.swift */,
 			);
-			path = " HighlightView";
+			path = StopWatchView;
 			sourceTree = "<group>";
 		};
 		21A1D48D268C67AD00C07A86 = {
@@ -137,7 +134,7 @@
 				21A342B9289147AC00243BCD /* HealthDataViewController.swift */,
 				21A4B7C828A722FE00699C36 /* HealthViewController.swift */,
 				219D151528B6225900193068 /* TimerViewController..swift */,
-				219D151828B6357300193068 /*  HighlightView */,
+				219D151828B6357300193068 /* StopWatchView */,
 				2197B175288806E800D23030 /* ChartView */,
 				21A4B7CA28A7285900699C36 /* HighlightView */,
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
@@ -240,7 +237,6 @@
 				21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */,
 				219D152528B7586D00193068 /* water02.gif in Resources */,
 				214521B727FA863B00A9C9DC /* HighlightCollectionViewCell.xib in Resources */,
-				219D151A28B635C600193068 /* TimerCollectionViewCell.xib in Resources */,
 				21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,13 +251,13 @@
 				2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */,
 				219D151428B605A600193068 /* TargetViewController.swift in Sources */,
 				2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */,
-				219D151D28B63A5F00193068 /* TimerCollectionViewCell.swift in Sources */,
 				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
 				21A342BA289147AC00243BCD /* HealthDataViewController.swift in Sources */,
 				219D151628B6225900193068 /* TimerViewController..swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				214521B627FA863B00A9C9DC /* HighlightCollectionViewCell.swift in Sources */,
+				219D152928B85A8700193068 /* CircularGauge.swift in Sources */,
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */,
 				21A342BC289425FE00243BCD /* HighlightCell.swift in Sources */,
