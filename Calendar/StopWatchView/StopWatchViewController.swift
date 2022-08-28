@@ -20,6 +20,10 @@ class StopWatchViewController: UIViewController {
     
     var count: Int = 0
     
+    var latestHeartRate = 0.0
+    
+    var focusRate = 0
+    
     var timer: Timer = Timer()
     var targetTimeInterval: CFTimeInterval = 0
     
@@ -29,7 +33,7 @@ class StopWatchViewController: UIViewController {
     let myDevice: UIDevice = UIDevice.current
     
     var result: String = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(targetTimeInterval)
@@ -71,6 +75,18 @@ class StopWatchViewController: UIViewController {
         UIDevice.current.isProximityMonitoringEnabled = false
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "totimer"{
+            let vc = segue.destination as! TimerViewController
+            vc.count = self.count
+            vc.latestHeartRate = self.latestHeartRate
+        }
+    }
+    
+    @IBAction func exitButtonPressed(){
+        self.performSegue(withIdentifier: "totimer", sender: nil)
+    }
+    
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
         if inturrptedView.isHidden == false {
@@ -102,7 +118,7 @@ class StopWatchViewController: UIViewController {
         let seconds = interval % 60
         let minutes = (interval / 60) % 60
         let hours = (interval / 3600)
-//        label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        //        label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
         updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds),
                            remainingRate: (targetTimeInterval - Double(count)) / targetTimeInterval)
     }
@@ -134,7 +150,7 @@ class StopWatchViewController: UIViewController {
         //期間の設定
         let calendar = Calendar.current
         let date = Date()
-        let endDate = calendar.date(byAdding: .day, value: -1, to: calendar.startOfDay(for: date))
+        let endDate = calendar.date(byAdding: .day, value: -0, to: calendar.startOfDay(for: date))
         let startDate = calendar.date(byAdding: .day, value: -20, to: calendar.startOfDay(for: date))
         print("startDate")
         print(startDate)
@@ -156,7 +172,10 @@ class StopWatchViewController: UIViewController {
                 let heartRate = currData.quantity.doubleValue(for: heartRateUnit)
                 self.heartRateArray.append(heartRate)
             }
+            print("heartRateArray")
             print(self.heartRateArray)
+            
+            latestHeartRate = self.heartRateArray.last ?? 0
             
             // aveHeartRateに平均心拍数を代入
             let heart = heartRateArray
@@ -169,12 +188,15 @@ class StopWatchViewController: UIViewController {
             // 平均心拍数からスコアを判定
             if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
                 print("超集中")
+                focusRate = 3
                 self.result = "超集中"
             } else if ( sum/Double(heart.count) + 1 > aveHeartRate &&  aveHeartRate > sum/Double(heart.count) - 1 ) {
                 print("集中")
+                focusRate = 2
                 self.result = "集中"
             } else if ( sum/Double(heart.count) - 1 > aveHeartRate) {
                 print("普通")
+                focusRate = 1
                 self.result = "普通"
             } else {
                 print("error")
