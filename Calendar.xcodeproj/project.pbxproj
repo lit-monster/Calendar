@@ -97,6 +97,7 @@
 				219D151328B605A600193068 /* TargetViewController.swift */,
 				219D152828B85A8700193068 /* CircularGauge.swift */,
 				216771AF269EF2570005F50C /* StopWatchViewController.swift */,
+				219D151528B6225900193068 /* TimerViewController..swift */,
 			);
 			path = StopWatchView;
 			sourceTree = "<group>";
@@ -127,7 +128,6 @@
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
 				212D7BC126D65D2B004561B0 /* Memo.swift */,
-				219D151528B6225900193068 /* TimerViewController..swift */,
 				219D151828B6357300193068 /* StopWatchView */,
 				2197B175288806E800D23030 /* ChartView */,
 				21A4B7CA28A7285900699C36 /* HighlightView */,
