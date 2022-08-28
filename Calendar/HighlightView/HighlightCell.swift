@@ -13,14 +13,9 @@ struct HighlightCell: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(.white)
-                .blur(radius: 64.0)
+                .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
                 .cornerRadius(16)
-            Rectangle()
-                .fill(Color("white30").shadow(.inner(color: Color("white60"), radius: 4)))
-            //
-            //                .frame(width:340, height:200)
-                .cornerRadius(16)
+                .shadow(color: .black.opacity(0.2),radius: 16)
             VStack(alignment: .leading) {
                 Text("超集中")
                     .font(.largeTitle)

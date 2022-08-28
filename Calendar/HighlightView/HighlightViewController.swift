@@ -14,7 +14,6 @@ class HighlightViewController: UIViewController {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
-//            collectionView.register(UINib(nibName: "HighlightCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HighlightCollectionViewCell")
             collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "HighlightCell")
         }
     }
@@ -38,6 +37,7 @@ extension HighlightViewController: UICollectionViewDataSource, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HighlightCell", for: indexPath)
         cell.contentConfiguration = UIHostingConfiguration {
             HighlightCell()
+                .frame(width: self.view.frame.width*0.9)
         }
         return cell
     }

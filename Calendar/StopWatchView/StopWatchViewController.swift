@@ -102,12 +102,19 @@ class StopWatchViewController: UIViewController {
             //            hapticfeedback
             self.feedbackGenerator?.notificationOccurred(.success)
             //alert
-            let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
+//            let alert = UIAlertController(title: "記録を保存する", message:"" ,preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in
+                self.dismiss(animated: true, completion: nil)
+                
+                //キャンセルボタンを押されたときにラベルのカウントを0に戻す
+                self.count = count - count
+//                label.text = String(count)
+            }
             let save = UIAlertAction(title: "保存", style: .default) { _ in
                 //保存ボタンを押された時の集中度合いの通知
                 //アラート生成
                 //UIAlertControllerのスタイルがalert
-                let alert: UIAlertController = UIAlertController(title: "集中度合いを記録しよう", message:  "どのくらい集中した？", preferredStyle: .alert)
+//                let alert: UIAlertController = UIAlertController(title: "集中度合いを記録しよう", message:  "どのくらい集中した？", preferredStyle: .alert)
                 // 確定ボタンの処理
                 let quality3Action = UIAlertAction(title: "超集中(★★★)", style: .default) { [weak self] _ in
                     guard let self = self else { return }
@@ -158,30 +165,22 @@ class StopWatchViewController: UIViewController {
                 }
                 
                 //UIAlertControllerに集中ボタンをActionを追加
-                alert.addAction(quality3Action)
-                alert.addAction(quality2Action)
-                alert.addAction(quality1Action)
+//                alert.addAction(quality3Action)
+//                alert.addAction(quality2Action)
+//                alert.addAction(quality1Action)
                 
                 //実際にAlertを表示する
-                self.present(alert, animated: true, completion: nil)
+//                self.present(alert, animated: true, completion: nil)
             }
             
             let pause = UIAlertAction(title: "一時停止", style: .default) { (acrion) in
                 self.dismiss(animated: true, completion: nil)
             }
             
-            let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in
-                self.dismiss(animated: true, completion: nil)
-                
-                //キャンセルボタンを押されたときにラベルのカウントを0に戻す
-                self.count = count - count
-//                label.text = String(count)
-            }
-            
-            alert.addAction(save)
-            alert.addAction(pause)
-            alert.addAction(cancel)
-            present(alert, animated: true, completion: nil)
+//            alert.addAction(save)
+//            alert.addAction(pause)
+//            alert.addAction(cancel)
+//            present(alert, animated: true, completion: nil)
         }
     }
     
