@@ -28,9 +28,7 @@
 		219D152928B85A8700193068 /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D152828B85A8700193068 /* CircularGauge.swift */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
-		21A342BA289147AC00243BCD /* HealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A342B9289147AC00243BCD /* HealthDataViewController.swift */; };
 		21A342BC289425FE00243BCD /* HighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A342BB289425FE00243BCD /* HighlightCell.swift */; };
-		21A4B7C928A722FE00699C36 /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A4B7C828A722FE00699C36 /* HealthViewController.swift */; };
 		21A4B7CE28A74CF400699C36 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A4B7CD28A74CF300699C36 /* HealthKit.framework */; };
 		21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B0A6DB28855BDF00CFE312 /* Main.storyboard */; };
 		21D848D32855E0610016BACD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21D848D22855E0610016BACD /* Realm */; };
@@ -60,9 +58,7 @@
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A1D4A7268C67B100C07A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21A342B9289147AC00243BCD /* HealthDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataViewController.swift; sourceTree = "<group>"; };
 		21A342BB289425FE00243BCD /* HighlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightCell.swift; sourceTree = "<group>"; };
-		21A4B7C828A722FE00699C36 /* HealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		21A4B7CB28A72D2100699C36 /* Calendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calendar.entitlements; sourceTree = "<group>"; };
 		21A4B7CD28A74CF300699C36 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		21B0A6DC28855BDF00CFE312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Calendar/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,8 +127,6 @@
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
 				212D7BC126D65D2B004561B0 /* Memo.swift */,
-				21A342B9289147AC00243BCD /* HealthDataViewController.swift */,
-				21A4B7C828A722FE00699C36 /* HealthViewController.swift */,
 				219D151528B6225900193068 /* TimerViewController..swift */,
 				219D151828B6357300193068 /* StopWatchView */,
 				2197B175288806E800D23030 /* ChartView */,
@@ -253,7 +247,6 @@
 				2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */,
 				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
-				21A342BA289147AC00243BCD /* HealthDataViewController.swift in Sources */,
 				219D151628B6225900193068 /* TimerViewController..swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				214521B627FA863B00A9C9DC /* HighlightCollectionViewCell.swift in Sources */,
@@ -261,7 +254,6 @@
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */,
 				21A342BC289425FE00243BCD /* HighlightCell.swift in Sources */,
-				21A4B7C928A722FE00699C36 /* HealthViewController.swift in Sources */,
 				212D7BC226D65D2B004561B0 /* Memo.swift in Sources */,
 				212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */,
 				211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */,

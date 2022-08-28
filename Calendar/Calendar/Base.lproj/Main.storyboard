@@ -440,7 +440,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
-                                <rect key="frame" x="0.0" y="396" width="413" height="105"/>
+                                <rect key="frame" x="20" y="396" width="374" height="105"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJe-jJ-Ypt">
@@ -452,8 +452,8 @@
                                     <action selector="start" destination="fvf-aK-hgg" eventType="touchUpInside" id="U3Z-8R-VLL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目標時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-jV-T3J">
-                                <rect key="frame" x="20" y="328" width="66" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク終了の目標時間を設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-jV-T3J">
+                                <rect key="frame" x="20" y="344" width="213" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
@@ -471,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ua5-da-0sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2865" y="-3571"/>
+            <point key="canvasLocation" x="-2865.217391304348" y="-3571.2053571428569"/>
         </scene>
         <!--highlight-->
         <scene sceneID="7kX-ta-Iit">
@@ -542,21 +542,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHY-uf-Mnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1339.1304347826087" y="-5063.1696428571422"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vCL-b2-vwf">
-            <objects>
-                <viewController id="jSa-5p-uHu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vmk-dz-0Kw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="lMd-AC-fw5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5wS-1e-Vgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4325" y="-4127"/>
         </scene>
         <!--Timer-->
         <scene sceneID="uYG-e8-Jkv">

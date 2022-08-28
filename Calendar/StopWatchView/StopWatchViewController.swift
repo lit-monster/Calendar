@@ -101,13 +101,8 @@ class StopWatchViewController: UIViewController {
             timer.invalidate()
             //            hapticfeedback
             self.feedbackGenerator?.notificationOccurred(.success)
-            let alert = UIAlertController(title: "記録を保存する", message: "あなたの予想集中度合いは\(self.result)です", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in
-                self.dismiss(animated: true, completion: nil)
-                
-                self.count = count - count
-//                label.text = String(count)
-            }
+            //alert
+            let alert = UIAlertController(title: "記録を保存する", message: "", preferredStyle: .alert)
             let save = UIAlertAction(title: "保存", style: .default) { _ in
                 //保存ボタンを押された時の集中度合いの通知
                 //アラート生成
@@ -173,6 +168,14 @@ class StopWatchViewController: UIViewController {
             
             let pause = UIAlertAction(title: "一時停止", style: .default) { (acrion) in
                 self.dismiss(animated: true, completion: nil)
+            }
+            
+            let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in
+                self.dismiss(animated: true, completion: nil)
+                
+                //キャンセルボタンを押されたときにラベルのカウントを0に戻す
+                self.count = count - count
+//                label.text = String(count)
             }
             
             alert.addAction(save)

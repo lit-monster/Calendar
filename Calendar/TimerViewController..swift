@@ -17,8 +17,5 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        imageView.animate(withGIFNamed: "water02", animationBlock:  {
-//            print("It's animating!")
-//        })
     }
 }
