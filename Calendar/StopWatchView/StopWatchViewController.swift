@@ -70,25 +70,17 @@ class StopWatchViewController: UIViewController {
         super.viewDidDisappear(animated)
         UIDevice.current.isProximityMonitoringEnabled = false
     }
+    
     // 近接センサーのON-Offが切り替わると実行される
     @objc func proximityMonitorStateDidChange() {
-        //        // 表示/非表示を切り替え
-        //        func changeVisible(visible: Bool) {
-        //            if visible {
-        //                label.isHidden = false
-        //            } else {
-        //                label.isHidden = true
-        //            }
-        //        }
-        //
         if inturrptedView.isHidden == false {
             inturrptedView.isHidden = true
         }
         let proximityState = UIDevice.current.proximityState
         print(proximityState)
+        self.feedbackGenerator?.notificationOccurred(.success)
         if proximityState {
             if !timer.isValid {
-                self.feedbackGenerator?.notificationOccurred(.success)
                 //タイマーが動作してなかったら動かす
                 timer = Timer.scheduledTimer(timeInterval: 1,
                                              target: self,
@@ -99,88 +91,6 @@ class StopWatchViewController: UIViewController {
             }
         } else {
             timer.invalidate()
-            //            hapticfeedback
-            self.feedbackGenerator?.notificationOccurred(.success)
-            //alert
-//            let alert = UIAlertController(title: "記録を保存する", message:"" ,preferredStyle: .alert)
-            let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { [self] (action) in
-                self.dismiss(animated: true, completion: nil)
-                
-                //キャンセルボタンを押されたときにラベルのカウントを0に戻す
-                self.count = count - count
-//                label.text = String(count)
-            }
-            let save = UIAlertAction(title: "保存", style: .default) { _ in
-                //保存ボタンを押された時の集中度合いの通知
-                //アラート生成
-                //UIAlertControllerのスタイルがalert
-//                let alert: UIAlertController = UIAlertController(title: "集中度合いを記録しよう", message:  "どのくらい集中した？", preferredStyle: .alert)
-                // 確定ボタンの処理
-                let quality3Action = UIAlertAction(title: "超集中(★★★)", style: .default) { [weak self] _ in
-                    guard let self = self else { return }
-                    //実際の処理
-                    print("超集中")
-                    //保存する記録
-                    let studyRecord = StudyRecord()
-                    studyRecord.date = Date()
-                    studyRecord.quality = 3
-                    studyRecord.time = TimeInterval(self.count)
-                    let realm = try! Realm()
-                    try! realm.write {
-                        realm.add(studyRecord)
-                    }
-                    self.count = 0
-                }
-                // 確定ボタンの処理
-                let quality2Action = UIAlertAction(title: "集中(★★)", style: .default) { [weak self] _ in
-                    guard let self = self else { return }
-                    //実際の処理
-                    print("集中")
-                    //保存する記録
-                    let studyRecord = StudyRecord()
-                    studyRecord.date = Date()
-                    studyRecord.quality = 2
-                    studyRecord.time = TimeInterval(self.count)
-                    let realm = try! Realm()
-                    try! realm.write {
-                        realm.add(studyRecord)
-                    }
-                    self.count = 0
-                }
-                // 確定ボタンの処理
-                let quality1Action = UIAlertAction(title: "普通(★)", style: .default) { [weak self] _ in
-                    guard let self = self else { return }
-                    //実際の処理
-                    print("普通")
-                    //保存する記録
-                    let studyRecord = StudyRecord()
-                    studyRecord.date = Date()
-                    studyRecord.quality = 1
-                    studyRecord.time = TimeInterval(self.count)
-                    let realm = try! Realm()
-                    try! realm.write {
-                        realm.add(studyRecord)
-                    }
-                    self.count = 0
-                }
-                
-                //UIAlertControllerに集中ボタンをActionを追加
-//                alert.addAction(quality3Action)
-//                alert.addAction(quality2Action)
-//                alert.addAction(quality1Action)
-                
-                //実際にAlertを表示する
-//                self.present(alert, animated: true, completion: nil)
-            }
-            
-            let pause = UIAlertAction(title: "一時停止", style: .default) { (acrion) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            
-//            alert.addAction(save)
-//            alert.addAction(pause)
-//            alert.addAction(cancel)
-//            present(alert, animated: true, completion: nil)
         }
     }
     
