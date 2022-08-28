@@ -12,7 +12,7 @@ import RealmSwift
 final class StudyRecordManager {
     static let shared = StudyRecordManager()
     
-    private init() { }
+    private init() {}
     
     let realm = try! Realm()
     
@@ -81,9 +81,10 @@ final class StudyRecordManager {
             }
         }
 
-        toyShapeArray.append(ToyShape(color: "普通", type: "Today", count: Int(today[0])))
-        toyShapeArray.append(ToyShape(color: "集中", type: "Today", count: Int(today[1])))
+        
         toyShapeArray.append(ToyShape(color: "超集中", type: "Today", count: Int(today[2])))
+        toyShapeArray.append(ToyShape(color: "集中", type: "Today", count: Int(today[1])))
+        toyShapeArray.append(ToyShape(color: "普通", type: "Today", count: Int(today[0])))
         
         let twoDays = yesterdayArray.map {
             $0.map {
@@ -93,9 +94,10 @@ final class StudyRecordManager {
             }
         }
 
-        toyShapeArray.append(ToyShape(color: "普通", type: "Yesterday", count: Int(twoDays[0])))
-        toyShapeArray.append(ToyShape(color: "集中", type: "Yesterday", count: Int(twoDays[1])))
+        
         toyShapeArray.append(ToyShape(color: "超集中", type: "Yesterday", count: Int(twoDays[2])))
+        toyShapeArray.append(ToyShape(color: "集中", type: "Yesterday", count: Int(twoDays[1])))
+        toyShapeArray.append(ToyShape(color: "普通", type: "Yesterday", count: Int(twoDays[0])))
         
         let threeDays = threeDaysArray.map {
             $0.map {
@@ -104,10 +106,10 @@ final class StudyRecordManager {
                 num1 + num2
             }
         }
-
-        toyShapeArray.append(ToyShape(color: "普通", type: "ThreeDays", count: Int(threeDays[0])))
-        toyShapeArray.append(ToyShape(color: "集中", type: "ThreeDays", count: Int(threeDays[1])))
+        
         toyShapeArray.append(ToyShape(color: "超集中", type: "ThreeDays", count: Int(threeDays[2])))
+        toyShapeArray.append(ToyShape(color: "集中", type: "ThreeDays", count: Int(threeDays[1])))
+        toyShapeArray.append(ToyShape(color: "普通", type: "ThreeDays", count: Int(threeDays[0])))
         
         let fourDays = fourDaysArray.map {
             $0.map {
@@ -116,10 +118,10 @@ final class StudyRecordManager {
                 num1 + num2
             }
         }
-
-        toyShapeArray.append(ToyShape(color: "普通", type: "FourDays", count: Int(fourDays[0])))
-        toyShapeArray.append(ToyShape(color: "集中", type: "FourDays", count: Int(fourDays[1])))
+        
         toyShapeArray.append(ToyShape(color: "超集中", type: "FourDays", count: Int(fourDays[2])))
+        toyShapeArray.append(ToyShape(color: "集中", type: "FourDays", count: Int(fourDays[1])))
+        toyShapeArray.append(ToyShape(color: "普通", type: "FourDays", count: Int(fourDays[0])))
         
         let fiveDays = fiveDaysArray.map {
             $0.map {
@@ -129,9 +131,9 @@ final class StudyRecordManager {
             }
         }
         
-        toyShapeArray.append(ToyShape(color: "普通", type: "fiveDays", count: Int(fiveDays[0])))
-        toyShapeArray.append(ToyShape(color: "集中", type: "fiveDays", count: Int(fiveDays[1])))
         toyShapeArray.append(ToyShape(color: "超集中", type: "fiveDays", count: Int(fiveDays[2])))
+        toyShapeArray.append(ToyShape(color: "集中", type: "fiveDays", count: Int(fiveDays[1])))
+        toyShapeArray.append(ToyShape(color: "普通", type: "fiveDays", count: Int(fiveDays[0])))
         
         let sixDays = sixDaysArray.map {
             $0.map {
@@ -141,9 +143,9 @@ final class StudyRecordManager {
             }
         }
         
-        toyShapeArray.append(ToyShape(color: "普通", type: "sixDays", count: Int(sixDays[0])))
-        toyShapeArray.append(ToyShape(color: "集中", type: "sixDays", count: Int(sixDays[1])))
         toyShapeArray.append(ToyShape(color: "超集中", type: "sixDays", count: Int(sixDays[2])))
+        toyShapeArray.append(ToyShape(color: "集中", type: "sixDays", count: Int(sixDays[1])))
+        toyShapeArray.append(ToyShape(color: "普通", type: "sixDays", count: Int(sixDays[0])))
         
         let sevenDays = weekAgoArray.map {
             $0.map {
@@ -153,9 +155,9 @@ final class StudyRecordManager {
             }
         }
         
-        toyShapeArray.append(ToyShape(color: "普通", type: "sevenDays", count: Int(sevenDays[0])))
-        toyShapeArray.append(ToyShape(color: "集中", type: "sevenDays", count: Int(sevenDays[1])))
         toyShapeArray.append(ToyShape(color: "超集中", type: "sevenDays", count: Int(sevenDays[2])))
+        toyShapeArray.append(ToyShape(color: "集中", type: "sevenDays", count: Int(sevenDays[1])))
+        toyShapeArray.append(ToyShape(color: "普通", type: "sevenDays", count: Int(sevenDays[0])))
         
         return toyShapeArray
 
