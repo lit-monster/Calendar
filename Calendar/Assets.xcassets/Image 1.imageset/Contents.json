@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Artboard22.png",
+      "filename" : "Rectangle.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,11 +12,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "33.png",
+      "filename" : "Rectangle 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Rectangle@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -27,10 +28,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Rectangle@2x 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Rectangle@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -41,6 +44,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Rectangle@3x 1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
