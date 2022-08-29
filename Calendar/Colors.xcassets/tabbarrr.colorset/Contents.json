@@ -1,7 +1,10 @@
 {
-  "images" : [
+  "colors" : [
     {
-      "filename" : "iPhoneFlipImage.png",
+      "color" : {
+        "platform" : "ios",
+        "reference" : "systemGray3Color"
+      },
       "idiom" : "universal"
     },
     {
@@ -11,7 +14,10 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 2.png",
+      "color" : {
+        "platform" : "ios",
+        "reference" : "systemGray3Color"
+      },
       "idiom" : "universal"
     }
   ],

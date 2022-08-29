@@ -17,9 +17,10 @@ struct CircularGauge:View {
         ZStack {
             Circle()
                 .stroke(
-                    Color.cyan.opacity(0.5),
+                    Color.cyan.opacity(0.3),
                     lineWidth: 30
                 )
+                .shadow(color: .blue.opacity(0.6),radius: 16)
             Circle()
                 .trim(from: 0, to: remainingRate)
                 .stroke(
@@ -38,7 +39,7 @@ struct CircularGauge:View {
                     .font(.system(size: 64, weight: .bold, design: .rounded))
                     .bold()
             }
-        }
+        }.background(.clear)
     }
 }
 

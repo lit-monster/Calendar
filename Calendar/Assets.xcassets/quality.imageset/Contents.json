@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Artboardsa.png",
+      "filename" : "Rectangle.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Artboard321.png",
+      "filename" : "Rectangle 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

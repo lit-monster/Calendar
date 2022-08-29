@@ -13,6 +13,8 @@ import Gifu
 
 class TimerViewController: UIViewController {
     
+    var feedbackGenerator : UINotificationFeedbackGenerator? = nil
+    
     var count: Int = 0
     var latestHeartRate: Double = 0.0
     var focusRate = 0
@@ -25,6 +27,9 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // インスタンスを生成し prepare() をコール
+        self.feedbackGenerator = UINotificationFeedbackGenerator()
+        self.feedbackGenerator?.prepare()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,6 +71,7 @@ class TimerViewController: UIViewController {
             realm.add(studyRecord)
         }
         self.count = 0
+        self.feedbackGenerator?.notificationOccurred(.success)
     }
     
     @IBAction func quality2(){
@@ -80,6 +86,7 @@ class TimerViewController: UIViewController {
             realm.add(studyRecord)
         }
         self.count = 0
+        self.feedbackGenerator?.notificationOccurred(.success)
     }
     
     @IBAction func quality1(){
@@ -94,6 +101,7 @@ class TimerViewController: UIViewController {
             realm.add(studyRecord)
         }
         self.count = 0
+        self.feedbackGenerator?.notificationOccurred(.success)
     }
     
 }

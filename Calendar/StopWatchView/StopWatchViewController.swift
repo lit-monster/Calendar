@@ -132,6 +132,7 @@ class StopWatchViewController: UIViewController {
         self.circularGaugeView.addSubview(vc.view)
         vc.didMove(toParent: self)
         vc.view.translatesAutoresizingMaskIntoConstraints = false
+        vc.view.backgroundColor = .clear
         
         let leadingConstraint = vc.view.leadingAnchor.constraint(equalTo: circularGaugeView.leadingAnchor, constant: 0)
         let trailingConstraint = vc.view.trailingAnchor.constraint(equalTo: circularGaugeView.trailingAnchor, constant: 0)
