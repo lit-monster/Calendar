@@ -80,6 +80,7 @@ class StopWatchViewController: UIViewController {
             let vc = segue.destination as! TimerViewController
             vc.count = self.count
             vc.latestHeartRate = self.latestHeartRate
+            vc.focusRate = self.focusRate
         }
     }
     
