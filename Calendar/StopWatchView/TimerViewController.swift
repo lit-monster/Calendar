@@ -102,6 +102,7 @@ class TimerViewController: UIViewController {
         }
         self.count = 0
         self.feedbackGenerator?.notificationOccurred(.success)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
