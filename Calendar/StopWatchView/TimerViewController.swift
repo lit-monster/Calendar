@@ -34,8 +34,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        totalTimeLabel.text = String(count)
-        heartRateLabel.text = String(latestHeartRate)
+        heartRateLabel.text = String(Int(latestHeartRate))
         if focusRate == 3 {
             starLabel.text = "★★★"
             recoLabal.text = "VERY HIGH"
@@ -46,6 +45,12 @@ class TimerViewController: UIViewController {
             starLabel.text = "★"
             recoLabal.text = "NORMAL"
         }
+
+        let interval = count
+        let seconds = interval % 60
+        let minutes = (interval / 60) % 60
+        let hours = (interval / 3600)
+        totalTimeLabel.text =  String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
     @IBOutlet weak var totalTimeLabel: UILabel!
@@ -102,6 +107,6 @@ class TimerViewController: UIViewController {
         }
         self.count = 0
         self.feedbackGenerator?.notificationOccurred(.success)
+        self.navigationController?.popViewController(animated: true)
     }
-    
 }

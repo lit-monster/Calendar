@@ -15,17 +15,18 @@ struct ChartContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Picker("Period", selection: $selectedPeriod) {
-                    ForEach(GraphPeriod.allCases) {
-                        period in
-                        Text(period.rawValue).tag(period)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding()
-                ChartPeriodView().frame(maxWidth: .infinity).padding()
+                ChartPeriodView().frame(maxWidth: .infinity)
+                    .padding()
                 BarChartView(stackedBarData: toyShapes)
-            }.navigationTitle(Text("集中グラフ"))
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(16)
+                    .padding()
+
+            }
+            .navigationTitle(Text("集中グラフ"))
+            .background(Image("glass3"))
+            .background(Color(uiColor: UIColor(named: "summary")!))
         }
         
     }
