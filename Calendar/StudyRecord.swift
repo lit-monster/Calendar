@@ -1,5 +1,5 @@
 //
-//  Memo.swift
+//  StudyRecord.swift
 //  Calendar
 //
 //  Created by 鈴木　葵葉 on 2021/07/28.
