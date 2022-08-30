@@ -6,10 +6,20 @@
 //
 
 import SwiftUI
+
 struct HighlightCell: View {
-    private var current = 67.0
-    private var minValue = 0.0
-    private var maxValue = 100.0
+
+    var minValue = 0.0
+    var maxValue = 100.0
+
+    //MARK: - Input Parameter
+    var title: String
+    var subTitle: String
+    var current: Double
+    var leftGaugeText: String
+    var rightGaugeText: String
+
+    //MARK: - body
     var body: some View {
         ZStack {
             Rectangle()
@@ -17,11 +27,11 @@ struct HighlightCell: View {
                 .cornerRadius(16)
                 .shadow(color: .black.opacity(0.2),radius: 16)
             VStack(alignment: .leading) {
-                Text("超集中")
+                Text(title)
                     .font(.largeTitle)
                     .foregroundColor(.cyan)
                     .bold()
-                Text("今日は昨日よりも時間が少なかったです。")
+                Text(subTitle)
                 Divider()
                 HStack {
                     VStack{
@@ -41,7 +51,7 @@ struct HighlightCell: View {
                         .gaugeStyle(.accessoryCircularCapacity)
                         .tint(Gradient(colors: [.cyan]))
                         
-                        Text("今日")
+                        Text(leftGaugeText)
                     }
                     
                     
@@ -63,7 +73,7 @@ struct HighlightCell: View {
                         .gaugeStyle(.accessoryCircularCapacity)
                         .tint(Gradient(colors: [.cyan]))
                         
-                        Text("昨日")
+                        Text(rightGaugeText)
                     }
                 }
             }
@@ -74,6 +84,10 @@ struct HighlightCell: View {
 
 struct HighlightCell_Previews: PreviewProvider {
     static var previews: some View {
-        HighlightCell()
+        HighlightCell(title: "超集中",
+                      subTitle: "今日は昨日よりも時間が少なかったです。",
+                      current: 34,
+                      leftGaugeText: "今日",
+                      rightGaugeText: "昨日")
     }
 }
