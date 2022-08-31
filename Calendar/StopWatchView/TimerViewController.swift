@@ -67,19 +67,24 @@ class TimerViewController: UIViewController {
         print("超集中")
         //保存する記録
         saveRecord(quality: 3)
+        navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
+
     }
     
     @IBAction func quality2(){
         print("集中")
         //保存する記録
         saveRecord(quality: 2)
+        navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
+
     }
     
     @IBAction func quality1(){
         print("普通")
         //保存する記録
         saveRecord(quality: 1)
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
+
     }
     
     private func saveRecord(quality: Int) {
