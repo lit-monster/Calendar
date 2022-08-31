@@ -5,7 +5,6 @@
 //  Created by 鈴木　葵葉 on 2021/07/28.
 //
 
-import Foundation
 import UIKit
 
 struct ToyShape: Identifiable {
