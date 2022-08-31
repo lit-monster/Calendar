@@ -39,7 +39,7 @@ struct HighlightCell: View {
                     Spacer()
                     ForEach(breakdowns) { breakdown in
                         VStack{
-                            Gauge(value: breakdown.currentValue, in: 0.0...20) {
+                            Gauge(value: breakdown.currentValue, in: 0.0...breakdown.maxValue) {
                                 Text("Score")
                             } currentValueLabel: {
                                 Text("\(Int(breakdown.currentValue))")
