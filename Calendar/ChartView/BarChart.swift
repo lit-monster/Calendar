@@ -1,14 +1,6 @@
 import SwiftUI
 import Charts
 
-
-struct ToyShape: Identifiable {
-    var color: String
-    let type: String
-    let count: Int
-    let id = UUID()
-}
-
 struct BarChartView: View {
     var stackedBarData: [ToyShape]
     
@@ -23,9 +15,9 @@ struct BarChartView: View {
             }
         }
         .chartForegroundStyleScale([
-            "普通": Color(UIColor(named: "charts-lightblue")!),
-            "集中": Color(UIColor(named: "charts-blue")!),
-            "超集中": Color(UIColor(named: "charts-deepblue")!)
+            "普通": Color(UIColor(named: ConcentrationType.normal.rawValue)!),
+            "集中": Color(UIColor(named: ConcentrationType.concentrating.rawValue)!),
+            "超集中": Color(UIColor(named: ConcentrationType.superConcentrating.rawValue)!)
         ])
     }
 }

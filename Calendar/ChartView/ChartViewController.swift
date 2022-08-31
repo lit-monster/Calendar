@@ -14,16 +14,18 @@ final class ChartViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let toyshapes = StudyRecordManager.shared.getWeekData()
-        let vc = UIHostingController(rootView: ChartContentView(toyShapes: toyshapes))
+        let toyshapes = StudyRecordManager.shared.getWeekData().flatMap { $0.getToyShape() }
+        let totalTime = StudyRecordManager.shared.getLatestWeekTotalStudyTime()
+        print(totalTime)
+        let vc = UIHostingController(rootView: ChartContentView(toyShapes: toyshapes, totalStudyTime: totalTime))
         self.addChild(vc)
         self.view.addSubview(vc.view)
         vc.didMove(toParent: self)
         vc.view.translatesAutoresizingMaskIntoConstraints = false
-        let leadingConstraint = vc.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
-        let trailingConstraint = vc.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
-        let bottomConstraint = vc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
-        let topConstraint = vc.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
-        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, bottomConstraint, topConstraint])
+        NSLayoutConstraint.activate([
+            vc.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            vc.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            vc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            vc.view.topAnchor.constraint(equalTo: view.topAnchor)])
     }
 }

@@ -8,29 +8,29 @@
 import SwiftUI
 
 struct ChartPeriodView: View {
-    @State var totalTimeString = "5h30m"
-    @State var periodString = "Aug 23-26, 2022"
+    var totalTimeString: String
+    @State var periodString = "THIS WEEK"
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(totalTimeString)
-                    .font(.title)
-                    .bold()
+
                 Text("TOTAL")
                     .font(.headline)
-                    .foregroundColor(Color(uiColor: UIColor.systemGray2))
+                    .foregroundColor(Color(uiColor: UIColor.systemGray))
                 Text(periodString)
                     .font(.headline)
-                    .foregroundColor(Color(uiColor: UIColor.systemGray2))
+                    .foregroundColor(Color(uiColor: UIColor.systemGray))
+                Text(totalTimeString)
+                    .font(.system(.largeTitle, design: .rounded))
+                    .bold()
             }
             Spacer()
         }
-        
     }
 }
 
 struct ChartPeriodView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartPeriodView()
+        ChartPeriodView(totalTimeString: "02h 12m 23s")
     }
 }

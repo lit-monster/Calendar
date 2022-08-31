@@ -11,7 +11,7 @@ import RealmSwift
 import HealthKit
 
 class StopWatchViewController: UIViewController {
-    var feedbackGenerator : UINotificationFeedbackGenerator? = nil
+    let feedbackGenerator = UINotificationFeedbackGenerator()
     
     @IBOutlet var circularGaugeView: UIView!
     
@@ -49,8 +49,7 @@ class StopWatchViewController: UIViewController {
             object: nil
         )
         // インスタンスを生成し prepare() をコール
-        self.feedbackGenerator = UINotificationFeedbackGenerator()
-        self.feedbackGenerator?.prepare()
+        feedbackGenerator.prepare()
         
         //healthkit使用の許可
         let typeOfRead = Set([typeOfHeartRate])
@@ -95,7 +94,7 @@ class StopWatchViewController: UIViewController {
         }
         let proximityState = UIDevice.current.proximityState
         print(proximityState)
-        self.feedbackGenerator?.notificationOccurred(.success)
+        self.feedbackGenerator.notificationOccurred(.success)
         if proximityState {
             if !timer.isValid {
                 //タイマーが動作してなかったら動かす
@@ -134,12 +133,11 @@ class StopWatchViewController: UIViewController {
         vc.didMove(toParent: self)
         vc.view.translatesAutoresizingMaskIntoConstraints = false
         vc.view.backgroundColor = .clear
-        
-        let leadingConstraint = vc.view.leadingAnchor.constraint(equalTo: circularGaugeView.leadingAnchor, constant: 0)
-        let trailingConstraint = vc.view.trailingAnchor.constraint(equalTo: circularGaugeView.trailingAnchor, constant: 0)
-        let bottomConstraint = vc.view.bottomAnchor.constraint(equalTo: circularGaugeView.bottomAnchor, constant: 0)
-        let topConstraint = vc.view.topAnchor.constraint(equalTo: circularGaugeView.topAnchor, constant: 0)
-        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, bottomConstraint, topConstraint])
+        NSLayoutConstraint.activate([
+            vc.view.leadingAnchor.constraint(equalTo: circularGaugeView.leadingAnchor),
+            vc.view.trailingAnchor.constraint(equalTo: circularGaugeView.trailingAnchor),
+            vc.view.bottomAnchor.constraint(equalTo: circularGaugeView.bottomAnchor),
+            vc.view.topAnchor.constraint(equalTo: circularGaugeView.topAnchor)])
     }
     
     //ヘルスキット系
