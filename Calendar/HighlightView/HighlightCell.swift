@@ -7,18 +7,20 @@
 
 import SwiftUI
 
+struct Breakdown: Identifiable {
+    let title: String
+    let maxValue: Double
+    let currentValue: Double
+    let id = UUID()
+}
+
 struct HighlightCell: View {
-
-    var minValue = 0.0
-    var maxValue = 100.0
-
+    
     //MARK: - Input Parameter
     var title: String
     var subTitle: String
-    var current: Double
-    var leftGaugeText: String
-    var rightGaugeText: String
-
+    var breakdowns: [Breakdown]
+    
     //MARK: - body
     var body: some View {
         ZStack {
@@ -34,47 +36,69 @@ struct HighlightCell: View {
                 Text(subTitle)
                 Divider()
                 HStack {
-                    VStack{
-                        Gauge(value: current, in: minValue...maxValue) {
-                            Text("Score")
-                        } currentValueLabel: {
-                            Text("\(Int(current))")
-                                .font(.headline)
-                                .foregroundColor(.cyan)
-                        } minimumValueLabel: {
-                            Text("\(Int(minValue))")
-                                .foregroundColor(.blue)
-                        } maximumValueLabel: {
-                            Text("\(Int(maxValue))")
-                                .foregroundColor(.blue)
+                    ForEach(breakdowns) { breakdown in
+                        VStack{
+                            Gauge(value: breakdown.currentValue, in: 0.0...breakdown.currentValue) {
+                                Text("Score")
+                            } currentValueLabel: {
+                                Text("\(Int(breakdown.currentValue))")
+                                    .font(.headline)
+                                    .foregroundColor(.cyan)
+                            } minimumValueLabel: {
+                                Text("\(0)")
+                                    .foregroundColor(.blue)
+                            } maximumValueLabel: {
+                                Text("\(breakdown.maxValue)")
+                                    .foregroundColor(.blue)
+                            }
+                            .gaugeStyle(.accessoryCircularCapacity)
+                            .tint(Gradient(colors: [.cyan]))
+                            
+                            Text(breakdown.title)
                         }
-                        .gaugeStyle(.accessoryCircularCapacity)
-                        .tint(Gradient(colors: [.cyan]))
-                        
-                        Text(leftGaugeText)
+                        Spacer()
                     }
-                    
-                    
-                    Spacer()
-                    VStack {
-                        Gauge(value: current, in: minValue...maxValue) {
-                            Text("Score")
-                        } currentValueLabel: {
-                            Text("\(Int(current))")
-                                .font(.headline)
-                                .foregroundColor(.cyan)
-                        } minimumValueLabel: {
-                            Text("\(Int(minValue))")
-                                .foregroundColor(.blue)
-                        } maximumValueLabel: {
-                            Text("\(Int(maxValue))")
-                                .foregroundColor(.blue)
-                        }
-                        .gaugeStyle(.accessoryCircularCapacity)
-                        .tint(Gradient(colors: [.cyan]))
-                        
-                        Text(rightGaugeText)
-                    }
+                    //                    VStack{
+                    //                        Gauge(value: current, in: minValue...maxValue) {
+                    //                            Text("Score")
+                    //                        } currentValueLabel: {
+                    //                            Text("\(Int(current))")
+                    //                                .font(.headline)
+                    //                                .foregroundColor(.cyan)
+                    //                        } minimumValueLabel: {
+                    //                            Text("\(Int(minValue))")
+                    //                                .foregroundColor(.blue)
+                    //                        } maximumValueLabel: {
+                    //                            Text("\(Int(maxValue))")
+                    //                                .foregroundColor(.blue)
+                    //                        }
+                    //                        .gaugeStyle(.accessoryCircularCapacity)
+                    //                        .tint(Gradient(colors: [.cyan]))
+                    //
+                    //                        Text(leftGaugeText)
+                    //                    }
+                    //
+                    //
+                    //                    Spacer()
+                    //                    VStack {
+                    //                        Gauge(value: current, in: minValue...maxValue) {
+                    //                            Text("Score")
+                    //                        } currentValueLabel: {
+                    //                            Text("\(Int(current))")
+                    //                                .font(.headline)
+                    //                                .foregroundColor(.cyan)
+                    //                        } minimumValueLabel: {
+                    //                            Text("\(Int(minValue))")
+                    //                                .foregroundColor(.blue)
+                    //                        } maximumValueLabel: {
+                    //                            Text("\(Int(maxValue))")
+                    //                                .foregroundColor(.blue)
+                    //                        }
+                    //                        .gaugeStyle(.accessoryCircularCapacity)
+                    //                        .tint(Gradient(colors: [.cyan]))
+                    //
+                    //                        Text(rightGaugeText)
+                    //                    }
                 }
             }
             .padding()
@@ -86,8 +110,8 @@ struct HighlightCell_Previews: PreviewProvider {
     static var previews: some View {
         HighlightCell(title: "超集中",
                       subTitle: "今日は昨日よりも時間が少なかったです。",
-                      current: 34,
-                      leftGaugeText: "今日",
-                      rightGaugeText: "昨日")
+                      breakdowns: [
+                        Breakdown(title: "Hello", maxValue: 100, currentValue: 30)
+                      ])
     }
 }

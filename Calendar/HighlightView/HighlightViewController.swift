@@ -10,6 +10,9 @@ import SwiftUI
 
 class HighlightViewController: UIViewController {
     
+    var studyConditionForLast2Weeks = StudyRecordManager.shared.getLast2Weeks()
+    var studyConditionForWeek = StudyRecordManager.shared.getWeekData()
+    
     @IBOutlet var collectionView: UICollectionView! {
         didSet {
             collectionView.delegate = self
@@ -23,8 +26,6 @@ class HighlightViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewFlowLayout.estimatedItemSize = CGSize(width: self.view.frame.width, height: 64)
-
-        // Do any additional setup after loading the view.
     }
 }
 
@@ -38,52 +39,62 @@ extension HighlightViewController: UICollectionViewDataSource, UICollectionViewD
         switch indexPath.row {
         case 0:
             cell.contentConfiguration = UIHostingConfiguration {
+                let yesterday = studyConditionForWeek[1].superConcentratingTime
+                let today = studyConditionForWeek[0].superConcentratingTime
                 HighlightCell(title: "超集中",
-                              subTitle: "今日は昨日の超集中の34%勉強しました。",
-                              current: 34,
-                              leftGaugeText: "今日",
-                              rightGaugeText: "昨日")
+                              subTitle: "今日は昨日の超集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%勉強しました。",
+                              breakdowns: [
+                                Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
+                                Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
+                                Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].superConcentratingTime),
+                                
+                              ])
                     .frame(width: self.view.frame.width*0.9)
             }
 
         case 1:
             cell.contentConfiguration = UIHostingConfiguration {
+                let yesterday = studyConditionForWeek[1].concentratingTime
+                let today = studyConditionForWeek[0].concentratingTime
                 HighlightCell(title: "集中",
-                              subTitle: "今日の勉強時間は昨日の集中の80%です。",
-                              current: 80,
-                              leftGaugeText: "今日",
-                              rightGaugeText: "昨日")
+                              subTitle: "今日の勉強時間は昨日の集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
+                              breakdowns: [
+                                Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
+                                Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
+                                Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].concentratingTime),
+                                
+                              ])
                     .frame(width: self.view.frame.width*0.9)
             }
 
         case 2:
             cell.contentConfiguration = UIHostingConfiguration {
+                let yesterday = studyConditionForWeek[1].normalTime
+                let today = studyConditionForWeek[0].normalTime
                 HighlightCell(title: "普通",
-                              subTitle: "今日の勉強時間は昨日の普通の76%です。",
-                              current: 76,
-                              leftGaugeText: "今日",
-                              rightGaugeText: "昨日")
+                              subTitle: "今日の勉強時間は昨日の普通の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
+                              breakdowns: [
+                                Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
+                                Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
+                                Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].normalTime),
+                                
+                              ])
                     .frame(width: self.view.frame.width*0.9)
             }
             
         case 3:
             cell.contentConfiguration = UIHostingConfiguration {
+                let thisWeek = studyConditionForWeek[0].total
+                let lastWeek = studyConditionForWeek[1].total
                 HighlightCell(title: "週の合計",
-                              subTitle: "今週の勉強時間は先週の80%です。",
-                              current: 80,
-                              leftGaugeText: "先週",
-                              rightGaugeText: "今週")
+                              subTitle: "今週の勉強時間は先週の\(lastWeek > 0 ? String(Int(thisWeek / lastWeek * 100)) : "-")%です。",
+                              breakdowns: [
+                                Breakdown(title: "今週", maxValue: lastWeek, currentValue: thisWeek)
+                              ])
                     .frame(width: self.view.frame.width*0.9)
             }
         default:
-            cell.contentConfiguration = UIHostingConfiguration {
-                HighlightCell(title: "超集中",
-                              subTitle: "今日は昨日よりも時間が少なかったです。",
-                              current: 34,
-                              leftGaugeText: "今日",
-                              rightGaugeText: "昨日")
-                    .frame(width: self.view.frame.width*0.9)
-            }
+            break
         }
         return cell
     }

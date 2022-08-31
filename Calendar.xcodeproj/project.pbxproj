@@ -29,6 +29,9 @@
 		21C93F3028BE54D700E807B6 /* StudyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2F28BE54D700E807B6 /* StudyRecord.swift */; };
 		21D848D32855E0610016BACD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21D848D22855E0610016BACD /* Realm */; };
 		21D848D52855E0610016BACD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21D848D42855E0610016BACD /* RealmSwift */; };
+		BAC3473028BE995F00895FBE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3472F28BE995F00895FBE /* Date.swift */; };
+		BAC3473328BE9B7200895FBE /* StudyCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473228BE9B7200895FBE /* StudyCondition.swift */; };
+		BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473428BE9E2F00895FBE /* ToyShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,7 @@
 		217A1F9427DDF13D0082B2BC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		218C51AB27FBE74A00973A80 /* HighlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightViewController.swift; sourceTree = "<group>"; };
 		2196BA0A2856022800FA8D61 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
-		2198C50A28758B71000C705C /* StudyRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRecordManager.swift; sourceTree = "<group>"; };
+		2198C50A28758B71000C705C /* StudyRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRecordManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		2199B75D286C52AC00018ADB /* ChartContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentView.swift; sourceTree = "<group>"; };
 		2199B75F286C547E00018ADB /* ChartPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPeriodView.swift; sourceTree = "<group>"; };
 		219D151328B605A600193068 /* TargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,9 @@
 		21B0A6DC28855BDF00CFE312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Calendar/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		21C93F2F28BE54D700E807B6 /* StudyRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyRecord.swift; sourceTree = "<group>"; };
+		BAC3472F28BE995F00895FBE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BAC3473228BE9B7200895FBE /* StudyCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCondition.swift; sourceTree = "<group>"; };
+		BAC3473428BE9E2F00895FBE /* ToyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +82,6 @@
 			children = (
 				211BB55E26A80AE900655F2F /* ChartViewController.swift */,
 				2196BA0A2856022800FA8D61 /* BarChart.swift */,
-				2198C50A28758B71000C705C /* StudyRecordManager.swift */,
 				2199B75D286C52AC00018ADB /* ChartContentView.swift */,
 				2199B75F286C547E00018ADB /* ChartPeriodView.swift */,
 			);
@@ -114,12 +119,14 @@
 		21A1D498268C67AD00C07A86 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				BAC3473128BE9B5800895FBE /* Entity */,
+				BAC3472E28BE995500895FBE /* Helper */,
 				21A4B7CB28A72D2100699C36 /* Calendar.entitlements */,
 				212D7BBD26D65676004561B0 /* AppDelegate.swift */,
+				2198C50A28758B71000C705C /* StudyRecordManager.swift */,
 				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
-				21C93F2F28BE54D700E807B6 /* StudyRecord.swift */,
 				219D151828B6357300193068 /* StopWatchView */,
 				2197B175288806E800D23030 /* ChartView */,
 				21A4B7CA28A7285900699C36 /* HighlightView */,
@@ -145,6 +152,24 @@
 				21A4B7CD28A74CF300699C36 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAC3472E28BE995500895FBE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BAC3472F28BE995F00895FBE /* Date.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		BAC3473128BE9B5800895FBE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				21C93F2F28BE54D700E807B6 /* StudyRecord.swift */,
+				BAC3473228BE9B7200895FBE /* StudyCondition.swift */,
+				BAC3473428BE9E2F00895FBE /* ToyShape.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC3473328BE9B7200895FBE /* StudyCondition.swift in Sources */,
 				2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */,
+				BAC3473028BE995F00895FBE /* Date.swift in Sources */,
 				219D151428B605A600193068 /* TargetViewController.swift in Sources */,
 				2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */,
 				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
@@ -236,6 +263,7 @@
 				219D152928B85A8700193068 /* CircularGauge.swift in Sources */,
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				218C51AC27FBE74A00973A80 /* HighlightViewController.swift in Sources */,
+				BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */,
 				21A342BC289425FE00243BCD /* HighlightCell.swift in Sources */,
 				21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */,
 				212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */,
@@ -389,7 +417,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F584ZURPSX;
+				DEVELOPMENT_TEAM = 7R974FN29R;
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -397,7 +425,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar.monster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,7 +439,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/CalendarRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F584ZURPSX;
+				DEVELOPMENT_TEAM = WSAUVM3XKG;
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -419,7 +447,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar.sasaki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

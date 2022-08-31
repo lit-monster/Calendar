@@ -13,7 +13,7 @@ import Gifu
 
 class TimerViewController: UIViewController {
     
-    var feedbackGenerator : UINotificationFeedbackGenerator? = nil
+    let feedbackGenerator = UINotificationFeedbackGenerator()
     
     var count: Int = 0
     var latestHeartRate: Double = 0.0
@@ -28,8 +28,7 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // インスタンスを生成し prepare() をコール
-        self.feedbackGenerator = UINotificationFeedbackGenerator()
-        self.feedbackGenerator?.prepare()
+        feedbackGenerator.prepare()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,46 +66,25 @@ class TimerViewController: UIViewController {
         //実際の処理
         print("超集中")
         //保存する記録
-        let studyRecord = StudyRecord()
-        studyRecord.date = Date()
-        studyRecord.quality = 3
-        studyRecord.time = TimeInterval(self.count)
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(studyRecord)
-        }
-        self.count = 0
-        self.feedbackGenerator?.notificationOccurred(.success)
+        saveRecord(quality: 3)
     }
     
     @IBAction func quality2(){
         print("集中")
         //保存する記録
-        let studyRecord = StudyRecord()
-        studyRecord.date = Date()
-        studyRecord.quality = 2
-        studyRecord.time = TimeInterval(self.count)
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(studyRecord)
-        }
-        self.count = 0
-        self.feedbackGenerator?.notificationOccurred(.success)
+        saveRecord(quality: 2)
     }
     
     @IBAction func quality1(){
         print("普通")
         //保存する記録
-        let studyRecord = StudyRecord()
-        studyRecord.date = Date()
-        studyRecord.quality = 1
-        studyRecord.time = TimeInterval(self.count)
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(studyRecord)
-        }
-        self.count = 0
-        self.feedbackGenerator?.notificationOccurred(.success)
-        self.navigationController?.popViewController(animated: true)
+        saveRecord(quality: 1)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func saveRecord(quality: Int) {
+        StudyRecordManager.shared.saveRecord(quality: quality, count: count)
+        count = 0
+        feedbackGenerator.notificationOccurred(.success)
     }
 }

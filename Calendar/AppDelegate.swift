@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 import RealmSwift
-import Foundation
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,10 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             schemaVersion: 1,
             migrationBlock: nil,
             deleteRealmIfMigrationNeeded: true)
-        
-        
-        
-
         return true
     }
 
