@@ -25,6 +25,14 @@ final class StudyRecordManager {
         return studyConditions
     }
 
+    func getLatestWeekTotalStudyTime() -> TimeInterval {
+        let weekConditions = getWeekData()
+
+        let totalTimes = weekConditions.map { $0.total }
+        let totalTime = totalTimes.reduce(0, +)
+        return totalTime
+    }
+
     func isStudiedDay(of date: Date) -> Bool {
         let result = getByTimeRange(from: date.getTimeZero(), to: date.addingTimeInterval(86400))
         return result.total > 0

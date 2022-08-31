@@ -11,24 +11,84 @@ struct ChartContentView: View {
     
     @State var selectedPeriod: GraphPeriod = .week
     var toyShapes: [ToyShape]
+    var totalStudyTime: TimeInterval
+    @State var totalTimeString = ""
+    var studyConditionForLast2Weeks = StudyRecordManager.shared.getLast2Weeks()
+    var studyConditionForWeek = StudyRecordManager.shared.getWeekData()
+
+
     
     var body: some View {
         NavigationView {
-            VStack {
-                ChartPeriodView().frame(maxWidth: .infinity)
-                    .padding()
-                BarChartView(stackedBarData: toyShapes)
-                    .padding()
-                    .background(.ultraThinMaterial)
-                    .cornerRadius(16)
-                    .padding()
+            ScrollView {
+                VStack {
+                    Group {
+                        ChartPeriodView(totalTimeString: totalTimeString)
+                            .frame(maxWidth: .infinity)
+                        BarChartView(stackedBarData: toyShapes)
+                            .frame(height: 300)
+                            .padding()
+                            .background(.ultraThinMaterial)
+                            .cornerRadius(16)
+                        Spacer(minLength: 24)
+                        HStack {
+                            Text("ハイライト")
+                                .font(.system(.title, design: .default))
+                                .bold()
+                            Spacer()
+                        }
+                    }
 
+                    let yesterday = studyConditionForWeek[1].superConcentratingTime
+                    let today = studyConditionForWeek[0].superConcentratingTime
+                    HighlightCell(title: "超集中",
+                                  subTitle: "今日は昨日の超集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%勉強しました。",
+                                  breakdowns: [
+                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
+                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
+                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].superConcentratingTime),
+
+                                  ])
+                    Spacer(minLength: 24)
+                    HighlightCell(title: "集中",
+                                  subTitle: "今日の勉強時間は昨日の集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
+                                  breakdowns: [
+                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
+                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
+                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].concentratingTime),
+
+                                  ])
+                    Spacer(minLength: 24)
+                    HighlightCell(title: "普通",
+                                  subTitle: "今日の勉強時間は昨日の普通の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
+                                  breakdowns: [
+                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
+                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
+                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].normalTime),
+
+                                  ])
+                    Spacer(minLength: 24)
+                    let thisWeek = studyConditionForWeek[0].total
+                    let lastWeek = studyConditionForWeek[1].total
+                    HighlightCell(title: "週の合計",
+                                  subTitle: "今週の勉強時間は先週の\(lastWeek > 0 ? String(Int(thisWeek / lastWeek * 100)) : "-")%です。",
+                                  breakdowns: [
+                                    Breakdown(title: "今週", maxValue: lastWeek, currentValue: thisWeek)
+                                  ])
+                }
+                .padding()
+                .navigationTitle(Text("分析"))
             }
-            .navigationTitle(Text("集中グラフ"))
             .background(Image("glass3"))
             .background(Color(uiColor: UIColor(named: "summary")!))
         }
-        
+        .onAppear {
+            let interval = Int(totalStudyTime)
+            let seconds = interval % 60
+            let minutes = (interval / 60) % 60
+            let hours = (interval / 3600)
+            totalTimeString =  String(format: "%02dh %02dm %02ds", hours, minutes, seconds)
+        }
     }
 }
 
@@ -56,7 +116,7 @@ struct ChartContentView_Previews: PreviewProvider {
             .init(color: "Green", type: "ddd", count: 4),
             .init(color: "Pink", type: "ddd", count: 5),
             .init(color: "Yellow", type: "ddd", count: 2)
-        ])
+        ], totalStudyTime: 1234)
     }
 }
 

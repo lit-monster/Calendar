@@ -15,7 +15,9 @@ final class ChartViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         let toyshapes = StudyRecordManager.shared.getWeekData().flatMap { $0.getToyShape() }
-        let vc = UIHostingController(rootView: ChartContentView(toyShapes: toyshapes))
+        let totalTime = StudyRecordManager.shared.getLatestWeekTotalStudyTime()
+        print(totalTime)
+        let vc = UIHostingController(rootView: ChartContentView(toyShapes: toyshapes, totalStudyTime: totalTime))
         self.addChild(vc)
         self.view.addSubview(vc.view)
         vc.didMove(toParent: self)
