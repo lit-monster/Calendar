@@ -26,7 +26,6 @@ class TargetViewController: UIViewController {
     }
 
     let calendarView = UICalendarView()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,12 +58,22 @@ class TargetViewController: UIViewController {
     }
 }
 
+//MARK: - CalendarView Delegate
 extension TargetViewController: UICalendarViewDelegate {
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        return .image(UIImage.init(systemName: "sun.max.fill"), color: .systemOrange, size: .large)
+        guard let date = dateComponents.date else {
+            return .image(UIImage.init(systemName: "chevron.left.forwardslash.chevron.right"), color: .secondarySystemBackground, size: .large)
+        }
+        let isStudied = StudyRecordManager.shared.isStudiedDay(of: date)
+        if isStudied {
+            return .image(UIImage.init(systemName: "sun.max.fill"), color: .systemOrange, size: .large)
+        } else {
+            return .image(UIImage.init(systemName: "sun.max.fill"), color: .systemGray2, size: .large)
+        }
     }
 }
 
+//MARK: - CalendarView DataSource
 extension TargetViewController: UICalendarSelectionSingleDateDelegate {
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
         if let month = dateComponents?.month, let day = dateComponents?.day {

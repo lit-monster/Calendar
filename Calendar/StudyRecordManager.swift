@@ -25,7 +25,7 @@ final class StudyRecordManager {
         return studyConditions
     }
 
-    func isStudyedDay(of date: Date) -> Bool {
+    func isStudiedDay(of date: Date) -> Bool {
         let result = getByTimeRange(from: date.getTimeZero(), to: date.addingTimeInterval(86400))
         return result.total > 0
 
