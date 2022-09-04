@@ -58,8 +58,6 @@ class TimerViewController: UIViewController {
     
     @IBOutlet weak var recoLabal: UILabel!
     
-    @IBOutlet weak var imageView:GIFImageView!
-    
     @IBAction func quality3(){
         //実際の処理
         print("超集中")

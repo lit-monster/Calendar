@@ -58,7 +58,7 @@ final class StudyRecordManager {
     }
     
     func saveRecord(quality: Int, count: Int) {
-        let studyRecord = StudyRecord(date: Date(), time:  TimeInterval(count), quality: 1)
+        let studyRecord = StudyRecord(date: Date(), time:  TimeInterval(count), quality: quality)
         try! realm.write {
             realm.add(studyRecord)
         }

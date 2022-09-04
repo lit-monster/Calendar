@@ -33,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YP-YC-pVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2138" y="-4302"/>
+            <point key="canvasLocation" x="-2121" y="-4302"/>
         </scene>
         <!--Stop Watch View Controller-->
         <scene sceneID="uQJ-3Z-ENq">
@@ -80,34 +80,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-MS-WAu">
                                 <rect key="frame" x="0.0" y="56" width="414" height="677"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhoneFlipImage" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-5U-8nn">
-                                        <rect key="frame" x="56" y="30" width="302" height="398"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="302" id="Ec9-hD-cq3"/>
-                                            <constraint firstAttribute="height" constant="398" id="oG3-WN-rgJ"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強を始めよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-Q8-wUV">
-                                        <rect key="frame" x="54.666666666666657" y="460" width="305" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="305" id="03D-Q7-84r"/>
-                                            <constraint firstAttribute="height" constant="24" id="hdb-c3-bef"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhoneを裏返して勉強を始めよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSp-1q-R8P">
+                                        <rect key="frame" x="18" y="64" width="396" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" name="font"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-5U-8nn">
+                                        <rect key="frame" x="0.0" y="-129" width="432" height="1006"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="432" id="7tg-mf-iAP"/>
+                                            <constraint firstAttribute="height" constant="1006" id="kUV-z7-MvK"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="summary"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="9yy-5U-8nn" secondAttribute="trailing" constant="56" id="0xU-dT-6xV"/>
-                                    <constraint firstAttribute="bottom" secondItem="X9g-Q8-wUV" secondAttribute="bottom" constant="193" id="HHx-ya-bfl"/>
+                                    <constraint firstAttribute="trailing" secondItem="9yy-5U-8nn" secondAttribute="trailing" constant="-18" id="6pX-Vi-hVM"/>
+                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="-129" id="CBG-dc-ncd"/>
+                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" id="J4S-1w-KRW"/>
                                     <constraint firstAttribute="width" constant="414" id="JKc-a9-0z1"/>
-                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" constant="56" id="PhA-NW-uvh"/>
-                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="30" id="Tav-h8-hbS"/>
-                                    <constraint firstAttribute="trailing" secondItem="X9g-Q8-wUV" secondAttribute="trailing" constant="54.5" id="Vjk-5K-1q3"/>
-                                    <constraint firstItem="X9g-Q8-wUV" firstAttribute="top" secondItem="9yy-5U-8nn" secondAttribute="bottom" constant="32" id="X3w-99-OnF"/>
-                                    <constraint firstItem="X9g-Q8-wUV" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" constant="54.5" id="enG-Aa-y4c"/>
+                                    <constraint firstAttribute="bottom" secondItem="9yy-5U-8nn" secondAttribute="bottom" constant="-200" id="Tnb-nK-a0i"/>
                                     <constraint firstAttribute="height" constant="677" id="qSU-HT-6kU"/>
                                 </constraints>
                             </view>
@@ -119,6 +113,7 @@
                             <constraint firstItem="Xlm-3q-Pot" firstAttribute="top" secondItem="0bf-Zb-1I4" secondAttribute="bottom" constant="61" id="GJX-vz-Te9"/>
                             <constraint firstItem="Xlm-3q-Pot" firstAttribute="leading" secondItem="Pfg-Mk-sKX" secondAttribute="leading" id="Gx1-KB-ryL"/>
                             <constraint firstItem="Pfg-Mk-sKX" firstAttribute="bottom" secondItem="Xlm-3q-Pot" secondAttribute="bottom" constant="25" id="J4R-HU-Hnm"/>
+                            <constraint firstItem="yd2-MS-WAu" firstAttribute="bottom" secondItem="Pfg-Mk-sKX" secondAttribute="bottom" id="NAn-ub-b0D"/>
                             <constraint firstItem="0bf-Zb-1I4" firstAttribute="leading" secondItem="Pfg-Mk-sKX" secondAttribute="leading" constant="32" id="NCx-Uh-koa"/>
                             <constraint firstItem="Xlm-3q-Pot" firstAttribute="trailing" secondItem="Pfg-Mk-sKX" secondAttribute="trailing" id="PmP-T2-szQ"/>
                             <constraint firstItem="yd2-MS-WAu" firstAttribute="leading" secondItem="Pfg-Mk-sKX" secondAttribute="leading" id="YIz-xc-Izh"/>
@@ -137,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgb-7e-Wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2863.768115942029" y="-2838.6160714285711"/>
+            <point key="canvasLocation" x="-2864.0186915887848" y="-2838.6609071274302"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="RiM-9j-wFj">
@@ -290,7 +285,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ocO-4R-LcO">
-                                <rect key="frame" x="0.0" y="635.66666666666663" width="428" height="120"/>
+                                <rect key="frame" x="0.0" y="623.66666666666663" width="428" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3G-cD-UxE">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -394,7 +389,7 @@
                             <constraint firstItem="JgM-zT-ckC" firstAttribute="leading" secondItem="nbh-E9-1iL" secondAttribute="leading" id="KWf-Ar-RX4"/>
                             <constraint firstAttribute="bottom" secondItem="er3-g3-eAf" secondAttribute="bottom" id="LBu-SD-CEn"/>
                             <constraint firstItem="PO7-O2-WAe" firstAttribute="top" secondItem="2L8-z2-D69" secondAttribute="bottom" constant="33" id="SoL-bY-Lci"/>
-                            <constraint firstItem="ocO-4R-LcO" firstAttribute="top" secondItem="xs2-L5-A9O" secondAttribute="bottom" constant="24" id="TLh-I7-zSo"/>
+                            <constraint firstItem="ocO-4R-LcO" firstAttribute="top" secondItem="xs2-L5-A9O" secondAttribute="bottom" constant="12" id="TLh-I7-zSo"/>
                             <constraint firstItem="ocO-4R-LcO" firstAttribute="leading" secondItem="epV-ZT-Mci" secondAttribute="leading" id="abx-uB-JhC"/>
                             <constraint firstItem="nbh-E9-1iL" firstAttribute="trailing" secondItem="ocO-4R-LcO" secondAttribute="trailing" id="dKJ-Vg-IxD"/>
                             <constraint firstItem="er3-g3-eAf" firstAttribute="top" secondItem="epV-ZT-Mci" secondAttribute="top" id="gYO-Rw-Qzs"/>
@@ -412,7 +407,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="heartRateLabel" destination="dXc-ny-z4z" id="4th-GT-r7O"/>
-                        <outlet property="imageView" destination="nkH-bQ-aHf" id="fco-u1-yF7"/>
                         <outlet property="recoLabal" destination="y6l-pm-q34" id="CNf-xW-82x"/>
                         <outlet property="starLabel" destination="R73-nm-Ehw" id="P1j-qs-dEE"/>
                         <outlet property="totalTimeLabel" destination="hY2-4a-c3z" id="mCX-ki-ASF"/>
@@ -536,7 +530,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="tabbarrr"/>
-                        <color key="selectedImageTintColor" name="charts-deepblue"/>
+                        <color key="selectedImageTintColor" name="tabbar"/>
                     </tabBar>
                     <connections>
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
@@ -547,11 +541,11 @@
             </objects>
             <point key="canvasLocation" x="-2501" y="-5063"/>
         </scene>
-        <!--Today-->
+        <!--計測-->
         <scene sceneID="uYG-e8-Jkv">
             <objects>
                 <navigationController id="7v2-jG-oNr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Today" id="kQ7-0n-rHa">
+                    <tabBarItem key="tabBarItem" title="計測" id="kQ7-0n-rHa">
                         <imageReference key="image" image="timer" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color name="charts-blue"/>
@@ -580,7 +574,7 @@
         <image name="back" width="414" height="896"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
         <image name="glass2" width="414" height="896"/>
-        <image name="iPhoneFlipImage" width="302" height="398"/>
+        <image name="iPhone" width="414" height="896"/>
         <image name="quality" width="124" height="124"/>
         <image name="stop" width="414" height="200"/>
         <image name="timer" catalog="system" width="128" height="123"/>
@@ -592,14 +586,14 @@
         <namedColor name="charts-blue">
             <color red="0.23529411764705882" green="0.67450980392156867" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="charts-deepblue">
-            <color red="0.17254901960784313" green="0.48627450980392156" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="font">
             <color red="0.31299999356269836" green="0.31200000643730164" blue="0.32100000977516174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="summary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabbar">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabbarrr">
             <color red="0.77999997138977051" green="0.77999997138977051" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -14,8 +14,6 @@ class StopWatchViewController: UIViewController {
     let feedbackGenerator = UINotificationFeedbackGenerator()
     
     @IBOutlet var circularGaugeView: UIView!
-    
-    @IBOutlet var label:UILabel!
     @IBOutlet var inturrptedView: UIView!
     
     var count: Int = 0
@@ -151,7 +149,7 @@ class StopWatchViewController: UIViewController {
         let calendar = Calendar.current
         let date = Date()
         let endDate = calendar.date(byAdding: .day, value: -0, to: calendar.startOfDay(for: date))
-        let startDate = calendar.date(byAdding: .day, value: -3, to: calendar.startOfDay(for: date))
+        let startDate = calendar.date(byAdding: .day, value: -10, to: calendar.startOfDay(for: date))
         print("startDate")
         print(startDate)
         print("endDate")
