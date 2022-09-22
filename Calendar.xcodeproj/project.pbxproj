@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B0A6DB28855BDF00CFE312 /* Main.storyboard */; };
 		21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */; };
 		21C93F3028BE54D700E807B6 /* StudyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2F28BE54D700E807B6 /* StudyRecord.swift */; };
+		21DACA3828DB0D130068D97B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21DACA3728DB0D130068D97B /* Realm */; };
+		21DACA3A28DB0D130068D97B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21DACA3928DB0D130068D97B /* RealmSwift */; };
 		BAC3473028BE995F00895FBE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3472F28BE995F00895FBE /* Date.swift */; };
 		BAC3473328BE9B7200895FBE /* StudyCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473228BE9B7200895FBE /* StudyCondition.swift */; };
 		BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473428BE9E2F00895FBE /* ToyShape.swift */; };
@@ -62,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DACA3A28DB0D130068D97B /* RealmSwift in Frameworks */,
+				21DACA3828DB0D130068D97B /* Realm in Frameworks */,
 				21A4B7CE28A74CF400699C36 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +176,8 @@
 			);
 			name = Calendar;
 			packageProductDependencies = (
+				21DACA3728DB0D130068D97B /* Realm */,
+				21DACA3928DB0D130068D97B /* RealmSwift */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* Calendar.app */;
@@ -201,6 +207,7 @@
 			);
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
+				21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -394,7 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F584ZURPSX;
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -402,10 +409,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar.monster;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -416,7 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/CalendarRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WSAUVM3XKG;
+				DEVELOPMENT_TEAM = F584ZURPSX;
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -424,10 +431,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar.sasaki;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -453,6 +460,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21DACA3728DB0D130068D97B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		21DACA3928DB0D130068D97B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21A1D48E268C67AD00C07A86 /* Project object */;
 }

@@ -15,9 +15,9 @@ struct BarChartView: View {
             }
         }
         .chartForegroundStyleScale([
-            "普通": Color(UIColor(named: ConcentrationType.normal.rawValue)!),
+            "超集中": Color(UIColor(named: ConcentrationType.superConcentrating.rawValue)!),
             "集中": Color(UIColor(named: ConcentrationType.concentrating.rawValue)!),
-            "超集中": Color(UIColor(named: ConcentrationType.superConcentrating.rawValue)!)
+            "普通": Color(UIColor(named: ConcentrationType.normal.rawValue)!)
         ])
     }
 }

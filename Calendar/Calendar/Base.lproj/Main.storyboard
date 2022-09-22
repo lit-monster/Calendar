@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -44,13 +44,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xlm-3q-Pot">
-                                <rect key="frame" x="0.0" y="534" width="414" height="174"/>
+                                <rect key="frame" x="0.0" y="548" width="428" height="270"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop" translatesAutoresizingMaskIntoConstraints="NO" id="kf3-gy-7hJ">
-                                        <rect key="frame" x="0.0" y="-14" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="-14" width="428" height="296"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1u-3l-GSP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="270"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="終了">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,13 +72,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-Zb-1I4" customClass="CircularGauge">
-                                <rect key="frame" x="32" y="123" width="350" height="350"/>
+                                <rect key="frame" x="32" y="123" width="364" height="364"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0bf-Zb-1I4" secondAttribute="height" id="gQz-GL-LoM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-MS-WAu">
-                                <rect key="frame" x="0.0" y="56" width="414" height="677"/>
+                                <rect key="frame" x="0.0" y="166" width="428" height="677"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhoneを裏返して勉強を始めよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSp-1q-R8P">
                                         <rect key="frame" x="18" y="64" width="396" height="33"/>
@@ -145,7 +145,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="er3-g3-eAf">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hn-GR-OHe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hn-GR-OHe">
                                 <rect key="frame" x="17.000000000000007" y="99" width="123.66666666666669" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123.5" id="TUj-8f-i0J"/>
@@ -416,7 +416,7 @@
             </objects>
             <point key="canvasLocation" x="-2865.217391304348" y="-2122.0982142857142"/>
         </scene>
-        <!--Today-->
+        <!--計測-->
         <scene sceneID="Rfa-C0-DSU">
             <objects>
                 <viewController id="fvf-aK-hgg" customClass="TargetViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
@@ -511,7 +511,7 @@
                             <constraint firstAttribute="bottom" secondItem="zb5-Xx-qs5" secondAttribute="bottom" id="yzi-jm-Ofg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Today" id="adC-Lz-hwY"/>
+                    <navigationItem key="navigationItem" title="計測" id="adC-Lz-hwY"/>
                     <connections>
                         <outlet property="calendarBackgroundBlurView" destination="GSV-qz-eFc" id="z7C-Q3-3SW"/>
                         <outlet property="picker" destination="mPE-cC-flE" id="4u5-HZ-C4f"/>
