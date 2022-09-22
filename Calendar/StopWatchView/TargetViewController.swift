@@ -66,8 +66,6 @@ extension TargetViewController: UICalendarViewDelegate {
         let isStudied = StudyRecordManager.shared.isStudiedDay(of: date)
         if isStudied {
             return .image(UIImage.init(systemName: "sun.max.fill"), color: .systemOrange, size: .large)
-//        } else if ( StudyRecordManager.shared.isStudiedDay(of: date) < 10 ) {
-//            return .image(UIImage.init(systemName: "sun.min.fill"), color: .systemGray2, size: .large)
         } else {
             return .image(UIImage.init(systemName: "sun.max.fill"), color: .systemGray2, size: .large)
         }
