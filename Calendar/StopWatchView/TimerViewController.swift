@@ -34,13 +34,13 @@ class TimerViewController: UIViewController {
         heartRateLabel.text = String(Int(latestHeartRate))
         if focusRate == 3 {
             starLabel.text = "★★★"
-            recoLabal.text = "VERY HIGH"
+            recoLabal.text = "超集中"
         } else if focusRate == 2 {
             starLabel.text = "★★"
-            recoLabal.text = "HIGH"
+            recoLabal.text = "集中"
         } else if focusRate == 1 {
             starLabel.text = "★"
-            recoLabal.text = "NORMAL"
+            recoLabal.text = "普通L"
         }
 
         let interval = count
