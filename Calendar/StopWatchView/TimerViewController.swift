@@ -86,6 +86,6 @@ class TimerViewController: UIViewController {
     private func saveRecord(quality: Int) {
         StudyRecordManager.shared.saveRecord(quality: quality, count: count)
         count = 0
-        feedbackGenerator.notificationOccurred(.success)
+        feedbackGenerator.notificationOccurred(.warning)
     }
 }

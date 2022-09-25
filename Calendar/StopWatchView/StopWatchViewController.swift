@@ -92,7 +92,7 @@ class StopWatchViewController: UIViewController {
         }
         let proximityState = UIDevice.current.proximityState
         print(proximityState)
-        self.feedbackGenerator.notificationOccurred(.success)
+        self.feedbackGenerator.notificationOccurred(.warning)
         if proximityState {
             if !timer.isValid {
                 //タイマーが動作してなかったら動かす
