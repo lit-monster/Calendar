@@ -80,7 +80,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-MS-WAu">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-5U-8nn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-5U-8nn">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhoneを裏返して勉強の計測をしよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSi-Ov-2eH">
@@ -93,8 +93,6 @@
                                 </subviews>
                                 <color key="backgroundColor" name="summary"/>
                                 <constraints>
-                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" id="3AZ-6U-XZy"/>
-                                    <constraint firstAttribute="trailing" secondItem="9yy-5U-8nn" secondAttribute="trailing" id="ajn-wh-smy"/>
                                     <constraint firstAttribute="bottom" secondItem="9yy-5U-8nn" secondAttribute="bottom" id="ekD-ZX-t2Y"/>
                                     <constraint firstItem="9yy-5U-8nn" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" id="g1P-rk-595"/>
                                 </constraints>
@@ -467,6 +465,7 @@
                             <constraint firstItem="zb5-Xx-qs5" firstAttribute="top" secondItem="lnU-C6-iG2" secondAttribute="top" id="523-1u-sWS"/>
                             <constraint firstItem="GSV-qz-eFc" firstAttribute="top" secondItem="1Qz-0b-7Dv" secondAttribute="bottom" id="HcL-WN-lkN"/>
                             <constraint firstAttribute="trailing" secondItem="8yp-4S-LZN" secondAttribute="trailing" id="KW5-ko-HeH"/>
+                            <constraint firstItem="Ex2-RK-UzO" firstAttribute="bottom" secondItem="5Ta-hR-p58" secondAttribute="bottom" constant="38" id="NCa-i1-xlj"/>
                             <constraint firstItem="Ex2-RK-UzO" firstAttribute="bottom" secondItem="8yp-4S-LZN" secondAttribute="bottom" id="W63-WT-1Z4"/>
                             <constraint firstItem="1Qz-0b-7Dv" firstAttribute="leading" secondItem="Ex2-RK-UzO" secondAttribute="leading" constant="24" id="WpX-HQ-vqM"/>
                             <constraint firstItem="qXA-jV-T3J" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GSV-qz-eFc" secondAttribute="bottom" constant="8" id="Xoh-vP-QI8"/>

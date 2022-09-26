@@ -15,8 +15,7 @@ struct ChartContentView: View {
     @State var totalTimeString = ""
     var studyConditionForLast2Weeks = StudyRecordManager.shared.getLast2Weeks()
     var studyConditionForWeek = StudyRecordManager.shared.getWeekData()
-
-
+    
     
     var body: some View {
         NavigationView {
@@ -38,7 +37,7 @@ struct ChartContentView: View {
                             Spacer()
                         }
                     }
-
+                    
                     let yesterday = studyConditionForWeek[1].superConcentratingTime
                     let today = studyConditionForWeek[0].superConcentratingTime
                     HighlightCell(title: "超集中",
@@ -47,7 +46,7 @@ struct ChartContentView: View {
                                     Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
                                     Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
                                     Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].superConcentratingTime),
-
+                                    
                                   ])
                     Spacer(minLength: 24)
                     HighlightCell(title: "集中",
@@ -56,7 +55,7 @@ struct ChartContentView: View {
                                     Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
                                     Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
                                     Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].concentratingTime),
-
+                                    
                                   ])
                     Spacer(minLength: 24)
                     HighlightCell(title: "普通",
@@ -65,7 +64,7 @@ struct ChartContentView: View {
                                     Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
                                     Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
                                     Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].normalTime),
-
+                                    
                                   ])
                     Spacer(minLength: 24)
                     let thisWeek = studyConditionForWeek[0].total
