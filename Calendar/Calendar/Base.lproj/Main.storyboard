@@ -93,8 +93,8 @@
                                 </subviews>
                                 <color key="backgroundColor" name="summary"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="9yy-5U-8nn" secondAttribute="bottom" id="ekD-ZX-t2Y"/>
-                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" id="g1P-rk-595"/>
+                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" id="YTJ-fW-1fn"/>
+                                    <constraint firstAttribute="trailing" secondItem="9yy-5U-8nn" secondAttribute="trailing" id="quM-rt-dzS"/>
                                 </constraints>
                             </view>
                         </subviews>
