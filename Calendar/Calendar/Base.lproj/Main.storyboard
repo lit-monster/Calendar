@@ -83,9 +83,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-5U-8nn">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhoneを裏返して勉強の計測をしよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSi-Ov-2eH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強の計測をしよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSi-Ov-2eH">
                                         <rect key="frame" x="65.666666666666686" y="227" width="297" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -94,6 +93,8 @@
                                 <color key="backgroundColor" name="summary"/>
                                 <constraints>
                                     <constraint firstItem="9yy-5U-8nn" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" id="YTJ-fW-1fn"/>
+                                    <constraint firstItem="MSi-Ov-2eH" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="giS-T2-NJl"/>
+                                    <constraint firstItem="MSi-Ov-2eH" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="227" id="k51-i1-nsE"/>
                                     <constraint firstAttribute="trailing" secondItem="9yy-5U-8nn" secondAttribute="trailing" id="quM-rt-dzS"/>
                                 </constraints>
                             </view>
