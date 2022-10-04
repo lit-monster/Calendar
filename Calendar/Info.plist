@@ -21,11 +21,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
-	<string>recode halth recode</string>
+	<string>集中度合いを推定するためにhealth kit を使用します</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>share halth recode</string>
+	<string>Apple Watchを装着しhealth kitから心拍数を取得します</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>update halth recode</string>
+	<string>アプリ起動前に、Apple Watchを装着してください</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -10,7 +10,6 @@
 		211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB55E26A80AE900655F2F /* ChartViewController.swift */; };
 		212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBD26D65676004561B0 /* AppDelegate.swift */; };
 		212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBF26D65686004561B0 /* SceneDelegate.swift */; };
-		2148811928E03F400070F0AB /* RuleMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148811828E03F400070F0AB /* RuleMark.swift */; };
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
 		216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216847A528BF5A84007D11F6 /* HighlightCell.swift */; };
 		217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217A1F9427DDF13D0082B2BC /* Colors.xcassets */; };
@@ -37,7 +36,6 @@
 		211BB55E26A80AE900655F2F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		212D7BBD26D65676004561B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		212D7BBF26D65686004561B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2148811828E03F400070F0AB /* RuleMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleMark.swift; sourceTree = "<group>"; };
 		216771AF269EF2570005F50C /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		216847A528BF5A84007D11F6 /* HighlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightCell.swift; sourceTree = "<group>"; };
 		217A1F9427DDF13D0082B2BC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -47,7 +45,7 @@
 		2199B75F286C547E00018ADB /* ChartPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPeriodView.swift; sourceTree = "<group>"; };
 		219D151328B605A600193068 /* TargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
 		219D152828B85A8700193068 /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
-		21A1D496268C67AD00C07A86 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A1D496268C67AD00C07A86 /* スタレコ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "スタレコ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A1D4A5268C67B100C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A1D4A7268C67B100C07A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,7 +108,7 @@
 		21A1D497268C67AD00C07A86 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21A1D496268C67AD00C07A86 /* Calendar.app */,
+				21A1D496268C67AD00C07A86 /* スタレコ.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +124,6 @@
 				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
-				2148811828E03F400070F0AB /* RuleMark.swift */,
 				219D151828B6357300193068 /* StopWatchView */,
 				2197B175288806E800D23030 /* ChartView */,
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
@@ -183,7 +180,7 @@
 				21DACA3928DB0D130068D97B /* RealmSwift */,
 			);
 			productName = Calendar;
-			productReference = 21A1D496268C67AD00C07A86 /* Calendar.app */;
+			productReference = 21A1D496268C67AD00C07A86 /* スタレコ.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +247,6 @@
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				219D152928B85A8700193068 /* CircularGauge.swift in Sources */,
-				2148811928E03F400070F0AB /* RuleMark.swift in Sources */,
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */,
 				21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */,
@@ -337,6 +333,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "スタレコ";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -391,6 +388,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "スタレコ";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -407,14 +405,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F584ZURPSX;
 				INFOPLIST_FILE = Calendar/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "スタレコ";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco;
+				PRODUCT_NAME = "スタレコ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -429,14 +428,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F584ZURPSX;
 				INFOPLIST_FILE = Calendar/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "スタレコ";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.suzuki.daisuke.Calendar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco;
+				PRODUCT_NAME = "スタレコ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
