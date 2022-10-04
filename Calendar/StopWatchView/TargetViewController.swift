@@ -28,21 +28,21 @@ class TargetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        let gregorianCalendar = Calendar(identifier: .gregorian)
-//        calendarView.calendar = gregorianCalendar
-//        calendarView.locale = Locale(identifier: "ja_JP")
-//        calendarView.fontDesign = .rounded
-//        calendarView.delegate = self
-//        calendarView.selectionBehavior = UICalendarSelectionSingleDate(delegate: self)
-//        calendarView.translatesAutoresizingMaskIntoConstraints = false
-//        calendarBackgroundBlurView.contentView.addSubview(calendarView)
-//        NSLayoutConstraint.activate([
-//            calendarView.topAnchor.constraint(equalTo: calendarBackgroundBlurView.contentView.topAnchor, constant: 16),
-//            calendarBackgroundBlurView.contentView.bottomAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 16),
-//            calendarView.leadingAnchor.constraint(equalTo: calendarBackgroundBlurView.contentView.leadingAnchor, constant: 16),
-//            calendarBackgroundBlurView.contentView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor, constant: 16),
-//        ])
+        
+        let gregorianCalendar = Calendar(identifier: .gregorian)
+        calendarView.calendar = gregorianCalendar
+        calendarView.locale = Locale(identifier: "ja_JP")
+        calendarView.fontDesign = .rounded
+        calendarView.delegate = self
+        calendarView.selectionBehavior = UICalendarSelectionSingleDate(delegate: self)
+        calendarView.translatesAutoresizingMaskIntoConstraints = false
+        calendarBackgroundBlurView.contentView.addSubview(calendarView)
+        NSLayoutConstraint.activate([
+            calendarView.topAnchor.constraint(equalTo: calendarBackgroundBlurView.contentView.topAnchor, constant: 16),
+            calendarBackgroundBlurView.contentView.bottomAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 16),
+            calendarView.leadingAnchor.constraint(equalTo: calendarBackgroundBlurView.contentView.leadingAnchor, constant: 16),
+            calendarBackgroundBlurView.contentView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor, constant: 16),
+        ])
     }
 
     @IBAction func start() {
@@ -63,12 +63,8 @@ extension TargetViewController: UICalendarViewDelegate {
         guard let date = dateComponents.date else {
             return .image(UIImage.init(systemName: "chevron.left.forwardslash.chevron.right"), color: .secondarySystemBackground, size: .large)
         }
-        let isStudied = StudyRecordManager.shared.isStudiedDay(of: date)
-        if isStudied {
-            return .image(UIImage.init(systemName: "seal.fill"), color: UIColor(named: "charts-deepblue")!, size: .large)
-        } else {
-            return .image(UIImage.init(systemName: "seal.fill"), color: .systemGray2, size: .large)
-        }
+        let studyTimeRange = StudyRecordManager.shared.getStudyTimeRange(of: date)
+        return .image(UIImage.init(systemName: "seal.fill"), color: studyTimeRange.color, size: .large)
     }
 }
 

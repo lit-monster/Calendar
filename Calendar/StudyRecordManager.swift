@@ -4,8 +4,8 @@
 //
 //  Created by 鈴木　葵葉 on 2022/07/06.
 //
-import Foundation
 import RealmSwift
+import UIKit
 
 final class StudyRecordManager {
     static let shared = StudyRecordManager()
@@ -33,10 +33,39 @@ final class StudyRecordManager {
         return totalTime
     }
 
-    func isStudiedDay(of date: Date) -> Bool {
+    func getStudyTimeRange(of date: Date) -> StudyTimeRange {
         let result = getByTimeRange(from: date.getTimeZero(), to: date.addingTimeInterval(86400))
-        return result.total > 0
+        
+        if result.total > 300 {
+            return .fiveHoursOrLess
+        } else if result.total > 180 {
+            return .threeHoursOrLess
+        } else if result.total > 60 {
+            return .oneHoursOrLess
+        } else {
+            return .zero
+        }
 
+    }
+    
+    enum StudyTimeRange {
+        case zero
+        case oneHoursOrLess
+        case threeHoursOrLess
+        case fiveHoursOrLess
+        
+        var color: UIColor{
+            switch self{
+            case .zero:
+                return .systemGray2
+            case .oneHoursOrLess:
+                return  UIColor(named: "charts-lightblue")!
+            case .threeHoursOrLess:
+                return  UIColor(named: "charts-blue")!
+            case .fiveHoursOrLess:
+                return  UIColor(named: "charts-deepblue")!
+            }
+        }
     }
     
     func getLast2Weeks() -> [StudyCondition] {

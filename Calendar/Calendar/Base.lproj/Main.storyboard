@@ -404,31 +404,69 @@
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bm7-yz-7pm">
-                                <rect key="frame" x="23" y="143" width="382" height="248"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
-                                        <rect key="frame" x="-4" y="48" width="390" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目標時間を設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-0L-snf">
-                                        <rect key="frame" x="130" y="25" width="122" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <color key="highlightedColor" systemColor="systemGray2Color"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYR-xB-pSe">
+                                <rect key="frame" x="23" y="164" width="382" height="248"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WrQ-e6-CQ3">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="248"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
+                                            <rect key="frame" x="-4" y="48" width="390" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </datePicker>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目標時間を設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-0L-snf">
+                                            <rect key="frame" x="130" y="25" width="122" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <color key="highlightedColor" systemColor="systemGray2Color"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="382" id="0oJ-0q-X1o"/>
+                                    <constraint firstAttribute="height" constant="248" id="YB9-5n-xWh"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-qz-eFc">
+                                <rect key="frame" x="25" y="444" width="378" height="442"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bK0-ze-lTi">
+                                    <rect key="frame" x="0.0" y="0.0" width="378" height="442"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxI-d8-sxK">
+                                            <rect key="frame" x="0.0" y="0.0" width="138" height="314"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4ig-IT-hVJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="314"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="regular"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="442" id="8LP-Td-mFX"/>
+                                    <constraint firstAttribute="width" constant="378" id="dg3-fJ-Rqw"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ex2-RK-UzO"/>
                         <color key="backgroundColor" name="summary"/>
                         <constraints>
                             <constraint firstItem="zb5-Xx-qs5" firstAttribute="top" secondItem="lnU-C6-iG2" secondAttribute="top" id="523-1u-sWS"/>
+                            <constraint firstItem="Ex2-RK-UzO" firstAttribute="trailing" secondItem="GSV-qz-eFc" secondAttribute="trailing" constant="25" id="BtG-Qq-VVZ"/>
+                            <constraint firstItem="GSV-qz-eFc" firstAttribute="leading" secondItem="Ex2-RK-UzO" secondAttribute="leading" constant="25" id="G74-qS-A7j"/>
                             <constraint firstItem="Ex2-RK-UzO" firstAttribute="bottom" secondItem="5Ta-hR-p58" secondAttribute="bottom" constant="38" id="NCa-i1-xlj"/>
                             <constraint firstItem="zb5-Xx-qs5" firstAttribute="trailing" secondItem="lnU-C6-iG2" secondAttribute="trailing" id="egz-5Y-ENu"/>
+                            <constraint firstItem="Ex2-RK-UzO" firstAttribute="trailing" secondItem="fYR-xB-pSe" secondAttribute="trailing" constant="23" id="gKv-pf-bLc"/>
+                            <constraint firstItem="fYR-xB-pSe" firstAttribute="top" secondItem="Ex2-RK-UzO" secondAttribute="top" constant="21" id="hku-hG-GyE"/>
+                            <constraint firstItem="GSV-qz-eFc" firstAttribute="top" secondItem="fYR-xB-pSe" secondAttribute="bottom" constant="32" id="kVZ-Tj-bLE"/>
+                            <constraint firstItem="fYR-xB-pSe" firstAttribute="leading" secondItem="Ex2-RK-UzO" secondAttribute="leading" constant="23" id="ocw-eV-qe2"/>
                             <constraint firstItem="zb5-Xx-qs5" firstAttribute="leading" secondItem="lnU-C6-iG2" secondAttribute="leading" id="slN-0l-LH0"/>
                             <constraint firstAttribute="bottom" secondItem="zb5-Xx-qs5" secondAttribute="bottom" id="yzi-jm-Ofg"/>
                         </constraints>
@@ -451,39 +489,13 @@
                     <view key="view" contentMode="scaleToFill" id="aNm-74-Qpj">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-qz-eFc">
-                                <rect key="frame" x="28" y="242" width="380" height="442"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="bK0-ze-lTi">
-                                    <rect key="frame" x="0.0" y="0.0" width="380" height="442"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxI-d8-sxK">
-                                            <rect key="frame" x="0.0" y="0.0" width="140" height="314"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="4ig-IT-hVJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="314"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="regular"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="GSV-qz-eFc" secondAttribute="height" multiplier="0.86" id="IaM-HH-2ak"/>
-                                </constraints>
-                                <blurEffect style="regular"/>
-                            </visualEffectView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QU3-IK-aKI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7d-ND-x7k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2149" y="-3501"/>
+            <point key="canvasLocation" x="-2163" y="-3571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xe9-1b-h9l">
