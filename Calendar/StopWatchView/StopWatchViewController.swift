@@ -15,6 +15,11 @@ class StopWatchViewController: UIViewController {
     
     @IBOutlet var circularGaugeView: UIView!
     @IBOutlet var inturrptedView: UIView!
+    @IBOutlet weak var picker: UIDatePicker! {
+        didSet {
+            picker.datePickerMode = .countDownTimer
+        }
+    }
     
     var count: Int = 0
     
@@ -61,6 +66,22 @@ class StopWatchViewController: UIViewController {
         
         readHeartRate()
     }
+    @IBAction func start() {
+        performSegue(withIdentifier: "tocountdown", sender: .none)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tocountdown"{
+            let vc = segue.destination as! StopWatchViewController
+            vc.targetTimeInterval = picker.countDownDuration
+        }
+        if segue.identifier == "totimer"{
+            let vc = segue.destination as! TimerViewController
+            vc.count = self.count
+            vc.latestHeartRate = self.latestHeartRate
+            vc.focusRate = self.focusRate
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -70,15 +91,6 @@ class StopWatchViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         UIDevice.current.isProximityMonitoringEnabled = false
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "totimer"{
-            let vc = segue.destination as! TimerViewController
-            vc.count = self.count
-            vc.latestHeartRate = self.latestHeartRate
-            vc.focusRate = self.focusRate
-        }
     }
     
     @IBAction func exitButtonPressed(){

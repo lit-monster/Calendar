@@ -10,11 +10,11 @@ import UIKit
 
 class TargetViewController: UIViewController {
     
-    @IBOutlet weak var picker: UIDatePicker! {
-        didSet {
-            picker.datePickerMode = .countDownTimer
-        }
-    }
+//    @IBOutlet weak var picker: UIDatePicker! {
+//        didSet {
+//            picker.datePickerMode = .countDownTimer
+//        }
+//    }
 
     @IBOutlet weak var calendarBackgroundBlurView: UIVisualEffectView! {
         didSet {
@@ -45,16 +45,16 @@ class TargetViewController: UIViewController {
         ])
     }
 
-    @IBAction func start() {
-        performSegue(withIdentifier: "tocountdown", sender: .none)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "tocountdown"{
-            let vc = segue.destination as! StopWatchViewController
-            vc.targetTimeInterval = picker.countDownDuration
-        }
-    }
+//    @IBAction func start() {
+//        performSegue(withIdentifier: "tocountdown", sender: .none)
+//    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "tocountdown"{
+//            let vc = segue.destination as! StopWatchViewController
+//            vc.targetTimeInterval = picker.countDownDuration
+//        }
+//    }
 }
 
 //MARK: - CalendarView Delegate

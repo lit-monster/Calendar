@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-2121" y="-4302"/>
         </scene>
-        <!--Stop Watch View Controller-->
+        <!--計測-->
         <scene sceneID="uQJ-3Z-ENq">
             <objects>
-                <viewController id="Bkz-OM-wML" customClass="StopWatchViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="計測" id="Bkz-OM-wML" customClass="StopWatchViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZIP-tk-qfw">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,22 +80,51 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-MS-WAu">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-5U-8nn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glass2" translatesAutoresizingMaskIntoConstraints="NO" id="zb5-Xx-qs5">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強の計測をしよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSi-Ov-2eH">
-                                        <rect key="frame" x="65.666666666666686" y="227" width="297" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYR-xB-pSe">
+                                        <rect key="frame" x="23" y="339" width="382" height="248"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WrQ-e6-CQ3">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="248"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
+                                                    <rect key="frame" x="-4" y="48" width="390" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </datePicker>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目標時間を設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-0L-snf">
+                                                    <rect key="frame" x="130" y="25" width="122" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <color key="highlightedColor" systemColor="systemGray2Color"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="248" id="Qva-Ml-Bwm"/>
+                                            <constraint firstAttribute="width" constant="382" id="hL3-MM-fHB"/>
+                                        </constraints>
+                                        <blurEffect style="regular"/>
+                                    </visualEffectView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLS-vb-OVS">
+                                        <rect key="frame" x="190" y="679" width="75" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                        <connections>
+                                            <action selector="start" destination="Bkz-OM-wML" eventType="touchUpInside" id="spf-fs-fcl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="summary"/>
                                 <constraints>
-                                    <constraint firstItem="9yy-5U-8nn" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" id="YTJ-fW-1fn"/>
-                                    <constraint firstItem="MSi-Ov-2eH" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="giS-T2-NJl"/>
-                                    <constraint firstItem="MSi-Ov-2eH" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="227" id="k51-i1-nsE"/>
-                                    <constraint firstAttribute="trailing" secondItem="9yy-5U-8nn" secondAttribute="trailing" id="quM-rt-dzS"/>
+                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" constant="23" id="4kN-09-mfh"/>
+                                    <constraint firstAttribute="trailing" secondItem="fYR-xB-pSe" secondAttribute="trailing" constant="23" id="AIF-Jq-f50"/>
+                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="339" id="D38-Cm-dzy"/>
+                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="fk2-LR-h6J"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -119,12 +148,13 @@
                     <connections>
                         <outlet property="circularGaugeView" destination="0bf-Zb-1I4" id="D0f-oZ-rdk"/>
                         <outlet property="inturrptedView" destination="yd2-MS-WAu" id="xVh-mh-d4h"/>
+                        <outlet property="picker" destination="mPE-cC-flE" id="Vy4-BJ-XZQ"/>
                         <segue destination="MgA-5b-9WW" kind="show" identifier="totimer" id="Jch-Nt-uvf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgb-7e-Wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2864.0186915887848" y="-2838.6609071274302"/>
+            <point key="canvasLocation" x="-2865" y="-3571"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="RiM-9j-wFj">
@@ -394,43 +424,28 @@
                     <view key="view" contentMode="scaleToFill" id="lnU-C6-iG2" customClass="TargetViewController.swift">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ex2-RK-UzO"/>
+                        <color key="backgroundColor" name="summary"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="計測" id="adC-Lz-hwY"/>
+                    <connections>
+                        <outlet property="calendarBackgroundBlurView" destination="GSV-qz-eFc" id="z7C-Q3-3SW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ua5-da-0sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3969" y="-3571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s8I-Ct-nq5">
+            <objects>
+                <viewController id="qX0-ir-nac" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aNm-74-Qpj">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glass2" translatesAutoresizingMaskIntoConstraints="NO" id="zb5-Xx-qs5">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="始める" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ta-hR-p58">
-                                <rect key="frame" x="188" y="785" width="52" height="20"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" name="Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYR-xB-pSe">
-                                <rect key="frame" x="23" y="164" width="382" height="248"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WrQ-e6-CQ3">
-                                    <rect key="frame" x="0.0" y="0.0" width="382" height="248"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
-                                            <rect key="frame" x="-4" y="48" width="390" height="200"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </datePicker>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目標時間を設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-0L-snf">
-                                            <rect key="frame" x="130" y="25" width="122" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <color key="highlightedColor" systemColor="systemGray2Color"/>
-                                        </label>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="382" id="0oJ-0q-X1o"/>
-                                    <constraint firstAttribute="height" constant="248" id="YB9-5n-xWh"/>
-                                </constraints>
-                                <blurEffect style="regular"/>
-                            </visualEffectView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-qz-eFc">
-                                <rect key="frame" x="25" y="444" width="378" height="442"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-qz-eFc">
+                                <rect key="frame" x="25" y="341" width="378" height="442"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bK0-ze-lTi">
                                     <rect key="frame" x="0.0" y="0.0" width="378" height="442"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,40 +470,6 @@
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ex2-RK-UzO"/>
-                        <color key="backgroundColor" name="summary"/>
-                        <constraints>
-                            <constraint firstItem="zb5-Xx-qs5" firstAttribute="top" secondItem="lnU-C6-iG2" secondAttribute="top" id="523-1u-sWS"/>
-                            <constraint firstItem="Ex2-RK-UzO" firstAttribute="trailing" secondItem="GSV-qz-eFc" secondAttribute="trailing" constant="25" id="BtG-Qq-VVZ"/>
-                            <constraint firstItem="GSV-qz-eFc" firstAttribute="leading" secondItem="Ex2-RK-UzO" secondAttribute="leading" constant="25" id="G74-qS-A7j"/>
-                            <constraint firstItem="Ex2-RK-UzO" firstAttribute="bottom" secondItem="5Ta-hR-p58" secondAttribute="bottom" constant="38" id="NCa-i1-xlj"/>
-                            <constraint firstItem="zb5-Xx-qs5" firstAttribute="trailing" secondItem="lnU-C6-iG2" secondAttribute="trailing" id="egz-5Y-ENu"/>
-                            <constraint firstItem="Ex2-RK-UzO" firstAttribute="trailing" secondItem="fYR-xB-pSe" secondAttribute="trailing" constant="23" id="gKv-pf-bLc"/>
-                            <constraint firstItem="fYR-xB-pSe" firstAttribute="top" secondItem="Ex2-RK-UzO" secondAttribute="top" constant="21" id="hku-hG-GyE"/>
-                            <constraint firstItem="GSV-qz-eFc" firstAttribute="top" secondItem="fYR-xB-pSe" secondAttribute="bottom" constant="32" id="kVZ-Tj-bLE"/>
-                            <constraint firstItem="fYR-xB-pSe" firstAttribute="leading" secondItem="Ex2-RK-UzO" secondAttribute="leading" constant="23" id="ocw-eV-qe2"/>
-                            <constraint firstItem="zb5-Xx-qs5" firstAttribute="leading" secondItem="lnU-C6-iG2" secondAttribute="leading" id="slN-0l-LH0"/>
-                            <constraint firstAttribute="bottom" secondItem="zb5-Xx-qs5" secondAttribute="bottom" id="yzi-jm-Ofg"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="計測" id="adC-Lz-hwY"/>
-                    <connections>
-                        <outlet property="calendarBackgroundBlurView" destination="GSV-qz-eFc" id="z7C-Q3-3SW"/>
-                        <outlet property="picker" destination="mPE-cC-flE" id="4u5-HZ-C4f"/>
-                        <segue destination="Bkz-OM-wML" kind="show" identifier="tocountdown" id="9mn-vX-kGz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ua5-da-0sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2865.217391304348" y="-3571.2053571428569"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="s8I-Ct-nq5">
-            <objects>
-                <viewController id="qX0-ir-nac" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aNm-74-Qpj">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="QU3-IK-aKI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -519,7 +500,7 @@
         <!--計測-->
         <scene sceneID="uYG-e8-Jkv">
             <objects>
-                <navigationController id="7v2-jG-oNr" sceneMemberID="viewController">
+                <navigationController title="計測" id="7v2-jG-oNr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="計測" id="kQ7-0n-rHa">
                         <imageReference key="image" image="timer" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
@@ -534,7 +515,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fvf-aK-hgg" kind="relationship" relationship="rootViewController" id="1hR-gv-42u"/>
+                        <segue destination="Bkz-OM-wML" kind="relationship" relationship="rootViewController" id="bmi-o7-TOu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Me4-BS-HyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -548,7 +529,6 @@
         <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
         <image name="focus" width="378" height="240"/>
         <image name="glass2" width="414" height="896"/>
-        <image name="iPhone" width="414" height="896"/>
         <image name="quality1" width="124" height="124"/>
         <image name="quality2" width="124" height="124"/>
         <image name="quality3" width="124" height="124"/>
@@ -556,9 +536,6 @@
         <image name="timer" catalog="system" width="128" height="123"/>
         <image name="totaltime" width="268" height="96"/>
         <image name="waveform.path.ecg" catalog="system" width="128" height="125"/>
-        <namedColor name="Color">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="charts-blue">
             <color red="0.23529411764705882" green="0.67450980392156867" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
