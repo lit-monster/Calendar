@@ -63,11 +63,11 @@ class StopWatchViewController: UIViewController {
             }
             print(success)
         })
-        
         readHeartRate()
     }
+    
     @IBAction func start() {
-        performSegue(withIdentifier: "tocountdown", sender: .none)
+//        performSegue(withIdentifier: "tocountdown", sender: .none)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -102,6 +102,7 @@ class StopWatchViewController: UIViewController {
         if inturrptedView.isHidden == false {
             inturrptedView.isHidden = true
         }
+        performSegue(withIdentifier: "tocountdown", sender: .none)
         let proximityState = UIDevice.current.proximityState
         print(proximityState)
         self.feedbackGenerator.notificationOccurred(.warning)
