@@ -67,12 +67,12 @@ class StopWatchViewController: UIViewController {
     }
     
     @IBAction func start() {
-//        performSegue(withIdentifier: "tocountdown", sender: .none)
+        performSegue(withIdentifier: "tocountdown", sender: .none)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tocountdown"{
-            let vc = segue.destination as! StopWatchViewController
+            let vc = segue.destination as! TimerViewController
             vc.targetTimeInterval = picker.countDownDuration
         }
         if segue.identifier == "totimer"{
