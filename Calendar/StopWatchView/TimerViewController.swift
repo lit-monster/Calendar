@@ -19,15 +19,13 @@ class TimerViewController: UIViewController {
     
     var timer: Timer = Timer()
     var targetTimeInterval: CFTimeInterval = 0
-    
-    //時間の型で保存する、秒数で保存
     var startTime = TimeInterval()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         feedbackGenerator.prepare()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         heartRateLabel.text = String(Int(latestHeartRate))
@@ -48,19 +46,17 @@ class TimerViewController: UIViewController {
         let hours = (interval / 3600)
         totalTimeLabel.text =  String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
-    
+
     @IBOutlet weak var totalTimeLabel: UILabel!
-    
+
     @IBOutlet weak var heartRateLabel: UILabel!
-    
+
     @IBOutlet weak var starLabel: UILabel!
-    
+
     @IBOutlet weak var recoLabal: UILabel!
-    
+
     @IBAction func quality3(){
-        //実際の処理
         print("超集中")
-        //保存する記録
         saveRecord(quality: 3)
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
 
@@ -68,7 +64,6 @@ class TimerViewController: UIViewController {
     
     @IBAction func quality2(){
         print("集中")
-        //保存する記録
         saveRecord(quality: 2)
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
 
@@ -76,7 +71,6 @@ class TimerViewController: UIViewController {
     
     @IBAction func quality1(){
         print("普通")
-        //保存する記録
         saveRecord(quality: 1)
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
 

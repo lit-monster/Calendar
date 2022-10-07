@@ -57,7 +57,7 @@ final class BarChartViewHostingController: UIHostingController<BarChartView> {
     override init(rootView: BarChartView) {
         super.init(rootView: rootView)
     }
-    
+
     @objc required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

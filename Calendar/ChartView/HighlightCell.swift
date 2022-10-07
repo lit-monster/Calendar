@@ -15,12 +15,12 @@ struct Breakdown: Identifiable {
 }
 
 struct HighlightCell: View {
-    
+
     //MARK: - Input Parameter
     var title: String
     var subTitle: String
     var breakdowns: [Breakdown]
-    
+
     //MARK: - body
     var body: some View {
         ZStack {

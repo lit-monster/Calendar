@@ -12,7 +12,7 @@ final class ChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         let toyshapes = StudyRecordManager.shared.getWeekData().flatMap { $0.getToyShape() }
         let totalTime = StudyRecordManager.shared.getLatestWeekTotalStudyTime()
