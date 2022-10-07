@@ -27,5 +27,8 @@ final class ChartViewController: UIViewController {
             vc.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             vc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             vc.view.topAnchor.constraint(equalTo: view.topAnchor)])
+//        .chartPlotStyle { content in
+//            content.cornerRadius(10)
+//        }
     }
 }

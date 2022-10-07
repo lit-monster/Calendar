@@ -84,8 +84,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone1" translatesAutoresizingMaskIntoConstraints="NO" id="twu-yW-FTT">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                    </imageView>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYR-xB-pSe">
-                                        <rect key="frame" x="23" y="339" width="382" height="248"/>
+                                        <rect key="frame" x="23" y="196" width="382" height="248"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WrQ-e6-CQ3">
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="248"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,18 +107,28 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="248" id="Qva-Ml-Bwm"/>
-                                            <constraint firstAttribute="width" constant="382" id="hL3-MM-fHB"/>
+                                            <constraint firstAttribute="height" constant="248" id="4kg-2y-ALd"/>
+                                            <constraint firstAttribute="width" constant="382" id="AsU-mh-zeX"/>
                                         </constraints>
                                         <blurEffect style="regular"/>
                                     </visualEffectView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhoneを裏返して勉強しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-V1-dbv">
+                                        <rect key="frame" x="71" y="477" width="286" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="summary"/>
                                 <constraints>
-                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" constant="23" id="4kN-09-mfh"/>
-                                    <constraint firstAttribute="trailing" secondItem="fYR-xB-pSe" secondAttribute="trailing" constant="23" id="AIF-Jq-f50"/>
-                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="339" id="D38-Cm-dzy"/>
-                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="fk2-LR-h6J"/>
+                                    <constraint firstAttribute="bottom" secondItem="twu-yW-FTT" secondAttribute="bottom" id="1G7-P6-vj8"/>
+                                    <constraint firstAttribute="trailing" secondItem="fYR-xB-pSe" secondAttribute="trailing" constant="23" id="70K-s3-k2R"/>
+                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" constant="23" id="90o-KS-Kz1"/>
+                                    <constraint firstAttribute="trailing" secondItem="twu-yW-FTT" secondAttribute="trailing" id="Mir-OM-Gzs"/>
+                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="196" id="VhI-i3-r96"/>
+                                    <constraint firstItem="twu-yW-FTT" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" id="s47-4e-zvF"/>
+                                    <constraint firstItem="twu-yW-FTT" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" id="uxc-7S-EvC"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -145,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgb-7e-Wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2865" y="-3571"/>
+            <point key="canvasLocation" x="-2865.4205607476633" y="-3571.4902807775379"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="RiM-9j-wFj">
@@ -365,28 +378,9 @@
                     <view key="view" contentMode="scaleToFill" id="lnU-C6-iG2" customClass="TargetViewController.swift">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ex2-RK-UzO"/>
-                        <color key="backgroundColor" name="summary"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="計測" id="adC-Lz-hwY"/>
-                    <connections>
-                        <outlet property="calendarBackgroundBlurView" destination="GSV-qz-eFc" id="z7C-Q3-3SW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ua5-da-0sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3969" y="-3571"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="s8I-Ct-nq5">
-            <objects>
-                <viewController id="qX0-ir-nac" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aNm-74-Qpj">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-qz-eFc">
-                                <rect key="frame" x="25" y="341" width="378" height="442"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-qz-eFc">
+                                <rect key="frame" x="25" y="242" width="378" height="442"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bK0-ze-lTi">
                                     <rect key="frame" x="0.0" y="0.0" width="378" height="442"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,13 +405,36 @@
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ex2-RK-UzO"/>
+                        <color key="backgroundColor" name="summary"/>
+                        <constraints>
+                            <constraint firstItem="GSV-qz-eFc" firstAttribute="centerX" secondItem="lnU-C6-iG2" secondAttribute="centerX" id="4rg-MC-xPf"/>
+                            <constraint firstItem="GSV-qz-eFc" firstAttribute="centerY" secondItem="lnU-C6-iG2" secondAttribute="centerY" id="4sa-PO-3c1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="計測" id="adC-Lz-hwY"/>
+                    <connections>
+                        <outlet property="calendarBackgroundBlurView" destination="GSV-qz-eFc" id="z7C-Q3-3SW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ua5-da-0sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3803" y="-4048"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s8I-Ct-nq5">
+            <objects>
+                <viewController id="qX0-ir-nac" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aNm-74-Qpj">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="QU3-IK-aKI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7d-ND-x7k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2163" y="-3571"/>
+            <point key="canvasLocation" x="-5389" y="-4429"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xe9-1b-h9l">
@@ -456,7 +473,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Bkz-OM-wML" kind="relationship" relationship="rootViewController" id="bmi-o7-TOu"/>
+                        <segue destination="Bkz-OM-wML" kind="relationship" relationship="rootViewController" id="Tzx-VM-2uu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Me4-BS-HyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -468,6 +485,7 @@
         <image name="Image 3" width="111" height="53"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
         <image name="glass2" width="414" height="896"/>
+        <image name="iPhone1" width="414" height="896"/>
         <image name="quality1" width="132" height="87"/>
         <image name="quality2" width="132" height="87"/>
         <image name="quality3" width="132" height="87"/>

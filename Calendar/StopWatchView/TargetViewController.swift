@@ -9,13 +9,6 @@ import UIKit
 //import RealmSwift
 
 class TargetViewController: UIViewController {
-    
-//    @IBOutlet weak var picker: UIDatePicker! {
-//        didSet {
-//            picker.datePickerMode = .countDownTimer
-//        }
-//    }
-
     @IBOutlet weak var calendarBackgroundBlurView: UIVisualEffectView! {
         didSet {
             calendarBackgroundBlurView.layer.cornerRadius = 16
@@ -44,17 +37,6 @@ class TargetViewController: UIViewController {
             calendarBackgroundBlurView.contentView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor, constant: 16),
         ])
     }
-
-//    @IBAction func start() {
-//        performSegue(withIdentifier: "tocountdown", sender: .none)
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "tocountdown"{
-//            let vc = segue.destination as! StopWatchViewController
-//            vc.targetTimeInterval = picker.countDownDuration
-//        }
-//    }
 }
 
 //MARK: - CalendarView Delegate
