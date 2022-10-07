@@ -10,9 +10,9 @@ import UIKit
 final class StudyRecordManager {
     static let shared = StudyRecordManager()
     private init() {}
-    
+
     let realm = try! Realm()
-    
+
     func getWeekData() -> [StudyCondition] {
         var studyConditions = [StudyCondition]()
         let today = Date().getTimeZero()
@@ -35,7 +35,6 @@ final class StudyRecordManager {
 
     func getStudyTimeRange(of date: Date) -> StudyTimeRange {
         let result = getByTimeRange(from: date.getTimeZero(), to: date.addingTimeInterval(86400))
-        
         if result.total > 300 {
             return .fiveHoursOrLess
         } else if result.total > 180 {
@@ -47,13 +46,12 @@ final class StudyRecordManager {
         }
 
     }
-    
+
     enum StudyTimeRange {
         case zero
         case oneHoursOrLess
         case threeHoursOrLess
         case fiveHoursOrLess
-        
         var color: UIColor{
             switch self{
             case .zero:
@@ -67,17 +65,15 @@ final class StudyRecordManager {
             }
         }
     }
-    
+
     func getLast2Weeks() -> [StudyCondition] {
         let thisWeekBegin = Calendar.current.date(bySetting: .weekday, value: 1, of: Date().getTimeZero())!
         let lastWeekBegin = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: thisWeekBegin)!
-        
         return [
             getByTimeRange(from: thisWeekBegin, to: Date()),
             getByTimeRange(from: lastWeekBegin, to: thisWeekBegin)
         ]
     }
-    
     private func getByTimeRange(from: Date, to: Date) -> StudyCondition {
         let results = realm.objects(StudyRecord.self).filter { from <= $0.date && $0.date < to }
         return StudyCondition(date: from,
@@ -85,7 +81,6 @@ final class StudyRecordManager {
                                 concentratingTime: results.filter { $0.quality == 2 }.map { $0.time }.reduce(0, +),
                                 superConcentratingTime: results.filter { $0.quality == 3 }.map { $0.time }.reduce(0, +))
     }
-    
     func saveRecord(quality: Int, count: Int) {
         let studyRecord = StudyRecord(date: Date(), time:  TimeInterval(count), quality: quality)
         try! realm.write {

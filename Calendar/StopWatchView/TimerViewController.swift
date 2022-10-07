@@ -25,7 +25,6 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // インスタンスを生成し prepare() をコール
         feedbackGenerator.prepare()
     }
     
