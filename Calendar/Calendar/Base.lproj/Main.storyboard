@@ -109,15 +109,6 @@
                                         </constraints>
                                         <blurEffect style="regular"/>
                                     </visualEffectView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLS-vb-OVS">
-                                        <rect key="frame" x="190" y="679" width="75" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Button"/>
-                                        <connections>
-                                            <action selector="start" destination="Bkz-OM-wML" eventType="touchUpInside" id="spf-fs-fcl"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="summary"/>
                                 <constraints>

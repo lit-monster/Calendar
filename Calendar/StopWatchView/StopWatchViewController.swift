@@ -44,17 +44,14 @@ class StopWatchViewController: UIViewController {
         // 近接センサーの有効化
         UIDevice.current.isProximityMonitoringEnabled = true
         
-        // 近接センサーのON-Offが切り替わる通知
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(proximityMonitorStateDidChange),
             name: UIDevice.proximityStateDidChangeNotification,
             object: nil
         )
-        // インスタンスを生成し prepare() をコール
         feedbackGenerator.prepare()
         
-        //healthkit使用の許可
         let typeOfRead = Set([typeOfHeartRate])
         myHealthStore.requestAuthorization(toShare: [],read: typeOfRead,completion: { (success, error) in
             if let error = error {
@@ -65,16 +62,8 @@ class StopWatchViewController: UIViewController {
         })
         readHeartRate()
     }
-    
-    @IBAction func start() {
-        performSegue(withIdentifier: "tocountdown", sender: .none)
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "tocountdown"{
-            let vc = segue.destination as! TimerViewController
-            vc.targetTimeInterval = picker.countDownDuration
-        }
         if segue.identifier == "totimer"{
             let vc = segue.destination as! TimerViewController
             vc.count = self.count
@@ -82,33 +71,32 @@ class StopWatchViewController: UIViewController {
             vc.focusRate = self.focusRate
         }
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIDevice.current.isProximityMonitoringEnabled = true
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         UIDevice.current.isProximityMonitoringEnabled = false
     }
-    
+
     @IBAction func exitButtonPressed(){
         self.performSegue(withIdentifier: "totimer", sender: nil)
     }
-    
-    // 近接センサーのON-Offが切り替わると実行される
+
     @objc func proximityMonitorStateDidChange() {
         if inturrptedView.isHidden == false {
             inturrptedView.isHidden = true
+            targetTimeInterval = picker.countDownDuration 
         }
-        performSegue(withIdentifier: "tocountdown", sender: .none)
+
         let proximityState = UIDevice.current.proximityState
         print(proximityState)
         self.feedbackGenerator.notificationOccurred(.warning)
         if proximityState {
             if !timer.isValid {
-                //タイマーが動作してなかったら動かす
                 timer = Timer.scheduledTimer(timeInterval: 1,
                                              target: self,
                                              selector: #selector(self.up),
