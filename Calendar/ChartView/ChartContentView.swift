@@ -75,9 +75,8 @@ struct ChartContentView: View {
                                     place in MapPin(coordinate: place.location, tint: Color.purple)
                                 }
                                 .frame(width: 400, height: 400)
-//                                Rectangle()
-//                                    .cornerRadius(16)
-//                                    .shadow(color: .black.opacity(0.2),radius: 16)
+                                .cornerRadius(20)
+                                .shadow(color: .black.opacity(0.2),radius: 16)
                             }
                         }
                         
