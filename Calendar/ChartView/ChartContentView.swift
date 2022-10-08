@@ -6,16 +6,28 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ChartContentView: View {
-
+    
     @State var selectedPeriod: GraphPeriod = .week
     var toyShapes: [ToyShape]
     var totalStudyTime: TimeInterval
     @State var totalTimeString = ""
     var studyConditionForLast2Weeks = StudyRecordManager.shared.getLast2Weeks()
     var studyConditionForWeek = StudyRecordManager.shared.getWeekData()
-
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 37.334_900,
+                                       longitude: -122.009_020),
+        latitudinalMeters: 750,
+        longitudinalMeters: 750
+    )
+    @State private var places: [IdentifiablePlace] = [
+        IdentifiablePlace(lat: 37.331_01,  long: -122.007_45),
+        IdentifiablePlace(lat: 37.332_44,  long: -122.006_14)
+    ]
+    
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -35,21 +47,40 @@ struct ChartContentView: View {
                                 .cornerRadius(16)
                         }
                         Spacer(minLength: 24)
-                        Text("ログインボーナス")
-                            .font(.system(.title, design: .default))
-                            .bold()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        Spacer()
-                        ZStack{
-                            Rectangle()
-                                .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
-                                .cornerRadius(16)
-                                .shadow(color: .black.opacity(0.2),radius: 16)
-                            CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
-                                                                                   locale: Locale(identifier: "ja_JP"),
-                                                                                   fontDesign: .rounded))
+                        VStack {
+                            Text("ログインボーナス")
+                                .font(.system(.title, design: .default))
+                                .bold()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            Spacer()
+                            ZStack{
+                                Rectangle()
+                                    .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
+                                    .cornerRadius(16)
+                                    .shadow(color: .black.opacity(0.2),radius: 16)
+                                CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
+                                                                                       locale: Locale(identifier: "ja_JP"),
+                                                                                       fontDesign: .rounded))
+                            }
                         }
-
+                        
+                        VStack {
+                            Text("マップ")
+                                .font(.system(.title, design: .default))
+                                .bold()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            Spacer()
+                            ZStack{
+                                Map(coordinateRegion: $region, annotationItems: places) {
+                                    place in MapPin(coordinate: place.location, tint: Color.purple)
+                                }
+                                .frame(width: 400, height: 400)
+//                                Rectangle()
+//                                    .cornerRadius(16)
+//                                    .shadow(color: .black.opacity(0.2),radius: 16)
+                            }
+                        }
+                        
                         HStack {
                             Text("ハイライト")
                                 .font(.system(.title, design: .default))
@@ -57,7 +88,7 @@ struct ChartContentView: View {
                             Spacer()
                         }
                     }
-
+                    
                     let yesterday = studyConditionForWeek[1].superConcentratingTime
                     let today = studyConditionForWeek[0].superConcentratingTime
                     HighlightCell(title: "超集中",
@@ -66,7 +97,6 @@ struct ChartContentView: View {
                                     Breakdown(title: "今日", maxValue: studyConditionForWeek[0].superConcentratingTime, currentValue: today),
                                     Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].superConcentratingTime, currentValue: yesterday),
                                     Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].superConcentratingTime, currentValue: studyConditionForWeek[2].superConcentratingTime),
-                                    
                                   ])
                     Spacer(minLength: 24)
                     HighlightCell(title: "集中",
@@ -75,7 +105,6 @@ struct ChartContentView: View {
                                     Breakdown(title: "今日", maxValue: studyConditionForWeek[0].concentratingTime, currentValue: today),
                                     Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].concentratingTime, currentValue: yesterday),
                                     Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].concentratingTime, currentValue: studyConditionForWeek[2].concentratingTime),
-                                    
                                   ])
                     Spacer(minLength: 24)
                     HighlightCell(title: "普通",
@@ -108,41 +137,41 @@ struct ChartContentView: View {
             totalTimeString =  String(format: "%02dh %02dm %02ds", hours, minutes, seconds)
         }
     }
-}
-
-struct ChartContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChartContentView(toyShapes: [
-            .init(color: "Green", type: "Cube", count: 2),
-            .init(color: "Pink", type: "Cube", count: 1),
-            .init(color: "Yellow", type: "Cube", count: 1),
-            .init(color: "Green", type: "Sphere", count: 5),
-            .init(color: "Pink", type: "Sphere", count: 2),
-            .init(color: "Yellow", type: "Sphere", count: 1),
-            .init(color: "Green", type: "Pyramid", count: 5),
-            .init(color: "Pink", type: "Pyramid", count: 6),
-            .init(color: "Yellow", type: "Pyramid", count: 2),
-            .init(color: "Green", type: "aaa", count: 2),
-            .init(color: "Pink", type: "aaa", count: 3),
-            .init(color: "Yellow", type: "aaa", count: 4),
-            .init(color: "Green", type: "bbb", count: 6),
-            .init(color: "Pink", type: "bbb", count: 4),
-            .init(color: "Yellow", type: "bbb", count: 7),
-            .init(color: "Green", type: "ccc", count:5),
-            .init(color: "Pink", type: "ccc", count: 1),
-            .init(color: "Yellow", type: "ccc", count: 4),
-            .init(color: "Green", type: "ddd", count: 4),
-            .init(color: "Pink", type: "ddd", count: 5),
-            .init(color: "Yellow", type: "ddd", count: 2)
-        ], totalStudyTime: 1234)
+    
+    struct ChartContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ChartContentView(toyShapes: [
+                .init(color: "Green", type: "Cube", count: 2),
+                .init(color: "Pink", type: "Cube", count: 1),
+                .init(color: "Yellow", type: "Cube", count: 1),
+                .init(color: "Green", type: "Sphere", count: 5),
+                .init(color: "Pink", type: "Sphere", count: 2),
+                .init(color: "Yellow", type: "Sphere", count: 1),
+                .init(color: "Green", type: "Pyramid", count: 5),
+                .init(color: "Pink", type: "Pyramid", count: 6),
+                .init(color: "Yellow", type: "Pyramid", count: 2),
+                .init(color: "Green", type: "aaa", count: 2),
+                .init(color: "Pink", type: "aaa", count: 3),
+                .init(color: "Yellow", type: "aaa", count: 4),
+                .init(color: "Green", type: "bbb", count: 6),
+                .init(color: "Pink", type: "bbb", count: 4),
+                .init(color: "Yellow", type: "bbb", count: 7),
+                .init(color: "Green", type: "ccc", count:5),
+                .init(color: "Pink", type: "ccc", count: 1),
+                .init(color: "Yellow", type: "ccc", count: 4),
+                .init(color: "Green", type: "ddd", count: 4),
+                .init(color: "Pink", type: "ddd", count: 5),
+                .init(color: "Yellow", type: "ddd", count: 2)
+            ], totalStudyTime: 1234)
+        }
     }
-}
-
-
-enum GraphPeriod: String, CaseIterable, Identifiable {
-    case week = "W"
-    case month = "M"
-    case threeMonthes = "3M"
-    case sixMonthes = "6M"
-    var id: String { rawValue }
+    
+    
+    enum GraphPeriod: String, CaseIterable, Identifiable {
+        case week = "W"
+        case month = "M"
+        case threeMonthes = "3M"
+        case sixMonthes = "6M"
+        var id: String { rawValue }
+    }
 }

@@ -24,6 +24,7 @@
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
 		21A4B7CE28A74CF400699C36 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A4B7CD28A74CF300699C36 /* HealthKit.framework */; };
 		21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B0A6DB28855BDF00CFE312 /* Main.storyboard */; };
+		21B23BC728F1CF00001FBF65 /* IdentifiablePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */; };
 		21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */; };
 		21C93F3028BE54D700E807B6 /* StudyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2F28BE54D700E807B6 /* StudyRecord.swift */; };
 		21DACA3828DB0D130068D97B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21DACA3728DB0D130068D97B /* Realm */; };
@@ -54,6 +55,7 @@
 		21A4B7CB28A72D2100699C36 /* Calendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calendar.entitlements; sourceTree = "<group>"; };
 		21A4B7CD28A74CF300699C36 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		21B0A6DC28855BDF00CFE312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Calendar/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiablePlace.swift; sourceTree = "<group>"; };
 		21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		21C93F2F28BE54D700E807B6 /* StudyRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyRecord.swift; sourceTree = "<group>"; };
 		BAC3472F28BE995F00895FBE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				2199B75D286C52AC00018ADB /* ChartContentView.swift */,
 				2199B75F286C547E00018ADB /* ChartPeriodView.swift */,
 				2129B2F328F1553500B792E6 /* CalendarView.swift */,
+				21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */,
 			);
 			path = ChartView;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
 				2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */,
+				21B23BC728F1CF00001FBF65 /* IdentifiablePlace.swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				219D152928B85A8700193068 /* CircularGauge.swift in Sources */,
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,

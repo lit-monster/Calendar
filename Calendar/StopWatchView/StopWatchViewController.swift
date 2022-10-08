@@ -137,7 +137,7 @@ class StopWatchViewController: UIViewController {
         let calendar = Calendar.current
         let date = Date()
         let endDate = calendar.date(byAdding: .day, value: -0, to: calendar.startOfDay(for: date))
-        let startDate = calendar.date(byAdding: .day, value: -10, to: calendar.startOfDay(for: date))
+        let startDate = calendar.date(byAdding: .day, value: -7, to: calendar.startOfDay(for: date))
         print("startDate")
         print(startDate)
         print("endDate")
