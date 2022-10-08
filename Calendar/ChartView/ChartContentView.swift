@@ -20,9 +20,6 @@ struct ChartContentView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
-                                                                           locale: Locale(identifier: "ja_JP"),
-                                                                           fontDesign: .rounded))
                     Group {
                         ChartPeriodView(totalTimeString: totalTimeString)
                             .frame(maxWidth: .infinity)
@@ -32,6 +29,14 @@ struct ChartContentView: View {
                             .background(.ultraThinMaterial)
                             .cornerRadius(16)
                         Spacer(minLength: 24)
+                        Text("ログインボーナス")
+                            .font(.system(.title, design: .default))
+                            .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Spacer()
+                        CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
+                                                                               locale: Locale(identifier: "ja_JP"),
+                                                                               fontDesign: .rounded))
                         HStack {
                             Text("ハイライト")
                                 .font(.system(.title, design: .default))
