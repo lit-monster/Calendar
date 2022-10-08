@@ -26,6 +26,10 @@
 	<string>Apple Watchを装着しhealth kitから心拍数を取得します</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>アプリ起動前に、Apple Watchを装着してください</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>aaaa</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>aaaa</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -7,12 +7,14 @@
 
 import RealmSwift
 import UIKit
+import CoreLocation
 
 
-class TimerViewController: UIViewController {
-    
+class TimerViewController: UIViewController,CLLocationManagerDelegate {
+    var locationManager = CLLocationManager()
+
     let feedbackGenerator = UINotificationFeedbackGenerator()
-    
+
     var count: Int = 0
     var latestHeartRate: Double = 0.0
     var focusRate = 0
@@ -24,6 +26,16 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         feedbackGenerator.prepare()
+        locationManager.delegate = self
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+        print("location")
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,21 +73,21 @@ class TimerViewController: UIViewController {
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
 
     }
-    
+
     @IBAction func quality2(){
         print("集中")
         saveRecord(quality: 2)
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
 
     }
-    
+
     @IBAction func quality1(){
         print("普通")
         saveRecord(quality: 1)
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
 
     }
-    
+
     private func saveRecord(quality: Int) {
         StudyRecordManager.shared.saveRecord(quality: quality, count: count)
         count = 0
