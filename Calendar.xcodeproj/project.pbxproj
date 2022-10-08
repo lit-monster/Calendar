@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB55E26A80AE900655F2F /* ChartViewController.swift */; };
+		2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129B2F328F1553500B792E6 /* CalendarView.swift */; };
 		212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBD26D65676004561B0 /* AppDelegate.swift */; };
 		212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBF26D65686004561B0 /* SceneDelegate.swift */; };
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		211BB55E26A80AE900655F2F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		2129B2F328F1553500B792E6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		212D7BBD26D65676004561B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		212D7BBF26D65686004561B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		216771AF269EF2570005F50C /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				2196BA0A2856022800FA8D61 /* BarChart.swift */,
 				2199B75D286C52AC00018ADB /* ChartContentView.swift */,
 				2199B75F286C547E00018ADB /* ChartPeriodView.swift */,
+				2129B2F328F1553500B792E6 /* CalendarView.swift */,
 			);
 			path = ChartView;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
 				216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
+				2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				219D152928B85A8700193068 /* CircularGauge.swift in Sources */,
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,

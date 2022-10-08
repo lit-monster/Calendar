@@ -20,6 +20,9 @@ struct ChartContentView: View {
         NavigationView {
             ScrollView {
                 VStack {
+                    CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
+                                                                           locale: Locale(identifier: "ja_JP"),
+                                                                           fontDesign: .rounded))
                     Group {
                         ChartPeriodView(totalTimeString: totalTimeString)
                             .frame(maxWidth: .infinity)
