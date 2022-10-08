@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChartContentView: View {
-    
+
     @State var selectedPeriod: GraphPeriod = .week
     var toyShapes: [ToyShape]
     var totalStudyTime: TimeInterval
@@ -23,20 +23,33 @@ struct ChartContentView: View {
                     Group {
                         ChartPeriodView(totalTimeString: totalTimeString)
                             .frame(maxWidth: .infinity)
-                        BarChartView(stackedBarData: toyShapes)
-                            .frame(height: 300)
-                            .padding()
-                            .background(.ultraThinMaterial)
-                            .cornerRadius(16)
+                        ZStack{
+                            Rectangle()
+                                .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
+                                .cornerRadius(16)
+                                .shadow(color: .black.opacity(0.2),radius: 16)
+                            BarChartView(stackedBarData: toyShapes)
+                                .frame(height: 300)
+                                .padding()
+                                .background(.ultraThinMaterial)
+                                .cornerRadius(16)
+                        }
                         Spacer(minLength: 24)
                         Text("ログインボーナス")
                             .font(.system(.title, design: .default))
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
                         Spacer()
-                        CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
-                                                                               locale: Locale(identifier: "ja_JP"),
-                                                                               fontDesign: .rounded))
+                        ZStack{
+                            Rectangle()
+                                .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
+                                .cornerRadius(16)
+                                .shadow(color: .black.opacity(0.2),radius: 16)
+                            CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
+                                                                                   locale: Locale(identifier: "ja_JP"),
+                                                                                   fontDesign: .rounded))
+                        }
+
                         HStack {
                             Text("ハイライト")
                                 .font(.system(.title, design: .default))
@@ -44,33 +57,33 @@ struct ChartContentView: View {
                             Spacer()
                         }
                     }
-                    
+
                     let yesterday = studyConditionForWeek[1].superConcentratingTime
                     let today = studyConditionForWeek[0].superConcentratingTime
                     HighlightCell(title: "超集中",
                                   subTitle: "今日は昨日の超集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%勉強しました。",
                                   breakdowns: [
-                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
-                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
-                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].superConcentratingTime),
+                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].superConcentratingTime, currentValue: today),
+                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].superConcentratingTime, currentValue: yesterday),
+                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].superConcentratingTime, currentValue: studyConditionForWeek[2].superConcentratingTime),
                                     
                                   ])
                     Spacer(minLength: 24)
                     HighlightCell(title: "集中",
                                   subTitle: "今日の勉強時間は昨日の集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
                                   breakdowns: [
-                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
-                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
-                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].concentratingTime),
+                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].concentratingTime, currentValue: today),
+                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].concentratingTime, currentValue: yesterday),
+                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].concentratingTime, currentValue: studyConditionForWeek[2].concentratingTime),
                                     
                                   ])
                     Spacer(minLength: 24)
                     HighlightCell(title: "普通",
                                   subTitle: "今日の勉強時間は昨日の普通の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
                                   breakdowns: [
-                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].total, currentValue: today),
-                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].total, currentValue: yesterday),
-                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].total, currentValue: studyConditionForWeek[2].normalTime),
+                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].normalTime, currentValue: today),
+                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].normalTime, currentValue: yesterday),
+                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].normalTime, currentValue: studyConditionForWeek[2].normalTime),
                                   ])
                     Spacer(minLength: 24)
                     let thisWeek = studyConditionForWeek[0].total
