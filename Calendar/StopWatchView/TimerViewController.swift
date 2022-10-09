@@ -36,19 +36,17 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
         }
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-         guard let newLocation = locations.last else {
-              return
-         }
+        guard let newLocation = locations.last else {
+            return
+        }
 
-         let location:CLLocationCoordinate2D
-                = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
+        let location:CLLocationCoordinate2D
+        = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
 
-         let formatter: DateFormatter = DateFormatter()
-         formatter.timeZone   = TimeZone(identifier: "Asia/Tokyo")
-         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-         let date = formatter.string(from: newLocation.timestamp)
-
-//    print("緯度：", location.latitude, "経度：", location.longitude, "時間：", date)
+        let formatter: DateFormatter = DateFormatter()
+        formatter.timeZone   = TimeZone(identifier: "Asia/Tokyo")
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        let date = formatter.string(from: newLocation.timestamp)
         self.currentLatitude = location.latitude
         self.currentLongitude = location.longitude
 

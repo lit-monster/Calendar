@@ -17,8 +17,8 @@ struct ChartContentView: View {
     var studyConditionForLast2Weeks = StudyRecordManager.shared.getLast2Weeks()
     var studyConditionForWeek = StudyRecordManager.shared.getWeekData()
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 35.6208255,
-                                       longitude: 139.7393898),
+        center: CLLocationCoordinate2D(latitude: 35.6457448,
+                                       longitude: 139.8799667),
         latitudinalMeters: 750,
         longitudinalMeters: 750
     )
@@ -79,7 +79,6 @@ struct ChartContentView: View {
                                     default:
                                         return MapMarker(coordinate: place.location, tint: Color("charts-blue"))
                                     }
-
                                 }
                                 .frame(width: 400, height: 400)
                                 .cornerRadius(20)
@@ -87,7 +86,7 @@ struct ChartContentView: View {
                                 Spacer(minLength: 48)
                             }
                         }
-                        
+
                         HStack {
                             Text("ハイライト")
                                 .font(.system(.title, design: .default))
@@ -95,7 +94,7 @@ struct ChartContentView: View {
                             Spacer(minLength: 24)
                         }
                     }
-                    
+
                     let yesterday = studyConditionForWeek[1].superConcentratingTime
                     let today = studyConditionForWeek[0].superConcentratingTime
                     Group{
@@ -132,29 +131,6 @@ struct ChartContentView: View {
                                       ])
                     }
                 }
-
-//                Group{
-//                    Text("Topに戻る")
-//                                    .font(.largeTitle)
-//                                    .padding(.bottom)
-//
-//                                Button(action: {
-//                                    if(self.flag){
-//                                        self.labelText = "SwiftUI Test"
-//                                        self.flag = false
-//                                    }
-//                                    else{
-//                                        self.labelText = "tapped !"
-//                                        self.flag = true
-//                                    }
-//                                }){
-//                                    Text("Button")
-//                                        .font(.largeTitle)
-//                                        .foregroundColor(Color.white)
-//                                }
-//                                .padding(.all)
-//                                .background(Color.blue)
-//                }
 
                 .padding()
                 .navigationTitle(Text("分析"))
@@ -198,8 +174,7 @@ struct ChartContentView: View {
             ], totalStudyTime: 1234)
         }
     }
-    
-    
+
     enum GraphPeriod: String, CaseIterable, Identifiable {
         case week = "W"
         case month = "M"
