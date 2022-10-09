@@ -17,8 +17,8 @@ struct ChartContentView: View {
     var studyConditionForLast2Weeks = StudyRecordManager.shared.getLast2Weeks()
     var studyConditionForWeek = StudyRecordManager.shared.getWeekData()
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 35.6457448,
-                                       longitude: 135.8799667),
+        center: CLLocationCoordinate2D(latitude: 35.6809591,
+                                       longitude: 139.7673068),
         latitudinalMeters: 5000,
         longitudinalMeters: 5000
     )

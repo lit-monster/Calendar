@@ -35,7 +35,7 @@ struct HighlightCell: View {
                     .bold()
                 Text(subTitle)
                 Divider()
-                VStack {
+                HStack {
                     Spacer()
                     ForEach(breakdowns) { breakdown in
                         VStack{
@@ -52,7 +52,7 @@ struct HighlightCell: View {
                                 Text("\(breakdown.maxValue)")
                                     .foregroundColor(.blue)
                             }
-                            .gaugeStyle(.accessoryLinearCapacity)
+                            .gaugeStyle(.accessoryCircularCapacity)
                             .tint(Gradient(colors: [.cyan]))
                             
                             Text(breakdown.title)

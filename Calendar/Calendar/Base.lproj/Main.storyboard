@@ -360,56 +360,6 @@
             </objects>
             <point key="canvasLocation" x="-2865.4205607476633" y="-2807.5593952483805"/>
         </scene>
-        <!--計測-->
-        <scene sceneID="Rfa-C0-DSU">
-            <objects>
-                <viewController id="fvf-aK-hgg" customClass="TargetViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lnU-C6-iG2" customClass="TargetViewController.swift">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-qz-eFc">
-                                <rect key="frame" x="25" y="242" width="378" height="442"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bK0-ze-lTi">
-                                    <rect key="frame" x="0.0" y="0.0" width="378" height="442"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxI-d8-sxK">
-                                            <rect key="frame" x="0.0" y="0.0" width="138" height="314"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4ig-IT-hVJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="314"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="regular"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="442" id="8LP-Td-mFX"/>
-                                    <constraint firstAttribute="width" constant="378" id="dg3-fJ-Rqw"/>
-                                </constraints>
-                                <blurEffect style="regular"/>
-                            </visualEffectView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ex2-RK-UzO"/>
-                        <color key="backgroundColor" name="summary"/>
-                        <constraints>
-                            <constraint firstItem="GSV-qz-eFc" firstAttribute="centerX" secondItem="lnU-C6-iG2" secondAttribute="centerX" id="4rg-MC-xPf"/>
-                            <constraint firstItem="GSV-qz-eFc" firstAttribute="centerY" secondItem="lnU-C6-iG2" secondAttribute="centerY" id="4sa-PO-3c1"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="計測" id="adC-Lz-hwY"/>
-                    <connections>
-                        <outlet property="calendarBackgroundBlurView" destination="GSV-qz-eFc" id="z7C-Q3-3SW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ua5-da-0sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3803" y="-4048"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="s8I-Ct-nq5">
             <objects>
