@@ -20,6 +20,7 @@ class StopWatchViewController: UIViewController {
             picker.datePickerMode = .countDownTimer
         }
     }
+    @IBOutlet weak var pickerBlurView: UIVisualEffectView!
 
     var count: Int = 0
     var latestHeartRate = 0.0
@@ -32,6 +33,9 @@ class StopWatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerBlurView.layer.cornerCurve = .continuous
+        pickerBlurView.layer.cornerRadius = 16
+        pickerBlurView.clipsToBounds = true
         print(targetTimeInterval)
         print("👻👻👻👻")
         UIDevice.current.isProximityMonitoringEnabled = true

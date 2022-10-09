@@ -27,6 +27,19 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
     var currentLatitude: CLLocationDegrees = 0
 
     override func viewDidLoad() {
+        totalBlurView.layer.cornerCurve = .continuous
+        totalBlurView.layer.cornerRadius = 32
+        totalBlurView.clipsToBounds = true
+        heart.layer.cornerRadius = 16
+        heart.layer.shadowColor = UIColor.black.cgColor
+        heart.layer.shadowOpacity = 0.1
+        heart.layer.shadowRadius = 8
+        heart.layer.shadowOffset = CGSize(width: 4, height: 4)
+        rate.layer.cornerRadius = 16
+        rate.layer.shadowColor = UIColor.black.cgColor
+        rate.layer.shadowOpacity = 0.1
+        rate.layer.shadowRadius = 8
+        rate.layer.shadowOffset = CGSize(width: 4, height: 4)
         super.viewDidLoad()
         feedbackGenerator.prepare()
         locationManager.delegate = self
@@ -81,6 +94,12 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
 
     @IBOutlet weak var recoLabal: UILabel!
 
+    @IBOutlet weak var totalBlurView: UIVisualEffectView!
+
+    @IBOutlet weak var heart: UIView!
+    
+    @IBOutlet weak var rate: UIView!
+    
     @IBAction func quality3(){
         print("超集中")
         saveRecord(quality: 3)

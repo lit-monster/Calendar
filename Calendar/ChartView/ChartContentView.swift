@@ -27,8 +27,8 @@ struct ChartContentView: View {
             if let last = places.last {
                 region = MKCoordinateRegion(
                     center: last.location,
-                    latitudinalMeters: 5000,
-                    longitudinalMeters: 5000)
+                    latitudinalMeters: 10000,
+                    longitudinalMeters: 10000)
             }
         }
     }
@@ -44,30 +44,29 @@ struct ChartContentView: View {
                             Rectangle()
                                 .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
                                 .cornerRadius(16)
-                                .shadow(color: .black.opacity(0.2),radius: 16)
+                                .shadow(color: .black.opacity(0.3),radius: 16)
                             BarChartView(stackedBarData: toyShapes)
-                                .frame(height: 300)
+                                .frame(height: 250)
                                 .padding()
-                                .background(.ultraThinMaterial)
                                 .cornerRadius(16)
-                            Spacer(minLength: 48)
                         }
-                        VStack {
-                            Text("ログインボーナス")
-                                .font(.system(.title, design: .default))
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Spacer()
-                            ZStack{
-                                Rectangle()
-                                    .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
-                                    .cornerRadius(16)
-                                    .shadow(color: .black.opacity(0.2),radius: 16)
-                                CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
-                                                                                       locale: Locale(identifier: "ja_JP"),
-                                                                                       fontDesign: .rounded))
-                            }
-                        }
+                        Spacer(minLength: 48)
+                        //                        VStack {
+                        //                            Text("ログインボーナス")
+                        //                                .font(.system(.title, design: .default))
+                        //                                .bold()
+                        //                                .frame(maxWidth: .infinity, alignment: .leading)
+                        //                            Spacer()
+                        //                            ZStack{
+                        //                                Rectangle()
+                        //                                    .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
+                        //                                    .cornerRadius(16)
+                        //                                    .shadow(color: .black.opacity(0.2),radius: 16)
+                        //                                CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
+                        //                                                                                       locale: Locale(identifier: "ja_JP"),
+                        //                                                                                       fontDesign: .rounded))
+                        //                            }
+                        //                        }
                         
                         VStack {
                             Text("マップ")
@@ -88,11 +87,12 @@ struct ChartContentView: View {
                                         return MapMarker(coordinate: place.location, tint: Color("charts-blue"))
                                     }
                                 }
-                                .frame(width: 400, height: 400)
-                                .cornerRadius(20)
+                                .frame(maxWidth: .infinity)
+                                .aspectRatio(1, contentMode: .fill)
+                                .cornerRadius(16)
                                 .shadow(color: .black.opacity(0.2),radius: 16)
-                                Spacer(minLength: 48)
                             }
+                            Spacer(minLength: 48)
                         }
 
                         HStack {
