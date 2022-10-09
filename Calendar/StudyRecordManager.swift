@@ -4,6 +4,7 @@
 //
 //  Created by 鈴木　葵葉 on 2022/07/06.
 //
+import CoreLocation
 import RealmSwift
 import UIKit
 
@@ -75,15 +76,29 @@ final class StudyRecordManager {
             getByTimeRange(from: lastWeekBegin, to: thisWeekBegin)
         ]
     }
+
+    func getLast2WeeksCondition() -> StudyCondition {
+        let thisWeekBegin = Calendar.current.date(bySetting: .weekday, value: 1, of: Date().getTimeZero())!
+        let lastWeekBegin = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: thisWeekBegin)!
+        return getByTimeRange(from: lastWeekBegin, to: Date())
+    }
     private func getByTimeRange(from: Date, to: Date) -> StudyCondition {
         let results = realm.objects(StudyRecord.self).filter { from <= $0.date && $0.date < to }
+
+        let places: [IdentifiablePlace] = results.map {
+            IdentifiablePlace(lat: $0.lat, long: $0.long, quality: $0.quality)
+        }
+
         return StudyCondition(date: from,
-                                normalTime: results.filter { $0.quality == 1 }.map { $0.time }.reduce(0, +),
-                                concentratingTime: results.filter { $0.quality == 2 }.map { $0.time }.reduce(0, +),
-                                superConcentratingTime: results.filter { $0.quality == 3 }.map { $0.time }.reduce(0, +))
+                              normalTime: results.filter { $0.quality == 1 }.map { $0.time }.reduce(0, +),
+                              concentratingTime: results.filter { $0.quality == 2 }.map { $0.time }.reduce(0, +),
+                              superConcentratingTime: results.filter { $0.quality == 3 }.map { $0.time }.reduce(0, +),
+                              places: places
+        )
     }
-    func saveRecord(quality: Int, count: Int) {
-        let studyRecord = StudyRecord(date: Date(), time:  TimeInterval(count), quality: quality)
+
+    func saveRecord(quality: Int, count: Int, lat: CLLocationDegrees, long: CLLocationDegrees) {
+        let studyRecord = StudyRecord(date: Date(), time:  TimeInterval(count), quality: quality, lat: lat, long: long)
         try! realm.write {
             realm.add(studyRecord)
         }

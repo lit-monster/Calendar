@@ -17,15 +17,12 @@ struct ChartContentView: View {
     var studyConditionForLast2Weeks = StudyRecordManager.shared.getLast2Weeks()
     var studyConditionForWeek = StudyRecordManager.shared.getWeekData()
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.334_900,
-                                       longitude: -122.009_020),
+        center: CLLocationCoordinate2D(latitude: 35.6208255,
+                                       longitude: 139.7393898),
         latitudinalMeters: 750,
         longitudinalMeters: 750
     )
-    @State private var places: [IdentifiablePlace] = [
-        IdentifiablePlace(lat: 37.331_01,  long: -122.007_45),
-        IdentifiablePlace(lat: 37.332_44,  long: -122.006_14)
-    ]
+    var places: [IdentifiablePlace] = StudyRecordManager.shared.getLast2WeeksCondition().places
     
     
     var body: some View {
@@ -45,8 +42,8 @@ struct ChartContentView: View {
                                 .padding()
                                 .background(.ultraThinMaterial)
                                 .cornerRadius(16)
+                            Spacer(minLength: 48)
                         }
-                        Spacer(minLength: 24)
                         VStack {
                             Text("ログインボーナス")
                                 .font(.system(.title, design: .default))
@@ -71,12 +68,23 @@ struct ChartContentView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Spacer()
                             ZStack{
-                                Map(coordinateRegion: $region, annotationItems: places) {
-                                    place in MapPin(coordinate: place.location, tint: Color.purple)
+                                Map(coordinateRegion: $region, annotationItems: places) { place -> MapMarker in
+                                    switch place.quality {
+                                    case 0:
+                                        return MapMarker(coordinate: place.location, tint: Color("charts-lightblue"))
+                                    case 1:
+                                        return MapMarker(coordinate: place.location, tint: Color("charts-blue"))
+                                    case 2:
+                                        return MapMarker(coordinate: place.location, tint: Color("charts-deepblue"))
+                                    default:
+                                        return MapMarker(coordinate: place.location, tint: Color("charts-blue"))
+                                    }
+
                                 }
                                 .frame(width: 400, height: 400)
                                 .cornerRadius(20)
                                 .shadow(color: .black.opacity(0.2),radius: 16)
+                                Spacer(minLength: 48)
                             }
                         }
                         
@@ -84,44 +92,70 @@ struct ChartContentView: View {
                             Text("ハイライト")
                                 .font(.system(.title, design: .default))
                                 .bold()
-                            Spacer()
+                            Spacer(minLength: 24)
                         }
                     }
                     
                     let yesterday = studyConditionForWeek[1].superConcentratingTime
                     let today = studyConditionForWeek[0].superConcentratingTime
-                    HighlightCell(title: "超集中",
-                                  subTitle: "今日は昨日の超集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%勉強しました。",
-                                  breakdowns: [
-                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].superConcentratingTime, currentValue: today),
-                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].superConcentratingTime, currentValue: yesterday),
-                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].superConcentratingTime, currentValue: studyConditionForWeek[2].superConcentratingTime),
-                                  ])
-                    Spacer(minLength: 24)
-                    HighlightCell(title: "集中",
-                                  subTitle: "今日の勉強時間は昨日の集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
-                                  breakdowns: [
-                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].concentratingTime, currentValue: today),
-                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].concentratingTime, currentValue: yesterday),
-                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].concentratingTime, currentValue: studyConditionForWeek[2].concentratingTime),
-                                  ])
-                    Spacer(minLength: 24)
-                    HighlightCell(title: "普通",
-                                  subTitle: "今日の勉強時間は昨日の普通の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
-                                  breakdowns: [
-                                    Breakdown(title: "今日", maxValue: studyConditionForWeek[0].normalTime, currentValue: today),
-                                    Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].normalTime, currentValue: yesterday),
-                                    Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].normalTime, currentValue: studyConditionForWeek[2].normalTime),
-                                  ])
-                    Spacer(minLength: 24)
-                    let thisWeek = studyConditionForWeek[0].total
-                    let lastWeek = studyConditionForWeek[1].total
-                    HighlightCell(title: "週の合計",
-                                  subTitle: "今週の勉強時間は先週の\(lastWeek > 0 ? String(Int(thisWeek / lastWeek * 100)) : "-")%です。",
-                                  breakdowns: [
-                                    Breakdown(title: "今週", maxValue: lastWeek, currentValue: thisWeek)
-                                  ])
+                    Group{
+                        HighlightCell(title: "超集中",
+                                      subTitle: "今日は昨日の超集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%勉強しました。",
+                                      breakdowns: [
+                                        Breakdown(title: "今日", maxValue: studyConditionForWeek[0].superConcentratingTime, currentValue: today),
+                                        Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].superConcentratingTime, currentValue: yesterday),
+                                        Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].superConcentratingTime, currentValue: studyConditionForWeek[2].superConcentratingTime),
+                                      ])
+                        Spacer(minLength: 24)
+                        HighlightCell(title: "集中",
+                                      subTitle: "今日の勉強時間は昨日の集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
+                                      breakdowns: [
+                                        Breakdown(title: "今日", maxValue: studyConditionForWeek[0].concentratingTime, currentValue: today),
+                                        Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].concentratingTime, currentValue: yesterday),
+                                        Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].concentratingTime, currentValue: studyConditionForWeek[2].concentratingTime),
+                                      ])
+                        Spacer(minLength: 24)
+                        HighlightCell(title: "普通",
+                                      subTitle: "今日の勉強時間は昨日の普通の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
+                                      breakdowns: [
+                                        Breakdown(title: "今日", maxValue: studyConditionForWeek[0].normalTime, currentValue: today),
+                                        Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].normalTime, currentValue: yesterday),
+                                        Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].normalTime, currentValue: studyConditionForWeek[2].normalTime),
+                                      ])
+                        Spacer(minLength: 24)
+                        let thisWeek = studyConditionForWeek[0].total
+                        let lastWeek = studyConditionForWeek[1].total
+                        HighlightCell(title: "週の合計",
+                                      subTitle: "今週の勉強時間は先週の\(lastWeek > 0 ? String(Int(thisWeek / lastWeek * 100)) : "-")%です。",
+                                      breakdowns: [
+                                        Breakdown(title: "今週", maxValue: lastWeek, currentValue: thisWeek)
+                                      ])
+                    }
                 }
+
+//                Group{
+//                    Text("Topに戻る")
+//                                    .font(.largeTitle)
+//                                    .padding(.bottom)
+//
+//                                Button(action: {
+//                                    if(self.flag){
+//                                        self.labelText = "SwiftUI Test"
+//                                        self.flag = false
+//                                    }
+//                                    else{
+//                                        self.labelText = "tapped !"
+//                                        self.flag = true
+//                                    }
+//                                }){
+//                                    Text("Button")
+//                                        .font(.largeTitle)
+//                                        .foregroundColor(Color.white)
+//                                }
+//                                .padding(.all)
+//                                .background(Color.blue)
+//                }
+
                 .padding()
                 .navigationTitle(Text("分析"))
             }

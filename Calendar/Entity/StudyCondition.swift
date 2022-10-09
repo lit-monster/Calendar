@@ -5,6 +5,7 @@
 //  Created by 鈴木　葵葉 on 2021/07/28.
 //
 
+import CoreLocation
 import Foundation
 
 struct StudyCondition {
@@ -12,6 +13,7 @@ struct StudyCondition {
     let normalTime: Double
     let concentratingTime: Double
     let superConcentratingTime: Double
+    let places: [IdentifiablePlace]
     var total: Double {
         normalTime + concentratingTime + superConcentratingTime
     }

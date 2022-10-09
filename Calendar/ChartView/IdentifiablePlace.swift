@@ -11,10 +11,12 @@ import CoreLocation
 struct IdentifiablePlace: Identifiable {
     let id: UUID
     let location: CLLocationCoordinate2D
-    init(id: UUID = UUID(), lat: Double, long: Double) {
+    let quality: Int
+    init(id: UUID = UUID(), lat: Double, long: Double, quality: Int) {
         self.id = id
         self.location = CLLocationCoordinate2D(
             latitude: lat,
             longitude: long)
+        self.quality = quality
     }
 }

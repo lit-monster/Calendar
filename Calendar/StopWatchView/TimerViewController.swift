@@ -22,7 +22,10 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
     var timer: Timer = Timer()
     var targetTimeInterval: CFTimeInterval = 0
     var startTime = TimeInterval()
-    
+
+    var currentLongitude: CLLocationDegrees = 0
+    var currentLatitude: CLLocationDegrees = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         feedbackGenerator.prepare()
@@ -33,8 +36,21 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
         }
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations)
-        print("location")
+         guard let newLocation = locations.last else {
+              return
+         }
+
+         let location:CLLocationCoordinate2D
+                = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
+
+         let formatter: DateFormatter = DateFormatter()
+         formatter.timeZone   = TimeZone(identifier: "Asia/Tokyo")
+         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+         let date = formatter.string(from: newLocation.timestamp)
+
+//    print("緯度：", location.latitude, "経度：", location.longitude, "時間：", date)
+        self.currentLatitude = location.latitude
+        self.currentLongitude = location.longitude
 
     }
 
@@ -49,7 +65,7 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
             recoLabal.text = "集中"
         } else if focusRate == 1 {
             starLabel.text = "★"
-            recoLabal.text = "普通L"
+            recoLabal.text = "普通"
         }
 
         let interval = count
@@ -89,7 +105,9 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
     }
 
     private func saveRecord(quality: Int) {
-        StudyRecordManager.shared.saveRecord(quality: quality, count: count)
+        print(currentLatitude, currentLongitude)
+        print("aaasdfasdfasd")
+        StudyRecordManager.shared.saveRecord(quality: quality, count: count, lat: currentLatitude, long: currentLongitude)
         count = 0
         feedbackGenerator.notificationOccurred(.warning)
     }
