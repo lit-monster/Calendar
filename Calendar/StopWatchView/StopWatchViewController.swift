@@ -67,6 +67,7 @@ class StopWatchViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIDevice.current.isProximityMonitoringEnabled = true
+        inturrptedView.isHidden = false
     }
 
     override func viewDidDisappear(_ animated: Bool) {

@@ -18,7 +18,6 @@
 		2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198C50A28758B71000C705C /* StudyRecordManager.swift */; };
 		2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75D286C52AC00018ADB /* ChartContentView.swift */; };
 		2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75F286C547E00018ADB /* ChartPeriodView.swift */; };
-		219D151428B605A600193068 /* TargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D151328B605A600193068 /* TargetViewController.swift */; };
 		219D152928B85A8700193068 /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D152828B85A8700193068 /* CircularGauge.swift */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
@@ -46,7 +45,6 @@
 		2198C50A28758B71000C705C /* StudyRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRecordManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		2199B75D286C52AC00018ADB /* ChartContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentView.swift; sourceTree = "<group>"; };
 		2199B75F286C547E00018ADB /* ChartPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPeriodView.swift; sourceTree = "<group>"; };
-		219D151328B605A600193068 /* TargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
 		219D152828B85A8700193068 /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
 		21A1D496268C67AD00C07A86 /* スタレコ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "スタレコ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A1D4A2268C67B100C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */,
-				219D151328B605A600193068 /* TargetViewController.swift */,
 				219D152828B85A8700193068 /* CircularGauge.swift */,
 				216771AF269EF2570005F50C /* StopWatchViewController.swift */,
 			);
@@ -246,7 +243,6 @@
 				BAC3473328BE9B7200895FBE /* StudyCondition.swift in Sources */,
 				2199B760286C547E00018ADB /* ChartPeriodView.swift in Sources */,
 				BAC3473028BE995F00895FBE /* Date.swift in Sources */,
-				219D151428B605A600193068 /* TargetViewController.swift in Sources */,
 				2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */,
 				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
 				216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */,

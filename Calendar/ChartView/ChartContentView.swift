@@ -19,16 +19,16 @@ struct ChartContentView: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 35.6457448,
                                        longitude: 135.8799667),
-        latitudinalMeters: 1000,
-        longitudinalMeters: 1000
+        latitudinalMeters: 5000,
+        longitudinalMeters: 5000
     )
     @State var places = [IdentifiablePlace]()  {
         didSet {
             if let last = places.last {
                 region = MKCoordinateRegion(
                     center: last.location,
-                    latitudinalMeters: 1000,
-                    longitudinalMeters: 1000)
+                    latitudinalMeters: 5000,
+                    longitudinalMeters: 5000)
             }
         }
     }
