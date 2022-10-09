@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "Artboard.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "1F4CDD91-A813-44A5-9184-972840061D0F.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
