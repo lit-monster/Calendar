@@ -8,14 +8,18 @@
 import UIKit
 import SwiftUI
 
+
 struct CalendarView: UIViewRepresentable{
 
     let configuretion: Configuration
 
     func makeUIView(context: UIViewRepresentableContext<CalendarView>) -> UICalendarView {
-        let calendarView = UICalendarView(frame:  .zero)
+        let calendarView = UICalendarView(frame: .zero)
+        calendarView.translatesAutoresizingMaskIntoConstraints = false
+
         calendarView.delegate = context.coordinator
         calendarView.selectionBehavior = UICalendarSelectionSingleDate(delegate: context.coordinator)
+        calendarView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         return calendarView
     }
 

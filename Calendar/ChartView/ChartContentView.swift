@@ -51,22 +51,25 @@ struct ChartContentView: View {
                                 .cornerRadius(16)
                         }
                         Spacer(minLength: 48)
-                        //                        VStack {
-                        //                            Text("ログインボーナス")
-                        //                                .font(.system(.title, design: .default))
-                        //                                .bold()
-                        //                                .frame(maxWidth: .infinity, alignment: .leading)
-                        //                            Spacer()
-                        //                            ZStack{
-                        //                                Rectangle()
-                        //                                    .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
-                        //                                    .cornerRadius(16)
-                        //                                    .shadow(color: .black.opacity(0.2),radius: 16)
-                        //                                CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian),
-                        //                                                                                       locale: Locale(identifier: "ja_JP"),
-                        //                                                                                       fontDesign: .rounded))
-                        //                            }
-                        //                        }
+                        VStack {
+                            Text("ログインボーナス")
+                                .font(.system(.title, design: .default))
+                                .bold()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            Spacer()
+                            ZStack{
+                                Rectangle()
+                                    .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
+                                    .cornerRadius(16)
+                                    .shadow(color: .black.opacity(0.2),radius: 16)
+                                CalendarView(configuretion:
+                                                CalendarView.Configuration(calendar:
+                                                                            Calendar(identifier: .gregorian),
+                                                                                       locale: Locale(identifier: "ja_JP"),
+                                                                           fontDesign: .rounded)).padding()
+
+                            }
+                        }
                         
                         VStack {
                             Text("マップ")
