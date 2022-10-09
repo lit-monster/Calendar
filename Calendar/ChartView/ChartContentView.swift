@@ -18,12 +18,20 @@ struct ChartContentView: View {
     var studyConditionForWeek = StudyRecordManager.shared.getWeekData()
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 35.6457448,
-                                       longitude: 139.8799667),
-        latitudinalMeters: 750,
-        longitudinalMeters: 750
+                                       longitude: 135.8799667),
+        latitudinalMeters: 1000,
+        longitudinalMeters: 1000
     )
-    var places: [IdentifiablePlace] = StudyRecordManager.shared.getLast2WeeksCondition().places
-    
+    @State var places = [IdentifiablePlace]()  {
+        didSet {
+            if let last = places.last {
+                region = MKCoordinateRegion(
+                    center: last.location,
+                    latitudinalMeters: 1000,
+                    longitudinalMeters: 1000)
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -144,6 +152,7 @@ struct ChartContentView: View {
             let minutes = (interval / 60) % 60
             let hours = (interval / 3600)
             totalTimeString =  String(format: "%02dh %02dm %02ds", hours, minutes, seconds)
+            places = StudyRecordManager.shared.getLast2WeeksCondition().places
         }
     }
     

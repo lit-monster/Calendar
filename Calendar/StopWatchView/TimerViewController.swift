@@ -85,7 +85,7 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
         print("超集中")
         saveRecord(quality: 3)
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
-
+//        inturrptedView.isHidden = true
     }
 
     @IBAction func quality2(){
