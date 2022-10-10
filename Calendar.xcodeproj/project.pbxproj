@@ -15,6 +15,7 @@
 		216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216847A528BF5A84007D11F6 /* HighlightCell.swift */; };
 		217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217A1F9427DDF13D0082B2BC /* Colors.xcassets */; };
 		2189C52E28F3914D00A5BA34 /* StrorageChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189C52D28F3914C00A5BA34 /* StrorageChartView.swift */; };
+		2189C53028F3A54C00A5BA34 /* LoginContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189C52F28F3A54B00A5BA34 /* LoginContentViewController.swift */; };
 		2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196BA0A2856022800FA8D61 /* BarChart.swift */; };
 		2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198C50A28758B71000C705C /* StudyRecordManager.swift */; };
 		2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75D286C52AC00018ADB /* ChartContentView.swift */; };
@@ -43,6 +44,7 @@
 		216847A528BF5A84007D11F6 /* HighlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightCell.swift; sourceTree = "<group>"; };
 		217A1F9427DDF13D0082B2BC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2189C52D28F3914C00A5BA34 /* StrorageChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrorageChartView.swift; sourceTree = "<group>"; };
+		2189C52F28F3A54B00A5BA34 /* LoginContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentViewController.swift; sourceTree = "<group>"; };
 		2196BA0A2856022800FA8D61 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		2198C50A28758B71000C705C /* StudyRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRecordManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		2199B75D286C52AC00018ADB /* ChartContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				2129B2F328F1553500B792E6 /* CalendarView.swift */,
 				21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */,
 				2189C52D28F3914C00A5BA34 /* StrorageChartView.swift */,
+				2189C52F28F3A54B00A5BA34 /* LoginContentViewController.swift */,
 			);
 			path = ChartView;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
 				2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */,
 				21B23BC728F1CF00001FBF65 /* IdentifiablePlace.swift in Sources */,
+				2189C53028F3A54C00A5BA34 /* LoginContentViewController.swift in Sources */,
 				212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */,
 				219D152928B85A8700193068 /* CircularGauge.swift in Sources */,
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,

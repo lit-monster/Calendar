@@ -38,18 +38,26 @@
         <!--Item-->
         <scene sceneID="U7a-a0-6Qo">
             <objects>
-                <viewController id="cFF-0P-NNi" sceneMemberID="viewController">
+                <viewController id="cFF-0P-NNi" customClass="LoginContentViewController" customModule="スタレコ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHd-zl-Jbd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="X9z-5c-0JM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yVG-H9-qZ6"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="yVG-H9-qZ6">
+                        <imageReference key="image" image="calendar" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="tabbar"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoI-xq-h0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1335" y="-4302"/>
+            <point key="canvasLocation" x="-3613" y="-4302"/>
         </scene>
         <!--計測-->
         <scene sceneID="uQJ-3Z-ENq">
@@ -413,14 +421,14 @@
                         <color key="selectedImageTintColor" name="tabbarrr"/>
                     </tabBar>
                     <connections>
+                        <segue destination="cFF-0P-NNi" kind="relationship" relationship="viewControllers" id="6hE-jB-7fg"/>
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
                         <segue destination="Khu-uL-2wZ" kind="relationship" relationship="viewControllers" id="9ag-fc-pv2"/>
-                        <segue destination="cFF-0P-NNi" kind="relationship" relationship="viewControllers" id="6hE-jB-7fg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOC-sH-4Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2501" y="-5063"/>
+            <point key="canvasLocation" x="-2867" y="-5058"/>
         </scene>
         <!--計測-->
         <scene sceneID="uYG-e8-Jkv">
@@ -449,6 +457,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
         <image name="glass2" width="414" height="896"/>
         <image name="iPhone1" width="347" height="411"/>
