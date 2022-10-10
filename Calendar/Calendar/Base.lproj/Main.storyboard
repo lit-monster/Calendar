@@ -38,7 +38,7 @@
         <!--Item-->
         <scene sceneID="U7a-a0-6Qo">
             <objects>
-                <viewController id="cFF-0P-NNi" customClass="LoginContentViewController" customModule="スタレコ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginBonus" id="cFF-0P-NNi" customClass="LoginBonusViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHd-zl-Jbd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +191,13 @@
                             <constraint firstItem="yd2-MS-WAu" firstAttribute="leading" secondItem="Pfg-Mk-sKX" secondAttribute="leading" id="yGO-cx-sZX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="計測" largeTitleDisplayMode="always" id="hgt-13-Vv3"/>
+                    <navigationItem key="navigationItem" title="計測" largeTitleDisplayMode="always" id="hgt-13-Vv3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="calendar" catalog="system" id="Ms5-Vt-kPf">
+                            <connections>
+                                <action selector="loginBonusButtonPressed" destination="Bkz-OM-wML" id="orj-K3-ERs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="circularGaugeView" destination="0bf-Zb-1I4" id="D0f-oZ-rdk"/>
                         <outlet property="inturrptedView" destination="yd2-MS-WAu" id="xVh-mh-d4h"/>
@@ -215,9 +221,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glass2" translatesAutoresizingMaskIntoConstraints="NO" id="er3-g3-eAf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5g-cA-6LW">
-                                <rect key="frame" x="44" y="145" width="338" height="424"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5g-cA-6LW">
+                                <rect key="frame" x="38" y="146" width="338" height="424"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ir0-w2-D9E">
                                     <rect key="frame" x="0.0" y="0.0" width="338" height="424"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,7 +311,7 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="279" id="0Gm-Rc-AsZ"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="279" id="BMv-wO-Atb"/>
                                                 <constraint firstAttribute="height" constant="65" id="zhn-YV-kS4"/>
                                             </constraints>
                                         </stackView>
@@ -324,13 +329,17 @@
                                         <constraint firstItem="ohI-Fr-jFU" firstAttribute="top" secondItem="PO7-O2-WAe" secondAttribute="bottom" constant="40.670000000000002" id="ziO-lV-eET"/>
                                     </constraints>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="338" id="PN8-hT-FfU"/>
+                                    <constraint firstAttribute="height" constant="424" id="Vtp-ZZ-cFv"/>
+                                </constraints>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="t5C-f8-YN5">
-                                <rect key="frame" x="13" y="649" width="388" height="120"/>
+                                <rect key="frame" x="13" y="689" width="388" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dm-a1-7hI">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="quality1"/>
                                         <connections>
@@ -338,7 +347,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFT-NO-7uZ">
-                                        <rect key="frame" x="134" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="134" y="0.0" width="120" height="80"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="quality2" title=""/>
                                         <connections>
@@ -346,7 +355,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKH-Dh-eji">
-                                        <rect key="frame" x="268" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="268" y="0.0" width="120" height="80"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="quality3" title=""/>
                                         <connections>
@@ -356,11 +365,11 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="388" id="Tg8-sT-AAo"/>
-                                    <constraint firstAttribute="height" constant="120" id="W3a-NE-cCu"/>
+                                    <constraint firstAttribute="height" constant="80" id="W3a-NE-cCu"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="集中度合いを記録しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs2-L5-A9O">
-                                <rect key="frame" x="106" y="613" width="202" height="21.5"/>
+                                <rect key="frame" x="106" y="653" width="202" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -373,9 +382,11 @@
                             <constraint firstItem="er3-g3-eAf" firstAttribute="leading" secondItem="nbh-E9-1iL" secondAttribute="leading" id="GjY-hc-3NM"/>
                             <constraint firstItem="xs2-L5-A9O" firstAttribute="centerX" secondItem="epV-ZT-Mci" secondAttribute="centerX" id="H6f-Jc-X60"/>
                             <constraint firstAttribute="bottom" secondItem="er3-g3-eAf" secondAttribute="bottom" id="LBu-SD-CEn"/>
+                            <constraint firstItem="I5g-cA-6LW" firstAttribute="centerX" secondItem="epV-ZT-Mci" secondAttribute="centerX" id="Rbr-GC-6AL"/>
                             <constraint firstItem="er3-g3-eAf" firstAttribute="top" secondItem="epV-ZT-Mci" secondAttribute="top" id="gYO-Rw-Qzs"/>
                             <constraint firstItem="nbh-E9-1iL" firstAttribute="bottom" secondItem="t5C-f8-YN5" secondAttribute="bottom" constant="44" id="qag-Al-iN3"/>
                             <constraint firstItem="t5C-f8-YN5" firstAttribute="top" secondItem="xs2-L5-A9O" secondAttribute="bottom" constant="14.33" id="qoX-rf-Evd"/>
+                            <constraint firstItem="I5g-cA-6LW" firstAttribute="top" secondItem="nbh-E9-1iL" secondAttribute="top" constant="54" id="wew-Dj-ujh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="y8z-AZ-I28">
@@ -421,7 +432,6 @@
                         <color key="selectedImageTintColor" name="tabbarrr"/>
                     </tabBar>
                     <connections>
-                        <segue destination="cFF-0P-NNi" kind="relationship" relationship="viewControllers" id="6hE-jB-7fg"/>
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
                         <segue destination="Khu-uL-2wZ" kind="relationship" relationship="viewControllers" id="9ag-fc-pv2"/>
                     </connections>

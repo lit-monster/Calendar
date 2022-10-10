@@ -71,28 +71,26 @@ struct ChartContentView: View {
 //
 //                            }
 //                        }
-//
-//                        Group{
-//                            VStack{
-//                                Text("集中度の割合")
-//                                    .font(.system(.title, design: .rounded))
-//                                    .bold()
-//                                    .frame(maxWidth: .infinity, alignment: .leading)
-//                                ZStack{
-//                                    Rectangle()
-//                                        .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
-//                                        .cornerRadius(16)
-//                                        .shadow(color: .black.opacity(0.3),radius: 16)
-//                                    Chart(dataUsage.categories) { category in
-//                                        BarMark(x: .value("size", category.size))
-//                                            .foregroundStyle(by: .value("size", category.size))
-//                                    }
-//                                    .frame(height: 100)
-//                                    .padding([.all],30)
-//                                }
-//                            }
-//                        }
-//                        Spacer(minLength: 48)
+
+                        VStack{
+                            Text("集中度の割合")
+                                .font(.system(.title, design: .rounded))
+                                .bold()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            ZStack{
+                                Rectangle()
+                                    .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
+                                    .cornerRadius(16)
+                                    .shadow(color: .black.opacity(0.3),radius: 16)
+                                Chart(dataUsage.categories) { category in
+                                    BarMark(x: .value("size", category.size))
+                                        .foregroundStyle(by: .value("size", category.size))
+                                }
+                                .frame(height: 100)
+                                .padding([.all],30)
+                            }
+                        }
+                        Spacer(minLength: 48)
 
                         VStack {
                             Text("マップ")
@@ -182,24 +180,24 @@ struct ChartContentView: View {
         }
     }
 
-//    struct DataUsageCategory: Identifiable {
-//        var id: String { name }
-//
-//        let name: String
-//        let size: Double
-//    }
-//
-//    struct DataUsage {
-//        let categories: [DataUsageCategory]
-//    }
-//
-//    let dataUsage = DataUsage(
-//        categories: [
-//            .init(name: "App", size:60),
-//            .init(name: "写真", size:30),
-//            .init(name: "iOS", size:10)
-//        ]
-//    )
+    struct DataUsageCategory: Identifiable {
+        var id: String { name }
+
+        let name: String
+        let size: Double
+    }
+
+    struct DataUsage {
+        let categories: [DataUsageCategory]
+    }
+
+    let dataUsage = DataUsage(
+        categories: [
+            .init(name: "App", size:60),
+            .init(name: "写真", size:30),
+            .init(name: "iOS", size:10)
+        ]
+    )
 
     struct ChartContentView_Previews: PreviewProvider {
         static var previews: some View {
