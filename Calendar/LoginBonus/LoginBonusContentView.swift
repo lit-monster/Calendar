@@ -21,10 +21,10 @@ struct LoginBonusContentView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("Login Bonus")
+                Text("ログインボーナス")
                     .font(.system(.title, design: .rounded))
                     .bold()
-                    .frame(maxWidth: .infinity, alignment: .center)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                 Spacer()
                 ZStack{

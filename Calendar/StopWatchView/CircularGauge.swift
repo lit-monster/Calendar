@@ -31,7 +31,7 @@ struct CircularGauge: View {
                 .rotationEffect(.degrees(-90))
                 .animation(.easeOut, value: remainingRate)
             VStack {
-                Text("To the goal")
+                Text("目標時間まで")
                     .font(.headline)
                 Text(remainingTimeString)
                     .font(.system(size: 64, weight: .bold, design: .rounded))

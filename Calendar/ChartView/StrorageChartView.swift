@@ -16,9 +16,9 @@ struct StrorageChartView: View {
                 .foregroundStyle(by: .value("size", category.name))
         }
         .chartForegroundStyleScale([
-            "High": Color(UIColor(named: ConcentrationType.superConcentrating.rawValue)!),
-            "Normal": Color(UIColor(named: ConcentrationType.concentrating.rawValue)!),
-            "Low": Color(UIColor(named: ConcentrationType.normal.rawValue)!)
+            "超集中": Color(UIColor(named: ConcentrationType.superConcentrating.rawValue)!),
+            "集中": Color(UIColor(named: ConcentrationType.concentrating.rawValue)!),
+            "普通": Color(UIColor(named: ConcentrationType.normal.rawValue)!)
         ])
         .frame(height: 80)
         .padding(30)
@@ -47,9 +47,9 @@ class DataUsage {
         }
 
         categories = [
-            .init(name: "High", size: studyCondition.superConcentratingTime),
-            .init(name: "Normal", size: studyCondition.concentratingTime),
-            .init(name: "Low", size: studyCondition.normalTime)
+            .init(name: "超集中", size: studyCondition.superConcentratingTime),
+            .init(name: "集中", size: studyCondition.concentratingTime),
+            .init(name: "普通", size: studyCondition.normalTime)
         ]
     }
 }
