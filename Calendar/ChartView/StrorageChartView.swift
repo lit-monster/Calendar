@@ -23,7 +23,7 @@ struct StrorageChartView: View {
         .frame(height: 80)
         .padding(30)
         .chartPlotStyle{ content in
-            content.cornerRadius(10)
+            content.cornerRadius(3)
         }
     }
 }

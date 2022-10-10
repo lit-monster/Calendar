@@ -25,8 +25,10 @@ struct StudyCondition {
             return "Today"
         case 1:
             return "Yesterday"
+        case 2:
+            return "2 days"
         default:
-            return "\(dayDelta) days ago"
+            return "\(dayDelta) days"
         }
     }
     

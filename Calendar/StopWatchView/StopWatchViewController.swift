@@ -176,17 +176,17 @@ class StopWatchViewController: UIViewController {
             let aveHeartRate = sum/Double(heart.count)
 
             if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
-                print("超集中")
+                print("High")
                 focusRate = 3
-                self.result = "超集中"
+                self.result = "High"
             } else if ( sum/Double(heart.count) + 1 > aveHeartRate &&  aveHeartRate > sum/Double(heart.count) - 1 ) {
-                print("集中")
+                print("Normal")
                 focusRate = 2
-                self.result = "集中"
+                self.result = "Normal"
             } else if ( sum/Double(heart.count) - 1 > aveHeartRate) {
-                print("普通")
+                print("Low")
                 focusRate = 1
-                self.result = "普通"
+                self.result = "Low"
             } else {
                 print("error")
             }

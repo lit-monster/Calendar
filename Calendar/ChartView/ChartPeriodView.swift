@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ChartPeriodView: View {
     var totalTimeString: String
-    @State var periodString = "集中合計時間"
+    @State var periodString = "total study time"
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("今週の")
+                Text("This week")
                     .font(.headline)
                     .foregroundColor(Color(uiColor: UIColor.systemGray))
                 Text(periodString)

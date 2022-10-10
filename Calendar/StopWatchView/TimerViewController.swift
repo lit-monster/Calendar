@@ -82,13 +82,13 @@ class TimerViewController: UIViewController {
         heartRateLabel.text = String(Int(latestHeartRate))
         if focusRate == 3 {
             starLabel.text = "★★★"
-            recoLabal.text = "超集中"
+            recoLabal.text = "High"
         } else if focusRate == 2 {
             starLabel.text = "★★"
-            recoLabal.text = "集中"
+            recoLabal.text = "Normal"
         } else if focusRate == 1 {
             starLabel.text = "★"
-            recoLabal.text = "普通"
+            recoLabal.text = "Low"
         }
 
         let interval = count
@@ -102,6 +102,12 @@ class TimerViewController: UIViewController {
         print("超集中")
         saveRecord(quality: 3)
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
+        rate.layer.cornerRadius = 16
+        rate.layer.cornerCurve = .continuous
+        rate.layer.shadowColor = UIColor.black.cgColor
+        rate.layer.shadowOpacity = 0.1
+        rate.layer.shadowRadius = 8
+        rate.layer.shadowOffset = CGSize(width: 4, height: 4)
     }
 
     @IBAction func quality2() {

@@ -426,6 +426,30 @@
             </objects>
             <point key="canvasLocation" x="-2865" y="-4302"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="h1I-kE-PTO">
+            <objects>
+                <viewController storyboardIdentifier="LoginBonus" id="h0s-wg-weA" customClass="LoginBonusViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j54-73-K7b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eVk-K2-5wa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="PTw-g9-5Pf">
+                        <imageReference key="image" image="calendar" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="tabbar"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSF-2C-Cbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3613" y="-4302"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background1" width="414" height="896"/>
@@ -456,6 +480,9 @@
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

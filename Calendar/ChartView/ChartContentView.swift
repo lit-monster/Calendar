@@ -109,35 +109,35 @@ struct ChartContentView: View {
                         let yesterday = studyConditionForWeek[1].superConcentratingTime
                         let today = studyConditionForWeek[0].superConcentratingTime
                         HighlightCell(title: "High",
-                                      subTitle: "今日は昨日の超集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%勉強しました。",
+                                      subTitle: "Today's study time is\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")% of yesterday's high time.",
                                       breakdowns: [
-                                        Breakdown(title: "今日", maxValue: studyConditionForWeek[0].superConcentratingTime, currentValue: today),
-                                        Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].superConcentratingTime, currentValue: yesterday),
-                                        Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].superConcentratingTime, currentValue: studyConditionForWeek[2].superConcentratingTime),
+                                        Breakdown(title: "Today", maxValue: studyConditionForWeek[0].superConcentratingTime, currentValue: today),
+                                        Breakdown(title: "Yesterday", maxValue: studyConditionForWeek[1].superConcentratingTime, currentValue: yesterday),
+                                        Breakdown(title: "2 days ago", maxValue: studyConditionForWeek[2].superConcentratingTime, currentValue: studyConditionForWeek[2].superConcentratingTime),
                                       ])
                         Spacer(minLength: 24)
                         HighlightCell(title: "Normal",
-                                      subTitle: "今日の勉強時間は昨日の集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
+                                      subTitle: "Today's study time is\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")% of yesterday's normal time.",
                                       breakdowns: [
-                                        Breakdown(title: "今日", maxValue: studyConditionForWeek[0].concentratingTime, currentValue: today),
-                                        Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].concentratingTime, currentValue: yesterday),
-                                        Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].concentratingTime, currentValue: studyConditionForWeek[2].concentratingTime),
+                                        Breakdown(title: "Today", maxValue: studyConditionForWeek[0].concentratingTime, currentValue: today),
+                                        Breakdown(title: "Yesterday", maxValue: studyConditionForWeek[1].concentratingTime, currentValue: yesterday),
+                                        Breakdown(title: "2 days ago", maxValue: studyConditionForWeek[2].concentratingTime, currentValue: studyConditionForWeek[2].concentratingTime),
                                       ])
                         Spacer(minLength: 24)
                         HighlightCell(title: "Low",
-                                      subTitle: "今日の勉強時間は昨日の普通の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
+                                      subTitle: "Today's study time is \(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")% of yesterday's low time.",
                                       breakdowns: [
-                                        Breakdown(title: "今日", maxValue: studyConditionForWeek[0].normalTime, currentValue: today),
-                                        Breakdown(title: "昨日", maxValue: studyConditionForWeek[1].normalTime, currentValue: yesterday),
-                                        Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].normalTime, currentValue: studyConditionForWeek[2].normalTime),
+                                        Breakdown(title: "Today", maxValue: studyConditionForWeek[0].normalTime, currentValue: today),
+                                        Breakdown(title: "Yesterday", maxValue: studyConditionForWeek[1].normalTime, currentValue: yesterday),
+                                        Breakdown(title: "2 days ago", maxValue: studyConditionForWeek[2].normalTime, currentValue: studyConditionForWeek[2].normalTime),
                                       ])
                         Spacer(minLength: 24)
                         let thisWeek = studyConditionForWeek[0].total
                         let lastWeek = studyConditionForWeek[1].total
-                        HighlightCell(title: "週の合計",
-                                      subTitle: "今週の勉強時間は先週の\(lastWeek > 0 ? String(Int(thisWeek / lastWeek * 100)) : "-")%です。",
+                        HighlightCell(title: "Weekly Comparison",
+                                      subTitle: "This week's study time is \(lastWeek > 0 ? String(Int(thisWeek / lastWeek * 100)) : "-")% of last week's.",
                                       breakdowns: [
-                                        Breakdown(title: "今週", maxValue: lastWeek, currentValue: thisWeek)
+                                        Breakdown(title: "This week's", maxValue: lastWeek, currentValue: thisWeek)
                                       ])
                     }
                 }
