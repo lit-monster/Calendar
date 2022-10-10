@@ -8,6 +8,18 @@
 import SwiftUI
 import Charts
 
+struct StrorageChartView: View {
+    var body: some View {
+        Chart(dataUsage.categories) { category in
+            BarMark(x: .value("size", category.size))
+                .foregroundStyle(by: .value("size", category.size))
+        }
+        .frame(height: 100)
+        .padding([.all],30)
+    }
+}
+
+
 struct DataUsageCategory: Identifiable {
     var id: String { name }
 
@@ -26,17 +38,6 @@ let dataUsage = DataUsage(
         .init(name: "iOS", size:10)
     ]
 )
-
-struct StrorageChartView: View {
-    var body: some View {
-        Chart(dataUsage.categories) { category in
-            BarMark(x: .value("size", category.size))
-                .foregroundStyle(by: .value("size", category.size))
-        }
-        .frame(height: 100)
-        .padding([.all],30)
-    }
-}
 
 struct StrorageChartView_Previews: PreviewProvider {
     static var previews: some View {

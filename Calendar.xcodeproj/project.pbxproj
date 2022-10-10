@@ -90,10 +90,7 @@
 				2199B75D286C52AC00018ADB /* ChartContentView.swift */,
 				2199B75F286C547E00018ADB /* ChartPeriodView.swift */,
 				2129B2F328F1553500B792E6 /* CalendarView.swift */,
-				21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */,
 				2189C52D28F3914C00A5BA34 /* StrorageChartView.swift */,
-				2189C52F28F3A54B00A5BA34 /* LoginBonusContentView.swift */,
-				E7C5D90D28F3AF4C00993862 /* LoginBonusViewController.swift */,
 			);
 			path = ChartView;
 			sourceTree = "<group>";
@@ -136,6 +133,7 @@
 				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
+				E7C5D90F28F3CCA700993862 /* LoginBonus */,
 				219D151828B6357300193068 /* StopWatchView */,
 				2197B175288806E800D23030 /* ChartView */,
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
@@ -164,11 +162,21 @@
 		BAC3473128BE9B5800895FBE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */,
 				21C93F2F28BE54D700E807B6 /* StudyRecord.swift */,
 				BAC3473228BE9B7200895FBE /* StudyCondition.swift */,
 				BAC3473428BE9E2F00895FBE /* ToyShape.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		E7C5D90F28F3CCA700993862 /* LoginBonus */ = {
+			isa = PBXGroup;
+			children = (
+				2189C52F28F3A54B00A5BA34 /* LoginBonusContentView.swift */,
+				E7C5D90D28F3AF4C00993862 /* LoginBonusViewController.swift */,
+			);
+			path = LoginBonus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

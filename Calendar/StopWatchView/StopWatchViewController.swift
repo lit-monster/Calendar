@@ -7,7 +7,6 @@
 
 import UIKit
 import SwiftUI
-import RealmSwift
 import HealthKit
 
 class StopWatchViewController: UIViewController {
@@ -18,9 +17,16 @@ class StopWatchViewController: UIViewController {
     @IBOutlet weak var picker: UIDatePicker! {
         didSet {
             picker.datePickerMode = .countDownTimer
+            
         }
     }
-    @IBOutlet weak var pickerBlurView: UIVisualEffectView!
+    @IBOutlet weak var pickerBlurView: UIVisualEffectView! {
+        didSet {
+            pickerBlurView.layer.cornerCurve = .continuous
+            pickerBlurView.layer.cornerRadius = 16
+            pickerBlurView.clipsToBounds = true
+        }
+    }
 
     var count: Int = 0
     var latestHeartRate = 0.0
@@ -33,11 +39,6 @@ class StopWatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerBlurView.layer.cornerCurve = .continuous
-        pickerBlurView.layer.cornerRadius = 16
-        pickerBlurView.clipsToBounds = true
-        print(targetTimeInterval)
-        print("👻👻👻👻")
         UIDevice.current.isProximityMonitoringEnabled = true
 
         NotificationCenter.default.addObserver(
@@ -46,6 +47,7 @@ class StopWatchViewController: UIViewController {
             name: UIDevice.proximityStateDidChangeNotification,
             object: nil
         )
+
         feedbackGenerator.prepare()
 
         let typeOfRead = Set([typeOfHeartRate])
@@ -60,7 +62,7 @@ class StopWatchViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "totimer"{
+        if segue.identifier == "totimer" {
             let vc = segue.destination as! TimerViewController
             vc.count = self.count
             vc.latestHeartRate = self.latestHeartRate
@@ -152,25 +154,17 @@ class StopWatchViewController: UIViewController {
         let date = Date()
         let endDate = calendar.date(byAdding: .day, value: -0, to: calendar.startOfDay(for: date))
         let startDate = calendar.date(byAdding: .day, value: -7, to: calendar.startOfDay(for: date))
-        print("startDate")
-        print(startDate)
-        print("endDate")
-        print(endDate)
 
         let heartRateUnit:HKUnit = HKUnit(from: "count/min")
         let query = HKSampleQuery(sampleType: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!, predicate: HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: []), limit: HKObjectQueryNoLimit, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]){ [self] (query, results, error) in
 
             guard results != [] else { return }
 
-            print(results?[0])
-
             for result in results ?? [] {
                 guard let currData = result as? HKQuantitySample else { return }
                 let heartRate = currData.quantity.doubleValue(for: heartRateUnit)
                 self.heartRateArray.append(heartRate)
             }
-            print("heartRateArray")
-            print(self.heartRateArray)
 
             latestHeartRate = self.heartRateArray.last ?? 0
 
