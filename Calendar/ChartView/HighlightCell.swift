@@ -39,19 +39,7 @@ struct HighlightCell: View {
                     Spacer()
                     ForEach(breakdowns) { breakdown in
                         VStack{
-                            Gauge(value: breakdown.currentValue, in: 0.0...breakdown.maxValue) {
-                                Text("Score")
-                            } currentValueLabel: {
-                                Text("\(Int(breakdown.currentValue))")
-                                    .font(.headline)
-                                    .foregroundColor(.cyan)
-                            } minimumValueLabel: {
-                                Text("\(0)")
-                                    .foregroundColor(.blue)
-                            } maximumValueLabel: {
-                                Text("\(breakdown.maxValue)")
-                                    .foregroundColor(.blue)
-                            }
+                            Gauge(value: breakdown.currentValue, in: 0.0...breakdown.maxValue) {}
                             .gaugeStyle(.accessoryCircularCapacity)
                             .tint(Gradient(colors: [.cyan]))
                             

@@ -427,7 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7R974FN29R;
+				DEVELOPMENT_TEAM = F584ZURPSX;
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "スタレコ";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -436,7 +436,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco.monster;
+				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco;
 				PRODUCT_NAME = "スタレコ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -450,7 +450,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/CalendarRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7R974FN29R;
+				DEVELOPMENT_TEAM = F584ZURPSX;
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "スタレコ";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -459,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco.monster;
+				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco;
 				PRODUCT_NAME = "スタレコ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
