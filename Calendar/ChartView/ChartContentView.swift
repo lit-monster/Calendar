@@ -54,7 +54,7 @@ struct ChartContentView: View {
                     Spacer(minLength: 48)
 
                     Group {
-                        Text("集中度の割合")
+                        Text("This week's rate")
                             .font(.system(.title, design: .rounded))
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -65,14 +65,14 @@ struct ChartContentView: View {
                                 .shadow(color: .black.opacity(0.3),radius: 16)
                            StrorageChartView()
                             .frame(height: 100)
-                            .padding([.all],30)
+                            .padding(15)
                         }
                     }
 
                     Spacer(minLength: 48)
 
                     Group {
-                        Text("マップ")
+                        Text("Where I studied")
                             .font(.system(.title, design: .rounded))
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -101,14 +101,14 @@ struct ChartContentView: View {
 
 
                     Group {
-                        Text("ハイライト")
+                        Text("Summary")
                             .font(.system(.title,design: .rounded))
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
 
                         let yesterday = studyConditionForWeek[1].superConcentratingTime
                         let today = studyConditionForWeek[0].superConcentratingTime
-                        HighlightCell(title: "超集中",
+                        HighlightCell(title: "High",
                                       subTitle: "今日は昨日の超集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%勉強しました。",
                                       breakdowns: [
                                         Breakdown(title: "今日", maxValue: studyConditionForWeek[0].superConcentratingTime, currentValue: today),
@@ -116,7 +116,7 @@ struct ChartContentView: View {
                                         Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].superConcentratingTime, currentValue: studyConditionForWeek[2].superConcentratingTime),
                                       ])
                         Spacer(minLength: 24)
-                        HighlightCell(title: "集中",
+                        HighlightCell(title: "Normal",
                                       subTitle: "今日の勉強時間は昨日の集中の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
                                       breakdowns: [
                                         Breakdown(title: "今日", maxValue: studyConditionForWeek[0].concentratingTime, currentValue: today),
@@ -124,7 +124,7 @@ struct ChartContentView: View {
                                         Breakdown(title: "一昨日", maxValue: studyConditionForWeek[2].concentratingTime, currentValue: studyConditionForWeek[2].concentratingTime),
                                       ])
                         Spacer(minLength: 24)
-                        HighlightCell(title: "普通",
+                        HighlightCell(title: "Low",
                                       subTitle: "今日の勉強時間は昨日の普通の\(yesterday > 0 ? String(Int(today / yesterday * 100)) : "-")%です。",
                                       breakdowns: [
                                         Breakdown(title: "今日", maxValue: studyConditionForWeek[0].normalTime, currentValue: today),
@@ -142,7 +142,7 @@ struct ChartContentView: View {
                     }
                 }
                 .padding()
-                .navigationTitle(Text("分析"))
+                .navigationTitle(Text("Analyse"))
             }
             .background(Image("background2"))
             .background(Color(uiColor: UIColor(named: "summary")!))

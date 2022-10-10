@@ -13,7 +13,6 @@ struct ChartPeriodView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-
                 Text("今週の")
                     .font(.headline)
                     .foregroundColor(Color(uiColor: UIColor.systemGray))

@@ -20,7 +20,7 @@
                         <viewLayoutGuide key="safeArea" id="w3Q-AQ-ReX"/>
                         <color key="backgroundColor" name="summary"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="分析" id="ZHw-Vm-2Br">
+                    <tabBarItem key="tabBarItem" title="Analyse" id="ZHw-Vm-2Br">
                         <imageReference key="image" image="chart.bar.xaxis" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color name="tabbar"/>
@@ -52,7 +52,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1u-3l-GSP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="終了">
+                                        <buttonConfiguration key="configuration" style="plain" title="Done!!">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -96,7 +96,7 @@
                                                         <constraint firstAttribute="height" constant="173" id="lXi-S6-gic"/>
                                                     </constraints>
                                                 </datePicker>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標時間を設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-0L-snf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set target time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-0L-snf">
                                                     <rect key="frame" x="104" y="15" width="122" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="jDF-wp-3Eb"/>
@@ -124,8 +124,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone1" translatesAutoresizingMaskIntoConstraints="NO" id="twu-yW-FTT">
                                         <rect key="frame" x="0.0" y="418" width="414" height="395"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-V1-dbv">
-                                        <rect key="frame" x="94.5" y="396" width="225" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flip the iPhone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-V1-dbv">
+                                        <rect key="frame" x="150.5" y="396" width="113" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="7zK-jo-A7o"/>
                                         </constraints>
@@ -167,7 +167,7 @@
                             <constraint firstItem="yd2-MS-WAu" firstAttribute="leading" secondItem="Pfg-Mk-sKX" secondAttribute="leading" id="yGO-cx-sZX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="計測" largeTitleDisplayMode="always" id="hgt-13-Vv3">
+                    <navigationItem key="navigationItem" title="Measure" largeTitleDisplayMode="always" id="hgt-13-Vv3">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="calendar" catalog="system" id="Ms5-Vt-kPf">
                             <connections>
                                 <action selector="loginBonusButtonPressed" destination="Bkz-OM-wML" id="orj-K3-ERs"/>
@@ -194,7 +194,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glass2" translatesAutoresizingMaskIntoConstraints="NO" id="er3-g3-eAf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="er3-g3-eAf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5g-cA-6LW">
@@ -203,14 +203,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="338" height="424"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="合計時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hn-GR-OHe">
-                                            <rect key="frame" x="124" y="58" width="89" height="19.333333333333343"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hn-GR-OHe">
+                                            <rect key="frame" x="124" y="58" width="89" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="集中度推定結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO7-O2-WAe">
-                                            <rect key="frame" x="112" y="250" width="114.5" height="19.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recommendation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO7-O2-WAe">
+                                            <rect key="frame" x="108" y="250" width="122" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                             <color key="highlightedColor" systemColor="labelColor"/>
                                         </label>
@@ -230,7 +230,7 @@
                                                                 <color key="baseForegroundColor" name="n"/>
                                                             </buttonConfiguration>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拍/分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVU-0P-zlE">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BPM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVU-0P-zlE">
                                                             <rect key="frame" x="93" y="26" width="31" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="31" id="aCC-Ad-q2S"/>
@@ -291,10 +291,10 @@
                                                 <constraint firstAttribute="height" constant="65" id="zhn-YV-kS4"/>
                                             </constraints>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY2-4a-c3z">
-                                            <rect key="frame" x="25" y="125" width="289" height="57.333333333333314"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY2-4a-c3z">
+                                            <rect key="frame" x="25" y="125" width="289" height="58"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="48"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -344,8 +344,8 @@
                                     <constraint firstAttribute="height" constant="80" id="W3a-NE-cCu"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="集中度合いを記録しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs2-L5-A9O">
-                                <rect key="frame" x="106" y="653" width="202" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's record !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs2-L5-A9O">
+                                <rect key="frame" x="151.5" y="653" width="111" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -405,7 +405,7 @@
         <scene sceneID="uYG-e8-Jkv">
             <objects>
                 <navigationController title="計測" id="7v2-jG-oNr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="計測" id="kQ7-0n-rHa">
+                    <tabBarItem key="tabBarItem" title="Measure" id="kQ7-0n-rHa">
                         <imageReference key="image" image="timer" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color name="tabbar"/>
@@ -429,9 +429,9 @@
     </scenes>
     <resources>
         <image name="background1" width="414" height="896"/>
+        <image name="background2" width="414" height="896"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
-        <image name="glass2" width="414" height="896"/>
         <image name="iPhone1" width="347" height="411"/>
         <image name="quality1" width="132" height="87"/>
         <image name="quality2" width="132" height="87"/>

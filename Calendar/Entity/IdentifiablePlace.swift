@@ -14,9 +14,7 @@ struct IdentifiablePlace: Identifiable {
     let quality: Int
     init(id: UUID = UUID(), lat: Double, long: Double, quality: Int) {
         self.id = id
-        self.location = CLLocationCoordinate2D(
-            latitude: lat,
-            longitude: long)
+        self.location = CLLocationCoordinate2D(latitude: lat,longitude: long)
         self.quality = quality
     }
 }

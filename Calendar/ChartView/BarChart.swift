@@ -14,6 +14,10 @@ struct BarChartView: View {
                 .foregroundStyle(by: .value("Shape Color", shape.color))
             }
         }
+        .chartPlotStyle { content in
+            content.cornerRadius(10)
+        }
+        .chartLegend(.hidden)
         .chartForegroundStyleScale([
             "超集中": Color(UIColor(named: ConcentrationType.superConcentrating.rawValue)!),
             "集中": Color(UIColor(named: ConcentrationType.concentrating.rawValue)!),

@@ -22,13 +22,11 @@ struct StudyCondition {
         let dayDelta = Calendar.current.dateComponents([.day], from: date, to: Date()).day ?? 0
         switch dayDelta {
         case 0:
-            return "今日"
+            return "Today"
         case 1:
-            return "昨日"
-        case 2:
-            return "一昨日"
+            return "Yesterday"
         default:
-            return "\(dayDelta)日前"
+            return "\(dayDelta) days ago"
         }
     }
     

@@ -26,6 +26,13 @@ final class StudyRecordManager {
         return studyConditions
     }
 
+
+    func getLatestWeekData() -> StudyCondition {
+        let today = Date().getTimeZero()
+        let weekAgo = Calendar.current.date(byAdding: .day, value: -6, to: today)!
+        return getByTimeRange(from: weekAgo, to: today)
+    }
+
     func getLatestWeekTotalStudyTime() -> TimeInterval {
         let weekConditions = getWeekData()
 

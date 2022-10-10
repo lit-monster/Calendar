@@ -9,13 +9,22 @@ import SwiftUI
 import Charts
 
 struct StrorageChartView: View {
+    @State var dataUsage = DataUsage(studyCondition: StudyRecordManager.shared.getLatestWeekData())
     var body: some View {
         Chart(dataUsage.categories) { category in
             BarMark(x: .value("size", category.size))
-                .foregroundStyle(by: .value("size", category.size))
+                .foregroundStyle(by: .value("size", category.name))
         }
-        .frame(height: 100)
-        .padding([.all],30)
+        .chartForegroundStyleScale([
+            "High": Color(UIColor(named: ConcentrationType.superConcentrating.rawValue)!),
+            "Normal": Color(UIColor(named: ConcentrationType.concentrating.rawValue)!),
+            "Low": Color(UIColor(named: ConcentrationType.normal.rawValue)!)
+        ])
+        .frame(height: 80)
+        .padding(30)
+        .chartPlotStyle{ content in
+            content.cornerRadius(10)
+        }
     }
 }
 
@@ -27,17 +36,23 @@ struct DataUsageCategory: Identifiable {
     let size: Double
 }
 
-struct DataUsage {
+class DataUsage {
     let categories: [DataUsageCategory]
-}
+    let studyCondition: StudyCondition
 
-let dataUsage = DataUsage(
-    categories: [
-        .init(name: "App", size:60),
-        .init(name: "写真", size:30),
-        .init(name: "iOS", size:10)
-    ]
-)
+    init(studyCondition: StudyCondition) {
+        self.studyCondition = studyCondition
+        var todayTotal: Double {
+            studyCondition.normalTime + studyCondition.concentratingTime + studyCondition.superConcentratingTime
+        }
+
+        categories = [
+            .init(name: "High", size: studyCondition.superConcentratingTime),
+            .init(name: "Normal", size: studyCondition.concentratingTime),
+            .init(name: "Low", size: studyCondition.normalTime)
+        ]
+    }
+}
 
 struct StrorageChartView_Previews: PreviewProvider {
     static var previews: some View {
