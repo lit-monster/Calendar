@@ -1,5 +1,5 @@
 //
-//  LoginContentView.swift
+//  LoginBonusContentView.swift
 //  Calendar
 //
 //  Created by 鈴木　葵葉 on 2022/10/10.

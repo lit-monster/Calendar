@@ -2,7 +2,7 @@
 //  LoginBonusViewController.swift
 //  Calendar
 //
-//  Created by Masakaz Ozaki on 2022/10/10.
+//  Created by 鈴木　葵葉 on 2022/10/10.
 //
 
 import UIKit
@@ -14,9 +14,6 @@ final class LoginBonusViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-//        let toyshapes = StudyRecordManager.shared.getWeekData().flatMap { $0.getToyShape() }
-//        let totalTime = StudyRecordManager.shared.getLatestWeekTotalStudyTime()
-//        print(totalTime)
         let vc = UIHostingController(rootView: LoginBonusContentView())
         self.addChild(vc)
         self.view.addSubview(vc.view)

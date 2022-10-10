@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 
-class TimerViewController: UIViewController,CLLocationManagerDelegate {
+class TimerViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
 
     let feedbackGenerator = UINotificationFeedbackGenerator()
@@ -42,12 +42,21 @@ class TimerViewController: UIViewController,CLLocationManagerDelegate {
         rate.layer.shadowOffset = CGSize(width: 4, height: 4)
         super.viewDidLoad()
         feedbackGenerator.prepare()
-        locationManager.delegate = self
 
-        if CLLocationManager.locationServicesEnabled() {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 10
+        locationManager.activityType = .fitness
+        locationManager.startUpdatingHeading()
+
+
+
+        if locationManager.authorizationStatus == .authorizedWhenInUse || locationManager.authorizationStatus == .authorizedAlways {
             locationManager.startUpdatingLocation()
         }
     }
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let newLocation = locations.last else {
             return
