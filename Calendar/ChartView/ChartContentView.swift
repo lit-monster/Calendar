@@ -144,7 +144,7 @@ struct ChartContentView: View {
                 .padding()
                 .navigationTitle(Text("分析"))
             }
-            .background(Image("glass3"))
+            .background(Image("background2"))
             .background(Color(uiColor: UIColor(named: "summary")!))
         }
         .onAppear {

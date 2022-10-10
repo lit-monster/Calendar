@@ -35,30 +35,6 @@
             </objects>
             <point key="canvasLocation" x="-2121.0280373831774" y="-4302.3758099352053"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="U7a-a0-6Qo">
-            <objects>
-                <viewController storyboardIdentifier="LoginBonus" id="cFF-0P-NNi" customClass="LoginBonusViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MHd-zl-Jbd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="X9z-5c-0JM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yVG-H9-qZ6">
-                        <imageReference key="image" image="calendar" catalog="system" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color name="tabbar"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SoI-xq-h0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3613" y="-4302"/>
-        </scene>
         <!--計測-->
         <scene sceneID="uQJ-3Z-ENq">
             <objects>
@@ -104,7 +80,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-MS-WAu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glass2" translatesAutoresizingMaskIntoConstraints="NO" id="zb5-Xx-qs5">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="zb5-Xx-qs5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                     </imageView>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYR-xB-pSe">
@@ -149,7 +125,7 @@
                                         <rect key="frame" x="0.0" y="418" width="414" height="395"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-V1-dbv">
-                                        <rect key="frame" x="94.5" y="396" width="225.5" height="21"/>
+                                        <rect key="frame" x="94.5" y="396" width="225" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="7zK-jo-A7o"/>
                                         </constraints>
@@ -452,6 +428,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background1" width="414" height="896"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
         <image name="glass2" width="414" height="896"/>
@@ -479,9 +456,6 @@
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
