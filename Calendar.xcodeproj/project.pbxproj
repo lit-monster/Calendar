@@ -14,6 +14,7 @@
 		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
 		216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216847A528BF5A84007D11F6 /* HighlightCell.swift */; };
 		217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217A1F9427DDF13D0082B2BC /* Colors.xcassets */; };
+		2189C52E28F3914D00A5BA34 /* StrorageChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189C52D28F3914C00A5BA34 /* StrorageChartView.swift */; };
 		2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196BA0A2856022800FA8D61 /* BarChart.swift */; };
 		2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198C50A28758B71000C705C /* StudyRecordManager.swift */; };
 		2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199B75D286C52AC00018ADB /* ChartContentView.swift */; };
@@ -41,6 +42,7 @@
 		216771AF269EF2570005F50C /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		216847A528BF5A84007D11F6 /* HighlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightCell.swift; sourceTree = "<group>"; };
 		217A1F9427DDF13D0082B2BC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2189C52D28F3914C00A5BA34 /* StrorageChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrorageChartView.swift; sourceTree = "<group>"; };
 		2196BA0A2856022800FA8D61 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		2198C50A28758B71000C705C /* StudyRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRecordManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		2199B75D286C52AC00018ADB /* ChartContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				2199B75F286C547E00018ADB /* ChartPeriodView.swift */,
 				2129B2F328F1553500B792E6 /* CalendarView.swift */,
 				21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */,
+				2189C52D28F3914C00A5BA34 /* StrorageChartView.swift */,
 			);
 			path = ChartView;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */,
 				21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */,
+				2189C52E28F3914D00A5BA34 /* StrorageChartView.swift in Sources */,
 				212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */,
 				21C93F3028BE54D700E807B6 /* StudyRecord.swift in Sources */,
 				211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */,
