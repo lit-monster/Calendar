@@ -125,11 +125,11 @@
                                         <rect key="frame" x="0.0" y="418" width="414" height="395"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-V1-dbv">
-                                        <rect key="frame" x="94" y="396" width="226" height="21"/>
+                                        <rect key="frame" x="56.5" y="396" width="301.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="7zK-jo-A7o"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
