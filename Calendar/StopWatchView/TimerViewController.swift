@@ -81,13 +81,13 @@ class TimerViewController: UIViewController {
         super.viewDidAppear(animated)
         heartRateLabel.text = String(Int(latestHeartRate))
         if focusRate == 3 {
-            starLabel.text = "★★★"
+//            starLabel.text = "★★★"
             recoLabal.text = "超集中"
         } else if focusRate == 2 {
-            starLabel.text = "★★"
+//            starLabel.text = "★★"
             recoLabal.text = "集中"
         } else if focusRate == 1 {
-            starLabel.text = "★"
+//            starLabel.text = "★"
             recoLabal.text = "普通"
         }
 

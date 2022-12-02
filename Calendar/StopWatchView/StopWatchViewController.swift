@@ -39,8 +39,11 @@ class StopWatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // 近接センサーの有効化
         UIDevice.current.isProximityMonitoringEnabled = true
 
+        // 近接センサーのON-Offが切り替わる通知
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(proximityMonitorStateDidChange),
@@ -48,6 +51,7 @@ class StopWatchViewController: UIViewController {
             object: nil
         )
 
+        // インスタンスを生成し prepare() をコール
         feedbackGenerator.prepare()
 
         let typeOfRead = Set([typeOfHeartRate])
@@ -97,7 +101,7 @@ class StopWatchViewController: UIViewController {
     @objc func proximityMonitorStateDidChange() {
         if inturrptedView.isHidden == false {
             inturrptedView.isHidden = true
-            targetTimeInterval = picker.countDownDuration 
+            targetTimeInterval = picker.countDownDuration
         }
 
         let proximityState = UIDevice.current.proximityState
@@ -125,6 +129,9 @@ class StopWatchViewController: UIViewController {
         let hours = (interval / 3600)
         updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds),
                            remainingRate: (targetTimeInterval - Double(count)) / targetTimeInterval)
+        if interval < 0 {
+            feedbackGenerator.prepare()
+        }
     }
 
     func updateGaugePrgress(remainingTime: String, remainingRate: Double) {
