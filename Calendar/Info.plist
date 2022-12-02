@@ -2,14 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
-	<string>集中度合いを推定するためにhealth kit を使用します</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>Apple Watchを装着しhealth kitから心拍数を取得します</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>アプリ起動前に、Apple Watchを装着してください</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>集中度合いを推定するためにhealth kit を使用します</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Apple Watchを装着しhealth kitから心拍数を取得します</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>アプリ起動前に、Apple Watchを装着してください</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>位置情報を許可するとあなたの”集中できる場所”が分析できるようになります。</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

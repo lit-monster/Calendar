@@ -44,9 +44,9 @@ final class StudyRecordManager {
     func getStudyTimeRange(of date: Date) -> StudyTimeRange {
         let result = getByTimeRange(from: date.getTimeZero(), to: date.addingTimeInterval(86400))
         print(result.total)
-        if result.total > 180 {
+        if result.total > 1800 {
             return .fiveHoursOrLess
-        } else if result.total > 60 {
+        } else if result.total > 600 {
             return .threeHoursOrLess
         } else if result.total > 0 {
             return .oneHoursOrLess
