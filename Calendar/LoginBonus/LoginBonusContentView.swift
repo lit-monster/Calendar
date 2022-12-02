@@ -31,7 +31,7 @@ struct LoginBonusContentView: View {
                     Rectangle()
                         .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
                         .cornerRadius(16)
-                        .shadow(color: .black.opacity(0.2),radius: 16)
+//                        .shadow(color: .black.opacity(0.2),radius: 16)
                     CalendarView(configuretion:
                                     CalendarView.Configuration(calendar:
                                                                 Calendar(identifier: .gregorian),
