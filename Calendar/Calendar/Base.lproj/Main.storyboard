@@ -29,11 +29,44 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="集中グラフ" largeTitleDisplayMode="always" id="2qz-wV-6op"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YP-YC-pVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2121.0280373831774" y="-4302.3758099352053"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j9q-d2-Z0i">
+            <objects>
+                <viewController id="0fk-xI-7Fd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eEs-ZC-NDl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rbS-TC-VR7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCo-gK-fNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-768" y="-4302"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="q84-3V-BKS">
+            <objects>
+                <viewController id="Vmm-hb-Ip0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUQ-Ew-SVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="U9h-C3-Yu1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yig-RF-5MY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOF-8g-Z2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-99" y="-3586"/>
         </scene>
         <!--計測-->
         <scene sceneID="uQJ-3Z-ENq">
@@ -56,8 +89,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="exitButtonPressed" destination="Bkz-OM-wML" eventType="touchUpInside" id="xUG-jv-gL4"/>
-                                            <segue destination="5jT-bN-La5" kind="push" identifier="totimer" id="Ngp-tG-eDJ"/>
+                                            <action selector="exitButtonPressed" destination="Bkz-OM-wML" eventType="touchUpInside" id="ttB-fZ-KaI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -90,7 +122,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="330" height="224"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
                                                     <rect key="frame" x="5" y="51" width="320" height="173"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="320" id="28M-fY-dSJ"/>
@@ -180,6 +212,7 @@
                         <outlet property="inturrptedView" destination="yd2-MS-WAu" id="xVh-mh-d4h"/>
                         <outlet property="picker" destination="mPE-cC-flE" id="Vy4-BJ-XZQ"/>
                         <outlet property="pickerBlurView" destination="fYR-xB-pSe" id="ZDs-Aw-EQN"/>
+                        <segue destination="5jT-bN-La5" kind="show" identifier="totimer" id="Lr8-8w-85X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgb-7e-Wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -282,7 +315,7 @@
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                             <color key="highlightedColor" systemColor="labelColor"/>
                                         </label>
-                                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ysW-ea-tPK">
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ysW-ea-tPK">
                                             <rect key="frame" x="29.5" y="310" width="279" height="65"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBG-6M-GDU">

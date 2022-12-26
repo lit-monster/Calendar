@@ -36,7 +36,7 @@ class StopWatchViewController: UIViewController {
     var startTime = TimeInterval()
     let myDevice: UIDevice = UIDevice.current
     var result: String = ""
-
+    var diffSum: Double = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -174,11 +174,13 @@ class StopWatchViewController: UIViewController {
             }
 
             latestHeartRate = self.heartRateArray.last ?? 0
-
+            //心拍数の配列
             let heart = heartRateArray
+            //心拍数の配列の合計
             let sum = self.heartRateArray.reduce(0) {(num1: Double, num2: Double) -> Double in
                 return num1 + num2
             }
+
             print(sum/Double(heart.count))
             let aveHeartRate = sum/Double(heart.count)
 
@@ -197,6 +199,14 @@ class StopWatchViewController: UIViewController {
             } else {
                 print("error")
             }
+
+            //標準偏差の計算
+            //差の合計
+            for heartRate in heartRateArray{
+                diffSum += heartRate - aveHeartRate
+            }
+            //標準偏差
+            let stdv = sqrt(diffSum/Double(heartRateArray.count))
         }
         myHealthStore.execute(query)
     }
