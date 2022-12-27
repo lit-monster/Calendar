@@ -36,6 +36,7 @@ struct CircularGauge: View {
                 Text(remainingTimeString)
                     .font(.system(size: 64, weight: .bold, design: .rounded))
                     .bold()
+                    .minimumScaleFactor(0.5)
             }
         }.background(.clear)
     }
