@@ -74,14 +74,16 @@ class StopWatchViewController: UIViewController {
             vc.focusRate = self.focusRate
         }
     }
-
+    //アプリ起動時
+    //近接センサーの有効化、inturrptedViewの表示、countを０に
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIDevice.current.isProximityMonitoringEnabled = true
         inturrptedView.isHidden = false
         count = 0
     }
-
+    //アプリ終了時
+    //近接センサーの無効化
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         UIDevice.current.isProximityMonitoringEnabled = false
@@ -100,15 +102,9 @@ class StopWatchViewController: UIViewController {
     }
 
     @objc func proximityMonitorStateDidChange() {
-
-        if UIDevice.current.userInterfaceIdiom == .phone {
             if inturrptedView.isHidden == false {
                 inturrptedView.isHidden = true
                 targetTimeInterval = picker.countDownDuration
-            } else if UIDevice.current.userInterfaceIdiom == .pad {
-
-
-            }
         }
 
         let proximityState = UIDevice.current.proximityState
