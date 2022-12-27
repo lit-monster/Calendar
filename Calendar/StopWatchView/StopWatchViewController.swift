@@ -14,6 +14,7 @@ class StopWatchViewController: UIViewController {
     
     @IBOutlet var circularGaugeView: UIView!
     @IBOutlet var inturrptedView: UIView!
+    @IBOutlet var ipadview: UIView!
     @IBOutlet weak var picker: UIDatePicker! {
         didSet {
             picker.datePickerMode = .countDownTimer
@@ -27,7 +28,7 @@ class StopWatchViewController: UIViewController {
             pickerBlurView.clipsToBounds = true
         }
     }
-
+    
     var count: Int = 0
     var latestHeartRate = 0.0
     var focusRate = 0
@@ -40,10 +41,8 @@ class StopWatchViewController: UIViewController {
     var stdev: Double = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // 近接センサーの有効化
         UIDevice.current.isProximityMonitoringEnabled = true
-
         // 近接センサーのON-Offが切り替わる通知
         NotificationCenter.default.addObserver(
             self,
@@ -51,10 +50,9 @@ class StopWatchViewController: UIViewController {
             name: UIDevice.proximityStateDidChangeNotification,
             object: nil
         )
-
         // インスタンスを生成し prepare() をコール
         feedbackGenerator.prepare()
-
+        
         let typeOfRead = Set([typeOfHeartRate])
         myHealthStore.requestAuthorization(toShare: [],read: typeOfRead,completion: { (success, error) in
             if let error = error {
@@ -65,7 +63,7 @@ class StopWatchViewController: UIViewController {
         })
         readHeartRate()
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "totimer" {
             let vc = segue.destination as! TimerViewController
@@ -77,10 +75,18 @@ class StopWatchViewController: UIViewController {
     //アプリ起動時
     //近接センサーの有効化、inturrptedViewの表示、countを０に
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        UIDevice.current.isProximityMonitoringEnabled = true
-        inturrptedView.isHidden = false
-        count = 0
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            super.viewDidAppear(animated)
+            UIDevice.current.isProximityMonitoringEnabled = true
+            inturrptedView.isHidden = false
+            ipadview.isHidden = true
+            count = 0
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            super.viewDidAppear(animated)
+            inturrptedView.isHidden = true
+            ipadview.isHidden = false
+            count = 0
+        }
     }
     //アプリ終了時
     //近接センサーの無効化
@@ -88,11 +94,11 @@ class StopWatchViewController: UIViewController {
         super.viewDidDisappear(animated)
         UIDevice.current.isProximityMonitoringEnabled = false
     }
-
+    
     @IBAction func exitButtonPressed(){
         self.performSegue(withIdentifier: "totimer", sender: nil)
     }
-
+    
     @IBAction func loginBonusButtonPressed() {
         let loginBonusViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginBonus")
         if let sheet = loginBonusViewController.sheetPresentationController {
@@ -100,13 +106,16 @@ class StopWatchViewController: UIViewController {
         }
         self.present(loginBonusViewController, animated: true)
     }
-
+    
+    //近接センサー
     @objc func proximityMonitorStateDidChange() {
+        //inturrptedViewが表示されているとき
         if inturrptedView.isHidden == false {
             inturrptedView.isHidden = true
+            //TargetTimeIntervalに設定した目標時間を代入
             targetTimeInterval = picker.countDownDuration
         }
-
+        
         let proximityState = UIDevice.current.proximityState
         print(proximityState)
         self.feedbackGenerator.notificationOccurred(.warning)
@@ -123,7 +132,7 @@ class StopWatchViewController: UIViewController {
             timer.invalidate()
         }
     }
-
+    
     @objc func up() {
         count = count + 1
         let interval = Int(targetTimeInterval) - Int(count)
@@ -136,7 +145,7 @@ class StopWatchViewController: UIViewController {
             feedbackGenerator.prepare()
         }
     }
-
+    
     func updateGaugePrgress(remainingTime: String, remainingRate: Double) {
         for view in self.circularGaugeView.subviews {
             view.removeFromSuperview()
@@ -153,29 +162,29 @@ class StopWatchViewController: UIViewController {
             vc.view.bottomAnchor.constraint(equalTo: circularGaugeView.bottomAnchor),
             vc.view.topAnchor.constraint(equalTo: circularGaugeView.topAnchor)])
     }
-
+    
     let myHealthStore = HKHealthStore()
     var typeOfHeartRate = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
-
+    
     var heartRateArray: [Double] = []
-
+    
     func readHeartRate() {
         let calendar = Calendar.current
         let date = Date()
         let endDate = calendar.date(byAdding: .day, value: -0, to: calendar.startOfDay(for: date))
         let startDate = calendar.date(byAdding: .day, value: -7, to: calendar.startOfDay(for: date))
-
+        
         let heartRateUnit:HKUnit = HKUnit(from: "count/min")
         let query = HKSampleQuery(sampleType: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!, predicate: HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: []), limit: HKObjectQueryNoLimit, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]){ [self] (query, results, error) in
-
+            
             guard results != [] else { return }
-
+            
             for result in results ?? [] {
                 guard let currData = result as? HKQuantitySample else { return }
                 let heartRate = currData.quantity.doubleValue(for: heartRateUnit)
                 self.heartRateArray.append(heartRate)
             }
-
+            
             latestHeartRate = self.heartRateArray.last ?? 0
             //心拍数の配列
             let heart = heartRateArray
@@ -183,10 +192,10 @@ class StopWatchViewController: UIViewController {
             let sum = self.heartRateArray.reduce(0) {(num1: Double, num2: Double) -> Double in
                 return num1 + num2
             }
-
+            
             print(sum/Double(heart.count))
             let aveHeartRate = sum/Double(heart.count)
-
+            
             //標準偏差の計算
             //差の合計
             for heartRate in heartRateArray{
@@ -202,7 +211,7 @@ class StopWatchViewController: UIViewController {
             print(heartRateArray.count)
             print("変動係数")
             print(stdev/aveHeartRate)
-
+            
             if ( stdev < stdev/aveHeartRate + 2) {
                 print("超集中")
                 focusRate = 3
@@ -226,7 +235,7 @@ class StopWatchViewController: UIViewController {
             } else {
                 print("error")
             }
-
+            
             //            if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
             //                print("超集中")
             //                focusRate = 3
