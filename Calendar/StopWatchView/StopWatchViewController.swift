@@ -185,22 +185,6 @@ class StopWatchViewController: UIViewController {
             print(sum/Double(heart.count))
             let aveHeartRate = sum/Double(heart.count)
 
-            if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
-                print("超集中")
-                focusRate = 3
-                self.result = "超集中"
-            } else if ( sum/Double(heart.count) + 1 > aveHeartRate &&  aveHeartRate > sum/Double(heart.count) - 1 ) {
-                print("集中")
-                focusRate = 2
-                self.result = "集中"
-            } else if ( sum/Double(heart.count) - 1 > aveHeartRate) {
-                print("普通")
-                focusRate = 1
-                self.result = "普通"
-            } else {
-                print("error")
-            }
-
             //標準偏差の計算
             //差の合計
             for heartRate in heartRateArray{
@@ -214,7 +198,48 @@ class StopWatchViewController: UIViewController {
             print(stdev)
             print("心拍の配列の長さ")
             print(heartRateArray.count)
+            print("変動係数")
+            print(stdev/aveHeartRate)
 
+            if ( stdev < stdev/aveHeartRate + 2) {
+                print("超集中")
+                focusRate = 3
+                self.result = "超集中"
+            } else if ( stdev < stdev/aveHeartRate - 2) {
+                print("超集中")
+                focusRate = 3
+                self.result = "超集中"
+            } else if (stdev < stdev/aveHeartRate + 1) {
+                print("集中")
+                focusRate = 2
+                self.result = "集中"
+            } else if (stdev < stdev/aveHeartRate - 1) {
+                print("集中")
+                focusRate = 2
+                self.result = "集中"
+            } else if (stdev < stdev/aveHeartRate ) {
+                print("普通")
+                focusRate = 1
+                self.result = "普通"
+            } else {
+                print("error")
+            }
+
+            //            if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
+            //                print("超集中")
+            //                focusRate = 3
+            //                self.result = "超集中"
+            //            } else if ( sum/Double(heart.count) + 1 > aveHeartRate &&  aveHeartRate > sum/Double(heart.count) - 1 ) {
+            //                print("集中")
+            //                focusRate = 2
+            //                self.result = "集中"
+            //            } else if ( sum/Double(heart.count) - 1 > aveHeartRate) {
+            //                print("普通")
+            //                focusRate = 1
+            //                self.result = "普通"
+            //            } else {
+            //                print("error")
+            //            }
         }
         myHealthStore.execute(query)
     }
