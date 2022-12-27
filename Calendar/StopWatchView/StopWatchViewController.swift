@@ -102,9 +102,9 @@ class StopWatchViewController: UIViewController {
     }
 
     @objc func proximityMonitorStateDidChange() {
-            if inturrptedView.isHidden == false {
-                inturrptedView.isHidden = true
-                targetTimeInterval = picker.countDownDuration
+        if inturrptedView.isHidden == false {
+            inturrptedView.isHidden = true
+            targetTimeInterval = picker.countDownDuration
         }
 
         let proximityState = UIDevice.current.proximityState
