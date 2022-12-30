@@ -14,7 +14,10 @@ class StopWatchViewController: UIViewController {
     
     @IBOutlet var circularGaugeView: UIView!
     @IBOutlet var inturrptedView: UIView!
-    @IBOutlet var ipadview: UIView!
+    @IBOutlet weak var upset: UILabel!
+    @IBOutlet weak var iphone: UIImageView!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var picker: UIDatePicker! {
         didSet {
             picker.datePickerMode = .countDownTimer
@@ -75,16 +78,22 @@ class StopWatchViewController: UIViewController {
     //アプリ起動時
     //近接センサーの有効化、inturrptedViewの表示、countを０に
     override func viewDidAppear(_ animated: Bool) {
+        print(UIDevice.current.userInterfaceIdiom.rawValue)
+
+        inturrptedView.isHidden = false
+        //iPhoneの時とiPadの時で分岐させる
         if UIDevice.current.userInterfaceIdiom == .phone {
             super.viewDidAppear(animated)
             UIDevice.current.isProximityMonitoringEnabled = true
-            inturrptedView.isHidden = false
-            ipadview.isHidden = true
+            startButton.isHidden = true
+            stopButton.isHidden = true
             count = 0
         } else if UIDevice.current.userInterfaceIdiom == .pad {
             super.viewDidAppear(animated)
-            inturrptedView.isHidden = true
-            ipadview.isHidden = false
+            upset.isHidden = true
+            iphone.isHidden = true
+            startButton.isHidden = false
+            stopButton.isHidden = false
             count = 0
         }
     }

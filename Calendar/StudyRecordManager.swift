@@ -30,7 +30,7 @@ final class StudyRecordManager {
     func getLatestWeekData() -> StudyCondition {
         let today = Date().getTimeZero()
         //心拍データの期間の指定
-        let weekAgo = Calendar.current.date(byAdding: .day, value: -12, to: today)!
+        let weekAgo = Calendar.current.date(byAdding: .day, value: -22, to: today)!
         return getByTimeRange(from: weekAgo, to: today)
     }
 
