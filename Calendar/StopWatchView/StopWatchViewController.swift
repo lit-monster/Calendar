@@ -55,7 +55,7 @@ class StopWatchViewController: UIViewController {
         )
         // インスタンスを生成し prepare() をコール
         feedbackGenerator.prepare()
-        
+
         let typeOfRead = Set([typeOfHeartRate])
         myHealthStore.requestAuthorization(toShare: [],read: typeOfRead,completion: { (success, error) in
             if let error = error {
@@ -182,18 +182,18 @@ class StopWatchViewController: UIViewController {
         let date = Date()
         let endDate = calendar.date(byAdding: .day, value: -0, to: calendar.startOfDay(for: date))
         let startDate = calendar.date(byAdding: .day, value: -7, to: calendar.startOfDay(for: date))
-        
+
         let heartRateUnit:HKUnit = HKUnit(from: "count/min")
         let query = HKSampleQuery(sampleType: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!, predicate: HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: []), limit: HKObjectQueryNoLimit, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]){ [self] (query, results, error) in
-            
+
             guard results != [] else { return }
-            
+
             for result in results ?? [] {
                 guard let currData = result as? HKQuantitySample else { return }
                 let heartRate = currData.quantity.doubleValue(for: heartRateUnit)
                 self.heartRateArray.append(heartRate)
             }
-            
+
             latestHeartRate = self.heartRateArray.last ?? 0
             //心拍数の配列
             let heart = heartRateArray
@@ -201,10 +201,10 @@ class StopWatchViewController: UIViewController {
             let sum = self.heartRateArray.reduce(0) {(num1: Double, num2: Double) -> Double in
                 return num1 + num2
             }
-            
+
             print(sum/Double(heart.count))
             let aveHeartRate = sum/Double(heart.count)
-            
+
             //標準偏差の計算
             //差の合計
             for heartRate in heartRateArray{
@@ -220,7 +220,7 @@ class StopWatchViewController: UIViewController {
             print(heartRateArray.count)
             print("変動係数")
             print(stdev/aveHeartRate)
-            
+
             if ( stdev < stdev/aveHeartRate + 2) {
                 print("超集中")
                 focusRate = 3
@@ -244,7 +244,7 @@ class StopWatchViewController: UIViewController {
             } else {
                 print("error")
             }
-            
+
             //            if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
             //                print("超集中")
             //                focusRate = 3
