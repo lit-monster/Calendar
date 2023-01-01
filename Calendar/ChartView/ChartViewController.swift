@@ -28,4 +28,11 @@ final class ChartViewController: UIViewController {
             vc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             vc.view.topAnchor.constraint(equalTo: view.topAnchor)])
     }
+    @IBAction func loginBonusButtonPressed() {
+        let loginBonusViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginBonus")
+        if let sheet = loginBonusViewController.sheetPresentationController {
+            sheet.detents = [.custom { context in 0.8 * context.maximumDetentValue }]
+        }
+        self.present(loginBonusViewController, animated: true)
+    }
 }

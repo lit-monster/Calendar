@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zm3-pw-QG2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0fk-xI-7Fd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -30,7 +30,14 @@
                         </imageReference>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="集中グラフ" largeTitleDisplayMode="always" id="2qz-wV-6op"/>
+                    <navigationItem key="navigationItem" title="集中グラフ" largeTitleDisplayMode="always" id="2qz-wV-6op">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="calendar" catalog="system" id="Ms5-Vt-kPf">
+                            <color key="tintColor" systemColor="systemCyanColor"/>
+                            <connections>
+                                <action selector="loginBonusButtonPressed" destination="Khu-uL-2wZ" id="zOe-8o-9nW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YP-YC-pVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -50,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCo-gK-fNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1254" y="-4302"/>
+            <point key="canvasLocation" x="-1383" y="-4302"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="q84-3V-BKS">
@@ -66,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOF-8g-Z2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-99" y="-3586"/>
+            <point key="canvasLocation" x="138" y="-2808"/>
         </scene>
         <!--計測-->
         <scene sceneID="uQJ-3Z-ENq">
@@ -214,13 +221,7 @@
                             <constraint firstItem="yd2-MS-WAu" firstAttribute="leading" secondItem="Pfg-Mk-sKX" secondAttribute="leading" id="yGO-cx-sZX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="計測" largeTitleDisplayMode="always" id="hgt-13-Vv3">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="calendar" catalog="system" id="Ms5-Vt-kPf">
-                            <connections>
-                                <action selector="loginBonusButtonPressed" destination="Bkz-OM-wML" id="orj-K3-ERs"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="計測" largeTitleDisplayMode="always" id="hgt-13-Vv3"/>
                     <connections>
                         <outlet property="circularGaugeView" destination="0bf-Zb-1I4" id="D0f-oZ-rdk"/>
                         <outlet property="inturrptedView" destination="yd2-MS-WAu" id="xVh-mh-d4h"/>
@@ -345,7 +346,7 @@
                                                                 <constraint firstAttribute="width" constant="23" id="HxV-Pd-ieZ"/>
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="button:Ub4-dn-VDY:image" catalog="system" title="">
+                                                            <buttonConfiguration key="configuration" style="plain" image="button:Ub4-dn-VDY:image" title="">
                                                                 <color key="baseForegroundColor" name="n"/>
                                                             </buttonConfiguration>
                                                         </button>
@@ -504,7 +505,7 @@
     <resources>
         <image name="background1" width="414" height="896"/>
         <image name="background2" width="414" height="896"/>
-        <image name="button:Ub4-dn-VDY:image" catalog="system" width="128" height="125">
+        <image name="button:Ub4-dn-VDY:image" width="128" height="125">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKywzNjlDS0xQU1UkbnVsbNcNDg8QERITFBUW
@@ -17753,6 +17754,9 @@ AAAAAAAAAAAAAAAPwZY
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
