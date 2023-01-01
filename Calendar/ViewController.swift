@@ -44,6 +44,7 @@ class ViewController: UIViewController {
 
     // UIViewを作成
     let View1 = UIView()
+    let View2 = UIView()
 
     // UIAccelerometerを作成
     let motionManager = CMMotionManager()
@@ -62,9 +63,13 @@ class ViewController: UIViewController {
         View1.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         View1.backgroundColor = .red
         View1.center = view.center
-        view.addSubview(View1)
-
         View1.layer.cornerRadius = 50
+        view.addSubview(View1)
+        View2.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        View2.backgroundColor = .systemPink
+        View2.center = view.center
+        View2.layer.cornerRadius = 50
+        view.addSubview(View2)
 
         // UIAccelerometerの設定
         motionManager.startAccelerometerUpdates(to: .main) { [weak self] (data, error) in
@@ -92,8 +97,9 @@ class ViewController: UIViewController {
         animator.addBehavior(gravity)
 
         // UICollisionBehaviorを作成して、画面の下端で反射させるように設定
-        collision = UICollisionBehavior(items: [View1])
+        let collision = UICollisionBehavior(items: [View1, View2])
         collision.addBoundary(withIdentifier: "bottom" as NSCopying, from: CGPoint(x: 0, y: view.bounds.height), to: CGPoint(x: view.bounds.width, y: view.bounds.height))
+        collision.translatesReferenceBoundsIntoBoundary = true
         animator.addBehavior(collision)
     }
 
@@ -101,8 +107,9 @@ class ViewController: UIViewController {
     func moveIcon(x: Double, y: Double) {
         let screenSize = view.frame.size
         let iconSize = View1.frame.size
-        let posX = View1.center.x + CGFloat(x * 5)  // 加速度を5倍にする
-        let posY = View1.center.y - CGFloat(y * 5)  // 加速度を5倍にする
+        let posX = View1.center.x + CGFloat(x * 10)  // 加速度を5倍にする
+        let posY = View1.center.y - CGFloat(y * 10)  // 加速度を5倍にする
+
         if posX > screenSize.width - iconSize.width / 2 {
             View1.center.x = screenSize.width - iconSize.width / 2
         } else if posX < iconSize.width / 2 {
@@ -117,6 +124,8 @@ class ViewController: UIViewController {
         } else {
             View1.center.y = posY
         }
+
+
     }
     //    // 新たにViewを表示する関数
     //    @objc func showView() {
