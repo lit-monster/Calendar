@@ -5,52 +5,18 @@
 //  Created by 鈴木　葵葉 on 2022/12/28.
 //
 //
-//import Foundation
-//import UIKit
-//
-//class ViewController: UIViewController {
-//
-//    var animator: UIDynamicAnimator!
-//    var gravity: UIGravityBehavior!
-//    var collision: UICollisionBehavior!
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Viewを作成して画面上に追加
-//        let redView = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-//        redView.backgroundColor = .red
-//        self.view.addSubview(redView)
-//
-//        // UIDynamicAnimatorを作成
-//        animator = UIDynamicAnimator(referenceView: view)
-//
-//        // UIGravityBehaviorを作成して、Viewを重力で落下させるように設定
-//        gravity = UIGravityBehavior(items: [redView])
-//        animator.addBehavior(gravity)
-//
-//        // UICollisionBehaviorを作成して、画面の下端で反射させるように設定
-//        collision = UICollisionBehavior(items: [redView])
-//        collision.addBoundary(withIdentifier: "bottom" as NSCopying, from: CGPoint(x: 0, y: view.bounds.height), to: CGPoint(x: view.bounds.width, y: view.bounds.height))
-//        animator.addBehavior(collision)
-//    }
-//}
 
 import UIKit
 import CoreMotion
 import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollisionBehaviorDelegate {
 
     // UIViewを作成
     let View1 = UIView()
     let View2 = UIView()
-
     // UIAccelerometerを作成
     let motionManager = CMMotionManager()
-
-    //    // Buttonを作成
-    //    let showViewButton = UIButton()
 
     var animator: UIDynamicAnimator!
     var gravity: UIGravityBehavior!
@@ -77,38 +43,32 @@ class ViewController: UIViewController {
             let x = data.acceleration.x
             let y = data.acceleration.y
             self?.moveIcon(x: x, y: y)
+            self?.moveIcon1(x: x, y: y)
         }
-
-        //        // Buttonの設定
-        //        showViewButton.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
-        //        showViewButton.setTitle("Show View", for: .normal)
-        //        showViewButton.setTitleColor(.black, for: .normal)
-        //        showViewButton.center = view.center
-        //        view.addSubview(showViewButton)
-
-        //        // Buttonがタップされたときに実行する処理を設定
-        //        showViewButton.addTarget(self, action: #selector(showView), for: .touchUpInside)
-
         // UIDynamicAnimatorを作成
         animator = UIDynamicAnimator(referenceView: view)
-
-        // UIGravityBehaviorを作成して、Viewを重力で落下させるように設定
-        gravity = UIGravityBehavior(items: [View1])
-        animator.addBehavior(gravity)
 
         // UICollisionBehaviorを作成して、画面の下端で反射させるように設定
         let collision = UICollisionBehavior(items: [View1, View2])
         collision.addBoundary(withIdentifier: "bottom" as NSCopying, from: CGPoint(x: 0, y: view.bounds.height), to: CGPoint(x: view.bounds.width, y: view.bounds.height))
+        // 画面のフレームを境界線とする
         collision.translatesReferenceBoundsIntoBoundary = true
+        // Collision delegateを設定
+        collision.collisionDelegate = self
+        // Dynamic animatorにcollision behaviorを追加
         animator.addBehavior(collision)
+        // Gravity behaviorを作成
+        let gravity = UIGravityBehavior(items: [View1,View2])
+        // Dynamic animatorにgravity behaviorを追加
+        animator.addBehavior(gravity)
     }
 
     // アイコンを移動させる関数
     func moveIcon(x: Double, y: Double) {
         let screenSize = view.frame.size
         let iconSize = View1.frame.size
-        let posX = View1.center.x + CGFloat(x * 10)  // 加速度を5倍にする
-        let posY = View1.center.y - CGFloat(y * 10)  // 加速度を5倍にする
+        let posX = View1.center.x + CGFloat(x * 15)  // 加速度をx倍にする
+        let posY = View1.center.y - CGFloat(y * 15)  // 加速度をx倍にする
 
         if posX > screenSize.width - iconSize.width / 2 {
             View1.center.x = screenSize.width - iconSize.width / 2
@@ -124,17 +84,27 @@ class ViewController: UIViewController {
         } else {
             View1.center.y = posY
         }
-
-
     }
-    //    // 新たにViewを表示する関数
-    //    @objc func showView() {
-    //        let newView = UIView()
-    //        newView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-    //        newView.backgroundColor = .green
-    //        newView.center = view.center
-    //        view.addSubview(newView)
-    //    }
+    func moveIcon1(x: Double, y: Double) {
+        let screenSize = view.frame.size
+        let iconSize = View2.frame.size
+        let posX = View2.center.x + CGFloat(x * 15)  // 加速度をx倍にする
+        let posY = View2.center.y - CGFloat(y * 15)  // 加速度をx倍にする
 
+        if posX > screenSize.width - iconSize.width / 2 {
+            View2.center.x = screenSize.width - iconSize.width / 2
+        } else if posX < iconSize.width / 2 {
+            View2.center.x = iconSize.width / 2
+        } else {
+            View2.center.x = posX
+        }
+        if posY > screenSize.height - iconSize.height / 2 {
+            View2.center.y = screenSize.height - iconSize.height / 2
+        } else if posY < iconSize.height / 2 {
+            View2.center.y = iconSize.height / 2
+        } else {
+            View2.center.y = posY
+        }
+    }
 }
 
