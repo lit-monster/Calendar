@@ -51,6 +51,17 @@
                     <view key="view" contentMode="scaleToFill" id="eEs-ZC-NDl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGK-a1-yxs">
+                                <rect key="frame" x="170" y="320" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="createBoxes" destination="0fk-xI-7Fd" eventType="touchUpInside" id="gsP-E2-TZo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rbS-TC-VR7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
