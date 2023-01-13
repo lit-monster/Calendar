@@ -58,7 +58,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
                                 <connections>
-                                    <action selector="createBoxes" destination="0fk-xI-7Fd" eventType="touchUpInside" id="gsP-E2-TZo"/>
+                                    <action selector="addView" destination="0fk-xI-7Fd" eventType="touchUpInside" id="axH-Nb-K7N"/>
                                 </connections>
                             </button>
                         </subviews>
