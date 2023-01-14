@@ -12,7 +12,8 @@
 		2119F183296ECB2E00E4F25A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2119F182296ECB2E00E4F25A /* Assets.xcassets */; };
 		2119F186296ECB2E00E4F25A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2119F185296ECB2E00E4F25A /* Preview Assets.xcassets */; };
 		2119F18A296ECB6300E4F25A /* Watch Calendar Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2119F17C296ECB2900E4F25A /* Watch Calendar Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2119F19229715E1200E4F25A /* GravitySPM in Frameworks */ = {isa = PBXBuildFile; productRef = 2119F19129715E1200E4F25A /* GravitySPM */; };
+		2119F1942971687F00E4F25A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2119F1932971687F00E4F25A /* GoogleService-Info.plist */; };
+		2119F19729727B4800E4F25A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2119F19629727B4800E4F25A /* FirebaseAnalytics */; };
 		211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB55E26A80AE900655F2F /* ChartViewController.swift */; };
 		2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129B2F328F1553500B792E6 /* CalendarView.swift */; };
 		212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBD26D65676004561B0 /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 		2119F185296ECB2E00E4F25A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2119F18E296ECE2F00E4F25A /* Watch Calendar Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch Calendar Watch App.entitlements"; sourceTree = "<group>"; };
 		2119F18F296ECE7600E4F25A /* Watch-Calendar-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Watch-Calendar-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2119F1932971687F00E4F25A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		211BB55E26A80AE900655F2F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		2129B2F328F1553500B792E6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		212D7BBD26D65676004561B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,8 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2119F19229715E1200E4F25A /* GravitySPM in Frameworks */,
 				21DACA3A28DB0D130068D97B /* RealmSwift in Frameworks */,
+				2119F19729727B4800E4F25A /* FirebaseAnalytics in Frameworks */,
 				21DACA3828DB0D130068D97B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +208,7 @@
 				21A1D4A2268C67B100C07A86 /* Assets.xcassets */,
 				217A1F9427DDF13D0082B2BC /* Colors.xcassets */,
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
+				2119F1932971687F00E4F25A /* GoogleService-Info.plist */,
 				216A46B1295B69B600EC1D52 /* ViewController.swift */,
 			);
 			path = Calendar;
@@ -284,7 +287,7 @@
 			packageProductDependencies = (
 				21DACA3728DB0D130068D97B /* Realm */,
 				21DACA3928DB0D130068D97B /* RealmSwift */,
-				2119F19129715E1200E4F25A /* GravitySPM */,
+				2119F19629727B4800E4F25A /* FirebaseAnalytics */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* スタレコ.app */;
@@ -318,7 +321,7 @@
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
 				21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */,
-				2119F19029715E1200E4F25A /* XCRemoteSwiftPackageReference "Gravity" */,
+				2119F19529727B4800E4F25A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -346,6 +349,7 @@
 			files = (
 				217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */,
 				21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */,
+				2119F1942971687F00E4F25A /* GoogleService-Info.plist in Resources */,
 				21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */,
 				21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */,
 			);
@@ -700,12 +704,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2119F19029715E1200E4F25A /* XCRemoteSwiftPackageReference "Gravity" */ = {
+		2119F19529727B4800E4F25A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/elpsk/Gravity?fbclid=IwAR2qtnKOxZfRNxICXP6ZAhB7PMF7pH_dIojzod4jDzoro6JqAuXrBe_Ee74";
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 9.0.0;
 			};
 		};
 		21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
@@ -719,10 +723,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2119F19129715E1200E4F25A /* GravitySPM */ = {
+		2119F19629727B4800E4F25A /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2119F19029715E1200E4F25A /* XCRemoteSwiftPackageReference "Gravity" */;
-			productName = GravitySPM;
+			package = 2119F19529727B4800E4F25A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 		21DACA3728DB0D130068D97B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
