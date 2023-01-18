@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21087C982977F32100CB445F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C972977F32100CB445F /* FirebaseAnalytics */; };
+		21087C9A2977F32100CB445F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C992977F32100CB445F /* FirebaseAnalyticsSwift */; };
+		21087C9C2977F32100CB445F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C9B2977F32100CB445F /* FirebaseAuth */; };
+		21087C9E2977F32100CB445F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C9D2977F32100CB445F /* FirebaseFirestore */; };
+		21087CA02977F32100CB445F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C9F2977F32100CB445F /* FirebaseFirestoreSwift */; };
+		21087CA22977F32100CB445F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 21087CA12977F32100CB445F /* FirebaseStorage */; };
+		21087CA42977F5C800CB445F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21087CA32977F5C800CB445F /* LoginViewController.swift */; };
 		2119F17F296ECB2900E4F25A /* Watch_CalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119F17E296ECB2900E4F25A /* Watch_CalendarApp.swift */; };
 		2119F181296ECB2900E4F25A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119F180296ECB2900E4F25A /* ContentView.swift */; };
 		2119F183296ECB2E00E4F25A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2119F182296ECB2E00E4F25A /* Assets.xcassets */; };
 		2119F186296ECB2E00E4F25A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2119F185296ECB2E00E4F25A /* Preview Assets.xcassets */; };
 		2119F18A296ECB6300E4F25A /* Watch Calendar Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2119F17C296ECB2900E4F25A /* Watch Calendar Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2119F1942971687F00E4F25A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2119F1932971687F00E4F25A /* GoogleService-Info.plist */; };
-		2119F19729727B4800E4F25A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2119F19629727B4800E4F25A /* FirebaseAnalytics */; };
 		211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB55E26A80AE900655F2F /* ChartViewController.swift */; };
 		2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129B2F328F1553500B792E6 /* CalendarView.swift */; };
 		212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBD26D65676004561B0 /* AppDelegate.swift */; };
@@ -68,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21087CA32977F5C800CB445F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2119F17C296ECB2900E4F25A /* Watch Calendar Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch Calendar Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2119F17E296ECB2900E4F25A /* Watch_CalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_CalendarApp.swift; sourceTree = "<group>"; };
 		2119F180296ECB2900E4F25A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,9 +125,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21087C9A2977F32100CB445F /* FirebaseAnalyticsSwift in Frameworks */,
+				21087C9C2977F32100CB445F /* FirebaseAuth in Frameworks */,
 				21DACA3A28DB0D130068D97B /* RealmSwift in Frameworks */,
-				2119F19729727B4800E4F25A /* FirebaseAnalytics in Frameworks */,
+				21087CA02977F32100CB445F /* FirebaseFirestoreSwift in Frameworks */,
 				21DACA3828DB0D130068D97B /* Realm in Frameworks */,
+				21087CA22977F32100CB445F /* FirebaseStorage in Frameworks */,
+				21087C982977F32100CB445F /* FirebaseAnalytics in Frameworks */,
+				21087C9E2977F32100CB445F /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +222,7 @@
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
 				2119F1932971687F00E4F25A /* GoogleService-Info.plist */,
 				216A46B1295B69B600EC1D52 /* ViewController.swift */,
+				21087CA32977F5C800CB445F /* LoginViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -287,7 +300,12 @@
 			packageProductDependencies = (
 				21DACA3728DB0D130068D97B /* Realm */,
 				21DACA3928DB0D130068D97B /* RealmSwift */,
-				2119F19629727B4800E4F25A /* FirebaseAnalytics */,
+				21087C972977F32100CB445F /* FirebaseAnalytics */,
+				21087C992977F32100CB445F /* FirebaseAnalyticsSwift */,
+				21087C9B2977F32100CB445F /* FirebaseAuth */,
+				21087C9D2977F32100CB445F /* FirebaseFirestore */,
+				21087C9F2977F32100CB445F /* FirebaseFirestoreSwift */,
+				21087CA12977F32100CB445F /* FirebaseStorage */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* スタレコ.app */;
@@ -321,7 +339,7 @@
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
 				21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */,
-				2119F19529727B4800E4F25A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -387,6 +405,7 @@
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */,
 				21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */,
+				21087CA42977F5C800CB445F /* LoginViewController.swift in Sources */,
 				2189C52E28F3914D00A5BA34 /* StrorageChartView.swift in Sources */,
 				212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */,
 				216A46B2295B69B700EC1D52 /* ViewController.swift in Sources */,
@@ -704,12 +723,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2119F19529727B4800E4F25A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 		21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
@@ -723,10 +742,35 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2119F19629727B4800E4F25A /* FirebaseAnalytics */ = {
+		21087C972977F32100CB445F /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2119F19529727B4800E4F25A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		21087C992977F32100CB445F /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		21087C9B2977F32100CB445F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		21087C9D2977F32100CB445F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		21087C9F2977F32100CB445F /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		21087CA12977F32100CB445F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 		21DACA3728DB0D130068D97B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

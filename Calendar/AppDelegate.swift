@@ -12,18 +12,6 @@ import RealmSwift
 import FirebaseCore
 
 @main
-//struct YourApp: App {
-//    // register app delegate for Firebase setup
-//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-//
-//    var body: some Scene {
-//        WindowGroup {
-//            NavigationView {
-//                ContentView()
-//            }
-//        }
-//    }
-//}
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -32,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             schemaVersion: 1,
             migrationBlock: nil,
             deleteRealmIfMigrationNeeded: true)
-        return true
 
         FirebaseApp.configure()
+        return true
     }
 
     // MARK: UISceneSession Lifecycle
