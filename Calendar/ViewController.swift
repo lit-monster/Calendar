@@ -86,36 +86,3 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
 
 }
 
-//import UIKit
-//import CoreMotion
-//import Foundation
-//import GravitySPM
-//
-//class ViewController: UIViewController, UICollisionBehaviorDelegate {
-//
-//    var gravity: Gravity?
-//    var gravityItems: [UIDynamicItem] = []
-//
-//    override func viewDidLoad() {
-//    }
-//
-//    @IBAction func createBoxes() {
-//        let posX = arc4random() % 320;
-//        let box = UIView()
-//        box.frame = CGRect(x: Int(posX), y: 0, width: 100, height: 100)
-//        box.backgroundColor = .red
-//        box.layer.cornerRadius = 50
-//        view.addSubview(box)
-//        self.gravityItems.append(box)
-//
-//
-//        gravity = Gravity(gravityItems: gravityItems, collisionItems: nil,
-//            referenceView: self.view,
-//            boundary: UIBezierPath(rect: self.view.frame),
-//            queue: nil)
-//
-//        gravity?.enable()
-//    }
-//
-//
-//}

@@ -8,16 +8,8 @@
 import UIKit
 import SwiftUI
 import RealmSwift
-//import FirebaseCore
-//import FirebaseAnalytics
-//
-//class AppDelegate: NSObject, UIApplicationDelegate {
-//    func application(_ application: UIApplication,
-//                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//        FirebaseApp.configure()
-//        return true
-//    }
-//}
+
+import FirebaseCore
 
 @main
 //struct YourApp: App {
@@ -41,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             migrationBlock: nil,
             deleteRealmIfMigrationNeeded: true)
         return true
+
+        FirebaseApp.configure()
     }
 
     // MARK: UISceneSession Lifecycle

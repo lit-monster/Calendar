@@ -108,13 +108,13 @@ class StopWatchViewController: UIViewController {
         self.performSegue(withIdentifier: "totimer", sender: nil)
     }
     
-//    @IBAction func loginBonusButtonPressed() {
-//        let loginBonusViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginBonus")
-//        if let sheet = loginBonusViewController.sheetPresentationController {
-//            sheet.detents = [.custom { context in 0.8 * context.maximumDetentValue }]
-//        }
-//        self.present(loginBonusViewController, animated: true)
-//    }
+    //    @IBAction func loginBonusButtonPressed() {
+    //        let loginBonusViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginBonus")
+    //        if let sheet = loginBonusViewController.sheetPresentationController {
+    //            sheet.detents = [.custom { context in 0.8 * context.maximumDetentValue }]
+    //        }
+    //        self.present(loginBonusViewController, animated: true)
+    //    }
     
     //近接センサー
     @objc func proximityMonitorStateDidChange() {
@@ -141,7 +141,7 @@ class StopWatchViewController: UIViewController {
             timer.invalidate()
         }
     }
-    
+
     @objc func up() {
         count = count + 1
         let interval = Int(targetTimeInterval) - Int(count)
@@ -154,7 +154,8 @@ class StopWatchViewController: UIViewController {
             feedbackGenerator.prepare()
         }
     }
-    
+
+    //Gauge
     func updateGaugePrgress(remainingTime: String, remainingRate: Double) {
         for view in self.circularGaugeView.subviews {
             view.removeFromSuperview()
@@ -244,22 +245,6 @@ class StopWatchViewController: UIViewController {
             } else {
                 print("error")
             }
-
-            //            if ( aveHeartRate > sum/Double(heart.count) + 1 ) {
-            //                print("超集中")
-            //                focusRate = 3
-            //                self.result = "超集中"
-            //            } else if ( sum/Double(heart.count) + 1 > aveHeartRate &&  aveHeartRate > sum/Double(heart.count) - 1 ) {
-            //                print("集中")
-            //                focusRate = 2
-            //                self.result = "集中"
-            //            } else if ( sum/Double(heart.count) - 1 > aveHeartRate) {
-            //                print("普通")
-            //                focusRate = 1
-            //                self.result = "普通"
-            //            } else {
-            //                print("error")
-            //            }
         }
         myHealthStore.execute(query)
     }
