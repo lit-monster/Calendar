@@ -29,27 +29,28 @@ class LoginViewController: UIViewController {
     }
 
 
+    @IBAction func createNewUser(){}
 
-    @IBAction func createUser() {
-        let email = mailTextField.text ?? ""
-        let password = passTextField.text ?? ""
-
-        print(email)
-        print(password)
-        //新規会員登録
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            // 会員登録完了
-
-            if error == nil {
-                // homeに遷移
-            } else {
-                // alert出す
-            }
-
-            print(authResult)
-            print(error)
-        }
-    }
+//    @IBAction func createUser() {
+//        let email = mailTextField.text ?? ""
+//        let password = passTextField.text ?? ""
+//
+//        print(email)
+//        print(password)
+//        //新規会員登録
+//        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+//            // 会員登録完了
+//
+//            if error == nil {
+//                // homeに遷移
+//            } else {
+//                // alert出す
+//            }
+//
+//            print(authResult)
+//            print(error)
+//        }
+//    }
 
     @IBAction func login() {
         // login

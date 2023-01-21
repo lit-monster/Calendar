@@ -14,6 +14,7 @@
 		21087CA02977F32100CB445F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C9F2977F32100CB445F /* FirebaseFirestoreSwift */; };
 		21087CA22977F32100CB445F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 21087CA12977F32100CB445F /* FirebaseStorage */; };
 		21087CA42977F5C800CB445F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21087CA32977F5C800CB445F /* LoginViewController.swift */; };
+		21087CA72978172D00CB445F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21087CA62978172D00CB445F /* SignUpViewController.swift */; };
 		2119F17F296ECB2900E4F25A /* Watch_CalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119F17E296ECB2900E4F25A /* Watch_CalendarApp.swift */; };
 		2119F181296ECB2900E4F25A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119F180296ECB2900E4F25A /* ContentView.swift */; };
 		2119F183296ECB2E00E4F25A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2119F182296ECB2E00E4F25A /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		21087CA32977F5C800CB445F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		21087CA62978172D00CB445F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2119F17C296ECB2900E4F25A /* Watch Calendar Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch Calendar Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2119F17E296ECB2900E4F25A /* Watch_CalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_CalendarApp.swift; sourceTree = "<group>"; };
 		2119F180296ECB2900E4F25A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				2119F1932971687F00E4F25A /* GoogleService-Info.plist */,
 				216A46B1295B69B600EC1D52 /* ViewController.swift */,
 				21087CA32977F5C800CB445F /* LoginViewController.swift */,
+				21087CA62978172D00CB445F /* SignUpViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				2198C50B28758B71000C705C /* StudyRecordManager.swift in Sources */,
 				2196BA0B2856022800FA8D61 /* BarChart.swift in Sources */,
 				216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */,
+				21087CA72978172D00CB445F /* SignUpViewController.swift in Sources */,
 				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
 				2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */,
 				21B23BC728F1CF00001FBF65 /* IdentifiablePlace.swift in Sources */,
