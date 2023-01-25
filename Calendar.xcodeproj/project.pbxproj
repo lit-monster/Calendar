@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21087C982977F32100CB445F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C972977F32100CB445F /* FirebaseAnalytics */; };
-		21087C9A2977F32100CB445F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C992977F32100CB445F /* FirebaseAnalyticsSwift */; };
-		21087C9C2977F32100CB445F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C9B2977F32100CB445F /* FirebaseAuth */; };
-		21087C9E2977F32100CB445F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C9D2977F32100CB445F /* FirebaseFirestore */; };
-		21087CA02977F32100CB445F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21087C9F2977F32100CB445F /* FirebaseFirestoreSwift */; };
-		21087CA22977F32100CB445F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 21087CA12977F32100CB445F /* FirebaseStorage */; };
 		21087CA42977F5C800CB445F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21087CA32977F5C800CB445F /* LoginViewController.swift */; };
 		21087CA72978172D00CB445F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21087CA62978172D00CB445F /* SignUpViewController.swift */; };
 		2119F17F296ECB2900E4F25A /* Watch_CalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119F17E296ECB2900E4F25A /* Watch_CalendarApp.swift */; };
@@ -42,8 +36,36 @@
 		21B23BC728F1CF00001FBF65 /* IdentifiablePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */; };
 		21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */; };
 		21C93F3028BE54D700E807B6 /* StudyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2F28BE54D700E807B6 /* StudyRecord.swift */; };
-		21DACA3828DB0D130068D97B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21DACA3728DB0D130068D97B /* Realm */; };
-		21DACA3A28DB0D130068D97B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21DACA3928DB0D130068D97B /* RealmSwift */; };
+		21CAD5AE29812637005ED2FA /* AppAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5922981262D005ED2FA /* AppAuth.xcframework */; };
+		21CAD5B029812637005ED2FA /* FirebaseAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5932981262E005ED2FA /* FirebaseAuth.xcframework */; };
+		21CAD5B229812637005ED2FA /* gRPC-C++.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5942981262E005ED2FA /* gRPC-C++.xcframework */; };
+		21CAD5B429812638005ED2FA /* leveldb-library.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5952981262E005ED2FA /* leveldb-library.xcframework */; };
+		21CAD5B629812638005ED2FA /* GTMSessionFetcher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5962981262F005ED2FA /* GTMSessionFetcher.xcframework */; };
+		21CAD5B829812639005ED2FA /* FirebaseCoreExtension.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5972981262F005ED2FA /* FirebaseCoreExtension.xcframework */; };
+		21CAD5BA29812639005ED2FA /* FirebaseFirestoreSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59829812630005ED2FA /* FirebaseFirestoreSwift.xcframework */; };
+		21CAD5BC2981263A005ED2FA /* FirebaseAppCheckInterop.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59929812630005ED2FA /* FirebaseAppCheckInterop.xcframework */; };
+		21CAD5BE2981263B005ED2FA /* FirebaseInstallations.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59A29812630005ED2FA /* FirebaseInstallations.xcframework */; };
+		21CAD5C02981263C005ED2FA /* BoringSSL-GRPC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59B29812630005ED2FA /* BoringSSL-GRPC.xcframework */; };
+		21CAD5C22981263C005ED2FA /* FirebaseSharedSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59C29812631005ED2FA /* FirebaseSharedSwift.xcframework */; };
+		21CAD5C42981263D005ED2FA /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59D29812631005ED2FA /* GoogleUtilities.xcframework */; };
+		21CAD5C62981263E005ED2FA /* FirebaseAnalyticsSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59E29812631005ED2FA /* FirebaseAnalyticsSwift.xcframework */; };
+		21CAD5C82981263F005ED2FA /* FirebaseAuthInterop.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59F29812632005ED2FA /* FirebaseAuthInterop.xcframework */; };
+		21CAD5CA29812640005ED2FA /* abseil.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A029812632005ED2FA /* abseil.xcframework */; };
+		21CAD5CC29812641005ED2FA /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A129812632005ED2FA /* GoogleAppMeasurementIdentitySupport.xcframework */; };
+		21CAD5CE29812642005ED2FA /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A229812633005ED2FA /* nanopb.xcframework */; };
+		21CAD5D029812644005ED2FA /* FirebaseStorage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A329812633005ED2FA /* FirebaseStorage.xcframework */; };
+		21CAD5D229812645005ED2FA /* gRPC-Core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A429812633005ED2FA /* gRPC-Core.xcframework */; };
+		21CAD5D429812646005ED2FA /* FirebaseFirestore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A529812634005ED2FA /* FirebaseFirestore.xcframework */; };
+		21CAD5D629812647005ED2FA /* FirebaseAnalytics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A629812634005ED2FA /* FirebaseAnalytics.xcframework */; };
+		21CAD5D829812649005ED2FA /* FirebaseCoreInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A729812635005ED2FA /* FirebaseCoreInternal.xcframework */; };
+		21CAD5DA2981264A005ED2FA /* FBLPromises.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A829812635005ED2FA /* FBLPromises.xcframework */; };
+		21CAD5DC2981264C005ED2FA /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A929812635005ED2FA /* GoogleAppMeasurement.xcframework */; };
+		21CAD5DE2981264E005ED2FA /* FirebaseCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5AA29812636005ED2FA /* FirebaseCore.xcframework */; };
+		21CAD5E02981264F005ED2FA /* GTMAppAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5AB29812636005ED2FA /* GTMAppAuth.xcframework */; };
+		21CAD5E229812651005ED2FA /* GoogleSignIn.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5AC29812636005ED2FA /* GoogleSignIn.xcframework */; };
+		21CAD5E429812653005ED2FA /* Libuv-gRPC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5AD29812637005ED2FA /* Libuv-gRPC.xcframework */; };
+		21CAD5F329813D67005ED2FA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21CAD5F229813D67005ED2FA /* Realm */; };
+		21CAD5F529813D6B005ED2FA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21CAD5F429813D6B005ED2FA /* RealmSwift */; };
 		BAC3473028BE995F00895FBE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3472F28BE995F00895FBE /* Date.swift */; };
 		BAC3473328BE9B7200895FBE /* StudyCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473228BE9B7200895FBE /* StudyCondition.swift */; };
 		BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473428BE9E2F00895FBE /* ToyShape.swift */; };
@@ -109,6 +131,36 @@
 		21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiablePlace.swift; sourceTree = "<group>"; };
 		21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		21C93F2F28BE54D700E807B6 /* StudyRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyRecord.swift; sourceTree = "<group>"; };
+		21CAD5922981262D005ED2FA /* AppAuth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AppAuth.xcframework; path = Carthage/Build/AppAuth.xcframework; sourceTree = "<group>"; };
+		21CAD5932981262E005ED2FA /* FirebaseAuth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAuth.xcframework; path = Carthage/Build/FirebaseAuth.xcframework; sourceTree = "<group>"; };
+		21CAD5942981262E005ED2FA /* gRPC-C++.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "gRPC-C++.xcframework"; path = "Carthage/Build/gRPC-C++.xcframework"; sourceTree = "<group>"; };
+		21CAD5952981262E005ED2FA /* leveldb-library.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "leveldb-library.xcframework"; path = "Carthage/Build/leveldb-library.xcframework"; sourceTree = "<group>"; };
+		21CAD5962981262F005ED2FA /* GTMSessionFetcher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GTMSessionFetcher.xcframework; path = Carthage/Build/GTMSessionFetcher.xcframework; sourceTree = "<group>"; };
+		21CAD5972981262F005ED2FA /* FirebaseCoreExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseCoreExtension.xcframework; path = Carthage/Build/FirebaseCoreExtension.xcframework; sourceTree = "<group>"; };
+		21CAD59829812630005ED2FA /* FirebaseFirestoreSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseFirestoreSwift.xcframework; path = Carthage/Build/FirebaseFirestoreSwift.xcframework; sourceTree = "<group>"; };
+		21CAD59929812630005ED2FA /* FirebaseAppCheckInterop.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAppCheckInterop.xcframework; path = Carthage/Build/FirebaseAppCheckInterop.xcframework; sourceTree = "<group>"; };
+		21CAD59A29812630005ED2FA /* FirebaseInstallations.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseInstallations.xcframework; path = Carthage/Build/FirebaseInstallations.xcframework; sourceTree = "<group>"; };
+		21CAD59B29812630005ED2FA /* BoringSSL-GRPC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "BoringSSL-GRPC.xcframework"; path = "Carthage/Build/BoringSSL-GRPC.xcframework"; sourceTree = "<group>"; };
+		21CAD59C29812631005ED2FA /* FirebaseSharedSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseSharedSwift.xcframework; path = Carthage/Build/FirebaseSharedSwift.xcframework; sourceTree = "<group>"; };
+		21CAD59D29812631005ED2FA /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleUtilities.xcframework; path = Carthage/Build/GoogleUtilities.xcframework; sourceTree = "<group>"; };
+		21CAD59E29812631005ED2FA /* FirebaseAnalyticsSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAnalyticsSwift.xcframework; path = Carthage/Build/FirebaseAnalyticsSwift.xcframework; sourceTree = "<group>"; };
+		21CAD59F29812632005ED2FA /* FirebaseAuthInterop.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAuthInterop.xcframework; path = Carthage/Build/FirebaseAuthInterop.xcframework; sourceTree = "<group>"; };
+		21CAD5A029812632005ED2FA /* abseil.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = abseil.xcframework; path = Carthage/Build/abseil.xcframework; sourceTree = "<group>"; };
+		21CAD5A129812632005ED2FA /* GoogleAppMeasurementIdentitySupport.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleAppMeasurementIdentitySupport.xcframework; path = Carthage/Build/GoogleAppMeasurementIdentitySupport.xcframework; sourceTree = "<group>"; };
+		21CAD5A229812633005ED2FA /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = nanopb.xcframework; path = Carthage/Build/nanopb.xcframework; sourceTree = "<group>"; };
+		21CAD5A329812633005ED2FA /* FirebaseStorage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseStorage.xcframework; path = Carthage/Build/FirebaseStorage.xcframework; sourceTree = "<group>"; };
+		21CAD5A429812633005ED2FA /* gRPC-Core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "gRPC-Core.xcframework"; path = "Carthage/Build/gRPC-Core.xcframework"; sourceTree = "<group>"; };
+		21CAD5A529812634005ED2FA /* FirebaseFirestore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseFirestore.xcframework; path = Carthage/Build/FirebaseFirestore.xcframework; sourceTree = "<group>"; };
+		21CAD5A629812634005ED2FA /* FirebaseAnalytics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAnalytics.xcframework; path = Carthage/Build/FirebaseAnalytics.xcframework; sourceTree = "<group>"; };
+		21CAD5A729812635005ED2FA /* FirebaseCoreInternal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseCoreInternal.xcframework; path = Carthage/Build/FirebaseCoreInternal.xcframework; sourceTree = "<group>"; };
+		21CAD5A829812635005ED2FA /* FBLPromises.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBLPromises.xcframework; path = Carthage/Build/FBLPromises.xcframework; sourceTree = "<group>"; };
+		21CAD5A929812635005ED2FA /* GoogleAppMeasurement.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleAppMeasurement.xcframework; path = Carthage/Build/GoogleAppMeasurement.xcframework; sourceTree = "<group>"; };
+		21CAD5AA29812636005ED2FA /* FirebaseCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseCore.xcframework; path = Carthage/Build/FirebaseCore.xcframework; sourceTree = "<group>"; };
+		21CAD5AB29812636005ED2FA /* GTMAppAuth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GTMAppAuth.xcframework; path = Carthage/Build/GTMAppAuth.xcframework; sourceTree = "<group>"; };
+		21CAD5AC29812636005ED2FA /* GoogleSignIn.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleSignIn.xcframework; path = Carthage/Build/GoogleSignIn.xcframework; sourceTree = "<group>"; };
+		21CAD5AD29812637005ED2FA /* Libuv-gRPC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "Libuv-gRPC.xcframework"; path = "Carthage/Build/Libuv-gRPC.xcframework"; sourceTree = "<group>"; };
+		21CAD5E829812D47005ED2FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Static/Realm.framework; sourceTree = "<group>"; };
+		21CAD5ED29812DEB005ED2FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		BAC3472F28BE995F00895FBE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BAC3473228BE9B7200895FBE /* StudyCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCondition.swift; sourceTree = "<group>"; };
 		BAC3473428BE9E2F00895FBE /* ToyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyShape.swift; sourceTree = "<group>"; };
@@ -127,14 +179,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21087C9A2977F32100CB445F /* FirebaseAnalyticsSwift in Frameworks */,
-				21087C9C2977F32100CB445F /* FirebaseAuth in Frameworks */,
-				21DACA3A28DB0D130068D97B /* RealmSwift in Frameworks */,
-				21087CA02977F32100CB445F /* FirebaseFirestoreSwift in Frameworks */,
-				21DACA3828DB0D130068D97B /* Realm in Frameworks */,
-				21087CA22977F32100CB445F /* FirebaseStorage in Frameworks */,
-				21087C982977F32100CB445F /* FirebaseAnalytics in Frameworks */,
-				21087C9E2977F32100CB445F /* FirebaseFirestore in Frameworks */,
+				21CAD5E02981264F005ED2FA /* GTMAppAuth.xcframework in Frameworks */,
+				21CAD5C22981263C005ED2FA /* FirebaseSharedSwift.xcframework in Frameworks */,
+				21CAD5CE29812642005ED2FA /* nanopb.xcframework in Frameworks */,
+				21CAD5D229812645005ED2FA /* gRPC-Core.xcframework in Frameworks */,
+				21CAD5BE2981263B005ED2FA /* FirebaseInstallations.xcframework in Frameworks */,
+				21CAD5C02981263C005ED2FA /* BoringSSL-GRPC.xcframework in Frameworks */,
+				21CAD5D029812644005ED2FA /* FirebaseStorage.xcframework in Frameworks */,
+				21CAD5AE29812637005ED2FA /* AppAuth.xcframework in Frameworks */,
+				21CAD5CA29812640005ED2FA /* abseil.xcframework in Frameworks */,
+				21CAD5F329813D67005ED2FA /* Realm in Frameworks */,
+				21CAD5D629812647005ED2FA /* FirebaseAnalytics.xcframework in Frameworks */,
+				21CAD5D429812646005ED2FA /* FirebaseFirestore.xcframework in Frameworks */,
+				21CAD5BC2981263A005ED2FA /* FirebaseAppCheckInterop.xcframework in Frameworks */,
+				21CAD5C62981263E005ED2FA /* FirebaseAnalyticsSwift.xcframework in Frameworks */,
+				21CAD5DA2981264A005ED2FA /* FBLPromises.xcframework in Frameworks */,
+				21CAD5B029812637005ED2FA /* FirebaseAuth.xcframework in Frameworks */,
+				21CAD5E229812651005ED2FA /* GoogleSignIn.xcframework in Frameworks */,
+				21CAD5DC2981264C005ED2FA /* GoogleAppMeasurement.xcframework in Frameworks */,
+				21CAD5F529813D6B005ED2FA /* RealmSwift in Frameworks */,
+				21CAD5B629812638005ED2FA /* GTMSessionFetcher.xcframework in Frameworks */,
+				21CAD5C82981263F005ED2FA /* FirebaseAuthInterop.xcframework in Frameworks */,
+				21CAD5C42981263D005ED2FA /* GoogleUtilities.xcframework in Frameworks */,
+				21CAD5CC29812641005ED2FA /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */,
+				21CAD5B829812639005ED2FA /* FirebaseCoreExtension.xcframework in Frameworks */,
+				21CAD5DE2981264E005ED2FA /* FirebaseCore.xcframework in Frameworks */,
+				21CAD5D829812649005ED2FA /* FirebaseCoreInternal.xcframework in Frameworks */,
+				21CAD5BA29812639005ED2FA /* FirebaseFirestoreSwift.xcframework in Frameworks */,
+				21CAD5B429812638005ED2FA /* leveldb-library.xcframework in Frameworks */,
+				21CAD5E429812653005ED2FA /* Libuv-gRPC.xcframework in Frameworks */,
+				21CAD5B229812637005ED2FA /* gRPC-C++.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +307,36 @@
 		21A4B7CC28A74CF200699C36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21CAD5E829812D47005ED2FA /* Realm.framework */,
+				21CAD5ED29812DEB005ED2FA /* Realm.framework */,
+				21CAD5A029812632005ED2FA /* abseil.xcframework */,
+				21CAD5922981262D005ED2FA /* AppAuth.xcframework */,
+				21CAD59B29812630005ED2FA /* BoringSSL-GRPC.xcframework */,
+				21CAD5A829812635005ED2FA /* FBLPromises.xcframework */,
+				21CAD5A629812634005ED2FA /* FirebaseAnalytics.xcframework */,
+				21CAD59E29812631005ED2FA /* FirebaseAnalyticsSwift.xcframework */,
+				21CAD59929812630005ED2FA /* FirebaseAppCheckInterop.xcframework */,
+				21CAD5932981262E005ED2FA /* FirebaseAuth.xcframework */,
+				21CAD59F29812632005ED2FA /* FirebaseAuthInterop.xcframework */,
+				21CAD5AA29812636005ED2FA /* FirebaseCore.xcframework */,
+				21CAD5972981262F005ED2FA /* FirebaseCoreExtension.xcframework */,
+				21CAD5A729812635005ED2FA /* FirebaseCoreInternal.xcframework */,
+				21CAD5A529812634005ED2FA /* FirebaseFirestore.xcframework */,
+				21CAD59829812630005ED2FA /* FirebaseFirestoreSwift.xcframework */,
+				21CAD59A29812630005ED2FA /* FirebaseInstallations.xcframework */,
+				21CAD59C29812631005ED2FA /* FirebaseSharedSwift.xcframework */,
+				21CAD5A329812633005ED2FA /* FirebaseStorage.xcframework */,
+				21CAD5A929812635005ED2FA /* GoogleAppMeasurement.xcframework */,
+				21CAD5A129812632005ED2FA /* GoogleAppMeasurementIdentitySupport.xcframework */,
+				21CAD5AC29812636005ED2FA /* GoogleSignIn.xcframework */,
+				21CAD59D29812631005ED2FA /* GoogleUtilities.xcframework */,
+				21CAD5942981262E005ED2FA /* gRPC-C++.xcframework */,
+				21CAD5A429812633005ED2FA /* gRPC-Core.xcframework */,
+				21CAD5AB29812636005ED2FA /* GTMAppAuth.xcframework */,
+				21CAD5962981262F005ED2FA /* GTMSessionFetcher.xcframework */,
+				21CAD5952981262E005ED2FA /* leveldb-library.xcframework */,
+				21CAD5AD29812637005ED2FA /* Libuv-gRPC.xcframework */,
+				21CAD5A229812633005ED2FA /* nanopb.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,14 +405,8 @@
 			);
 			name = Calendar;
 			packageProductDependencies = (
-				21DACA3728DB0D130068D97B /* Realm */,
-				21DACA3928DB0D130068D97B /* RealmSwift */,
-				21087C972977F32100CB445F /* FirebaseAnalytics */,
-				21087C992977F32100CB445F /* FirebaseAnalyticsSwift */,
-				21087C9B2977F32100CB445F /* FirebaseAuth */,
-				21087C9D2977F32100CB445F /* FirebaseFirestore */,
-				21087C9F2977F32100CB445F /* FirebaseFirestoreSwift */,
-				21087CA12977F32100CB445F /* FirebaseStorage */,
+				21CAD5F229813D67005ED2FA /* Realm */,
+				21CAD5F429813D6B005ED2FA /* RealmSwift */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* スタレコ.app */;
@@ -341,8 +439,7 @@
 			);
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
-				21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */,
-				21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				21CAD5F129813D67005ED2FA /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -647,6 +744,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_TEAM = F584ZURPSX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "スタレコ";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -675,6 +777,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_TEAM = F584ZURPSX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "スタレコ";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -727,15 +834,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		21CAD5F129813D67005ED2FA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
@@ -746,44 +845,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		21087C972977F32100CB445F /* FirebaseAnalytics */ = {
+		21CAD5F229813D67005ED2FA /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		21087C992977F32100CB445F /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		21087C9B2977F32100CB445F /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		21087C9D2977F32100CB445F /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		21087C9F2977F32100CB445F /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
-		21087CA12977F32100CB445F /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21087C962977F32100CB445F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		21DACA3728DB0D130068D97B /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 21CAD5F129813D67005ED2FA /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		21DACA3928DB0D130068D97B /* RealmSwift */ = {
+		21CAD5F429813D6B005ED2FA /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 21DACA3628DB0D130068D97B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 21CAD5F129813D67005ED2FA /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -13,7 +13,15 @@ class LoginViewController: UIViewController {
 
     @IBOutlet var mailTextField: UITextField!
     @IBOutlet var passTextField: UITextField!
-
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var loginBlurView: UIVisualEffectView!{
+        didSet {
+            loginBlurView.layer.cornerCurve = .continuous
+            loginBlurView.layer.cornerRadius = 32
+            loginBlurView.clipsToBounds = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

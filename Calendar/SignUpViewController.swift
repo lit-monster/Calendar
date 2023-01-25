@@ -13,6 +13,13 @@ class SignUpViewController: UIViewController {
 
     @IBOutlet var mailTextField: UITextField!
     @IBOutlet var passTextField: UITextField!
+    @IBOutlet weak var signUpBlurView: UIVisualEffectView!{
+        didSet {
+            signUpBlurView.layer.cornerCurve = .continuous
+            signUpBlurView.layer.cornerRadius = 32
+            signUpBlurView.clipsToBounds = true
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
