@@ -214,6 +214,7 @@
                     <connections>
                         <outlet property="mailTextField" destination="KVX-bH-5JC" id="fNe-af-POb"/>
                         <outlet property="passTextField" destination="Zik-7V-Xov" id="j6z-vb-jgX"/>
+                        <outlet property="signUpBlurView" destination="g2B-HH-c5C" id="Btd-7d-1SK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPz-6Y-br2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

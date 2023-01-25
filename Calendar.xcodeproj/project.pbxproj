@@ -282,6 +282,7 @@
 		21A1D498268C67AD00C07A86 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				21CAD5F6298143DE005ED2FA /* Login */,
 				BAC3473128BE9B5800895FBE /* Entity */,
 				BAC3472E28BE995500895FBE /* Helper */,
 				213C4CE7293760DB00BC8C84 /* Calendar.entitlements */,
@@ -298,8 +299,6 @@
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
 				2119F1932971687F00E4F25A /* GoogleService-Info.plist */,
 				216A46B1295B69B600EC1D52 /* ViewController.swift */,
-				21087CA32977F5C800CB445F /* LoginViewController.swift */,
-				21087CA62978172D00CB445F /* SignUpViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -339,6 +338,15 @@
 				21CAD5A229812633005ED2FA /* nanopb.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21CAD5F6298143DE005ED2FA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				21087CA32977F5C800CB445F /* LoginViewController.swift */,
+				21087CA62978172D00CB445F /* SignUpViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		BAC3472E28BE995500895FBE /* Helper */ = {
