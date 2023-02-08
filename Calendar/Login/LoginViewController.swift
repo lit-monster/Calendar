@@ -37,45 +37,80 @@ class LoginViewController: UIViewController {
     }
 
 
-    @IBAction func createNewUser(){}
-
-//    @IBAction func createUser() {
+    @IBAction func createNewUser(){
 //        let email = mailTextField.text ?? ""
 //        let password = passTextField.text ?? ""
 //
 //        print(email)
 //        print(password)
-//        //新規会員登録
-//        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-//            // 会員登録完了
-//
-//            if error == nil {
-//                // homeに遷移
+//        //ログイン
+//        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+//            // ユーザー作成が成功したら、ユーザーのデータをデータベース(FireSrore)に書き込む
+//            if let error = error {
+//                print(error)
 //            } else {
-//                // alert出す
+//                print("seikou")
+//                print(authResult?.user.uid)
 //            }
-//
-//            print(authResult)
-//            print(error)
 //        }
-//    }
+
+
+    }
+
+    //    @IBAction func createUser() {
+    //        let email = mailTextField.text ?? ""
+    //        let password = passTextField.text ?? ""
+    //
+    //        print(email)
+    //        print(password)
+    //        //新規会員登録
+    //        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+    //            // 会員登録完了
+    //
+    //            if error == nil {
+    //                // homeに遷移
+    //            } else {
+    //                // alert出す
+    //            }
+    //
+    //            print(authResult)
+    //            print(error)
+    //        }
+    //    }
 
     @IBAction func login() {
+        let email = mailTextField.text ?? ""
+        let password = passTextField.text ?? ""
+
+        print(email)
+        print(password)
+        //ログイン
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            // ユーザー作成が成功したら、ユーザーのデータをデータベース(FireSrore)に書き込む
+            if let error = error {
+                print(error)
+            } else {
+                print("seikou")
+                print(authResult?.user.uid)
+
+                self.dismiss(animated: true)
+            }
+        }
         // login
-//        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-//
-//            guard let strongSelf = self else { return }
-//            print(authResult?.user.uid)
-//
-//            if error == nil {
-//                // homeに遷移
-//            } else {
-//                // alert出す
-//            }
-//
-//            print(authResult)
-//            print(error)
-//        }
+        //        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+        //
+        //            guard let strongSelf = self else { return }
+        //            print(authResult?.user.uid)
+        //
+        //            if error == nil {
+        //                // homeに遷移
+        //            } else {
+        //                // alert出す
+        //            }
+        //
+        //            print(authResult)
+        //            print(error)
+        //        }
 
     }
 

@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import HealthKit
+import FirebaseAuth
 
 class StopWatchViewController: UIViewController {
     let feedbackGenerator = UINotificationFeedbackGenerator()
@@ -44,6 +45,17 @@ class StopWatchViewController: UIViewController {
     var stdev: Double = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
+        //ログインしてるか
+        try! Auth.auth().signOut()
+        let user = Auth.auth().currentUser
+        print(user?.uid)
+        // ログインしてたら
+        if user != nil {
+            
+        } else {
+            performSegue(withIdentifier: "toLogin", sender: nil)
+        }
+
         // 近接センサーの有効化
         UIDevice.current.isProximityMonitoringEnabled = true
         // 近接センサーのON-Offが切り替わる通知
