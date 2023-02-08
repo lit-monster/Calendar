@@ -427,7 +427,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="calendar" catalog="system" id="Ms5-Vt-kPf">
                             <color key="tintColor" systemColor="systemCyanColor"/>
                             <connections>
-                                <action selector="loginBonusButtonPressed" destination="Khu-uL-2wZ" id="zOe-8o-9nW"/>
+                                <action selector="loginBonusButtonPressed" destination="Bkz-OM-wML" id="7ou-lB-l1z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

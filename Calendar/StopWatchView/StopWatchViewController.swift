@@ -120,13 +120,13 @@ class StopWatchViewController: UIViewController {
         self.performSegue(withIdentifier: "totimer", sender: nil)
     }
     
-    //    @IBAction func loginBonusButtonPressed() {
-    //        let loginBonusViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginBonus")
-    //        if let sheet = loginBonusViewController.sheetPresentationController {
-    //            sheet.detents = [.custom { context in 0.8 * context.maximumDetentValue }]
-    //        }
-    //        self.present(loginBonusViewController, animated: true)
-    //    }
+    @IBAction func loginBonusButtonPressed() {
+        let loginBonusViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginBonus")
+        if let sheet = loginBonusViewController.sheetPresentationController {
+            sheet.detents = [.custom { context in 0.8 * context.maximumDetentValue }]
+        }
+        self.present(loginBonusViewController, animated: true)
+    }
     
     //近接センサー
     @objc func proximityMonitorStateDidChange() {
