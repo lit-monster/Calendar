@@ -46,7 +46,7 @@ class StopWatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //ログインしてるか
-        try! Auth.auth().signOut()
+//        try! Auth.auth().signOut()
         let user = Auth.auth().currentUser
         print(user?.uid)
         // ログインしてたら

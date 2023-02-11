@@ -156,8 +156,8 @@
             filePath = "Calendar/StopWatchView/TimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "heart"
             landmarkType = "24">
          </BreakpointContent>
@@ -172,8 +172,8 @@
             filePath = "Calendar/StopWatchView/TimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "TimerViewController"
             landmarkType = "3">
          </BreakpointContent>

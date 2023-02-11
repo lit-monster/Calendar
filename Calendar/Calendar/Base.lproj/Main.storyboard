@@ -20,8 +20,8 @@
                         <viewLayoutGuide key="safeArea" id="w3Q-AQ-ReX"/>
                         <color key="backgroundColor" name="summary"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="分析" id="ZHw-Vm-2Br">
-                        <imageReference key="image" image="chart.bar.xaxis" catalog="system" renderingMode="hierarchical-single">
+                    <tabBarItem key="tabBarItem" title="記録" id="ZHw-Vm-2Br">
+                        <imageReference key="image" image="person.fill" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color name="tabbar"/>
                                 <color systemColor="secondaryLabelColor"/>
@@ -36,6 +36,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YP-YC-pVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2129" y="-4302"/>
+        </scene>
+        <!--共有-->
+        <scene sceneID="66v-IL-Pt0">
+            <objects>
+                <viewController id="8kI-rq-Xm5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="her-ED-feJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLS-QK-R9c">
+                                <rect key="frame" x="152" y="271" width="111" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="ログアウト"/>
+                                <connections>
+                                    <action selector="Logout:" destination="yVh-Uc-MHQ" eventType="touchUpInside" id="ABL-LK-3P1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gSw-wY-Exu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="共有" image="person.3.fill" catalog="system" selectedImage="person.3.fill" id="2Dv-Sd-b3g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceJ-VO-OH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="yVh-Uc-MHQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1371" y="-4302"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="TAB-dQ-Fxn">
@@ -351,10 +379,6 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone1" translatesAutoresizingMaskIntoConstraints="NO" id="twu-yW-FTT">
                                         <rect key="frame" x="0.0" y="418" width="414" height="346"/>
                                     </imageView>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qB-NO-1gx">
-                                        <rect key="frame" x="184" y="662" width="49" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-V1-dbv">
                                         <rect key="frame" x="56.5" y="396" width="301" height="21"/>
                                         <constraints>
@@ -374,13 +398,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="終了"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="心拍機能を使う" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-qt-IHH">
-                                        <rect key="frame" x="146" y="616" width="122" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="zb5-Xx-qs5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                                     </imageView>
@@ -447,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgb-7e-Wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2866.666666666667" y="-3571.875"/>
+            <point key="canvasLocation" x="-2865" y="-3573"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="xe9-1b-h9l">
@@ -462,11 +479,12 @@
                     <connections>
                         <segue destination="7v2-jG-oNr" kind="relationship" relationship="viewControllers" id="agh-yD-Ixk"/>
                         <segue destination="Khu-uL-2wZ" kind="relationship" relationship="viewControllers" id="9ag-fc-pv2"/>
+                        <segue destination="8kI-rq-Xm5" kind="relationship" relationship="viewControllers" id="uml-Ai-R8Y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOC-sH-4Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2867" y="-5058"/>
+            <point key="canvasLocation" x="-2130" y="-5058"/>
         </scene>
         <!--計測-->
         <scene sceneID="uYG-e8-Jkv">
@@ -515,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSF-2C-Cbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3613" y="-4302"/>
+            <point key="canvasLocation" x="-3607" y="-3573"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="Exw-a1-a48">
@@ -680,6 +698,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="心拍機能による集中度合いの推定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQ2-lK-4co">
+                                <rect key="frame" x="20" y="782" width="260" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4v-wA-yIR">
+                                <rect key="frame" x="305" y="777" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FNJ-fq-lAC"/>
                         <color key="backgroundColor" name="summary"/>
@@ -700,8 +729,11 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="focusLabel" destination="k26-Dq-XwG" id="CrQ-Qu-rfi"/>
+                        <outlet property="haertRateStackView" destination="ysW-ea-tPK" id="Sfq-l0-fSW"/>
                         <outlet property="heart" destination="FBG-6M-GDU" id="MAC-Sl-7t4"/>
                         <outlet property="heartRateLabel" destination="th5-PQ-s9b" id="T6K-v5-rYa"/>
+                        <outlet property="heartRateSwith" destination="K4v-wA-yIR" id="tIq-k7-e56"/>
                         <outlet property="rate" destination="60Y-AU-fuV" id="22g-On-rgU"/>
                         <outlet property="recoLabal" destination="ZW4-cC-H09" id="Ufw-eM-JLd"/>
                         <outlet property="totalBlurView" destination="wn1-c1-b7O" id="StE-ug-pe7"/>
@@ -17959,8 +17991,9 @@ AAAAAAAAAAAAAAAPwZY
 </mutableData>
         </image>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
         <image name="iPhone1" width="347" height="411"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="quality1" width="132" height="87"/>
         <image name="quality2" width="132" height="87"/>
         <image name="quality3" width="132" height="87"/>

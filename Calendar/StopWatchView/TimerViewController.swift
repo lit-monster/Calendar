@@ -28,6 +28,11 @@ class TimerViewController: UIViewController {
 
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var heartRateLabel: UILabel!
+
+    @IBOutlet weak var focusLabel: UILabel!
+    @IBOutlet weak var haertRateStackView: UIStackView!
+    @IBOutlet weak var heartRateSwith: UISwitch!
+    
     @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var recoLabal: UILabel!
     @IBOutlet weak var totalBlurView: UIVisualEffectView! {
@@ -129,6 +134,9 @@ class TimerViewController: UIViewController {
         count = 0
         feedbackGenerator.notificationOccurred(.warning)
     }
+
+    
+
 }
 
 extension TimerViewController: CLLocationManagerDelegate {
