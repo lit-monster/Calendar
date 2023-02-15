@@ -46,7 +46,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLS-QK-R9c">
-                                <rect key="frame" x="152" y="271" width="111" height="35"/>
+                                <rect key="frame" x="283" y="59" width="111" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="ログアウト"/>
@@ -63,7 +63,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceJ-VO-OH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yVh-Uc-MHQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1371" y="-4302"/>
+            <point key="canvasLocation" x="-1371.0144927536232" y="-4302.4553571428569"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="TAB-dQ-Fxn">
@@ -338,24 +338,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-MS-WAu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                                 <subviews>
-                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYR-xB-pSe">
-                                        <rect key="frame" x="42" y="160" width="330" height="224"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WrQ-e6-CQ3">
-                                            <rect key="frame" x="0.0" y="0.0" width="330" height="224"/>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekO-6Z-ZQw">
+                                        <rect key="frame" x="15" y="160" width="399" height="286"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4yS-Bm-VBY">
+                                            <rect key="frame" x="0.0" y="0.0" width="399" height="286"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
-                                                    <rect key="frame" x="5" y="51" width="320" height="173"/>
+                                                <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
+                                                    <rect key="frame" x="48.5" y="56" width="302" height="173"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="320" id="28M-fY-dSJ"/>
-                                                        <constraint firstAttribute="height" constant="173" id="lXi-S6-gic"/>
+                                                        <constraint firstAttribute="height" constant="173" id="cEN-4R-NOi"/>
+                                                        <constraint firstAttribute="width" constant="302" id="vcE-cN-jhZ"/>
                                                     </constraints>
                                                 </datePicker>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標時間を設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-0L-snf">
-                                                    <rect key="frame" x="104" y="15" width="122" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="目標時間を設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-0L-snf">
+                                                    <rect key="frame" x="58.5" y="56" width="282" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="jDF-wp-3Eb"/>
-                                                        <constraint firstAttribute="width" constant="122" id="wfb-5A-xBv"/>
+                                                        <constraint firstAttribute="height" constant="41" id="2t3-oR-vtS"/>
+                                                        <constraint firstAttribute="width" constant="282" id="ect-4h-xvS"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -363,24 +364,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NT6-0L-snf" firstAttribute="centerX" secondItem="WrQ-e6-CQ3" secondAttribute="centerX" id="6tf-4r-RdK"/>
-                                                <constraint firstItem="mPE-cC-flE" firstAttribute="top" secondItem="NT6-0L-snf" secondAttribute="bottom" constant="15" id="MGy-Gw-OXI"/>
-                                                <constraint firstItem="mPE-cC-flE" firstAttribute="centerX" secondItem="WrQ-e6-CQ3" secondAttribute="centerX" id="d7t-iR-xzT"/>
-                                                <constraint firstAttribute="bottom" secondItem="mPE-cC-flE" secondAttribute="bottom" id="hj9-ls-ZJz"/>
-                                                <constraint firstItem="NT6-0L-snf" firstAttribute="top" secondItem="WrQ-e6-CQ3" secondAttribute="top" constant="15" id="li4-nv-iWG"/>
+                                                <constraint firstItem="mPE-cC-flE" firstAttribute="centerX" secondItem="4yS-Bm-VBY" secondAttribute="centerX" id="ezU-1e-w0h"/>
+                                                <constraint firstItem="NT6-0L-snf" firstAttribute="centerX" secondItem="4yS-Bm-VBY" secondAttribute="centerX" id="rZe-6C-maD"/>
                                             </constraints>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="330" id="5kG-QY-GFf"/>
-                                            <constraint firstAttribute="height" constant="224" id="xHd-j4-Rqu"/>
-                                        </constraints>
                                         <blurEffect style="regular"/>
                                     </visualEffectView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone1" translatesAutoresizingMaskIntoConstraints="NO" id="twu-yW-FTT">
-                                        <rect key="frame" x="0.0" y="418" width="414" height="346"/>
+                                        <rect key="frame" x="0.0" y="353" width="414" height="411"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-V1-dbv">
-                                        <rect key="frame" x="56.5" y="396" width="301" height="21"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneを裏返して勉強しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-V1-dbv">
+                                        <rect key="frame" x="56.5" y="331" width="301" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="7zK-jo-A7o"/>
                                         </constraints>
@@ -388,12 +382,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arc-Lg-guP">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arc-Lg-guP">
                                         <rect key="frame" x="177.5" y="240" width="59" height="34"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="開始"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSK-tX-5nu">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSK-tX-5nu">
                                         <rect key="frame" x="177.5" y="329.5" width="59" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="終了"/>
@@ -408,18 +402,15 @@
                                     <constraint firstAttribute="trailing" secondItem="twu-yW-FTT" secondAttribute="trailing" id="2ag-Uv-VBd"/>
                                     <constraint firstItem="twu-yW-FTT" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" id="2qr-CJ-mj9"/>
                                     <constraint firstItem="zb5-Xx-qs5" firstAttribute="leading" secondItem="yd2-MS-WAu" secondAttribute="leading" id="3Lg-i2-W7v"/>
-                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="66A-1f-bPs"/>
                                     <constraint firstAttribute="bottom" secondItem="twu-yW-FTT" secondAttribute="bottom" id="8OB-3M-YS6"/>
                                     <constraint firstItem="arc-Lg-guP" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="A6r-od-gYl"/>
                                     <constraint firstItem="zb5-Xx-qs5" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" id="AII-sV-hNb"/>
                                     <constraint firstItem="1tE-V1-dbv" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="E2x-Kh-t5l"/>
                                     <constraint firstItem="KSK-tX-5nu" firstAttribute="top" secondItem="arc-Lg-guP" secondAttribute="bottom" constant="55.5" id="HDU-tx-lv1"/>
                                     <constraint firstAttribute="bottom" secondItem="KSK-tX-5nu" secondAttribute="bottom" constant="400" id="SCq-vP-hqA"/>
-                                    <constraint firstItem="1tE-V1-dbv" firstAttribute="top" secondItem="fYR-xB-pSe" secondAttribute="bottom" constant="12" id="ae6-Ck-3BB"/>
                                     <constraint firstAttribute="trailing" secondItem="zb5-Xx-qs5" secondAttribute="trailing" id="gXs-UY-jlY"/>
                                     <constraint firstAttribute="bottom" secondItem="zb5-Xx-qs5" secondAttribute="bottom" id="iCB-jV-er8"/>
                                     <constraint firstItem="KSK-tX-5nu" firstAttribute="centerX" secondItem="yd2-MS-WAu" secondAttribute="centerX" id="qwv-bG-HwM"/>
-                                    <constraint firstItem="fYR-xB-pSe" firstAttribute="top" secondItem="yd2-MS-WAu" secondAttribute="top" constant="160" id="uVt-bC-5TA"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -454,7 +445,6 @@
                         <outlet property="inturrptedView" destination="yd2-MS-WAu" id="xVh-mh-d4h"/>
                         <outlet property="iphone" destination="twu-yW-FTT" id="W06-vj-AaF"/>
                         <outlet property="picker" destination="mPE-cC-flE" id="Vy4-BJ-XZQ"/>
-                        <outlet property="pickerBlurView" destination="fYR-xB-pSe" id="ZDs-Aw-EQN"/>
                         <outlet property="startButton" destination="arc-Lg-guP" id="7E8-P2-TSK"/>
                         <outlet property="stopButton" destination="KSK-tX-5nu" id="OID-bM-FgF"/>
                         <outlet property="upset" destination="1tE-V1-dbv" id="Yim-tr-Ax1"/>
@@ -464,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgb-7e-Wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2865" y="-3573"/>
+            <point key="canvasLocation" x="-2865.217391304348" y="-3573.2142857142853"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="xe9-1b-h9l">
@@ -484,7 +474,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOC-sH-4Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2130" y="-5058"/>
+            <point key="canvasLocation" x="-2867" y="-5046"/>
         </scene>
         <!--計測-->
         <scene sceneID="uYG-e8-Jkv">
