@@ -25,11 +25,11 @@ class StopWatchViewController: UIViewController {
             
         }
     }
-    @IBOutlet weak var pickerBlurView: UIVisualEffectView! {
+    @IBOutlet weak var PickerBlurView: UIVisualEffectView! {
         didSet {
-            pickerBlurView.layer.cornerCurve = .continuous
-            pickerBlurView.layer.cornerRadius = 16
-            pickerBlurView.clipsToBounds = true
+            PickerBlurView.layer.cornerCurve = .continuous
+            PickerBlurView.layer.cornerRadius = 16
+            PickerBlurView.clipsToBounds = true
         }
     }
     
