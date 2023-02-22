@@ -11,6 +11,7 @@ struct CircularGauge: View {
     
     var remainingRate: Double
     var remainingTimeString: String
+    var gaugeText: String
     var body: some View {
         ZStack {
             Circle()
@@ -31,7 +32,7 @@ struct CircularGauge: View {
                 .rotationEffect(.degrees(-90))
                 .animation(.easeOut, value: remainingRate)
             VStack {
-                Text("目標時間まで")
+                Text(gaugeText)
                     .font(.headline)
                 Text(remainingTimeString)
                     .font(.system(size: 64, weight: .bold, design: .rounded))
@@ -44,6 +45,6 @@ struct CircularGauge: View {
 
 struct CircularGauge_Previews: PreviewProvider {
     static var previews: some View {
-        CircularGauge(remainingRate: 0.4, remainingTimeString: "01:40")
+        CircularGauge(remainingRate: 0.4, remainingTimeString: "01:40", gaugeText: "目標時間")
     }
 }

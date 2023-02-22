@@ -344,7 +344,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="229"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-cC-flE">
                                                     <rect key="frame" x="32" y="56" width="320" height="165"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="165" id="aSA-yC-FMI"/>

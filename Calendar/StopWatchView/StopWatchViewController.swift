@@ -156,23 +156,40 @@ class StopWatchViewController: UIViewController {
 
     @objc func up() {
         count = count + 1
-        let interval = Int(targetTimeInterval) - Int(count)
-        let seconds = interval % 60
-        let minutes = (interval / 60) % 60
-        let hours = (interval / 3600)
-        updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds),
-                           remainingRate: (targetTimeInterval - Double(count)) / targetTimeInterval)
+
+        var interval = Int(targetTimeInterval) - Int(count)
+
         if interval < 0 {
-            feedbackGenerator.prepare()
+            // 目標達成
+            interval = abs(interval)
+
+
+            let seconds = interval % 60
+            let minutes = (interval / 60) % 60
+            let hours = (interval / 3600)
+
+            //　GaugeViewの更新　remainingTimeにstringを渡すと、labelに表示
+            updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds),
+                               remainingRate: (targetTimeInterval - Double(count)) / targetTimeInterval, gaugeText: "目標達成")
+        } else {
+            // 目標未達
+
+            let seconds = interval % 60
+            let minutes = (interval / 60) % 60
+            let hours = (interval / 3600)
+            //　GaugeViewの更新　remainingTimeにstringを渡すと、labelに表示
+            updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds),
+                               remainingRate: (targetTimeInterval - Double(count)) / targetTimeInterval, gaugeText: "目標まで")
+
         }
     }
 
     //Gauge
-    func updateGaugePrgress(remainingTime: String, remainingRate: Double) {
+    func updateGaugePrgress(remainingTime: String, remainingRate: Double, gaugeText: String) {
         for view in self.circularGaugeView.subviews {
             view.removeFromSuperview()
         }
-        let vc = UIHostingController(rootView: CircularGauge(remainingRate: remainingRate, remainingTimeString: remainingTime))
+        let vc = UIHostingController(rootView: CircularGauge(remainingRate: remainingRate, remainingTimeString: remainingTime, gaugeText: gaugeText))
         self.addChild(vc)
         self.circularGaugeView.addSubview(vc.view)
         vc.didMove(toParent: self)
