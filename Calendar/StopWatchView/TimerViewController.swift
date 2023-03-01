@@ -8,12 +8,16 @@
 
 import UIKit
 import CoreLocation
+import FirebaseAuth
+import FirebaseFirestore
 
 
 class TimerViewController: UIViewController {
     var locationManager = CLLocationManager()
 
     let feedbackGenerator = UINotificationFeedbackGenerator()
+
+    let db = Firestore.firestore()
 
     var count: Int = 0
     var latestHeartRate: Double = 0.0
@@ -68,6 +72,8 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+
         feedbackGenerator.prepare()
 
         locationManager.delegate = self
@@ -79,6 +85,8 @@ class TimerViewController: UIViewController {
 
         if locationManager.authorizationStatus == .authorizedWhenInUse || locationManager.authorizationStatus == .authorizedAlways {
             locationManager.startUpdatingLocation()
+        } else {
+            fatalError()
         }
     }
 
@@ -130,12 +138,40 @@ class TimerViewController: UIViewController {
     }
 
     private func saveRecord(quality: Int) {
+        focusRate = quality
         StudyRecordManager.shared.saveRecord(quality: quality, count: count, lat: currentLatitude, long: currentLongitude)
+        createStudyRecord()
         count = 0
         feedbackGenerator.notificationOccurred(.warning)
     }
 
-    
+
+    func createStudyRecord() {
+        print(focusRate)
+        print(latestHeartRate)
+        print(currentLongitude)
+        print(currentLatitude)
+
+        // 書き込むコード。uid(ユーザーのID)とtime(勉強時間)とconcentrate(集中度)
+        self.db.collection("studyRecords7").document().setData([
+            "date": Date(),
+            "targetTime": targetTimeInterval,
+            "durationTime": count,
+            "concentrate": focusRate,
+            "heartRate": latestHeartRate,
+            "longitude": currentLongitude,
+            "latitude": currentLatitude,
+            "uid": Auth.auth().currentUser!.uid
+            
+        ]) { err in
+            if let err = err {
+                print("エラー: \(err)")
+            } else {
+                print("書き込み成功！")
+            }
+        }
+    }
+
 
 }
 

@@ -33,40 +33,14 @@
 		21A0D19729972DBC0099F810 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A0D19629972DBC0099F810 /* ShareViewController.swift */; };
 		21A1D4A3268C67B100C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A2268C67B100C07A86 /* Assets.xcassets */; };
 		21A1D4A6268C67B100C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */; };
+		21A2B5DC29AF558F00DA0AE9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21A2B5DB29AF558F00DA0AE9 /* Realm */; };
+		21A2B5DE29AF558F00DA0AE9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21A2B5DD29AF558F00DA0AE9 /* RealmSwift */; };
+		21A2B5E329AF58F300DA0AE9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21A2B5E229AF58F300DA0AE9 /* FirebaseAuth */; };
+		21A2B5E529AF591A00DA0AE9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21A2B5E429AF591A00DA0AE9 /* FirebaseFirestore */; };
 		21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B0A6DB28855BDF00CFE312 /* Main.storyboard */; };
 		21B23BC728F1CF00001FBF65 /* IdentifiablePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */; };
 		21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */; };
 		21C93F3028BE54D700E807B6 /* StudyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2F28BE54D700E807B6 /* StudyRecord.swift */; };
-		21CAD5AE29812637005ED2FA /* AppAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5922981262D005ED2FA /* AppAuth.xcframework */; };
-		21CAD5B029812637005ED2FA /* FirebaseAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5932981262E005ED2FA /* FirebaseAuth.xcframework */; };
-		21CAD5B229812637005ED2FA /* gRPC-C++.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5942981262E005ED2FA /* gRPC-C++.xcframework */; };
-		21CAD5B429812638005ED2FA /* leveldb-library.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5952981262E005ED2FA /* leveldb-library.xcframework */; };
-		21CAD5B629812638005ED2FA /* GTMSessionFetcher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5962981262F005ED2FA /* GTMSessionFetcher.xcframework */; };
-		21CAD5B829812639005ED2FA /* FirebaseCoreExtension.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5972981262F005ED2FA /* FirebaseCoreExtension.xcframework */; };
-		21CAD5BA29812639005ED2FA /* FirebaseFirestoreSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59829812630005ED2FA /* FirebaseFirestoreSwift.xcframework */; };
-		21CAD5BC2981263A005ED2FA /* FirebaseAppCheckInterop.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59929812630005ED2FA /* FirebaseAppCheckInterop.xcframework */; };
-		21CAD5BE2981263B005ED2FA /* FirebaseInstallations.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59A29812630005ED2FA /* FirebaseInstallations.xcframework */; };
-		21CAD5C02981263C005ED2FA /* BoringSSL-GRPC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59B29812630005ED2FA /* BoringSSL-GRPC.xcframework */; };
-		21CAD5C22981263C005ED2FA /* FirebaseSharedSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59C29812631005ED2FA /* FirebaseSharedSwift.xcframework */; };
-		21CAD5C42981263D005ED2FA /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59D29812631005ED2FA /* GoogleUtilities.xcframework */; };
-		21CAD5C62981263E005ED2FA /* FirebaseAnalyticsSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59E29812631005ED2FA /* FirebaseAnalyticsSwift.xcframework */; };
-		21CAD5C82981263F005ED2FA /* FirebaseAuthInterop.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD59F29812632005ED2FA /* FirebaseAuthInterop.xcframework */; };
-		21CAD5CA29812640005ED2FA /* abseil.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A029812632005ED2FA /* abseil.xcframework */; };
-		21CAD5CC29812641005ED2FA /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A129812632005ED2FA /* GoogleAppMeasurementIdentitySupport.xcframework */; };
-		21CAD5CE29812642005ED2FA /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A229812633005ED2FA /* nanopb.xcframework */; };
-		21CAD5D029812644005ED2FA /* FirebaseStorage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A329812633005ED2FA /* FirebaseStorage.xcframework */; };
-		21CAD5D229812645005ED2FA /* gRPC-Core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A429812633005ED2FA /* gRPC-Core.xcframework */; };
-		21CAD5D429812646005ED2FA /* FirebaseFirestore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A529812634005ED2FA /* FirebaseFirestore.xcframework */; };
-		21CAD5D629812647005ED2FA /* FirebaseAnalytics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A629812634005ED2FA /* FirebaseAnalytics.xcframework */; };
-		21CAD5D829812649005ED2FA /* FirebaseCoreInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A729812635005ED2FA /* FirebaseCoreInternal.xcframework */; };
-		21CAD5DA2981264A005ED2FA /* FBLPromises.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A829812635005ED2FA /* FBLPromises.xcframework */; };
-		21CAD5DC2981264C005ED2FA /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5A929812635005ED2FA /* GoogleAppMeasurement.xcframework */; };
-		21CAD5DE2981264E005ED2FA /* FirebaseCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5AA29812636005ED2FA /* FirebaseCore.xcframework */; };
-		21CAD5E02981264F005ED2FA /* GTMAppAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5AB29812636005ED2FA /* GTMAppAuth.xcframework */; };
-		21CAD5E229812651005ED2FA /* GoogleSignIn.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5AC29812636005ED2FA /* GoogleSignIn.xcframework */; };
-		21CAD5E429812653005ED2FA /* Libuv-gRPC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CAD5AD29812637005ED2FA /* Libuv-gRPC.xcframework */; };
-		21CAD5F329813D67005ED2FA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21CAD5F229813D67005ED2FA /* Realm */; };
-		21CAD5F529813D6B005ED2FA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21CAD5F429813D6B005ED2FA /* RealmSwift */; };
 		BAC3473028BE995F00895FBE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3472F28BE995F00895FBE /* Date.swift */; };
 		BAC3473328BE9B7200895FBE /* StudyCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473228BE9B7200895FBE /* StudyCondition.swift */; };
 		BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473428BE9E2F00895FBE /* ToyShape.swift */; };
@@ -181,36 +155,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CAD5E02981264F005ED2FA /* GTMAppAuth.xcframework in Frameworks */,
-				21CAD5C22981263C005ED2FA /* FirebaseSharedSwift.xcframework in Frameworks */,
-				21CAD5CE29812642005ED2FA /* nanopb.xcframework in Frameworks */,
-				21CAD5D229812645005ED2FA /* gRPC-Core.xcframework in Frameworks */,
-				21CAD5BE2981263B005ED2FA /* FirebaseInstallations.xcframework in Frameworks */,
-				21CAD5C02981263C005ED2FA /* BoringSSL-GRPC.xcframework in Frameworks */,
-				21CAD5D029812644005ED2FA /* FirebaseStorage.xcframework in Frameworks */,
-				21CAD5AE29812637005ED2FA /* AppAuth.xcframework in Frameworks */,
-				21CAD5CA29812640005ED2FA /* abseil.xcframework in Frameworks */,
-				21CAD5F329813D67005ED2FA /* Realm in Frameworks */,
-				21CAD5D629812647005ED2FA /* FirebaseAnalytics.xcframework in Frameworks */,
-				21CAD5D429812646005ED2FA /* FirebaseFirestore.xcframework in Frameworks */,
-				21CAD5BC2981263A005ED2FA /* FirebaseAppCheckInterop.xcframework in Frameworks */,
-				21CAD5C62981263E005ED2FA /* FirebaseAnalyticsSwift.xcframework in Frameworks */,
-				21CAD5DA2981264A005ED2FA /* FBLPromises.xcframework in Frameworks */,
-				21CAD5B029812637005ED2FA /* FirebaseAuth.xcframework in Frameworks */,
-				21CAD5E229812651005ED2FA /* GoogleSignIn.xcframework in Frameworks */,
-				21CAD5DC2981264C005ED2FA /* GoogleAppMeasurement.xcframework in Frameworks */,
-				21CAD5F529813D6B005ED2FA /* RealmSwift in Frameworks */,
-				21CAD5B629812638005ED2FA /* GTMSessionFetcher.xcframework in Frameworks */,
-				21CAD5C82981263F005ED2FA /* FirebaseAuthInterop.xcframework in Frameworks */,
-				21CAD5C42981263D005ED2FA /* GoogleUtilities.xcframework in Frameworks */,
-				21CAD5CC29812641005ED2FA /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */,
-				21CAD5B829812639005ED2FA /* FirebaseCoreExtension.xcframework in Frameworks */,
-				21CAD5DE2981264E005ED2FA /* FirebaseCore.xcframework in Frameworks */,
-				21CAD5D829812649005ED2FA /* FirebaseCoreInternal.xcframework in Frameworks */,
-				21CAD5BA29812639005ED2FA /* FirebaseFirestoreSwift.xcframework in Frameworks */,
-				21CAD5B429812638005ED2FA /* leveldb-library.xcframework in Frameworks */,
-				21CAD5E429812653005ED2FA /* Libuv-gRPC.xcframework in Frameworks */,
-				21CAD5B229812637005ED2FA /* gRPC-C++.xcframework in Frameworks */,
+				21A2B5DE29AF558F00DA0AE9 /* RealmSwift in Frameworks */,
+				21A2B5E529AF591A00DA0AE9 /* FirebaseFirestore in Frameworks */,
+				21A2B5E329AF58F300DA0AE9 /* FirebaseAuth in Frameworks */,
+				21A2B5DC29AF558F00DA0AE9 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,8 +364,10 @@
 			);
 			name = Calendar;
 			packageProductDependencies = (
-				21CAD5F229813D67005ED2FA /* Realm */,
-				21CAD5F429813D6B005ED2FA /* RealmSwift */,
+				21A2B5DB29AF558F00DA0AE9 /* Realm */,
+				21A2B5DD29AF558F00DA0AE9 /* RealmSwift */,
+				21A2B5E229AF58F300DA0AE9 /* FirebaseAuth */,
+				21A2B5E429AF591A00DA0AE9 /* FirebaseFirestore */,
 			);
 			productName = Calendar;
 			productReference = 21A1D496268C67AD00C07A86 /* スタレコ.app */;
@@ -450,7 +400,8 @@
 			);
 			mainGroup = 21A1D48D268C67AD00C07A86;
 			packageReferences = (
-				21CAD5F129813D67005ED2FA /* XCRemoteSwiftPackageReference "realm-swift" */,
+				21A2B5C729AF517000DA0AE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				21A2B5DA29AF558E00DA0AE9 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 21A1D497268C67AD00C07A86 /* Products */;
 			projectDirPath = "";
@@ -846,9 +797,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		21CAD5F129813D67005ED2FA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		21A2B5C729AF517000DA0AE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		21A2B5DA29AF558E00DA0AE9 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aheze/realm-swift";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -857,15 +816,25 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		21CAD5F229813D67005ED2FA /* Realm */ = {
+		21A2B5DB29AF558F00DA0AE9 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 21CAD5F129813D67005ED2FA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 21A2B5DA29AF558E00DA0AE9 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		21CAD5F429813D6B005ED2FA /* RealmSwift */ = {
+		21A2B5DD29AF558F00DA0AE9 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 21CAD5F129813D67005ED2FA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 21A2B5DA29AF558E00DA0AE9 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		21A2B5E229AF58F300DA0AE9 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21A2B5C729AF517000DA0AE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		21A2B5E429AF591A00DA0AE9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21A2B5C729AF517000DA0AE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

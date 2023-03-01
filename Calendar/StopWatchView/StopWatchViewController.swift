@@ -43,10 +43,12 @@ class StopWatchViewController: UIViewController {
     var result: String = ""
     var diffSum: Double = 0.0
     var stdev: Double = 0.0
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //ログインしてるか
-//        try! Auth.auth().signOut()
+        //        try! Auth.auth().signOut()
         let user = Auth.auth().currentUser
         print(user?.uid)
         // ログインしてたら
@@ -85,6 +87,7 @@ class StopWatchViewController: UIViewController {
             vc.count = self.count
             vc.latestHeartRate = self.latestHeartRate
             vc.focusRate = self.focusRate
+            vc.targetTimeInterval = self.targetTimeInterval
         }
     }
     //アプリ起動時
@@ -224,6 +227,9 @@ class StopWatchViewController: UIViewController {
                 self.heartRateArray.append(heartRate)
             }
 
+            print("心拍数")
+            print(latestHeartRate)
+
             latestHeartRate = self.heartRateArray.last ?? 0
             //心拍数の配列
             let heart = heartRateArray
@@ -250,6 +256,7 @@ class StopWatchViewController: UIViewController {
             print(heartRateArray.count)
             print("変動係数")
             print(stdev/aveHeartRate)
+
 
             if ( stdev < stdev/aveHeartRate + 2) {
                 print("超集中")
