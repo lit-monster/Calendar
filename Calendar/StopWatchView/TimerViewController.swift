@@ -94,13 +94,13 @@ class TimerViewController: UIViewController {
         super.viewDidAppear(animated)
         heartRateLabel.text = String(Int(latestHeartRate))
         if focusRate == 3 {
-//            starLabel.text = "★★★"
+            //            starLabel.text = "★★★"
             recoLabal.text = "超集中"
         } else if focusRate == 2 {
-//            starLabel.text = "★★"
+            //            starLabel.text = "★★"
             recoLabal.text = "集中"
         } else if focusRate == 1 {
-//            starLabel.text = "★"
+            //            starLabel.text = "★"
             recoLabal.text = "普通"
         }
 
@@ -147,10 +147,23 @@ class TimerViewController: UIViewController {
 
 
     func createStudyRecord() {
+        print("保存する記録")
+        print("日時")
+        print(Date())
+        print("目標時間")
+        print(targetTimeInterval)
+        print("勉強時間")
+        print(count)
+        print("集中度")
         print(focusRate)
+        print("心拍数")
         print(latestHeartRate)
+        print("緯度")
         print(currentLongitude)
+        print("経度")
         print(currentLatitude)
+        print("ユーザーのID")
+        print(Auth.auth().currentUser!.uid)
 
         // 書き込むコード。uid(ユーザーのID)とtime(勉強時間)とconcentrate(集中度)
         self.db.collection("studyRecords").document().setData([
@@ -162,7 +175,7 @@ class TimerViewController: UIViewController {
             "longitude": currentLongitude,
             "latitude": currentLatitude,
             "uid": Auth.auth().currentUser!.uid
-            
+
         ]) { err in
             if let err = err {
                 print("エラー: \(err)")
@@ -171,7 +184,6 @@ class TimerViewController: UIViewController {
             }
         }
     }
-
 
 }
 
