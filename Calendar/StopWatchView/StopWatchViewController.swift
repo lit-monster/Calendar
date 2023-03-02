@@ -50,6 +50,7 @@ class StopWatchViewController: UIViewController {
         //ログインしてるか
         //        try! Auth.auth().signOut()
         let user = Auth.auth().currentUser
+        print("ユーザーのID")
         print(user?.uid)
         // ログインしてたら
         if user != nil {
@@ -227,10 +228,11 @@ class StopWatchViewController: UIViewController {
                 self.heartRateArray.append(heartRate)
             }
 
+            latestHeartRate = self.heartRateArray.last ?? 0
+
             print("心拍数")
             print(latestHeartRate)
-
-            latestHeartRate = self.heartRateArray.last ?? 0
+            
             //心拍数の配列
             let heart = heartRateArray
             //心拍数の配列の合計
@@ -238,8 +240,10 @@ class StopWatchViewController: UIViewController {
                 return num1 + num2
             }
 
-            print(sum/Double(heart.count))
             let aveHeartRate = sum/Double(heart.count)
+
+            print("")
+            print(sum/Double(heart.count))
 
             //標準偏差の計算
             //差の合計

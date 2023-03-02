@@ -153,7 +153,7 @@ class TimerViewController: UIViewController {
         print(currentLatitude)
 
         // 書き込むコード。uid(ユーザーのID)とtime(勉強時間)とconcentrate(集中度)
-        self.db.collection("studyRecords7").document().setData([
+        self.db.collection("studyRecords").document().setData([
             "date": Date(),
             "targetTime": targetTimeInterval,
             "durationTime": count,
