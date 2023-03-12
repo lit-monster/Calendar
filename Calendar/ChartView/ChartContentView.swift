@@ -80,11 +80,11 @@ struct ChartContentView: View {
                         ZStack {
                             Map(coordinateRegion: $region, annotationItems: places) { place -> MapMarker in
                                 switch place.quality {
-                                case 0:
-                                    return MapMarker(coordinate: place.location, tint: Color("charts-lightblue"))
                                 case 1:
-                                    return MapMarker(coordinate: place.location, tint: Color("charts-blue"))
+                                    return MapMarker(coordinate: place.location, tint: Color("charts-lightblue"))
                                 case 2:
+                                    return MapMarker(coordinate: place.location, tint: Color("charts-blue"))
+                                case 3:
                                     return MapMarker(coordinate: place.location, tint: Color("charts-deepblue"))
                                 default:
                                     return MapMarker(coordinate: place.location, tint: Color("charts-blue"))

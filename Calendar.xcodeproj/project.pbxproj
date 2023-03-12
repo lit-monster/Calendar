@@ -249,7 +249,6 @@
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
 				2119F1932971687F00E4F25A /* GoogleService-Info.plist */,
 				216A46B1295B69B600EC1D52 /* ViewController.swift */,
-				21A0D19629972DBC0099F810 /* ShareViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -294,6 +293,7 @@
 		21CAD5F6298143DE005ED2FA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				21A0D19629972DBC0099F810 /* ShareViewController.swift */,
 				21087CA32977F5C800CB445F /* LoginViewController.swift */,
 				21087CA62978172D00CB445F /* SignUpViewController.swift */,
 			);

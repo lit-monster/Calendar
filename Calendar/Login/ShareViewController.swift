@@ -10,18 +10,39 @@ import SwiftUI
 import FirebaseAuth
 
 class ShareViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        try! Auth.auth().signOut()
 
         let user = Auth.auth().currentUser
         print(user?.uid)
         // ログインしてたら
         if user != nil {
-
+            
         } else {
             performSegue(withIdentifier: "toLogin", sender: nil)
+        }
+    }
+    
+    @IBAction func logout(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        }
+        catch let error as NSError {
+            print(error)
+        }
+
+    }
+    
+    @IBAction func deleteUser(_ sender: Any) {
+        let user = Auth.auth().currentUser
+
+        user?.delete { error in
+          if let error = error {
+            // An error happened.
+          } else {
+            // Account deleted.
+          }
         }
     }
 }

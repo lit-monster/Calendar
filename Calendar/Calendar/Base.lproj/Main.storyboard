@@ -40,7 +40,7 @@
         <!--共有-->
         <scene sceneID="66v-IL-Pt0">
             <objects>
-                <viewController id="8kI-rq-Xm5" sceneMemberID="viewController">
+                <viewController id="8kI-rq-Xm5" customClass="ShareViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="her-ED-feJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,18 @@
                                 <buttonConfiguration key="configuration" style="gray" title="ログアウト"/>
                                 <connections>
                                     <action selector="Logout:" destination="yVh-Uc-MHQ" eventType="touchUpInside" id="ABL-LK-3P1"/>
+                                    <action selector="logout:" destination="8kI-rq-Xm5" eventType="touchUpInside" id="NEV-Cb-Hbr"/>
                                     <segue destination="Xsd-DB-dZP" kind="modal" modalPresentationStyle="fullScreen" id="I1M-7E-cWA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iID-co-c33">
+                                <rect key="frame" x="248" y="122" width="146" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="アカウント削除"/>
+                                <connections>
+                                    <action selector="deleteUser:" destination="8kI-rq-Xm5" eventType="touchUpInside" id="X0Q-IJ-vL8"/>
+                                    <action selector="logout:" destination="8kI-rq-Xm5" eventType="touchUpInside" id="Lgw-sZ-qER"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +75,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceJ-VO-OH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yVh-Uc-MHQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1371.0144927536232" y="-4302.4553571428569"/>
+            <point key="canvasLocation" x="-1371" y="-4302"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="TAB-dQ-Fxn">
@@ -271,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCo-gK-fNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="-2808"/>
+            <point key="canvasLocation" x="-1430" y="-2808"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="q84-3V-BKS">
@@ -287,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOF-8g-Z2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="-2808"/>
+            <point key="canvasLocation" x="-2130" y="-2808"/>
         </scene>
         <!--計測-->
         <scene sceneID="uQJ-3Z-ENq">
@@ -547,21 +558,13 @@
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                             <color key="highlightedColor" systemColor="labelColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ysW-ea-tPK">
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ysW-ea-tPK">
                                             <rect key="frame" x="29.5" y="310" width="279" height="65"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBG-6M-GDU">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBG-6M-GDU">
                                                     <rect key="frame" x="0.0" y="0.0" width="130" height="65"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub4-dn-VDY">
-                                                            <rect key="frame" x="8" y="16" width="23" height="34"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="23" id="HxV-Pd-ieZ"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="􀊵"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拍/分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSJ-6U-bMH">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="拍/分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSJ-6U-bMH">
                                                             <rect key="frame" x="93" y="26" width="31" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="31" id="FXW-ao-bld"/>
@@ -570,7 +573,7 @@
                                                             <color key="textColor" name="n"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th5-PQ-s9b">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="65" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th5-PQ-s9b">
                                                             <rect key="frame" x="38" y="7" width="47" height="52"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="47" id="8AV-gK-JhI"/>
@@ -585,16 +588,12 @@
                                                         <constraint firstAttribute="bottom" secondItem="th5-PQ-s9b" secondAttribute="bottom" constant="6" id="8ye-wZ-XMj"/>
                                                         <constraint firstItem="th5-PQ-s9b" firstAttribute="top" secondItem="FBG-6M-GDU" secondAttribute="top" constant="7" id="D4J-o5-pHD"/>
                                                         <constraint firstAttribute="bottom" secondItem="BSJ-6U-bMH" secondAttribute="bottom" constant="23" id="Jzy-am-ke7"/>
-                                                        <constraint firstItem="th5-PQ-s9b" firstAttribute="leading" secondItem="Ub4-dn-VDY" secondAttribute="trailing" constant="7" id="Psv-Fl-dhT"/>
-                                                        <constraint firstItem="Ub4-dn-VDY" firstAttribute="leading" secondItem="FBG-6M-GDU" secondAttribute="leading" constant="8" id="VY8-91-yVM"/>
                                                         <constraint firstAttribute="trailing" secondItem="BSJ-6U-bMH" secondAttribute="trailing" constant="6" id="ZRC-rW-h4h"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Ub4-dn-VDY" secondAttribute="bottom" constant="15" id="arQ-uB-gdu"/>
                                                         <constraint firstItem="BSJ-6U-bMH" firstAttribute="top" secondItem="FBG-6M-GDU" secondAttribute="top" constant="26" id="dNI-6s-gLJ"/>
                                                         <constraint firstItem="BSJ-6U-bMH" firstAttribute="leading" secondItem="th5-PQ-s9b" secondAttribute="trailing" constant="8" symbolic="YES" id="eeV-if-ydl"/>
-                                                        <constraint firstItem="Ub4-dn-VDY" firstAttribute="top" secondItem="FBG-6M-GDU" secondAttribute="top" constant="16" id="pvi-vW-1Uq"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-AU-fuV">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-AU-fuV">
                                                     <rect key="frame" x="149" y="0.0" width="130" height="65"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZW4-cC-H09">
@@ -763,7 +762,6 @@
         <image name="quality3" width="132" height="87"/>
         <image name="stop" width="414" height="200"/>
         <image name="timer" catalog="system" width="128" height="123"/>
-        <image name="􀊵" width="128" height="128"/>
         <namedColor name="n">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
