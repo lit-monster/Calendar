@@ -27,9 +27,11 @@ class ShareViewController: UIViewController {
     @IBAction func logout(_ sender: Any) {
         do {
             try Auth.auth().signOut()
+            
         }
         catch let error as NSError {
             print(error)
+            self.performSegue(withIdentifier: "tosignup", sender: nil)
         }
 
     }
@@ -38,11 +40,13 @@ class ShareViewController: UIViewController {
         let user = Auth.auth().currentUser
 
         user?.delete { error in
-          if let error = error {
-            // An error happened.
-          } else {
-            // Account deleted.
-          }
+            if let error = error {
+                // An error happened.
+                print(error)
+            } else {
+                // Account deleted.
+                self.performSegue(withIdentifier: "tosignup", sender: nil)
+            }
         }
     }
 }

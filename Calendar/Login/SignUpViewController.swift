@@ -47,22 +47,6 @@ class SignUpViewController: UIViewController {
         }
     }
 
-    // 勉強データを書き込む
-//    @IBAction func createStudyRecord() {
-//        // 書き込むコード。uid(ユーザーのID)とtime(勉強時間)とconcentrate(集中度)
-//        self.db.collection("studyRecords").document().setData([
-//            "uid": Auth.auth().currentUser!.uid,
-//            "time": "10",
-//            "concentrate": "3"
-//        ]) { err in
-//            if let err = err {
-//                print("エラー: \(err)")
-//            } else {
-//                print("書き込み成功！")
-//            }
-//        }
-//    }
-
     // 自分の勉強データを取得
     func fetchMyStudyRecord() {
         self.db.collection("studyRecords").whereField("uid", isEqualTo: "123456")

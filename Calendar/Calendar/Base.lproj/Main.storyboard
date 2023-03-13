@@ -53,7 +53,6 @@
                                 <connections>
                                     <action selector="Logout:" destination="yVh-Uc-MHQ" eventType="touchUpInside" id="ABL-LK-3P1"/>
                                     <action selector="logout:" destination="8kI-rq-Xm5" eventType="touchUpInside" id="NEV-Cb-Hbr"/>
-                                    <segue destination="Xsd-DB-dZP" kind="modal" modalPresentationStyle="fullScreen" id="I1M-7E-cWA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iID-co-c33">
@@ -71,6 +70,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="共有" image="person.3.fill" catalog="system" selectedImage="person.3.fill" id="2Dv-Sd-b3g"/>
+                    <connections>
+                        <segue destination="Xsd-DB-dZP" kind="show" identifier="tosignup" id="ayJ-su-pzl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceJ-VO-OH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yVh-Uc-MHQ" userLabel="Exit" sceneMemberID="exit"/>
@@ -82,11 +84,11 @@
             <objects>
                 <viewController id="Xsd-DB-dZP" customClass="LoginViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jO2-FX-qDT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Id7-kz-uHw">
-                                <rect key="frame" x="-299" y="0.0" width="1012" height="896"/>
+                                <rect key="frame" x="-299" y="0.0" width="1012" height="838"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yq6-qx-yWA">
                                 <rect key="frame" x="38" y="183" width="338" height="424"/>
@@ -746,7 +748,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I1M-7E-cWA"/>
+        <segue reference="ayJ-su-pzl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back" width="1012" height="2000"/>
