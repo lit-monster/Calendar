@@ -240,6 +240,7 @@
 				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
 				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
 				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
+				216A46B1295B69B600EC1D52 /* ViewController.swift */,
 				21CAD5F6298143DE005ED2FA /* Login */,
 				E7C5D90F28F3CCA700993862 /* CalendarLog */,
 				219D151828B6357300193068 /* StopWatchView */,
@@ -248,7 +249,6 @@
 				217A1F9427DDF13D0082B2BC /* Colors.xcassets */,
 				21A1D4A7268C67B100C07A86 /* Info.plist */,
 				2119F1932971687F00E4F25A /* GoogleService-Info.plist */,
-				216A46B1295B69B600EC1D52 /* ViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";

@@ -12,55 +12,74 @@ import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet var mailTextField: UITextField!
+    @IBOutlet var passTextField: UITextField!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet weak var signUpView: UIVisualEffectView!{
+        didSet {
+            signUpView.layer.cornerCurve = .continuous
+            signUpView.layer.cornerRadius = 32
+            signUpView.clipsToBounds = true
+        }
+    }
+
     let db = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        createUser()
-//        createStudyRecord()
-        fetchMyStudyRecord()
     }
 
     // ユーザー作成
     @IBAction func createUser() {
+
+        let email = mailTextField.text ?? ""
+        let password = passTextField.text ?? ""
+        let name = nameTextField.text ?? ""
+
+        print(email)
+        print(password)
+        
         // Authでユーザー作成
-        Auth.auth().createUser(withEmail: "aoba1234578@gmail.com", password: "password12345") { authResult, error in
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
 
             // ユーザー作成が成功したら、ユーザーのデータをデータベース(FireSrore)に書き込む
             if let error = error {
+
+                let alert = UIAlertController(title: "エラー", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "閉じる", style: .default))
+                self.present(alert, animated: true)
                 print(error)
             } else {
                 // 書き込むコード。nameとemail
                 self.db.collection("users").document(authResult!.user.uid).setData([
-                    "name": "Aoba",
-                    "email": "aoba@gmail.com"
+                    "name": name,
+                    "email": email
                 ]) { err in
                     if let err = err {
                         print("エラー: \(err)")
                     } else {
+                        self.dismiss(animated: true)
                         print("書き込み成功！")
                     }
                 }
-
             }
         }
     }
 
     // 自分の勉強データを取得
-    func fetchMyStudyRecord() {
-        self.db.collection("studyRecords").whereField("uid", isEqualTo: "123456")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-                    }
-                }
-        }
-
-    }
+//    func fetchMyStudyRecord() {
+//        self.db.collection("studyRecords").whereField("uid", isEqualTo: "123456")
+//            .getDocuments() { (querySnapshot, err) in
+//                if let err = err {
+//                    print("Error getting documents: \(err)")
+//                } else {
+//                    for document in querySnapshot!.documents {
+//                        print("\(document.documentID) => \(document.data())")
+//                    }
+//                }
+//        }
+//
+//    }
 
 
 

@@ -53,21 +53,21 @@ struct ChartContentView: View {
 
                     Spacer(minLength: 48)
 
-//                    Group {
-//                        Text("今週の集中度合い")
-//                            .font(.system(.title, design: .rounded))
-//                            .bold()
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                        ZStack {
-//                            Rectangle()
-//                                .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
-//                                .cornerRadius(16)
-//                                .shadow(color: .black.opacity(0.3),radius: 16)
-//                           StrorageChartView()
-//                            .frame(height: 100)
-//                            .padding(15)
-//                        }
-//                    }
+                    Group {
+                        Text("今週全体の集中度")
+                            .font(.system(.title, design: .rounded))
+                            .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        ZStack {
+                            Rectangle()
+                                .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
+                                .cornerRadius(16)
+                                .shadow(color: .black.opacity(0.3),radius: 16)
+                           StrorageChartView()
+                            .frame(height: 100)
+                            .padding(15)
+                        }
+                    }
 
                     Spacer(minLength: 48)
 
@@ -144,7 +144,7 @@ struct ChartContentView: View {
                 .padding()
                 .navigationTitle(Text("分析"))
             }
-            .background(Image("background2"))
+            .background(Image("back3"))
             .background(Color(uiColor: UIColor(named: "summary")!))
         }
         .onAppear {

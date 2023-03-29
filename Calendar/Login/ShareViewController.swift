@@ -10,6 +10,14 @@ import SwiftUI
 import FirebaseAuth
 
 class ShareViewController: UIViewController {
+
+    @IBOutlet weak var accountView: UIVisualEffectView!{
+        didSet {
+            accountView.layer.cornerCurve = .continuous
+            accountView.layer.cornerRadius = 32
+            accountView.clipsToBounds = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +35,11 @@ class ShareViewController: UIViewController {
     @IBAction func logout(_ sender: Any) {
         do {
             try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "tosignup", sender: nil)
             
         }
         catch let error as NSError {
             print(error)
-            self.performSegue(withIdentifier: "tosignup", sender: nil)
         }
 
     }
