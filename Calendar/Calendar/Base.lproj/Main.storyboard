@@ -17,8 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="Cz8-qu-JFF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back3" translatesAutoresizingMaskIntoConstraints="NO" id="1yG-NH-nxC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="w3Q-AQ-ReX"/>
                         <color key="backgroundColor" name="summary"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1yG-NH-nxC" secondAttribute="bottom" id="8gu-jO-Ea6"/>
+                            <constraint firstItem="1yG-NH-nxC" firstAttribute="trailing" secondItem="w3Q-AQ-ReX" secondAttribute="trailing" id="R15-bu-KeA"/>
+                            <constraint firstItem="1yG-NH-nxC" firstAttribute="top" secondItem="Cz8-qu-JFF" secondAttribute="top" id="RKd-Xp-rdl"/>
+                            <constraint firstItem="1yG-NH-nxC" firstAttribute="leading" secondItem="w3Q-AQ-ReX" secondAttribute="leading" id="p91-HA-gsQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="記録" id="ZHw-Vm-2Br">
                         <imageReference key="image" image="chart.bar.fill" catalog="system" renderingMode="hierarchical-single">
@@ -35,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YP-YC-pVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2129" y="-4302"/>
+            <point key="canvasLocation" x="-2130.434782608696" y="-4302.4553571428569"/>
         </scene>
         <!--アカウント-->
         <scene sceneID="66v-IL-Pt0">
@@ -283,7 +294,6 @@
                                             </buttonConfiguration>
                                             <connections>
                                                 <action selector="createUser" destination="Hue-yj-hug" eventType="touchUpInside" id="S2M-JG-MLM"/>
-                                                <action selector="tapTransitionButton:" destination="Hue-yj-hug" eventType="touchUpInside" id="oFL-Ix-9jQ"/>
                                             </connections>
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeH-JN-kSI">
@@ -512,11 +522,11 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="PickerBlurView" destination="ekO-6Z-ZQw" id="peO-d2-zyw"/>
                         <outlet property="circularGaugeView" destination="0bf-Zb-1I4" id="D0f-oZ-rdk"/>
                         <outlet property="inturrptedView" destination="yd2-MS-WAu" id="xVh-mh-d4h"/>
                         <outlet property="iphone" destination="twu-yW-FTT" id="W06-vj-AaF"/>
                         <outlet property="picker" destination="mPE-cC-flE" id="Vy4-BJ-XZQ"/>
-                        <outlet property="pickerBlurView" destination="ekO-6Z-ZQw" id="KB3-Gb-Q6m"/>
                         <outlet property="startButton" destination="arc-Lg-guP" id="7E8-P2-TSK"/>
                         <outlet property="stopButton" destination="KSK-tX-5nu" id="OID-bM-FgF"/>
                         <outlet property="upset" destination="1tE-V1-dbv" id="Yim-tr-Ax1"/>
@@ -819,6 +829,7 @@
         <image name="back0" width="414" height="896"/>
         <image name="back1" width="414" height="896"/>
         <image name="back2" width="414" height="896"/>
+        <image name="back3" width="414" height="896"/>
         <image name="back4" width="414" height="896"/>
         <image name="back5" width="414" height="896"/>
         <image name="calendar" catalog="system" width="128" height="107"/>

@@ -29,18 +29,18 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    // segueが動作することをViewControllerに通知するメソッド
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    // segueが動作することをViewControllerに通知するメソッド
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        if segue.identifier == "toname" {
+//            let next = segue.destination as! ShareViewController
+//            next.outputValue = self.nameTextField.text
+//        }
+//    }
 
-        if segue.identifier == "toname" {
-            let next = segue.destination as! ShareViewController
-            next.outputValue = self.nameTextField.text
-        }
-    }
-
-    @IBAction func tapTransitionButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toname", sender: nil)
-    }
+//    @IBAction func tapTransitionButton(_ sender: Any) {
+//        self.performSegue(withIdentifier: "toname", sender: nil)
+//    }
 
     // ユーザー作成
     @IBAction func createUser() {

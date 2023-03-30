@@ -18,6 +18,7 @@ final class ChartViewController: UIViewController {
         let totalTime = StudyRecordManager.shared.getLatestWeekTotalStudyTime()
         print(totalTime)
         let vc = UIHostingController(rootView: ChartContentView(toyShapes: toyshapes, totalStudyTime: totalTime))
+        vc.view.backgroundColor = UIColor.clear
         self.addChild(vc)
         self.view.addSubview(vc.view)
         vc.didMove(toParent: self)
