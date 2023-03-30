@@ -29,6 +29,19 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    // segueが動作することをViewControllerに通知するメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "toname" {
+            let next = segue.destination as! ShareViewController
+            next.outputValue = self.nameTextField.text
+        }
+    }
+
+    @IBAction func tapTransitionButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toname", sender: nil)
+    }
+
     // ユーザー作成
     @IBAction func createUser() {
 
@@ -67,19 +80,19 @@ class SignUpViewController: UIViewController {
     }
 
     // 自分の勉強データを取得
-//    func fetchMyStudyRecord() {
-//        self.db.collection("studyRecords").whereField("uid", isEqualTo: "123456")
-//            .getDocuments() { (querySnapshot, err) in
-//                if let err = err {
-//                    print("Error getting documents: \(err)")
-//                } else {
-//                    for document in querySnapshot!.documents {
-//                        print("\(document.documentID) => \(document.data())")
-//                    }
-//                }
-//        }
-//
-//    }
+    //    func fetchMyStudyRecord() {
+    //        self.db.collection("studyRecords").whereField("uid", isEqualTo: "123456")
+    //            .getDocuments() { (querySnapshot, err) in
+    //                if let err = err {
+    //                    print("Error getting documents: \(err)")
+    //                } else {
+    //                    for document in querySnapshot!.documents {
+    //                        print("\(document.documentID) => \(document.data())")
+    //                    }
+    //                }
+    //        }
+    //
+    //    }
 
 
 

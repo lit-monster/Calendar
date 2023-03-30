@@ -8,8 +8,11 @@
 import UIKit
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 class ShareViewController: UIViewController {
+
+    let db = Firestore.firestore()
 
     @IBOutlet weak var accountView: UIVisualEffectView!{
         didSet {
@@ -18,10 +21,11 @@ class ShareViewController: UIViewController {
             accountView.clipsToBounds = true
         }
     }
+    @IBOutlet weak var nameLabel: UILabel!
+    var outputValue : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let user = Auth.auth().currentUser
         print(user?.uid)
         // ログインしてたら
@@ -29,6 +33,18 @@ class ShareViewController: UIViewController {
             
         } else {
             performSegue(withIdentifier: "toLogin", sender: nil)
+        }
+
+        let docRef = db.collection("users").document(user!.uid)
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                self.nameLabel.text = data!["name"] as! String
+                print(data!["name"])
+            } else {
+                print("Document does not exist")
+            }
         }
     }
     

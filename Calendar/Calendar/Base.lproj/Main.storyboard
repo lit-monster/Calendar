@@ -40,7 +40,7 @@
         <!--アカウント-->
         <scene sceneID="66v-IL-Pt0">
             <objects>
-                <viewController id="8kI-rq-Xm5" customClass="ShareViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="8kI-rq-Xm5" customClass="ShareViewController" customModule="スタレコ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="her-ED-feJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,11 +89,18 @@
                                                 <action selector="logout:" destination="8kI-rq-Xm5" eventType="touchUpInside" id="Lgw-sZ-qER"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnP-zI-QrY">
-                                            <rect key="frame" x="56" y="40" width="220" height="49"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnP-zI-QrY" customClass="nameLabel">
+                                            <rect key="frame" x="56" y="95" width="220" height="49"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" red="0.91561835999999996" green="0.48818570379999998" blue="0.58823722599999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="47"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザーネーム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4os-hc-2Iw">
+                                            <rect key="frame" x="112" y="69" width="108" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -115,8 +122,10 @@
                         </imageReference>
                         <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="default"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="ec2-J1-spI"/>
                     <connections>
                         <outlet property="accountView" destination="cJ3-5R-cAV" id="NcI-7q-20N"/>
+                        <outlet property="nameLabel" destination="GnP-zI-QrY" id="bJy-mq-bf7"/>
                         <segue destination="Xsd-DB-dZP" kind="show" identifier="tosignup" id="ayJ-su-pzl"/>
                     </connections>
                 </viewController>
@@ -274,6 +283,7 @@
                                             </buttonConfiguration>
                                             <connections>
                                                 <action selector="createUser" destination="Hue-yj-hug" eventType="touchUpInside" id="S2M-JG-MLM"/>
+                                                <action selector="tapTransitionButton:" destination="Hue-yj-hug" eventType="touchUpInside" id="oFL-Ix-9jQ"/>
                                             </connections>
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeH-JN-kSI">
@@ -653,7 +663,7 @@
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-AU-fuV">
                                                     <rect key="frame" x="149" y="0.0" width="130" height="65"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZW4-cC-H09">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 集中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZW4-cC-H09">
                                                             <rect key="frame" x="8" y="8" width="114" height="49"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="49" id="aUZ-a2-opl"/>
