@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class StopWatchViewController: UIViewController {
     let feedbackGenerator = UINotificationFeedbackGenerator()
-    
+
     @IBOutlet var circularGaugeView: UIView!
     @IBOutlet var inturrptedView: UIView!
     @IBOutlet weak var upset: UILabel!
@@ -25,6 +25,7 @@ class StopWatchViewController: UIViewController {
             
         }
     }
+
     @IBOutlet weak var PickerBlurView: UIVisualEffectView! {
         didSet {
             PickerBlurView.layer.cornerCurve = .continuous
@@ -32,7 +33,7 @@ class StopWatchViewController: UIViewController {
             PickerBlurView.clipsToBounds = true
         }
     }
-    
+
     var count: Int = 0
     var latestHeartRate = 0.0
     var focusRate = 0
@@ -43,7 +44,6 @@ class StopWatchViewController: UIViewController {
     var result: String = ""
     var diffSum: Double = 0.0
     var stdev: Double = 0.0
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +81,7 @@ class StopWatchViewController: UIViewController {
         })
         readHeartRate()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "totimer" {
             let vc = segue.destination as! TimerViewController
@@ -113,17 +113,18 @@ class StopWatchViewController: UIViewController {
             count = 0
         }
     }
+
     //アプリ終了時
     //近接センサーの無効化
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         UIDevice.current.isProximityMonitoringEnabled = false
     }
-    
+
     @IBAction func exitButtonPressed(){
         self.performSegue(withIdentifier: "totimer", sender: nil)
     }
-    
+
     @IBAction func loginBonusButtonPressed() {
         let loginBonusViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginBonus")
         if let sheet = loginBonusViewController.sheetPresentationController {
@@ -131,7 +132,7 @@ class StopWatchViewController: UIViewController {
         }
         self.present(loginBonusViewController, animated: true)
     }
-    
+
     //近接センサー
     @objc func proximityMonitorStateDidChange() {
         //inturrptedViewが表示されているとき
@@ -167,7 +168,6 @@ class StopWatchViewController: UIViewController {
             // 目標達成
             interval = abs(interval)
 
-
             let seconds = interval % 60
             let minutes = (interval / 60) % 60
             let hours = (interval / 3600)
@@ -184,7 +184,6 @@ class StopWatchViewController: UIViewController {
             //　GaugeViewの更新　remainingTimeにstringを渡すと、labelに表示
             updateGaugePrgress(remainingTime: String(format: "%02d:%02d:%02d", hours, minutes, seconds),
                                remainingRate: (targetTimeInterval - Double(count)) / targetTimeInterval, gaugeText: "目標まで")
-
         }
     }
 
@@ -205,7 +204,7 @@ class StopWatchViewController: UIViewController {
             vc.view.bottomAnchor.constraint(equalTo: circularGaugeView.bottomAnchor),
             vc.view.topAnchor.constraint(equalTo: circularGaugeView.topAnchor)])
     }
-    
+
     let myHealthStore = HKHealthStore()
     var typeOfHeartRate = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
     
@@ -232,7 +231,7 @@ class StopWatchViewController: UIViewController {
 
             print("心拍数")
             print(latestHeartRate)
-            
+
             //心拍数の配列
             let heart = heartRateArray
             //心拍数の配列の合計
@@ -260,7 +259,6 @@ class StopWatchViewController: UIViewController {
             print(heartRateArray.count)
             print("変動係数")
             print(stdev/aveHeartRate)
-
 
             if ( stdev < stdev/aveHeartRate + 2) {
                 print("超集中")

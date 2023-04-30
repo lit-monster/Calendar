@@ -145,7 +145,6 @@ class TimerViewController: UIViewController {
         feedbackGenerator.notificationOccurred(.warning)
     }
 
-
     func createStudyRecord() {
         print("保存する記録")
         print("日時")

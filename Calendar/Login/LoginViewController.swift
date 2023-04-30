@@ -27,7 +27,6 @@ class LoginViewController: UIViewController {
     }
 
     private func showErrorIfNeeded(_ errorOrNil: Error?) {
-        // エラーがなければ何もしません
         guard let error = errorOrNil else { return }
 
         let message = "エラーが起きました" // ここは後述しますが、とりあえず固定文字列

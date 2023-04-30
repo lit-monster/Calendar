@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		21087CA42977F5C800CB445F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21087CA32977F5C800CB445F /* LoginViewController.swift */; };
 		21087CA72978172D00CB445F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21087CA62978172D00CB445F /* SignUpViewController.swift */; };
-		2119F17F296ECB2900E4F25A /* Watch_CalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119F17E296ECB2900E4F25A /* Watch_CalendarApp.swift */; };
-		2119F181296ECB2900E4F25A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119F180296ECB2900E4F25A /* ContentView.swift */; };
-		2119F183296ECB2E00E4F25A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2119F182296ECB2E00E4F25A /* Assets.xcassets */; };
-		2119F186296ECB2E00E4F25A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2119F185296ECB2E00E4F25A /* Preview Assets.xcassets */; };
-		2119F18A296ECB6300E4F25A /* Watch Calendar Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2119F17C296ECB2900E4F25A /* Watch Calendar Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2119F1942971687F00E4F25A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2119F1932971687F00E4F25A /* GoogleService-Info.plist */; };
 		211BB55F26A80AE900655F2F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211BB55E26A80AE900655F2F /* ChartViewController.swift */; };
 		2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129B2F328F1553500B792E6 /* CalendarView.swift */; };
@@ -47,16 +42,6 @@
 		E7C5D90E28F3AF4C00993862 /* LoginBonusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5D90D28F3AF4C00993862 /* LoginBonusViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2119F18B296ECB6300E4F25A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 21A1D48E268C67AD00C07A86 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2119F17B296ECB2800E4F25A;
-			remoteInfo = "Watch Calendar Watch App";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		2119F18D296ECB6300E4F25A /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -64,7 +49,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				2119F18A296ECB6300E4F25A /* Watch Calendar Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +58,6 @@
 /* Begin PBXFileReference section */
 		21087CA32977F5C800CB445F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21087CA62978172D00CB445F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		2119F17C296ECB2900E4F25A /* Watch Calendar Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch Calendar Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2119F17E296ECB2900E4F25A /* Watch_CalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_CalendarApp.swift; sourceTree = "<group>"; };
 		2119F180296ECB2900E4F25A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2119F182296ECB2E00E4F25A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,13 +127,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2119F179296ECB2800E4F25A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		21A1D493268C67AD00C07A86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				21A1D496268C67AD00C07A86 /* スタレコ.app */,
-				2119F17C296ECB2900E4F25A /* Watch Calendar Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,23 +306,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2119F17B296ECB2800E4F25A /* Watch Calendar Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2119F189296ECB2E00E4F25A /* Build configuration list for PBXNativeTarget "Watch Calendar Watch App" */;
-			buildPhases = (
-				2119F178296ECB2800E4F25A /* Sources */,
-				2119F179296ECB2800E4F25A /* Frameworks */,
-				2119F17A296ECB2800E4F25A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Watch Calendar Watch App";
-			productName = "Watch Calendar Watch App";
-			productReference = 2119F17C296ECB2900E4F25A /* Watch Calendar Watch App.app */;
-			productType = "com.apple.product-type.application";
-		};
 		21A1D495268C67AD00C07A86 /* Calendar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21A1D4C0268C67B200C07A86 /* Build configuration list for PBXNativeTarget "Calendar" */;
@@ -360,7 +318,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2119F18C296ECB6300E4F25A /* PBXTargetDependency */,
 			);
 			name = Calendar;
 			packageProductDependencies = (
@@ -382,9 +339,6 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					2119F17B296ECB2800E4F25A = {
-						CreatedOnToolsVersion = 14.0.1;
-					};
 					21A1D495268C67AD00C07A86 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -408,21 +362,11 @@
 			projectRoot = "";
 			targets = (
 				21A1D495268C67AD00C07A86 /* Calendar */,
-				2119F17B296ECB2800E4F25A /* Watch Calendar Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2119F17A296ECB2800E4F25A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2119F186296ECB2E00E4F25A /* Preview Assets.xcassets in Resources */,
-				2119F183296ECB2E00E4F25A /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		21A1D494268C67AD00C07A86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,15 +382,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2119F178296ECB2800E4F25A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2119F181296ECB2900E4F25A /* ContentView.swift in Sources */,
-				2119F17F296ECB2900E4F25A /* Watch_CalendarApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		21A1D492268C67AD00C07A86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,14 +415,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		2119F18C296ECB6300E4F25A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2119F17B296ECB2800E4F25A /* Watch Calendar Watch App */;
-			targetProxy = 2119F18B296ECB6300E4F25A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -508,78 +435,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2119F187296ECB2E00E4F25A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = "Watch Calendar Watch App/Watch Calendar Watch App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Watch Calendar Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = F584ZURPSX;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Watch-Calendar-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Watch Calendar";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "集中度合いを推定するためにhealth kit を使用します";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watchを装着しhealth kitから心拍数を取得します";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "アプリ起動前に、Apple Watchを装着してください";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.aoba.sutareco;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		2119F188296ECB2E00E4F25A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = "Watch Calendar Watch App/Watch Calendar Watch App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Watch Calendar Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = F584ZURPSX;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Watch-Calendar-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Watch Calendar";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "集中度合いを推定するためにhealth kit を使用します";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watchを装着しhealth kitから心拍数を取得します";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "アプリ起動前に、Apple Watchを装着してください";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.aoba.sutareco;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Release;
-		};
 		21A1D4BE268C67B200C07A86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -705,7 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.0;
+				CURRENT_PROJECT_VERSION = 2.0.0;
 				DEVELOPMENT_TEAM = F584ZURPSX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -720,14 +575,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco;
 				PRODUCT_NAME = "スタレコ";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -738,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.0;
+				CURRENT_PROJECT_VERSION = 2.0.0;
 				DEVELOPMENT_TEAM = F584ZURPSX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -753,29 +608,20 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco;
 				PRODUCT_NAME = "スタレコ";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2119F189296ECB2E00E4F25A /* Build configuration list for PBXNativeTarget "Watch Calendar Watch App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2119F187296ECB2E00E4F25A /* Debug */,
-				2119F188296ECB2E00E4F25A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		21A1D491268C67AD00C07A86 /* Build configuration list for PBXProject "Calendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

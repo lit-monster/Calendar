@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CircularGauge: View {
-    
+
     var remainingRate: Double
     var remainingTimeString: String
     var gaugeText: String

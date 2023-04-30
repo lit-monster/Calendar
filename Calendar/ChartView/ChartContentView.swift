@@ -43,9 +43,9 @@ struct ChartContentView: View {
                         .frame(maxWidth: .infinity)
                     ZStack{
                         Rectangle()
-                            .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
+                            .fill(.ultraThinMaterial.opacity(0.6).shadow(.inner(color: Color(uiColor: .systemGroupedBackground), radius: 16)))
                             .cornerRadius(16)
-                            .shadow(color: .black.opacity(0.3),radius: 16)
+                            .shadow(color: .black.opacity(0.2),radius: 16)
                         BarChartView(stackedBarData: toyShapes)
                             .frame(height: 250)
                             .padding()
