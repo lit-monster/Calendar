@@ -9,6 +9,7 @@ import RealmSwift
 import UIKit
 
 final class StudyRecordManager {
+
     static let shared = StudyRecordManager()
     private init() {}
 
@@ -90,6 +91,7 @@ final class StudyRecordManager {
         let lastWeekBegin = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: thisWeekBegin)!
         return getByTimeRange(from: lastWeekBegin, to: Date())
     }
+
     private func getByTimeRange(from: Date, to: Date) -> StudyCondition {
         let results = realm.objects(StudyRecord.self).filter { from <= $0.date && $0.date < to }
 

@@ -12,23 +12,24 @@ import FirebaseAuth
 import FirebaseFirestore
 
 
-class TimerViewController: UIViewController {
-    var locationManager = CLLocationManager()
+class StudyTimeRecordViewController: UIViewController {
 
-    let feedbackGenerator = UINotificationFeedbackGenerator()
-
-    let db = Firestore.firestore()
-
-    var count: Int = 0
-    var latestHeartRate: Double = 0.0
-    var focusRate = 0
-    
-    var timer: Timer = Timer()
+    // StopWatchVCから受け渡される値
     var targetTimeInterval: CFTimeInterval = 0
-    var startTime = TimeInterval()
+    var count: Int = 0
+    var focusRate = 0
+
+
+    var locationManager = CLLocationManager()
+    let feedbackGenerator = UINotificationFeedbackGenerator()
+    let db = Firestore.firestore()
 
     var currentLongitude: CLLocationDegrees = 0
     var currentLatitude: CLLocationDegrees = 0
+
+    var startTime = TimeInterval()
+    var timer: Timer = Timer()
+    var latestHeartRate: Double = 0.0
 
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var heartRateLabel: UILabel!
@@ -47,6 +48,7 @@ class TimerViewController: UIViewController {
         }
     }
 
+    //view
     @IBOutlet weak var heart: UIView! {
         didSet {
             heart.layer.cornerRadius = 16
@@ -72,10 +74,33 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-
         feedbackGenerator.prepare()
+        setUpLocation()
 
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        heartRateLabel.text = String(Int(latestHeartRate))
+        if focusRate == 3 {
+//            starLabel.text = "★★★"
+            recoLabal.text = "超集中"
+        } else if focusRate == 2 {
+//            starLabel.text = "★★"
+            recoLabal.text = "集中"
+        } else if focusRate == 1 {
+//            starLabel.text = "★"
+            recoLabal.text = "普通"
+        }
+
+        let interval = count
+        let seconds = interval % 60
+        let minutes = (interval / 60) % 60
+        let hours = (interval / 3600)
+        totalTimeLabel.text =  String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+
+    func setUpLocation() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -90,37 +115,11 @@ class TimerViewController: UIViewController {
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        heartRateLabel.text = String(Int(latestHeartRate))
-        if focusRate == 3 {
-            //            starLabel.text = "★★★"
-            recoLabal.text = "超集中"
-        } else if focusRate == 2 {
-            //            starLabel.text = "★★"
-            recoLabal.text = "集中"
-        } else if focusRate == 1 {
-            //            starLabel.text = "★"
-            recoLabal.text = "普通"
-        }
-
-        let interval = count
-        let seconds = interval % 60
-        let minutes = (interval / 60) % 60
-        let hours = (interval / 3600)
-        totalTimeLabel.text =  String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-    }
-
     @IBAction func quality3() {
         print("超集中")
         saveRecord(quality: 3)
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
-        rate.layer.cornerRadius = 16
-        rate.layer.cornerCurve = .continuous
-        rate.layer.shadowColor = UIColor.black.cgColor
-        rate.layer.shadowOpacity = 0.1
-        rate.layer.shadowRadius = 8
-        rate.layer.shadowOffset = CGSize(width: 4, height: 4)
+
     }
 
     @IBAction func quality2() {
@@ -186,14 +185,13 @@ class TimerViewController: UIViewController {
 
 }
 
-extension TimerViewController: CLLocationManagerDelegate {
+extension StudyTimeRecordViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let newLocation = locations.last else {
             return
         }
 
-        let location:CLLocationCoordinate2D
-        = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
 
         self.currentLatitude = location.latitude
         self.currentLongitude = location.longitude

@@ -57,12 +57,11 @@ class ShareViewController: UIViewController {
         catch let error as NSError {
             print(error)
         }
-
     }
     
     @IBAction func deleteUser(_ sender: Any) {
         let user = Auth.auth().currentUser
-
+        
         user?.delete { error in
             if let error = error {
                 // An error happened.

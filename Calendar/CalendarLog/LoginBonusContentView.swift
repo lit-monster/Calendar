@@ -31,13 +31,9 @@ struct LoginBonusContentView: View {
                     Rectangle()
                         .fill(.ultraThinMaterial.opacity(0.8).shadow(.inner(color: Color(uiColor: .systemBackground), radius: 16)))
                         .cornerRadius(16)
-                    CalendarView(configuretion:
-                                    CalendarView.Configuration(calendar:
-                                                                Calendar(identifier: .gregorian),
-                                                               locale: Locale(identifier: "ja_JP"),
-                                                               fontDesign: .rounded))
-                    .padding()
-                    .frame(maxHeight: .infinity)
+                    CalendarView(configuretion: CalendarView.Configuration(calendar: Calendar(identifier: .gregorian), locale: Locale(identifier: "ja_JP"), fontDesign: .rounded))
+                        .padding()
+                        .frame(maxHeight: .infinity)
                 }
             }
         }

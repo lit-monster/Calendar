@@ -10,7 +10,7 @@ import SwiftUI
 import HealthKit
 import FirebaseAuth
 
-class StopWatchViewController: UIViewController {
+class StudyTimeMeasurementViewController: UIViewController {
     let feedbackGenerator = UINotificationFeedbackGenerator()
 
     @IBOutlet var circularGaugeView: UIView!
@@ -84,7 +84,7 @@ class StopWatchViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "totimer" {
-            let vc = segue.destination as! TimerViewController
+            let vc = segue.destination as! StudyTimeRecordViewController
             vc.count = self.count
             vc.latestHeartRate = self.latestHeartRate
             vc.focusRate = self.focusRate

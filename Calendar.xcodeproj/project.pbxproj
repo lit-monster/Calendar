@@ -14,7 +14,7 @@
 		2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129B2F328F1553500B792E6 /* CalendarView.swift */; };
 		212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBD26D65676004561B0 /* AppDelegate.swift */; };
 		212D7BC026D65686004561B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7BBF26D65686004561B0 /* SceneDelegate.swift */; };
-		216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StopWatchViewController.swift */; };
+		216771B0269EF2570005F50C /* StudyTimeMeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216771AF269EF2570005F50C /* StudyTimeMeasurementViewController.swift */; };
 		216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216847A528BF5A84007D11F6 /* HighlightCell.swift */; };
 		216A46B2295B69B700EC1D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216A46B1295B69B600EC1D52 /* ViewController.swift */; };
 		217A1F9527DDF13D0082B2BC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217A1F9427DDF13D0082B2BC /* Colors.xcassets */; };
@@ -34,7 +34,7 @@
 		21A2B5E529AF591A00DA0AE9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21A2B5E429AF591A00DA0AE9 /* FirebaseFirestore */; };
 		21B0A6DD28855BDF00CFE312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B0A6DB28855BDF00CFE312 /* Main.storyboard */; };
 		21B23BC728F1CF00001FBF65 /* IdentifiablePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */; };
-		21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */; };
+		21C93F2E28BE54BE00E807B6 /* StudyTimeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2D28BE54BE00E807B6 /* StudyTimeRecordViewController.swift */; };
 		21C93F3028BE54D700E807B6 /* StudyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C93F2F28BE54D700E807B6 /* StudyRecord.swift */; };
 		BAC3473028BE995F00895FBE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3472F28BE995F00895FBE /* Date.swift */; };
 		BAC3473328BE9B7200895FBE /* StudyCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3473228BE9B7200895FBE /* StudyCondition.swift */; };
@@ -62,15 +62,13 @@
 		2119F180296ECB2900E4F25A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2119F182296ECB2E00E4F25A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2119F185296ECB2E00E4F25A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2119F18E296ECE2F00E4F25A /* Watch Calendar Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch Calendar Watch App.entitlements"; sourceTree = "<group>"; };
 		2119F18F296ECE7600E4F25A /* Watch-Calendar-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Watch-Calendar-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2119F1932971687F00E4F25A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		211BB55E26A80AE900655F2F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		2129B2F328F1553500B792E6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		212D7BBD26D65676004561B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		212D7BBF26D65686004561B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		213C4CE7293760DB00BC8C84 /* Calendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calendar.entitlements; sourceTree = "<group>"; };
-		216771AF269EF2570005F50C /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
+		216771AF269EF2570005F50C /* StudyTimeMeasurementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTimeMeasurementViewController.swift; sourceTree = "<group>"; };
 		216847A528BF5A84007D11F6 /* HighlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightCell.swift; sourceTree = "<group>"; };
 		216A46B1295B69B600EC1D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		217A1F9427DDF13D0082B2BC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -88,7 +86,7 @@
 		21A1D4A7268C67B100C07A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21B0A6DC28855BDF00CFE312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Calendar/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21B23BC628F1CF00001FBF65 /* IdentifiablePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiablePlace.swift; sourceTree = "<group>"; };
-		21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		21C93F2D28BE54BE00E807B6 /* StudyTimeRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTimeRecordViewController.swift; sourceTree = "<group>"; };
 		21C93F2F28BE54D700E807B6 /* StudyRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyRecord.swift; sourceTree = "<group>"; };
 		21CAD5922981262D005ED2FA /* AppAuth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AppAuth.xcframework; path = Carthage/Build/AppAuth.xcframework; sourceTree = "<group>"; };
 		21CAD5932981262E005ED2FA /* FirebaseAuth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAuth.xcframework; path = Carthage/Build/FirebaseAuth.xcframework; sourceTree = "<group>"; };
@@ -141,11 +139,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21144E2B2A63D2BA00F5EDDE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				212D7BBD26D65676004561B0 /* AppDelegate.swift */,
+				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
+				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
+				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		2119F17D296ECB2900E4F25A /* Watch Calendar Watch App */ = {
 			isa = PBXGroup;
 			children = (
 				2119F18F296ECE7600E4F25A /* Watch-Calendar-Watch-App-Info.plist */,
-				2119F18E296ECE2F00E4F25A /* Watch Calendar Watch App.entitlements */,
 				2119F17E296ECB2900E4F25A /* Watch_CalendarApp.swift */,
 				2119F180296ECB2900E4F25A /* ContentView.swift */,
 				2119F182296ECB2E00E4F25A /* Assets.xcassets */,
@@ -179,9 +187,9 @@
 		219D151828B6357300193068 /* StopWatchView */ = {
 			isa = PBXGroup;
 			children = (
-				21C93F2D28BE54BE00E807B6 /* TimerViewController.swift */,
+				216771AF269EF2570005F50C /* StudyTimeMeasurementViewController.swift */,
+				21C93F2D28BE54BE00E807B6 /* StudyTimeRecordViewController.swift */,
 				219D152828B85A8700193068 /* CircularGauge.swift */,
-				216771AF269EF2570005F50C /* StopWatchViewController.swift */,
 			);
 			path = StopWatchView;
 			sourceTree = "<group>";
@@ -207,14 +215,9 @@
 		21A1D498268C67AD00C07A86 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				21144E2B2A63D2BA00F5EDDE /* App */,
 				BAC3473128BE9B5800895FBE /* Entity */,
 				BAC3472E28BE995500895FBE /* Helper */,
-				213C4CE7293760DB00BC8C84 /* Calendar.entitlements */,
-				212D7BBD26D65676004561B0 /* AppDelegate.swift */,
-				2198C50A28758B71000C705C /* StudyRecordManager.swift */,
-				212D7BBF26D65686004561B0 /* SceneDelegate.swift */,
-				21A1D4A4268C67B100C07A86 /* LaunchScreen.storyboard */,
-				21B0A6DB28855BDF00CFE312 /* Main.storyboard */,
 				216A46B1295B69B600EC1D52 /* ViewController.swift */,
 				21CAD5F6298143DE005ED2FA /* Login */,
 				E7C5D90F28F3CCA700993862 /* CalendarLog */,
@@ -278,6 +281,7 @@
 		BAC3472E28BE995500895FBE /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2198C50A28758B71000C705C /* StudyRecordManager.swift */,
 				BAC3472F28BE995F00895FBE /* Date.swift */,
 			);
 			path = Helper;
@@ -394,7 +398,7 @@
 				216847A628BF5A84007D11F6 /* HighlightCell.swift in Sources */,
 				21A0D19729972DBC0099F810 /* ShareViewController.swift in Sources */,
 				21087CA72978172D00CB445F /* SignUpViewController.swift in Sources */,
-				216771B0269EF2570005F50C /* StopWatchViewController.swift in Sources */,
+				216771B0269EF2570005F50C /* StudyTimeMeasurementViewController.swift in Sources */,
 				2129B2F428F1553500B792E6 /* CalendarView.swift in Sources */,
 				21B23BC728F1CF00001FBF65 /* IdentifiablePlace.swift in Sources */,
 				2189C53028F3A54C00A5BA34 /* LoginBonusContentView.swift in Sources */,
@@ -403,7 +407,7 @@
 				E7C5D90E28F3AF4C00993862 /* LoginBonusViewController.swift in Sources */,
 				2199B75E286C52AC00018ADB /* ChartContentView.swift in Sources */,
 				BAC3473528BE9E2F00895FBE /* ToyShape.swift in Sources */,
-				21C93F2E28BE54BE00E807B6 /* TimerViewController.swift in Sources */,
+				21C93F2E28BE54BE00E807B6 /* StudyTimeRecordViewController.swift in Sources */,
 				21087CA42977F5C800CB445F /* LoginViewController.swift in Sources */,
 				2189C52E28F3914D00A5BA34 /* StrorageChartView.swift in Sources */,
 				212D7BBE26D65676004561B0 /* AppDelegate.swift in Sources */,
@@ -560,7 +564,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.0;
+				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_TEAM = F584ZURPSX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco;
 				PRODUCT_NAME = "スタレコ";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -593,7 +597,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.0;
+				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_TEAM = F584ZURPSX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.aoba.sutareco;
 				PRODUCT_NAME = "スタレコ";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

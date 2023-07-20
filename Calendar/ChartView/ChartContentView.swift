@@ -144,7 +144,7 @@ struct ChartContentView: View {
                 .padding()
                 .navigationTitle(Text("分析"))
             }
-            .background(Image("back3"))
+            .background(Image("back"))
             .edgesIgnoringSafeArea(.all)
         }
         .onAppear {
